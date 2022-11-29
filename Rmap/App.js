@@ -12,6 +12,7 @@ import MapViewer from './app/screens/MapViewer';
 import LoginScreen from './app/screens/LoginScreen';
 import HomeSheet from './app/screens/HomeSheet';
 import ClassSheet from './app/screens/ClassSheet';
+import DirectorySheet from './app/screens/DirectorySheet';
 
 
 function Modals(){
@@ -35,7 +36,12 @@ function Modals(){
       <BottomSheet.Screen
         component={ClassSheet}
         name="Class"
-        options={{enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#A6D49F'}}}
+        options={{index:1, enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#A6D49F'}}}
+      />
+      <BottomSheet.Screen
+        component={DirectorySheet}
+        name="Directory"
+        options={{index:1, enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#478BFF'}}}
       />
     </BottomSheet.Navigator>
   );
