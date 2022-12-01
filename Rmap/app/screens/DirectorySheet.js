@@ -4,10 +4,10 @@ import { StatusBar } from 'expo-status-bar';
 import { CommonActions } from '@react-navigation/native';
 import Feather from '@expo/vector-icons/Feather'; 
 
-function ClassSheet(props){
+function DirectorySheet(props){
     return(
         <View style={styles.container}>
-        <Text>Class Screen!</Text>
+        <Text>Directory Screen!</Text>
         <Button title ='Go Back' onPress={() => {props.navigation.dispatch(CommonActions.goBack());}}/>
         <StatusBar/>
         </View>
@@ -15,14 +15,7 @@ function ClassSheet(props){
 }
 
 const styles = StyleSheet.create({
-    container: { flex: 1,
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-        paddingLeft:20,
-        paddingRight:20,
-        backgroundColor: 'lightgrey',
-        },
+    container: { flex: 1, alignItems: 'center', justifyContent: 'center'},
   });
 
-export default ClassSheet;
+export default DirectorySheet;
