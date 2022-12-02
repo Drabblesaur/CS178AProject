@@ -24,7 +24,7 @@ function MapViewer(props){
 
   React.useEffect(() => {
     if (props.route.params?.modalOpen) {
-      props.navigation.navigate('First');
+      props.navigation.navigate('Home');
     }
   }, [props.route.params?.modalOpen]);
 
@@ -183,7 +183,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   pressableText: {
-    fontFamily : 'PoppinsMedium',
+    //fontFamily : 'PoppinsMedium',
     fontSize: 18,
     color: '#FFFFFF',
     paddingLeft: 10,

@@ -30,7 +30,7 @@ function Modals(){
       />
       <BottomSheet.Screen
         component={HomeSheet}
-        name="First"
+        name="Home"
         options={{enableDismissOnClose: true, enablePanDownToClose:false}}
       />
       <BottomSheet.Screen
