@@ -2,8 +2,9 @@ import React, {Component, useState} from 'react';
 import { Button, StyleSheet, Text, View, Image, SafeAreaView, Pressable } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import {BottomSheetBackdrop,BottomSheetBackdropProps,} from '@gorhom/bottom-sheet';
-import MapView, {Marker, Overlay} from 'react-native-maps';
+import MapView, {Marker, Overlay, Polygon, Geojson} from 'react-native-maps';
 import Icon from 'react-native-vector-icons/Feather';
+import Buildings from '../components/buildings.json';
 
 const UCRCOORD1 = [33.973311, -117.328205];
 const UCRCOORD2 = [33.973378, -117.328108];
@@ -19,6 +20,9 @@ const CHASS_SOUTH_COORD2 = [33.97512051004066, -117.33025715007692];
 
 
 Icon.loadFont();
+
+const buildings = Buildings;
+
 function MapViewer(props){
   const { modalOpen } = props.route.params;
 
@@ -60,29 +64,36 @@ function MapViewer(props){
             latitudeDelta: 0.0025,
             longitudeDelta: 0.0025,
           }}
-          /*customMapStyle={mapStyle}*/>
+          >
             
-          {/* Building floor overlays
-              NOTE: Need to refactor, there are a lot of buildings on campus */}
-          {/*
+          {
+            Buildings.features.map((b, i) =>
+              <Polygon
+                coordinates= {b.geometry.coordinates[0].map((x) => 
+                    ({latitude: x[1], longitude: x[0]}),
+                  )
+                }
+                key={`building-${i}`}
+                strokeColor="red"
+                fillColor="green"
+                strokeWidth={2}
+                tappable
+                onPress={() => console.log(`building-${i}`)}
+              />
+            )
+          }
+          
           <Overlay //Test, UCR logo
             image={require('../assets/UCR.png')}
             bounds={[UCRCOORD1, UCRCOORD2]}
             opacity={visibleFirst}
             hide={true}
           />
-          */}
+          
           <Overlay // SKYE HALL
             image={require('../assets/skye.png')}
             bounds={[SKYE_COORD1, SKYE_COORD2]}
             opacity={visibleFirst}
-          />
-          <Marker 
-            coordinate={{
-              latitude: 33.97537507374277,
-              longitude: -117.32886487890542,
-            }}
-            title={'Skye Hall'}
           />
           <Overlay // SPROUL HALL, FIRST FLOOR
             image={require('../assets/sproul1.png')}
@@ -114,21 +125,6 @@ function MapViewer(props){
             bounds={[CHASS_SOUTH_COORD1, CHASS_SOUTH_COORD2]}
             opacity={visibleSecond}
           />
-
-          {/* A test marker*/ /*
-          <Marker 
-            draggable
-            coordinate={{
-              latitude: 33.973362,
-              longitude: -117.328158,
-            }}
-            onDragEnd={
-              (e) => alert(JSON.stringify(e.nativeEvent.coordinate))
-            }
-            title={'Test Marker'}
-            description={'This is a description of the marker'}
-          /> */
-          }
         </MapView>
 
         {/* Button container for toggling floor plans*/}
