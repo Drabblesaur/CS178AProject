@@ -13,6 +13,8 @@ import LoginScreen from './app/screens/LoginScreen';
 import HomeSheet from './app/screens/HomeSheet';
 import ClassSheet from './app/screens/ClassSheet';
 import DirectorySheet from './app/screens/DirectorySheet';
+import FavoriteSheet from './app/screens/FavoriteSheet';
+import ProfileSheet from './app/screens/ProfileSheet';
 
 
 function Modals(){
@@ -31,7 +33,7 @@ function Modals(){
       <BottomSheet.Screen
         component={HomeSheet}
         name="Home"
-        options={{enableDismissOnClose: true, enablePanDownToClose:false}}
+        options={{index:0,enableDismissOnClose: true, enablePanDownToClose:false}}
       />
       <BottomSheet.Screen
         component={ClassSheet}
@@ -41,7 +43,17 @@ function Modals(){
       <BottomSheet.Screen
         component={DirectorySheet}
         name="Directory"
-        options={{index:1, enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#478BFF'}}}
+        options={{snapPoints: ["13%","55%"],index:1, enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#478BFF'}}}
+      />
+      <BottomSheet.Screen
+        component={FavoriteSheet}
+        name="Favorite"
+        options={{snapPoints: ["13%","55%"],index:1, enableDismissOnClose: true, enablePanDownToClose:false}}
+      />
+            <BottomSheet.Screen
+        component={ProfileSheet}
+        name="Profile"
+        options={{snapPoints: ["55%","90%"],index:1, enableDismissOnClose: true, enablePanDownToClose:false}}
       />
     </BottomSheet.Navigator>
   );

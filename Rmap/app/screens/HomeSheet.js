@@ -17,7 +17,9 @@ function HomeSheet(props){
                 {/* Search Bar */}
                 <BottomSheetTextInput style={styles.searchBar} placeholder="Search" />
                 {/* Profile */}
+                <TouchableWithoutFeedback onPress={() => {props.navigation.navigate('Profile');}}>
                 <View style={styles.profile}/>
+                </TouchableWithoutFeedback>
             </View>
             {/* Menu Container */}
             <View style={styles.menuContainer}>
@@ -27,9 +29,9 @@ function HomeSheet(props){
                     <View style={styles.classButton}>
                         <TouchableWithoutFeedback onPress={() => {props.navigation.navigate('Class');}}>
                             <View style={styles.classTouchable}>
-                                <Text>Get me to{"\n"}Class</Text>
+                                <Text style={{fontSize: 20, fontWeight: 'bold',color: 'white'}}>Get me to{"\n"}Class</Text>
                                 <View style={styles.classIcon}>
-                                <Feather name="navigation-2" color="white" size={40} />
+                                <Feather name="navigation-2" color="white" size={45} />
                                 </View>
                             </View>
                         </TouchableWithoutFeedback>
@@ -38,7 +40,10 @@ function HomeSheet(props){
                     <View style={styles.directoryButton}>
                     <TouchableWithoutFeedback onPress={() => {props.navigation.navigate('Directory');}}>
                             <View style={styles.directoryTouchable}>
-                                <Text>UCR{"\n"}Directory</Text>
+                                <Text style={{fontSize: 20, fontWeight: 'bold', color:'white'}}>UCR{"\n"}Directory</Text>
+                                <View style={styles.classIcon}>
+                                <Feather name="map" color="white" size={45} />
+                                </View>
                             </View>
                         </TouchableWithoutFeedback>
                     </View>
@@ -46,9 +51,11 @@ function HomeSheet(props){
                 {/* Side Button Container */}
                 <View style={styles.secBContainer}>
                     {/* Favorite Button */}
-                    <View style={styles.favoriteButton}>
-
-                    </View>
+                    <TouchableWithoutFeedback onPress={() => {props.navigation.navigate('Favorite');}}>
+                        <View style={styles.favoriteButton}>
+                            <Feather name="star" size={24} color="white" />
+                        </View>
+                    </TouchableWithoutFeedback>
                     {/* Settings Button */}
                     <View style={styles.settingsButton}>
 
@@ -124,8 +131,9 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     classIcon:{
+        paddingTop: 50,
         alignItems:'center',
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
         flex:1,
         width:'100%',
         paddingBottom:25,
@@ -160,6 +168,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFB81C',
         marginBottom: 5,
         borderRadius: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     settingsButton: {
         flex: 1,

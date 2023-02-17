@@ -4,6 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import {BottomSheetBackdrop,BottomSheetBackdropProps,} from '@gorhom/bottom-sheet';
 import MapView, {Marker, Overlay} from 'react-native-maps';
 import Icon from 'react-native-vector-icons/Feather';
+import { NativeViewGestureHandler } from 'react-native-gesture-handler';
 
 const UCRCOORD1 = [33.973311, -117.328205];
 const UCRCOORD2 = [33.973378, -117.328108];
@@ -51,6 +52,7 @@ function MapViewer(props){
     };
   
     return(
+      <NativeViewGestureHandler disallowInterruption={true}>
         <View style={styles.container}>
           <MapView
           style={styles.mapStyle}
@@ -152,6 +154,7 @@ function MapViewer(props){
           <StatusBar/>
           <StatusBar/>
         </View>
+        </NativeViewGestureHandler>
     );
 }
 
