@@ -1,13 +1,26 @@
-import React, {Component, useState} from 'react';
-import { Button, StyleSheet, Text, View, Image, SafeAreaView, Pressable } from 'react-native';
+import React, {Component, useEffect, useRef, useState} from 'react';
+import { 
+  Image, 
+  SafeAreaView, 
+  Pressable, 
+  Alert,
+  Button,
+  Linking,
+  PermissionsAndroid,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Switch,
+  Text,
+  ToastAndroid,
+  View,} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import {BottomSheetBackdrop,BottomSheetBackdropProps,} from '@gorhom/bottom-sheet';
 import MapView, {Marker, Overlay, Polygon, Polyline, Circle, Geojson} from 'react-native-maps';
 import Icon from 'react-native-vector-icons/Feather';
 
-import Buildings from '../components/buildings.json';
-import BuildingsFirstFloors from '../components/buildingsFirst.json';
-const RADIUS = 1;
+import Buildings from '../floorplans/buildings.json';
+import BuildingsFirstFloors from '../floorplans/buildingsFirst.json';
 
 Icon.loadFont();
 
@@ -19,34 +32,74 @@ function MapViewer(props){
       props.navigation.navigate('Home');
     }
   }, [props.route.params?.modalOpen]);
-
+  
     // Visibility states per floor plan
-    const [visibleBuilding, setBuilding] = useState(Buildings);
+    const [visibleBuilding, setBuilding] = useState(BuildingsFirstFloors);
 
     // Toggle between floors
     const toggleOverlay = (floor) => {
       if (floor == 0) {
-        setBuilding(Buildings);
+        setBuilding({"features": []});
       } else if (floor == 1) {
         setBuilding(BuildingsFirstFloors);
       }
+    };
+
+    // Display all buildings of the map
+    const displayBuildings = () => {
+      return (Buildings.features.map((b) => {
+        if (b.geometry.type == "Polygon") {
+          var lineColor = "#00276b";
+          var solidColor = "#adcbff";
+
+          if (b.properties.type == "resource") {
+            lineColor = "#345D3D";
+            solidColor = "#9DCDA8";
+          }
+          else if (b.properties.type == "library") {
+            lineColor = "#7A3B3B";
+            solidColor = "#DC7A7A";
+          }
+
+          return (
+            <Polygon
+              coordinates= {b.geometry.coordinates[0].map((x) => 
+                  ({latitude: x[1], longitude: x[0]}),
+                )
+              }
+              key={`building-${b.id}`}
+              strokeColor={lineColor}
+              fillColor={solidColor}
+              
+              strokeWidth={2}
+              tappable
+              onPress={() => console.log(`${b.properties.building}`)}
+            />
+            )
+          }
+          }
+        ));
     };
   
     return(
         <View style={styles.container}>
           <MapView
-          style={styles.mapStyle}
-          initialRegion={{ //Sets the initial view of the campus
-            latitude: 33.973362,
-            longitude: -117.328158,
-            latitudeDelta: 0.0025,
-            longitudeDelta: 0.0025,
-          }}
+            style={styles.mapStyle}
+            //showsUserLocation = {true}
+            //showsMyLocationButton = {true}
+            initialRegion={{ //Sets the initial view of the campus
+              latitude: 33.973362,
+              longitude: -117.328158,
+              latitudeDelta: 0.003,
+              longitudeDelta: 0.003,
+            }}
           >
-            
-          {// Function to iterate and display current json dataset (visibleBuilding)
+           
+          {// Call function to show all buildings first to always keep it "underneath" the classrooms
+            displayBuildings()
+          } 
+          {// Iterate and display current json dataset (visibleBuilding)
             visibleBuilding.features.map((b) => {
-              //console.log(b.geometry.type);
               if (b.geometry.type == "Polygon") {
                 return (
                   <Polygon
@@ -54,75 +107,101 @@ function MapViewer(props){
                         ({latitude: x[1], longitude: x[0]}),
                       )
                     }
-                    key={`building-${b.id}`}
-                    strokeColor="red"
+                    key={`building-room${b.id}`}
+                    strokeColor="#00276b"
+                    fillColor="#fff6b3"
                     
                     strokeWidth={2}
                     tappable
-                    onPress={() => console.log(`building-${b.id}`)}
+                    onPress={() => console.log(`${b.properties.building}, Room ${b.properties.room}`)}
                   />
                 )
               }
-              else if (b.geometry.type == "Point") {
-                return (
-                  <Circle
-                    center= {{
-                      latitude: b.geometry.coordinates[1], 
-                      longitude: b.geometry.coordinates[0]
-                    }
-                    }
-                    key={`classroom-${b.id}`}
-                    strokeColor="red"
-                    fillColor="blue"
-                    strokeWidth={2}
-                    radius = { RADIUS }
-                    tappable
-                    onPress={() => console.log(`classroom-${b.id}`)}
-                  />
-                )
-              }
-              else if (b.geometry.type == "LineString") {
-                return (
-                  <Polyline
-                      coordinates= {b.geometry.coordinates.map((x) => 
-                        ({latitude: x[1], longitude: x[0]}),
-                      )
-                    }
-                    key={`line-${b.id}`}
-                    strokeColor="red"
-                    strokeWidth={2}
-                  />
-                )
-              }
-              }
-            )
+            })
           }
+          {// Iterate and display current json dataset (visibleBuilding)
+            visibleBuilding.features.map((b) => {
+              if (b.geometry.type == "Point") {
+                var img = require('../assets/bathroom.jpeg');
 
-        </MapView>
+                if (b.properties.type == "bathroom") {
+                  img = require('../assets/bathroom.jpeg');
+                }
+                else if (b.properties.type == "elevator") {
+                  img = require('../assets/elevator.png');
+                }
+                else if (b.properties.type == "stairs") {
+                  img = require('../assets/stairs.jpg');
+                }
+                else if (b.properties.type == "water") {
+                  img = require('../assets/water.png');
+                }
 
-        {/* Button container for toggling floor plans*/}
-        <View style={ styles.buttonsContainer }>
-            <Pressable // BUILDINGS
-              onPress={() => toggleOverlay(0)}
-              style={ styles.buttonsStyle }>
-              <View>
-                  <Text style={styles.pressableText}>Buildings</Text>
-              </View>
-            </Pressable>
-            <Pressable // FIRST FLOORS
-              onPress={() => toggleOverlay(1)}
-              style={ styles.buttonsStyle }>
-              <View>
-                  <Text style={styles.pressableText}>First</Text>
-              </View>
-            </Pressable>
-        </View>
-          {/*<Button title ='go to Class' onPress={() => {props.navigation.navigate('Class');}}/>*/}
-          <StatusBar/>
-          <StatusBar/>
-        </View>
-    );
-}
+                return (
+                  <Marker
+                    tracksViewChanges={false}
+                    style={{width: 20, height: 20}}
+                    coordinate={
+                      {latitude: b.geometry.coordinates[1], 
+                        longitude: b.geometry.coordinates[0]
+                      }
+                      }
+                    key={`${b.properties.type}${b.id}`}
+                  >
+                    <Image
+                      source={img}
+                      style={{width: 20, height: 20}}
+                      resizeMethod="resize"
+                      resizeMode="center"
+                    />
+                  </Marker>
+                )
+              }
+            })
+          }
+          
+          {/*
+            <Marker
+              coordinate={{
+                latitude: props.position.latitude,
+                longitude: props.position.longitude
+              }}
+            />
+            */}
+
+          </MapView>
+
+          {/* Button container for toggling floor plans for testing purposes*/}
+          <View style={ styles.buttonsContainer }>
+              <Pressable // BUILDINGS
+                onPress={() => toggleOverlay(0)}
+                style={ styles.buttonsStyle }>
+                <View>
+                    <Text style={styles.pressableText}>Buildings</Text>
+                </View>
+              </Pressable>
+              <Pressable // FIRST FLOORS
+                onPress={() => toggleOverlay(1)}
+                style={ styles.buttonsStyle }>
+                <View>
+                    <Text style={styles.pressableText}>First</Text>
+                </View>
+              </Pressable>
+              {/*
+              <Pressable // TEST USER LOCATION
+                onPress={() => getOneTimeLocation()}
+                style={ styles.buttonsStyle }>
+                <View>
+                    <Text style={styles.pressableText}>User</Text>
+                </View>
+              </Pressable>
+            */}
+          </View>
+            <StatusBar/>
+            <StatusBar/>
+          </View>
+        );
+    }
 
 // Styling app in general
 const styles = StyleSheet.create({
@@ -140,7 +219,7 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     right: 0,
-    bottom: 0,
+    bottom: 90,
   },
   buttonsContainer: {
     flexDirection: 'column',
@@ -161,5 +240,27 @@ const styles = StyleSheet.create({
     paddingBottom: 2.5,
   }
 });
+
+const mapStyle=
+[
+  {
+    "featureType": "poi.business",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.business",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  }
+]
 
 export default MapViewer;
