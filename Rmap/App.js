@@ -50,14 +50,16 @@ function Modals(){
 
 export default function App() {
   return (
+    
     <GestureHandlerRootView style={{ flex: 1 }}>
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Login'>
-        <Stack.Screen name="Login" component={LoginScreen} options={{headerShown: false,}} />
+        <Stack.Screen name="LoginScreen" component={LoginScreen} options={{headerShown: false,}} />
         <Stack.Screen name="Modals" component={Modals} options={{headerShown: false,}}/>
       </Stack.Navigator>
     </NavigationContainer>
     </GestureHandlerRootView>
+   
   );
 }
 
