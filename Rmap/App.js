@@ -9,10 +9,12 @@ const BottomSheet = createBottomSheetNavigator();
 const Stack = createNativeStackNavigator();
 
 import MapViewer from './app/screens/MapViewer';
-import LoginScreen from './app/screens/LoginScreen';
+import Signup from './app/screens/LoginSignup/Signup';
 import HomeSheet from './app/screens/HomeSheet';
 import ClassSheet from './app/screens/ClassSheet';
 import DirectorySheet from './app/screens/DirectorySheet';
+import WelcomeScreen from './app/screens/LoginSignup/WelcomeScreen';
+import LoginScreen from './app/screens/LoginSignup/LoginScreen';
 
 
 function Modals(){
@@ -53,7 +55,9 @@ export default function App() {
     
     <GestureHandlerRootView style={{ flex: 1 }}>
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Login'>
+      <Stack.Navigator initialRouteName='Welcome'>
+        <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} options={{headerShown: false,}} />
+        <Stack.Screen name="Signup" component={Signup} options={{headerShown: false,}} />
         <Stack.Screen name="LoginScreen" component={LoginScreen} options={{headerShown: false,}} />
         <Stack.Screen name="Modals" component={Modals} options={{headerShown: false,}}/>
       </Stack.Navigator>
