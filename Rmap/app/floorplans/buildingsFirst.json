@@ -53,12 +53,12 @@
               33.97281
             ],
             [
-              -117.329904,
-              33.9726
+              -117.329906,
+              33.972604
             ],
             [
-              -117.329942,
-              33.9726
+              -117.329944,
+              33.972604
             ],
             [
               -117.329945,
@@ -151,17 +151,117 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Spieth Hall",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.326653,
+          33.972966
+        ],
+        "type": "Point"
+      },
+      "id": "040e352be599ef12958154b8fedb4ba6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1411"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328915,
+              33.971196
+            ],
+            [
+              -117.328837,
+              33.971196
+            ],
+            [
+              -117.328838,
+              33.971316
+            ],
+            [
+              -117.328916,
+              33.971316
+            ],
+            [
+              -117.328915,
+              33.971196
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "045143b3f24e9e36ea13d29ddfeae6ae"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Winston Chung Hall",
         "type": "bathroom"
       },
       "geometry": {
         "coordinates": [
-          -117.325824,
-          33.975303
+          -117.325848,
+          33.975293
         ],
         "type": "Point"
       },
       "id": "04e2d56ce84cd9b4995518efdb18e945"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1306"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326822,
+              33.972662
+            ],
+            [
+              -117.326821,
+              33.972627
+            ],
+            [
+              -117.326778,
+              33.972628
+            ],
+            [
+              -117.326779,
+              33.972662
+            ],
+            [
+              -117.326822,
+              33.972662
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "0576ad89f07afd2b6a9436fb0d995131"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "type": "bathroom"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.326532,
+          33.972592
+        ],
+        "type": "Point"
+      },
+      "id": "0598fe8933de8278daad7d8987726258"
     },
     {
       "type": "Feature",
@@ -252,6 +352,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "155"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.32813,
+              33.9762
+            ],
+            [
+              -117.32797,
+              33.976199
+            ],
+            [
+              -117.327969,
+              33.976125
+            ],
+            [
+              -117.32813,
+              33.976127
+            ],
+            [
+              -117.32813,
+              33.9762
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "08ef54a83960b4bb7dee6437be6dee82"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Bourns Hall",
         "room": "undefined"
       },
@@ -306,7 +441,7 @@
               33.975594
             ],
             [
-              -117.325911,
+              -117.32591,
               33.975635
             ],
             [
@@ -365,6 +500,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Olmsted Hall",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327805,
+              33.971626
+            ],
+            [
+              -117.327805,
+              33.971596
+            ],
+            [
+              -117.327772,
+              33.971596
+            ],
+            [
+              -117.327772,
+              33.971626
+            ],
+            [
+              -117.327805,
+              33.971626
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "0a20ef6c51fee03ffa709dcc3fa99240"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Winston Chung Hall",
         "room": "119"
       },
@@ -373,23 +543,23 @@
           [
             [
               -117.325836,
-              33.975609
-            ],
-            [
-              -117.3258,
-              33.975609
+              33.975608
             ],
             [
               -117.325799,
-              33.97558
+              33.975608
+            ],
+            [
+              -117.325798,
+              33.975578
+            ],
+            [
+              -117.325835,
+              33.975578
             ],
             [
               -117.325836,
-              33.975579
-            ],
-            [
-              -117.325836,
-              33.975609
+              33.975608
             ]
           ]
         ],
@@ -477,30 +647,65 @@
         "coordinates": [
           [
             [
-              -117.329822,
-              33.973011
+              -117.329824,
+              33.972989
             ],
             [
-              -117.329737,
-              33.973011
+              -117.329738,
+              33.972989
             ],
             [
-              -117.329736,
-              33.972952
+              -117.329739,
+              33.97293
             ],
             [
-              -117.329823,
-              33.972952
+              -117.329824,
+              33.97293
             ],
             [
-              -117.329822,
-              33.973011
+              -117.329824,
+              33.972989
             ]
           ]
         ],
         "type": "Polygon"
       },
       "id": "0f659ac8a8c69ae53ef95916542add7b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1311C"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326703,
+              33.972564
+            ],
+            [
+              -117.326674,
+              33.972563
+            ],
+            [
+              -117.326673,
+              33.972533
+            ],
+            [
+              -117.326703,
+              33.972533
+            ],
+            [
+              -117.326703,
+              33.972564
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "1088e2aa46b7f228b4ce75a579047b1d"
     },
     {
       "type": "Feature",
@@ -512,15 +717,15 @@
         "coordinates": [
           [
             [
-              -117.325946,
+              -117.325945,
               33.975593
             ],
             [
-              -117.325946,
-              33.975577
+              -117.325945,
+              33.975576
             ],
             [
-              -117.32591,
+              -117.325909,
               33.975576
             ],
             [
@@ -528,7 +733,7 @@
               33.975593
             ],
             [
-              -117.325946,
+              -117.325945,
               33.975593
             ]
           ]
@@ -551,6 +756,41 @@
         "type": "Point"
       },
       "id": "11c0eef1527966f795005d313cbb3482"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "type": "173"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328558,
+              33.9762
+            ],
+            [
+              -117.328557,
+              33.976128
+            ],
+            [
+              -117.328432,
+              33.976128
+            ],
+            [
+              -117.328434,
+              33.9762
+            ],
+            [
+              -117.328558,
+              33.9762
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "13a90f18deb8f3810a59bad0f076440c"
     },
     {
       "type": "Feature",
@@ -590,6 +830,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Spieth Hall",
+        "room": "1111"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326544,
+              33.972949
+            ],
+            [
+              -117.326462,
+              33.972949
+            ],
+            [
+              -117.326462,
+              33.972886
+            ],
+            [
+              -117.326544,
+              33.972886
+            ],
+            [
+              -117.326544,
+              33.972949
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "156cf0385118d5de97a5adebf6d57893"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Sproul Hall",
         "room": "1207"
       },
@@ -597,30 +872,65 @@
         "coordinates": [
           [
             [
-              -117.329905,
-              33.972746
+              -117.329907,
+              33.972745
             ],
             [
-              -117.329866,
-              33.972746
+              -117.329868,
+              33.972745
             ],
             [
-              -117.329864,
-              33.9726
-            ],
-            [
-              -117.329903,
-              33.9726
+              -117.329867,
+              33.972604
             ],
             [
               -117.329905,
-              33.972746
+              33.972604
+            ],
+            [
+              -117.329907,
+              33.972745
             ]
           ]
         ],
         "type": "Polygon"
       },
       "id": "15b8ba33449ed661d31fab27e811b3ce"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Winston Chung Hall",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325882,
+              33.975135
+            ],
+            [
+              -117.325882,
+              33.97502
+            ],
+            [
+              -117.325834,
+              33.97502
+            ],
+            [
+              -117.325832,
+              33.975135
+            ],
+            [
+              -117.325882,
+              33.975135
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "174fb6439df0ff48400a04c6309f70c2"
     },
     {
       "type": "Feature",
@@ -660,6 +970,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Olmsted Hall",
+        "room": "1429"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.32882,
+              33.971107
+            ],
+            [
+              -117.328821,
+              33.971139
+            ],
+            [
+              -117.328856,
+              33.971139
+            ],
+            [
+              -117.328855,
+              33.971107
+            ],
+            [
+              -117.32882,
+              33.971107
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "1a8a8336d4084cc8088eab181357338b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "type": "bathroom"
       },
@@ -674,21 +1019,53 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "178"
+      },
       "geometry": {
         "coordinates": [
           [
-            -117.326305,
-            33.975167
-          ],
-          [
-            -117.325603,
-            33.975167
+            [
+              -117.328685,
+              33.976354
+            ],
+            [
+              -117.328563,
+              33.976353
+            ],
+            [
+              -117.328561,
+              33.976274
+            ],
+            [
+              -117.328683,
+              33.976274
+            ],
+            [
+              -117.328685,
+              33.976354
+            ]
           ]
         ],
-        "type": "LineString"
+        "type": "Polygon"
       },
-      "id": "1bfbe4b2060f092768b96d85cbf8860f"
+      "id": "1bdcc0649111f0ea7db93982bd1de5aa"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "type": "bathroom"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.327897,
+          33.971527
+        ],
+        "type": "Point"
+      },
+      "id": "1dc45a62096def5f3e485352a2d2bbb3"
     },
     {
       "type": "Feature",
@@ -743,6 +1120,119 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Olmsted Hall",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327745,
+              33.971658
+            ],
+            [
+              -117.327744,
+              33.971596
+            ],
+            [
+              -117.327771,
+              33.971595
+            ],
+            [
+              -117.327772,
+              33.971626
+            ],
+            [
+              -117.327805,
+              33.971626
+            ],
+            [
+              -117.327806,
+              33.971658
+            ],
+            [
+              -117.327745,
+              33.971658
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "1fcc5d09e2d458a8948485c39676bdf9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1337"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328382,
+              33.971281
+            ],
+            [
+              -117.328383,
+              33.971318
+            ],
+            [
+              -117.328452,
+              33.971318
+            ],
+            [
+              -117.328451,
+              33.971281
+            ],
+            [
+              -117.328382,
+              33.971281
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "209155fe86f8e95fbb86ecd7c0633912"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327906,
+              33.971473
+            ],
+            [
+              -117.327907,
+              33.971556
+            ],
+            [
+              -117.327822,
+              33.971557
+            ],
+            [
+              -117.327821,
+              33.971473
+            ],
+            [
+              -117.327906,
+              33.971473
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "21e64d6d070c721392f0d56e88628f04"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "room": "1224"
       },
@@ -774,6 +1264,76 @@
         "type": "Polygon"
       },
       "id": "22b64642bcd94d7def4ea3f0f06a4d5f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1322"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.3283,
+              33.971237
+            ],
+            [
+              -117.3283,
+              33.9712
+            ],
+            [
+              -117.328268,
+              33.9712
+            ],
+            [
+              -117.328269,
+              33.971237
+            ],
+            [
+              -117.3283,
+              33.971237
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "22ea0592a6a17bedcb2cee476cc1b7d6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.32833,
+              33.97128
+            ],
+            [
+              -117.328304,
+              33.971281
+            ],
+            [
+              -117.328305,
+              33.971318
+            ],
+            [
+              -117.328331,
+              33.971318
+            ],
+            [
+              -117.32833,
+              33.97128
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "236e110d3cb01f95f349a480840b2c77"
     },
     {
       "type": "Feature",
@@ -839,6 +1399,91 @@
         "type": "Point"
       },
       "id": "25682a7245fceadfa0a2043b972fe93a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1132"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327558,
+              33.971559
+            ],
+            [
+              -117.327491,
+              33.971559
+            ],
+            [
+              -117.32749,
+              33.971474
+            ],
+            [
+              -117.327557,
+              33.971473
+            ],
+            [
+              -117.327558,
+              33.971559
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "263bb3966ccc6777710838c18fc31a65"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "type": "bathroom"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.327866,
+          33.976151
+        ],
+        "type": "Point"
+      },
+      "id": "28200868e76a7e324b54468fdd026936"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326357,
+              33.972985
+            ],
+            [
+              -117.326356,
+              33.972951
+            ],
+            [
+              -117.326303,
+              33.972951
+            ],
+            [
+              -117.326304,
+              33.972985
+            ],
+            [
+              -117.326357,
+              33.972985
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "28988c922fb153bcac3e83a6301e4ce0"
     },
     {
       "type": "Feature",
@@ -909,6 +1554,41 @@
         "type": "Polygon"
       },
       "id": "29c2ab9a8b8a402512b00c68c083017c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1310"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326736,
+              33.972662
+            ],
+            [
+              -117.326734,
+              33.972628
+            ],
+            [
+              -117.326704,
+              33.972628
+            ],
+            [
+              -117.326706,
+              33.972662
+            ],
+            [
+              -117.326736,
+              33.972662
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "29fe2e3d1b82737341084f8134bf237e"
     },
     {
       "type": "Feature",
@@ -994,6 +1674,186 @@
         "type": "Polygon"
       },
       "id": "2b9f940cda9c8071082e01c366c84c53"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1216"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326463,
+              33.973132
+            ],
+            [
+              -117.326462,
+              33.973069
+            ],
+            [
+              -117.326434,
+              33.973069
+            ],
+            [
+              -117.326435,
+              33.973132
+            ],
+            [
+              -117.326463,
+              33.973132
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "2cfa562b2c65ea0b5cd4585fc9a7539f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327744,
+              33.976157
+            ],
+            [
+              -117.327649,
+              33.976158
+            ],
+            [
+              -117.327648,
+              33.976112
+            ],
+            [
+              -117.327743,
+              33.976112
+            ],
+            [
+              -117.327744,
+              33.976157
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "2d08907eea890fbbddb9d1a38f010ce2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1311B"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326704,
+              33.97259
+            ],
+            [
+              -117.326674,
+              33.97259
+            ],
+            [
+              -117.326674,
+              33.972564
+            ],
+            [
+              -117.326704,
+              33.972564
+            ],
+            [
+              -117.326704,
+              33.97259
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "2d37a71056bf269d79d03ea876cee028"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "104"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327506,
+              33.976536
+            ],
+            [
+              -117.327384,
+              33.976535
+            ],
+            [
+              -117.327369,
+              33.976462
+            ],
+            [
+              -117.327345,
+              33.976464
+            ],
+            [
+              -117.327354,
+              33.976347
+            ],
+            [
+              -117.327344,
+              33.976348
+            ],
+            [
+              -117.327343,
+              33.976273
+            ],
+            [
+              -117.32735,
+              33.976272
+            ],
+            [
+              -117.32735,
+              33.97628
+            ],
+            [
+              -117.327373,
+              33.976279
+            ],
+            [
+              -117.327374,
+              33.976273
+            ],
+            [
+              -117.327528,
+              33.976273
+            ],
+            [
+              -117.32753,
+              33.976469
+            ],
+            [
+              -117.32752,
+              33.976467
+            ],
+            [
+              -117.327506,
+              33.976536
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "2e42e0eb866a8491c80bea55ef9bd894"
     },
     {
       "type": "Feature",
@@ -1100,6 +1960,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Winston Chung Hall",
+        "room": "134"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326277,
+              33.975135
+            ],
+            [
+              -117.326165,
+              33.975135
+            ],
+            [
+              -117.326164,
+              33.975107
+            ],
+            [
+              -117.326277,
+              33.975106
+            ],
+            [
+              -117.326277,
+              33.975135
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "30f17475dfe69f3d8180f54fa35f41e8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "CHASS Interdisciplinary South",
         "room": "1132"
       },
@@ -1177,24 +2072,24 @@
         "coordinates": [
           [
             [
-              -117.325923,
-              33.975481
+              -117.32594,
+              33.975458
             ],
             [
-              -117.325821,
-              33.975481
+              -117.325833,
+              33.975458
             ],
             [
-              -117.325819,
-              33.975411
+              -117.325832,
+              33.975365
             ],
             [
-              -117.325922,
-              33.975411
+              -117.32594,
+              33.975365
             ],
             [
-              -117.325923,
-              33.975481
+              -117.32594,
+              33.975458
             ]
           ]
         ],
@@ -1345,6 +2240,71 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Spieth Hall",
+        "room": "1117"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326544,
+              33.972856
+            ],
+            [
+              -117.326463,
+              33.972856
+            ],
+            [
+              -117.326463,
+              33.972886
+            ],
+            [
+              -117.326544,
+              33.972885
+            ],
+            [
+              -117.326544,
+              33.972856
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "3cd686eb5a77eed17b23756190c7af2e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "type": "elevator"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.326449,
+          33.972983
+        ],
+        "type": "Point"
+      },
+      "id": "3d35130b5a9572a4ee3414599a017bad"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.327372,
+          33.971499
+        ],
+        "type": "Point"
+      },
+      "id": "3d48ae52d88029d40b4fb5489c15b96e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "type": "stairs"
       },
@@ -1356,6 +2316,41 @@
         "type": "Point"
       },
       "id": "3dab4de46260422555471936300007fe"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328738,
+              33.971316
+            ],
+            [
+              -117.328737,
+              33.971278
+            ],
+            [
+              -117.328766,
+              33.971279
+            ],
+            [
+              -117.328767,
+              33.971316
+            ],
+            [
+              -117.328738,
+              33.971316
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "3db003333a8d2600fade9a08e5e5eabe"
     },
     {
       "type": "Feature",
@@ -1372,14 +2367,14 @@
             ],
             [
               -117.326059,
-              33.975482
+              33.975457
             ],
             [
-              -117.325924,
-              33.975482
+              -117.325941,
+              33.975458
             ],
             [
-              -117.325925,
+              -117.325941,
               33.975553
             ],
             [
@@ -1406,8 +2401,8 @@
               33.972811
             ],
             [
-              -117.329526,
-              33.972812
+              -117.329525,
+              33.97281
             ],
             [
               -117.329525,
@@ -1426,6 +2421,21 @@
         "type": "Polygon"
       },
       "id": "3eef306554b5bbb0f7c2e617708a0db1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "type": "elevator"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.327864,
+          33.971538
+        ],
+        "type": "Point"
+      },
+      "id": "3ef89e236d90ab35c1e2082d394fa3b2"
     },
     {
       "type": "Feature",
@@ -1496,6 +2506,91 @@
         "type": "Polygon"
       },
       "id": "405900946958d342152f80c093dbc7e2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328809,
+              33.971316
+            ],
+            [
+              -117.328808,
+              33.971268
+            ],
+            [
+              -117.328767,
+              33.971268
+            ],
+            [
+              -117.328768,
+              33.971316
+            ],
+            [
+              -117.328809,
+              33.971316
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "40e2964d91b470115ca9212cefa7aba1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "type": "bathroom"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.326479,
+          33.972615
+        ],
+        "type": "Point"
+      },
+      "id": "415aab41f545f5b6585e36c1e49eaa5c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Winston Chung Hall",
+        "room": "142"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326126,
+              33.975019
+            ],
+            [
+              -117.326126,
+              33.975135
+            ],
+            [
+              -117.32602,
+              33.975135
+            ],
+            [
+              -117.326019,
+              33.975019
+            ],
+            [
+              -117.326126,
+              33.975019
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "41ec9b7438651fbabce549ade12a16f7"
     },
     {
       "type": "Feature",
@@ -1669,6 +2764,45 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Winston Chung Hall",
+        "room": "138"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325668,
+              33.975344
+            ],
+            [
+              -117.325502,
+              33.975344
+            ],
+            [
+              -117.325502,
+              33.975225
+            ],
+            [
+              -117.325532,
+              33.97518
+            ],
+            [
+              -117.325665,
+              33.97518
+            ],
+            [
+              -117.325668,
+              33.975344
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "44e8e33162346ad3d18d0e0dee527c3a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Costo Hall",
         "room": "110"
       },
@@ -1704,6 +2838,76 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Olmsted Hall",
+        "room": "1423"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328856,
+              33.971107
+            ],
+            [
+              -117.328856,
+              33.971139
+            ],
+            [
+              -117.328915,
+              33.971139
+            ],
+            [
+              -117.328914,
+              33.971108
+            ],
+            [
+              -117.328856,
+              33.971107
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "47062d115349769fb7fd407a3abc96ed"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1438"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328782,
+              33.971044
+            ],
+            [
+              -117.328735,
+              33.971044
+            ],
+            [
+              -117.328736,
+              33.971068
+            ],
+            [
+              -117.328782,
+              33.971068
+            ],
+            [
+              -117.328782,
+              33.971044
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "47a0f9fad49d12a1f432f54f1cb9f43b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "room": "undefined"
       },
@@ -1735,6 +2939,56 @@
         "type": "Polygon"
       },
       "id": "4802943bee2e964508dff136d73f52ae"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.32732,
+          33.976176
+        ],
+        "type": "Point"
+      },
+      "id": "48208bf3af6784ad2acf8b3da5fd4ec5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1349"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328697,
+              33.971316
+            ],
+            [
+              -117.328659,
+              33.971316
+            ],
+            [
+              -117.328658,
+              33.97128
+            ],
+            [
+              -117.328696,
+              33.97128
+            ],
+            [
+              -117.328697,
+              33.971316
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "485d0b1db19d8ac49f13ca7fd7d9792e"
     },
     {
       "type": "Feature",
@@ -1809,6 +3063,21 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Materials Science and Engineering",
+        "type": "elevator"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.327561,
+          33.976374
+        ],
+        "type": "Point"
+      },
+      "id": "490110b2481e0d3babcfdc7da397c89b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Sproul Hall",
         "room": "undefined"
       },
@@ -1816,30 +3085,65 @@
         "coordinates": [
           [
             [
-              -117.329672,
-              33.973017
+              -117.329673,
+              33.972997
             ],
             [
-              -117.32969,
-              33.973017
+              -117.329693,
+              33.972997
             ],
             [
-              -117.329691,
-              33.973063
+              -117.329692,
+              33.973049
             ],
             [
-              -117.329672,
-              33.973063
+              -117.329673,
+              33.973049
             ],
             [
-              -117.329672,
-              33.973017
+              -117.329673,
+              33.972997
             ]
           ]
         ],
         "type": "Polygon"
       },
       "id": "49b4856b7a14e8bc0ec2d62200ddcb7c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1356"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326083,
+              33.972661
+            ],
+            [
+              -117.326142,
+              33.972661
+            ],
+            [
+              -117.326141,
+              33.972629
+            ],
+            [
+              -117.326083,
+              33.972629
+            ],
+            [
+              -117.326083,
+              33.972661
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "4a1bd99a4e29f2d613e53e2cba0b94fb"
     },
     {
       "type": "Feature",
@@ -1901,24 +3205,24 @@
         "coordinates": [
           [
             [
-              -117.325974,
-              33.975255
-            ],
-            [
-              -117.325837,
+              -117.325997,
               33.975254
             ],
             [
-              -117.325835,
+              -117.325864,
+              33.975254
+            ],
+            [
+              -117.325863,
               33.975167
             ],
             [
-              -117.325972,
+              -117.325996,
               33.975167
             ],
             [
-              -117.325974,
-              33.975255
+              -117.325997,
+              33.975254
             ]
           ]
         ],
@@ -1940,6 +3244,41 @@
         "type": "Point"
       },
       "id": "4bfb74be997f7d7081e50ff747f3c2c2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328019,
+              33.97128
+            ],
+            [
+              -117.328188,
+              33.97128
+            ],
+            [
+              -117.328186,
+              33.971199
+            ],
+            [
+              -117.328017,
+              33.971199
+            ],
+            [
+              -117.328019,
+              33.97128
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "4c9e080c3f849bb76fd40e1d939982a6"
     },
     {
       "type": "Feature",
@@ -1990,6 +3329,56 @@
         "type": "Polygon"
       },
       "id": "4d554131bb7f8487927bdcd4bc31c39a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "type": "elevator"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.32823,
+          33.976278
+        ],
+        "type": "Point"
+      },
+      "id": "4da2dc99fa2f0c0db8cd19ad11271083"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1125"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326545,
+              33.972856
+            ],
+            [
+              -117.326463,
+              33.972855
+            ],
+            [
+              -117.326461,
+              33.97275
+            ],
+            [
+              -117.326544,
+              33.97275
+            ],
+            [
+              -117.326545,
+              33.972856
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "4e3d932922aaf793ae24d9341c812066"
     },
     {
       "type": "Feature",
@@ -2064,6 +3453,111 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Winston Chung Hall",
+        "room": "139"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325951,
+              33.975135
+            ],
+            [
+              -117.325949,
+              33.97502
+            ],
+            [
+              -117.325882,
+              33.97502
+            ],
+            [
+              -117.325883,
+              33.975135
+            ],
+            [
+              -117.325951,
+              33.975135
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "4e807b442c5bf9dee553205402c9771f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1431"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.32882,
+              33.971106
+            ],
+            [
+              -117.32882,
+              33.971069
+            ],
+            [
+              -117.328914,
+              33.97107
+            ],
+            [
+              -117.328914,
+              33.971107
+            ],
+            [
+              -117.32882,
+              33.971106
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "4e8d9b4c05b05ca0b9a3eab2d980e9e8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "room": 103
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327546,
+              33.976199
+            ],
+            [
+              -117.327545,
+              33.976112
+            ],
+            [
+              -117.32737,
+              33.976112
+            ],
+            [
+              -117.327372,
+              33.976199
+            ],
+            [
+              -117.327546,
+              33.976199
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "4f0c94eca76be0ed4a9027d171458cae"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Skye Hall",
         "room": "171"
       },
@@ -2098,21 +3592,38 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1238"
+      },
       "geometry": {
         "coordinates": [
           [
-            -117.326331,
-            33.975347
-          ],
-          [
-            -117.325629,
-            33.975346
+            [
+              -117.326169,
+              33.973131
+            ],
+            [
+              -117.326169,
+              33.973068
+            ],
+            [
+              -117.326065,
+              33.973067
+            ],
+            [
+              -117.326066,
+              33.97313
+            ],
+            [
+              -117.326169,
+              33.973131
+            ]
           ]
         ],
-        "type": "LineString"
+        "type": "Polygon"
       },
-      "id": "512bba152c899a55cdee3b5f3d24a19d"
+      "id": "509c6eb715cb1d12850ad9d7dd5cc389"
     },
     {
       "type": "Feature",
@@ -2183,30 +3694,45 @@
         "coordinates": [
           [
             [
-              -117.325732,
-              33.975505
+              -117.325736,
+              33.975495
             ],
             [
-              -117.325732,
-              33.975491
-            ],
-            [
-              -117.325696,
-              33.975491
+              -117.325736,
+              33.975476
             ],
             [
               -117.325696,
-              33.975505
+              33.975476
             ],
             [
-              -117.325732,
-              33.975505
+              -117.325696,
+              33.975494
+            ],
+            [
+              -117.325736,
+              33.975495
             ]
           ]
         ],
         "type": "Polygon"
       },
       "id": "52dd9596e228c81c4bddee972baff500"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.326503,
+          33.972729
+        ],
+        "type": "Point"
+      },
+      "id": "52e741e3c5be8fcc1036ef7e60e2283f"
     },
     {
       "type": "Feature",
@@ -2242,6 +3768,41 @@
         "type": "Polygon"
       },
       "id": "54af318e205158710cd69d4dafee4c4f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1343"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328581,
+              33.971318
+            ],
+            [
+              -117.32858,
+              33.97128
+            ],
+            [
+              -117.328533,
+              33.97128
+            ],
+            [
+              -117.328533,
+              33.971317
+            ],
+            [
+              -117.328581,
+              33.971318
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "55ad6932c7a85e250ff38aad71807daa"
     },
     {
       "type": "Feature",
@@ -2323,23 +3884,23 @@
         "coordinates": [
           [
             [
-              -117.325838,
+              -117.325864,
               33.975346
             ],
             [
-              -117.325813,
+              -117.325832,
               33.975346
             ],
             [
-              -117.325811,
-              33.975266
+              -117.325833,
+              33.975263
             ],
             [
-              -117.325835,
-              33.975267
+              -117.325863,
+              33.975263
             ],
             [
-              -117.325838,
+              -117.325864,
               33.975346
             ]
           ]
@@ -2358,38 +3919,73 @@
         "coordinates": [
           [
             [
-              -117.329737,
-              33.973063
+              -117.32974,
+              33.97305
             ],
             [
-              -117.329738,
-              33.973013
+              -117.329741,
+              33.972992
             ],
             [
-              -117.329732,
-              33.97301
+              -117.329735,
+              33.972989
             ],
             [
-              -117.329699,
-              33.97301
+              -117.329702,
+              33.972989
             ],
             [
-              -117.329691,
-              33.973015
+              -117.329694,
+              33.972994
             ],
             [
-              -117.329691,
-              33.973063
+              -117.329693,
+              33.973049
             ],
             [
-              -117.329737,
-              33.973063
+              -117.32974,
+              33.97305
             ]
           ]
         ],
         "type": "Polygon"
       },
       "id": "56f4ebd65c249097503bae29ea311649"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1246"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326065,
+              33.97313
+            ],
+            [
+              -117.326031,
+              33.97313
+            ],
+            [
+              -117.32603,
+              33.973067
+            ],
+            [
+              -117.326064,
+              33.973067
+            ],
+            [
+              -117.326065,
+              33.97313
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "57a3cc8641c8b7f114d0bd491e46f450"
     },
     {
       "type": "Feature",
@@ -2464,6 +4060,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "151"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.32797,
+              33.976199
+            ],
+            [
+              -117.327905,
+              33.976199
+            ],
+            [
+              -117.327905,
+              33.976125
+            ],
+            [
+              -117.327969,
+              33.976125
+            ],
+            [
+              -117.32797,
+              33.976199
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "5a93cd75ff5ad719a1e8d689f567f8b0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "room": "undefined"
       },
@@ -2495,6 +4126,41 @@
         "type": "Polygon"
       },
       "id": "5aa736ffe830e2a9b6d2e25027b7ff30"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327336,
+              33.976168
+            ],
+            [
+              -117.327335,
+              33.976112
+            ],
+            [
+              -117.327305,
+              33.976112
+            ],
+            [
+              -117.327305,
+              33.976168
+            ],
+            [
+              -117.327336,
+              33.976168
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "5aad961f8b7a1943c443603e2deb1e36"
     },
     {
       "type": "Feature",
@@ -2569,6 +4235,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Spieth Hall",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326506,
+              33.972628
+            ],
+            [
+              -117.326455,
+              33.972628
+            ],
+            [
+              -117.326454,
+              33.972607
+            ],
+            [
+              -117.326505,
+              33.972607
+            ],
+            [
+              -117.326506,
+              33.972628
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "5cf17163f2702ad719adafeb80adf1f5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Skye Hall",
         "room": "170"
       },
@@ -2604,6 +4305,76 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Olmsted Hall",
+        "room": "1413"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328836,
+              33.971158
+            ],
+            [
+              -117.328819,
+              33.971158
+            ],
+            [
+              -117.328819,
+              33.971198
+            ],
+            [
+              -117.328837,
+              33.971198
+            ],
+            [
+              -117.328836,
+              33.971158
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "5d6dc681e5501f2b6e31f6f5406c5bb3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "113"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327649,
+              33.976199
+            ],
+            [
+              -117.327648,
+              33.976112
+            ],
+            [
+              -117.327545,
+              33.976112
+            ],
+            [
+              -117.327547,
+              33.976199
+            ],
+            [
+              -117.327649,
+              33.976199
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "5e012bc2328413273dc210fd801729e6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Bourns Hall",
         "room": "A125"
       },
@@ -2635,6 +4406,76 @@
         "type": "Polygon"
       },
       "id": "5e7945c8e4aad0b87b7282a62b84ef0e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326556,
+              33.972605
+            ],
+            [
+              -117.326505,
+              33.972606
+            ],
+            [
+              -117.326505,
+              33.972589
+            ],
+            [
+              -117.326556,
+              33.972589
+            ],
+            [
+              -117.326556,
+              33.972605
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "607ae00bafaff326b204541e119d272e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326557,
+              33.972628
+            ],
+            [
+              -117.326525,
+              33.972628
+            ],
+            [
+              -117.326524,
+              33.972606
+            ],
+            [
+              -117.326556,
+              33.972606
+            ],
+            [
+              -117.326557,
+              33.972628
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "6291e7b6858bf0209870e7549ba928c4"
     },
     {
       "type": "Feature",
@@ -2682,6 +4523,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Olmsted Hall",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328698,
+              33.97128
+            ],
+            [
+              -117.328699,
+              33.971316
+            ],
+            [
+              -117.328721,
+              33.971316
+            ],
+            [
+              -117.328721,
+              33.97128
+            ],
+            [
+              -117.328698,
+              33.97128
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "62da6773a117b27b53ccdfcbc670996c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Sproul Hall",
         "room": "undefined"
       },
@@ -2693,12 +4569,12 @@
               33.97265
             ],
             [
-              -117.329666,
-              33.972603
+              -117.329665,
+              33.972604
             ],
             [
               -117.329592,
-              33.972603
+              33.972604
             ],
             [
               -117.329592,
@@ -2717,6 +4593,111 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Spieth Hall",
+        "room": "1364"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325956,
+              33.972629
+            ],
+            [
+              -117.325957,
+              33.972661
+            ],
+            [
+              -117.326015,
+              33.972661
+            ],
+            [
+              -117.326015,
+              33.972629
+            ],
+            [
+              -117.325956,
+              33.972629
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "63c78c1f0bbd14eadf6efc935a6644a1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1363"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326081,
+              33.972593
+            ],
+            [
+              -117.325954,
+              33.972594
+            ],
+            [
+              -117.325952,
+              33.972533
+            ],
+            [
+              -117.32608,
+              33.972533
+            ],
+            [
+              -117.326081,
+              33.972593
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "6542f922eb2148ea81ad41915fbdd83f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Winston Chung Hall",
+        "room": "143"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326277,
+              33.975106
+            ],
+            [
+              -117.326126,
+              33.975106
+            ],
+            [
+              -117.326126,
+              33.975019
+            ],
+            [
+              -117.326276,
+              33.97502
+            ],
+            [
+              -117.326277,
+              33.975106
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "66ddd1dc59d6264d1b43b3f98f2496a2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Winston Chung Hall",
         "room": "132"
       },
@@ -2724,11 +4705,11 @@
         "coordinates": [
           [
             [
-              -117.326159,
+              -117.326167,
               33.975346
             ],
             [
-              -117.326301,
+              -117.3263,
               33.975346
             ],
             [
@@ -2736,11 +4717,11 @@
               33.975255
             ],
             [
-              -117.326157,
+              -117.326166,
               33.975255
             ],
             [
-              -117.326159,
+              -117.326167,
               33.975346
             ]
           ]
@@ -2752,17 +4733,200 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Olmsted Hall",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327892,
+              33.971595
+            ],
+            [
+              -117.327892,
+              33.971658
+            ],
+            [
+              -117.32786,
+              33.971658
+            ],
+            [
+              -117.32786,
+              33.971621
+            ],
+            [
+              -117.327847,
+              33.97162
+            ],
+            [
+              -117.327847,
+              33.971595
+            ],
+            [
+              -117.327892,
+              33.971595
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "674ff16418446af80734736f41eac563"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Winston Chung Hall",
         "type": "stairs"
       },
       "geometry": {
         "coordinates": [
-          -117.326273,
-          33.975371
+          -117.326264,
+          33.975378
         ],
         "type": "Point"
       },
       "id": "67df6c5d6a15a4f85a4d74cb8bbe02e9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328872,
+              33.971195
+            ],
+            [
+              -117.328871,
+              33.971158
+            ],
+            [
+              -117.328837,
+              33.971157
+            ],
+            [
+              -117.328838,
+              33.971195
+            ],
+            [
+              -117.328872,
+              33.971195
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "67e86df7dbe5a944716e3e765fac520b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1336"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.32846,
+              33.971237
+            ],
+            [
+              -117.328459,
+              33.9712
+            ],
+            [
+              -117.328422,
+              33.9712
+            ],
+            [
+              -117.328423,
+              33.971237
+            ],
+            [
+              -117.32846,
+              33.971237
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "680085b57fb6b1d6b240036686745ac7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327744,
+              33.976199
+            ],
+            [
+              -117.327699,
+              33.976199
+            ],
+            [
+              -117.327698,
+              33.976158
+            ],
+            [
+              -117.327744,
+              33.976158
+            ],
+            [
+              -117.327744,
+              33.976199
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "6887ec9c1493228d3aaa276bd0e701e6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "150"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327908,
+              33.976351
+            ],
+            [
+              -117.327906,
+              33.976273
+            ],
+            [
+              -117.327975,
+              33.976274
+            ],
+            [
+              -117.327976,
+              33.976351
+            ],
+            [
+              -117.327908,
+              33.976351
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "68bb4c4ae0c53b4c589118174ab750f7"
     },
     {
       "type": "Feature",
@@ -2977,6 +5141,76 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Olmsted Hall",
+        "room": "1340"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328539,
+              33.971237
+            ],
+            [
+              -117.328537,
+              33.9712
+            ],
+            [
+              -117.3285,
+              33.9712
+            ],
+            [
+              -117.328501,
+              33.971237
+            ],
+            [
+              -117.328539,
+              33.971237
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "6cd9af27e97258ab1ec51956ac19030a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "159"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328282,
+              33.9762
+            ],
+            [
+              -117.328281,
+              33.976128
+            ],
+            [
+              -117.328131,
+              33.976127
+            ],
+            [
+              -117.328131,
+              33.976199
+            ],
+            [
+              -117.328282,
+              33.9762
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "6d0a3b78264b83682e1692496b9eaaa7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "room": "1307"
       },
@@ -3012,6 +5246,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Spieth Hall",
+        "room": "1311A"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326674,
+              33.97259
+            ],
+            [
+              -117.326673,
+              33.972564
+            ],
+            [
+              -117.326644,
+              33.972564
+            ],
+            [
+              -117.326645,
+              33.97259
+            ],
+            [
+              -117.326674,
+              33.97259
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "6e3600b1a3630c53e22a1e6aec9450fb"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Costo Hall",
         "type": "stairs"
       },
@@ -3023,6 +5292,56 @@
         "type": "Point"
       },
       "id": "6e861463e635269d33ccded7c7e01b71"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1212A"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326545,
+              33.973133
+            ],
+            [
+              -117.326463,
+              33.973133
+            ],
+            [
+              -117.326463,
+              33.973101
+            ],
+            [
+              -117.326545,
+              33.973101
+            ],
+            [
+              -117.326545,
+              33.973133
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "6eb044017a63bf503de8624d256f3fa2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "type": "elevator"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.326629,
+          33.97264
+        ],
+        "type": "Point"
+      },
+      "id": "6eda2d0d6174cd82a4eb79e985561e45"
     },
     {
       "type": "Feature",
@@ -3058,6 +5377,41 @@
         "type": "Polygon"
       },
       "id": "6fe073c63e758222303ca5d5a0a6fd9e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "166"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328311,
+              33.976353
+            ],
+            [
+              -117.32831,
+              33.976312
+            ],
+            [
+              -117.328278,
+              33.976312
+            ],
+            [
+              -117.328279,
+              33.976352
+            ],
+            [
+              -117.328311,
+              33.976353
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "7084d1a2ee3292be9cd00fb6b4ad06f1"
     },
     {
       "type": "Feature",
@@ -3101,6 +5455,91 @@
         "type": "Polygon"
       },
       "id": "728b9af908b8e299c7ca7454b4fe7fb8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "type": "bathroom"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.326504,
+          33.972972
+        ],
+        "type": "Point"
+      },
+      "id": "72b0c8b7216dafd7199cfaad11611a8b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1422"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328783,
+              33.971144
+            ],
+            [
+              -117.328736,
+              33.971144
+            ],
+            [
+              -117.328735,
+              33.97112
+            ],
+            [
+              -117.328783,
+              33.97112
+            ],
+            [
+              -117.328783,
+              33.971144
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "72b5555c4ccdb1908a8c582ead564128"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1239"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326155,
+              33.973019
+            ],
+            [
+              -117.326065,
+              33.973019
+            ],
+            [
+              -117.326064,
+              33.972952
+            ],
+            [
+              -117.326154,
+              33.972952
+            ],
+            [
+              -117.326155,
+              33.973019
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "738fece8ac8da99615707882f6cfa8a6"
     },
     {
       "type": "Feature",
@@ -3210,6 +5649,76 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Spieth Hall",
+        "room": "1233"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326238,
+              33.973019
+            ],
+            [
+              -117.326198,
+              33.973019
+            ],
+            [
+              -117.326197,
+              33.972951
+            ],
+            [
+              -117.326237,
+              33.972951
+            ],
+            [
+              -117.326238,
+              33.973019
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "754802a9564855beb60ef2ddf7ddfeb1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1136"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327389,
+              33.971474
+            ],
+            [
+              -117.32739,
+              33.97156
+            ],
+            [
+              -117.32749,
+              33.971559
+            ],
+            [
+              -117.327489,
+              33.971474
+            ],
+            [
+              -117.327389,
+              33.971474
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "75484b411ad19061ad2649c24460d0f8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Winston Chung Hall",
         "room": "129"
       },
@@ -3217,23 +5726,23 @@
         "coordinates": [
           [
             [
-              -117.326119,
+              -117.326132,
               33.975346
             ],
             [
-              -117.325977,
+              -117.325999,
               33.975346
             ],
             [
-              -117.325975,
-              33.975255
+              -117.325998,
+              33.975254
             ],
             [
-              -117.326117,
-              33.975255
+              -117.32613,
+              33.975254
             ],
             [
-              -117.326119,
+              -117.326132,
               33.975346
             ]
           ]
@@ -3280,6 +5789,76 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Spieth Hall",
+        "room": "1222"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326407,
+              33.973132
+            ],
+            [
+              -117.326405,
+              33.973069
+            ],
+            [
+              -117.326351,
+              33.973068
+            ],
+            [
+              -117.326352,
+              33.973132
+            ],
+            [
+              -117.326407,
+              33.973132
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "77af1907cbf30c56ba8896b62cc6a6ac"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1307"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326819,
+              33.972589
+            ],
+            [
+              -117.326704,
+              33.97259
+            ],
+            [
+              -117.326703,
+              33.972533
+            ],
+            [
+              -117.326817,
+              33.972533
+            ],
+            [
+              -117.326819,
+              33.972589
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "784ae89cb48638fdfb47352df6f87879"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "room": "undefined"
       },
@@ -3311,6 +5890,106 @@
         "type": "Polygon"
       },
       "id": "78ddb56847d327e2df06da0e7605db6f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "type": "bathroom"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.327832,
+          33.971528
+        ],
+        "type": "Point"
+      },
+      "id": "78f71e3c6cf88dd79fbed210d2468fb2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1430"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328783,
+              33.971093
+            ],
+            [
+              -117.328735,
+              33.971093
+            ],
+            [
+              -117.328735,
+              33.971069
+            ],
+            [
+              -117.328783,
+              33.971069
+            ],
+            [
+              -117.328783,
+              33.971093
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "797981a47ac11083f9ae0c7658015cc0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1257"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325933,
+              33.973019
+            ],
+            [
+              -117.325931,
+              33.972953
+            ],
+            [
+              -117.325897,
+              33.972953
+            ],
+            [
+              -117.325898,
+              33.973019
+            ],
+            [
+              -117.325933,
+              33.973019
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "79b5ed384574bfa7f7f35c30c0d75033"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.328705,
+          33.976288
+        ],
+        "type": "Point"
+      },
+      "id": "79cc400d5a4f1623fa9bba8eb6beae4f"
     },
     {
       "type": "Feature",
@@ -3372,24 +6051,24 @@
         "coordinates": [
           [
             [
-              -117.329796,
-              33.9726
+              -117.329795,
+              33.972605
             ],
             [
               -117.329796,
               33.972649
             ],
             [
-              -117.329863,
+              -117.329866,
               33.972649
             ],
             [
-              -117.329862,
-              33.9726
+              -117.329865,
+              33.972604
             ],
             [
-              -117.329796,
-              33.9726
+              -117.329795,
+              33.972605
             ]
           ]
         ],
@@ -3407,24 +6086,24 @@
         "coordinates": [
           [
             [
-              -117.325836,
-              33.975253
+              -117.325863,
+              33.975251
             ],
             [
-              -117.325809,
-              33.975254
+              -117.325833,
+              33.975251
             ],
             [
-              -117.325809,
-              33.975244
+              -117.325833,
+              33.975241
             ],
             [
-              -117.325836,
-              33.975244
+              -117.325863,
+              33.975241
             ],
             [
-              -117.325836,
-              33.975253
+              -117.325863,
+              33.975251
             ]
           ]
         ],
@@ -3570,6 +6249,76 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Spieth Hall",
+        "room": "1118"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.32661,
+              33.972876
+            ],
+            [
+              -117.326691,
+              33.972877
+            ],
+            [
+              -117.326691,
+              33.972828
+            ],
+            [
+              -117.326609,
+              33.972827
+            ],
+            [
+              -117.32661,
+              33.972876
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "8023bbafcfa8c137809d5068929b367e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1127"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327635,
+              33.971658
+            ],
+            [
+              -117.327561,
+              33.971658
+            ],
+            [
+              -117.32756,
+              33.971596
+            ],
+            [
+              -117.327635,
+              33.971596
+            ],
+            [
+              -117.327635,
+              33.971658
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "818bfa399e77649456403fab74d35263"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "room": "undefined"
       },
@@ -3675,6 +6424,76 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Olmsted Hall",
+        "room": "1345"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.32862,
+              33.971317
+            ],
+            [
+              -117.328619,
+              33.97128
+            ],
+            [
+              -117.328581,
+              33.97128
+            ],
+            [
+              -117.328582,
+              33.971317
+            ],
+            [
+              -117.32862,
+              33.971317
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "8537a977d95ca8edde2558d4dfadec07"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.32643,
+              33.972985
+            ],
+            [
+              -117.326357,
+              33.972985
+            ],
+            [
+              -117.326357,
+              33.972951
+            ],
+            [
+              -117.32643,
+              33.972951
+            ],
+            [
+              -117.32643,
+              33.972985
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "85feff7d4ea0e0e230f3b4eb99ec976c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Sproul Hall",
         "type": "stairs"
       },
@@ -3686,6 +6505,41 @@
         "type": "Point"
       },
       "id": "863f86d0ea6f9f5cc14c9bd81a9ed237"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "172"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328562,
+              33.976353
+            ],
+            [
+              -117.32856,
+              33.976274
+            ],
+            [
+              -117.328437,
+              33.976274
+            ],
+            [
+              -117.328438,
+              33.976353
+            ],
+            [
+              -117.328562,
+              33.976353
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "865ef85b8b767b74e81429d9000dd56e"
     },
     {
       "type": "Feature",
@@ -3740,6 +6594,91 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Olmsted Hall",
+        "room": "1428"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328735,
+              33.971119
+            ],
+            [
+              -117.328783,
+              33.971119
+            ],
+            [
+              -117.328783,
+              33.971094
+            ],
+            [
+              -117.328735,
+              33.971094
+            ],
+            [
+              -117.328735,
+              33.971119
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "886ed0a4cf006e4f6a6579a8e05a3b9e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1352"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326246,
+              33.972662
+            ],
+            [
+              -117.326244,
+              33.972629
+            ],
+            [
+              -117.326197,
+              33.972629
+            ],
+            [
+              -117.326197,
+              33.972662
+            ],
+            [
+              -117.326246,
+              33.972662
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "89cc5786a54fdd996caa7ba2876047ed"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "type": "elevator"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.328343,
+          33.97129
+        ],
+        "type": "Point"
+      },
+      "id": "8a51c9d5428aedb6c34f69e488f95b07"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Sproul Hall",
         "room": "1209"
       },
@@ -3775,6 +6714,73 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "116"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327718,
+              33.976531
+            ],
+            [
+              -117.327599,
+              33.976529
+            ],
+            [
+              -117.327587,
+              33.976467
+            ],
+            [
+              -117.327575,
+              33.976468
+            ],
+            [
+              -117.327573,
+              33.976273
+            ],
+            [
+              -117.327704,
+              33.976273
+            ],
+            [
+              -117.327704,
+              33.97628
+            ],
+            [
+              -117.327724,
+              33.976279
+            ],
+            [
+              -117.327724,
+              33.976273
+            ],
+            [
+              -117.327745,
+              33.976273
+            ],
+            [
+              -117.327751,
+              33.976465
+            ],
+            [
+              -117.327733,
+              33.976464
+            ],
+            [
+              -117.327718,
+              33.976531
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "8b3a8b92d13f5861d078e3948fb717e1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Winston Chung Hall",
         "room": 117
       },
@@ -3791,10 +6797,10 @@
             ],
             [
               -117.325855,
-              33.975635
+              33.975636
             ],
             [
-              -117.325854,
+              -117.325855,
               33.975623
             ],
             [
@@ -3856,24 +6862,24 @@
         "coordinates": [
           [
             [
-              -117.326148,
-              33.97544
+              -117.326146,
+              33.975396
             ],
             [
-              -117.326112,
-              33.975439
+              -117.326111,
+              33.975395
             ],
             [
-              -117.326112,
-              33.975413
+              -117.326111,
+              33.975365
             ],
             [
-              -117.326137,
-              33.975413
+              -117.326136,
+              33.975365
             ],
             [
-              -117.326148,
-              33.97544
+              -117.326146,
+              33.975396
             ]
           ]
         ],
@@ -3891,23 +6897,23 @@
         "coordinates": [
           [
             [
-              -117.325976,
+              -117.325998,
               33.975346
             ],
             [
-              -117.325839,
-              33.975346
+              -117.325864,
+              33.975345
             ],
             [
-              -117.325837,
+              -117.325864,
               33.975255
             ],
             [
-              -117.325974,
+              -117.325997,
               33.975254
             ],
             [
-              -117.325976,
+              -117.325998,
               33.975346
             ]
           ]
@@ -3961,24 +6967,24 @@
         "coordinates": [
           [
             [
-              -117.325823,
-              33.975243
+              -117.325847,
+              33.975241
             ],
             [
-              -117.325823,
-              33.975231
+              -117.325847,
+              33.975229
             ],
             [
-              -117.325809,
-              33.975231
+              -117.325833,
+              33.975229
             ],
             [
-              -117.325809,
-              33.975243
+              -117.325833,
+              33.975241
             ],
             [
-              -117.325823,
-              33.975243
+              -117.325847,
+              33.975241
             ]
           ]
         ],
@@ -4035,6 +7041,76 @@
         "type": "Polygon"
       },
       "id": "8ff7a48aeab42dea7b3945b9aa73d1e0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1440"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328782,
+              33.971019
+            ],
+            [
+              -117.328735,
+              33.971018
+            ],
+            [
+              -117.328735,
+              33.971043
+            ],
+            [
+              -117.328783,
+              33.971043
+            ],
+            [
+              -117.328782,
+              33.971019
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "904ab07f8dc20bf63a804c70c8094521"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327907,
+              33.976368
+            ],
+            [
+              -117.327834,
+              33.976367
+            ],
+            [
+              -117.327832,
+              33.976294
+            ],
+            [
+              -117.327906,
+              33.976295
+            ],
+            [
+              -117.327907,
+              33.976368
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "9133ff6eb372dfb7c94115bdc864ffef"
     },
     {
       "type": "Feature",
@@ -4125,30 +7201,65 @@
       "type": "Feature",
       "properties": {
         "building": "Winston Chung Hall",
+        "room": "137"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325783,
+              33.975167
+            ],
+            [
+              -117.325784,
+              33.975255
+            ],
+            [
+              -117.325668,
+              33.975255
+            ],
+            [
+              -117.325666,
+              33.975167
+            ],
+            [
+              -117.325783,
+              33.975167
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "941b3a8a5d747913e124972edc845904"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Winston Chung Hall",
         "room": "149"
       },
       "geometry": {
         "coordinates": [
           [
             [
-              -117.325823,
-              33.975231
+              -117.325847,
+              33.975228
             ],
             [
-              -117.325809,
-              33.975231
+              -117.325833,
+              33.975228
             ],
             [
-              -117.325808,
-              33.975214
+              -117.325832,
+              33.975211
             ],
             [
-              -117.325823,
-              33.975214
+              -117.325847,
+              33.975211
             ],
             [
-              -117.325823,
-              33.975231
+              -117.325847,
+              33.975228
             ]
           ]
         ],
@@ -4194,6 +7305,21 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Materials Science and Engineering",
+        "type": "elevator"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.327842,
+          33.976176
+        ],
+        "type": "Point"
+      },
+      "id": "962e4d17c17c1d76789a573d103433dc"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Winston Chung Hall",
         "room": "135"
       },
@@ -4201,24 +7327,24 @@
         "coordinates": [
           [
             [
-              -117.326117,
-              33.975255
+              -117.326131,
+              33.975253
             ],
             [
-              -117.325975,
+              -117.325998,
               33.975254
             ],
             [
-              -117.325973,
+              -117.325997,
               33.975167
             ],
             [
-              -117.326115,
+              -117.32613,
               33.975167
             ],
             [
-              -117.326117,
-              33.975255
+              -117.326131,
+              33.975253
             ]
           ]
         ],
@@ -4275,6 +7401,41 @@
         "type": "Polygon"
       },
       "id": "98337e36fe32ee3cd68e39ac45cd5c7f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1113"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327859,
+              33.971658
+            ],
+            [
+              -117.327859,
+              33.971621
+            ],
+            [
+              -117.327805,
+              33.971621
+            ],
+            [
+              -117.327806,
+              33.971658
+            ],
+            [
+              -117.327859,
+              33.971658
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "98883f485fb7aa375fc9d80b80535997"
     },
     {
       "type": "Feature",
@@ -4380,6 +7541,21 @@
         "type": "Polygon"
       },
       "id": "9a2b741c432a25f30992d36682c9ef24"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "type": "bathroom"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.327869,
+          33.976301
+        ],
+        "type": "Point"
+      },
+      "id": "9bbc00dfa3ef1f8e58649af166993516"
     },
     {
       "type": "Feature",
@@ -4519,6 +7695,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Olmsted Hall",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327712,
+              33.971658
+            ],
+            [
+              -117.327743,
+              33.971658
+            ],
+            [
+              -117.327743,
+              33.971618
+            ],
+            [
+              -117.327712,
+              33.971618
+            ],
+            [
+              -117.327712,
+              33.971658
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "a0b38714b01d083d8f75e524f85cc6dd"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "room": "1225"
       },
@@ -4639,6 +7850,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Winston Chung Hall",
+        "room": "141"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326019,
+              33.975135
+            ],
+            [
+              -117.326018,
+              33.975019
+            ],
+            [
+              -117.32595,
+              33.97502
+            ],
+            [
+              -117.325951,
+              33.975135
+            ],
+            [
+              -117.326019,
+              33.975135
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "a27d0973db03747f6f1f5fb48ab730f7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Highlander Union Building",
         "room": "undefined"
       },
@@ -4725,6 +7971,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Spieth Hall",
+        "room": "1348"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326358,
+              33.972629
+            ],
+            [
+              -117.326246,
+              33.972629
+            ],
+            [
+              -117.326247,
+              33.972661
+            ],
+            [
+              -117.32636,
+              33.972661
+            ],
+            [
+              -117.326358,
+              33.972629
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "a4602ed5384c1957a240dcbc481e2e33"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "room": "1340"
       },
@@ -4756,6 +8037,76 @@
         "type": "Polygon"
       },
       "id": "a588918e7807bd4cb2815b8f6eb8a2bf"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326545,
+              33.97302
+            ],
+            [
+              -117.326463,
+              33.97302
+            ],
+            [
+              -117.326462,
+              33.97295
+            ],
+            [
+              -117.326544,
+              33.97295
+            ],
+            [
+              -117.326545,
+              33.97302
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "a59c67a4a4c58497227600907288b776"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1212"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326644,
+              33.972663
+            ],
+            [
+              -117.326643,
+              33.972628
+            ],
+            [
+              -117.326704,
+              33.972628
+            ],
+            [
+              -117.326705,
+              33.972662
+            ],
+            [
+              -117.326644,
+              33.972663
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "a62a46ad70382080eb7f11e3c7b604b1"
     },
     {
       "type": "Feature",
@@ -4795,6 +8146,76 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Olmsted Hall",
+        "room": "1341"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328532,
+              33.97128
+            ],
+            [
+              -117.328532,
+              33.971318
+            ],
+            [
+              -117.328481,
+              33.971318
+            ],
+            [
+              -117.32848,
+              33.97128
+            ],
+            [
+              -117.328532,
+              33.97128
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "a64da10182c0181e844a75ce6ccfeb1b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1324"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328333,
+              33.971237
+            ],
+            [
+              -117.328332,
+              33.9712
+            ],
+            [
+              -117.328301,
+              33.9712
+            ],
+            [
+              -117.328301,
+              33.971237
+            ],
+            [
+              -117.328333,
+              33.971237
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "a7585a9fbbc22be6c47307fdab2d6e6e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Sproul Hall",
         "room": "1206"
       },
@@ -4810,12 +8231,12 @@
               33.972673
             ],
             [
-              -117.329522,
+              -117.329525,
               33.972603
             ],
             [
               -117.329591,
-              33.972603
+              33.972604
             ],
             [
               -117.329592,
@@ -4826,6 +8247,76 @@
         "type": "Polygon"
       },
       "id": "a82748ca116714d7aa24d12f0e3c4c20"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1108"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327821,
+              33.971557
+            ],
+            [
+              -117.327754,
+              33.971557
+            ],
+            [
+              -117.327753,
+              33.971473
+            ],
+            [
+              -117.32782,
+              33.971473
+            ],
+            [
+              -117.327821,
+              33.971557
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "a8789db3d8c946af785caa0b63f1f132"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1229"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326239,
+              33.973019
+            ],
+            [
+              -117.326304,
+              33.97302
+            ],
+            [
+              -117.326303,
+              33.972951
+            ],
+            [
+              -117.326238,
+              33.972951
+            ],
+            [
+              -117.326239,
+              33.973019
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "a897dd022b0960ee0ae2237d00937c63"
     },
     {
       "type": "Feature",
@@ -4923,6 +8414,56 @@
         "type": "Polygon"
       },
       "id": "a9cd906855b49ed9bf0a976e31d07796"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1126"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327559,
+              33.971558
+            ],
+            [
+              -117.327558,
+              33.971474
+            ],
+            [
+              -117.327616,
+              33.971473
+            ],
+            [
+              -117.327617,
+              33.971558
+            ],
+            [
+              -117.327559,
+              33.971558
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "a9da754f9be57d709619a1aa13a7c21b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.325929,
+          33.972586
+        ],
+        "type": "Point"
+      },
+      "id": "aa93fb1eeddc2d8504bdb8de0951c158"
     },
     {
       "type": "Feature",
@@ -5102,6 +8643,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Olmsted Hall",
+        "room": "1116"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327753,
+              33.971557
+            ],
+            [
+              -117.327686,
+              33.971558
+            ],
+            [
+              -117.327685,
+              33.971473
+            ],
+            [
+              -117.327752,
+              33.971473
+            ],
+            [
+              -117.327753,
+              33.971557
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "ae546c35475e1d9e26a635fa30943433"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Sproul Hall",
         "room": "1228"
       },
@@ -5138,6 +8714,76 @@
       "type": "Feature",
       "properties": {
         "building": "Winston Chung Hall",
+        "room": "125"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325786,
+              33.975344
+            ],
+            [
+              -117.325669,
+              33.975343
+            ],
+            [
+              -117.325668,
+              33.975256
+            ],
+            [
+              -117.325784,
+              33.975255
+            ],
+            [
+              -117.325786,
+              33.975344
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "b1c9dc91c780117e97a2c1b48b98d867"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1342"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328578,
+              33.971237
+            ],
+            [
+              -117.328577,
+              33.971199
+            ],
+            [
+              -117.328539,
+              33.9712
+            ],
+            [
+              -117.32854,
+              33.971237
+            ],
+            [
+              -117.328578,
+              33.971237
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "b3dd7a4ef336a61080752eb3544a5586"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Winston Chung Hall",
         "room": 133
       },
       "geometry": {
@@ -5148,16 +8794,16 @@
               33.975254
             ],
             [
-              -117.326299,
+              -117.326296,
               33.975167
             ],
             [
-              -117.326156,
+              -117.326165,
               33.975167
             ],
             [
-              -117.326157,
-              33.975255
+              -117.326166,
+              33.975254
             ],
             [
               -117.326299,
@@ -5207,6 +8853,126 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Olmsted Hall",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.327899,
+          33.971217
+        ],
+        "type": "Point"
+      },
+      "id": "b5eb7a42f8a36510a05ccda84fa9fe6d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1321"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326505,
+              33.972606
+            ],
+            [
+              -117.326454,
+              33.972606
+            ],
+            [
+              -117.326454,
+              33.972586
+            ],
+            [
+              -117.326504,
+              33.972586
+            ],
+            [
+              -117.326505,
+              33.972606
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "b6175e0889bd2cfcc4fd2378ad3511ba"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1133"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.32756,
+              33.971658
+            ],
+            [
+              -117.327559,
+              33.971596
+            ],
+            [
+              -117.327492,
+              33.971596
+            ],
+            [
+              -117.327493,
+              33.971659
+            ],
+            [
+              -117.32756,
+              33.971658
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "b678af820865da4c8bddfbd76daab825"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1212"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327943,
+              33.971208
+            ],
+            [
+              -117.327855,
+              33.971208
+            ],
+            [
+              -117.327855,
+              33.971091
+            ],
+            [
+              -117.327942,
+              33.971091
+            ],
+            [
+              -117.327943,
+              33.971208
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "b6fb86c07f589b50307d40aae1eedf96"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Bourns Hall",
         "room": "B166"
       },
@@ -5250,6 +9016,119 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "162"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328247,
+              33.976352
+            ],
+            [
+              -117.328246,
+              33.976294
+            ],
+            [
+              -117.328167,
+              33.976294
+            ],
+            [
+              -117.328168,
+              33.976352
+            ],
+            [
+              -117.328247,
+              33.976352
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "b7325ca322ef3bd5cd5175dac79009e4"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1122"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326608,
+              33.972722
+            ],
+            [
+              -117.32669,
+              33.972722
+            ],
+            [
+              -117.326691,
+              33.972827
+            ],
+            [
+              -117.326609,
+              33.972827
+            ],
+            [
+              -117.326608,
+              33.972722
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "b7919cff58bb444d92fc4baa1ccc64d3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1437"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.32882,
+              33.971068
+            ],
+            [
+              -117.328915,
+              33.971069
+            ],
+            [
+              -117.328915,
+              33.971018
+            ],
+            [
+              -117.328838,
+              33.971018
+            ],
+            [
+              -117.328838,
+              33.971057
+            ],
+            [
+              -117.32882,
+              33.971057
+            ],
+            [
+              -117.32882,
+              33.971068
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "b7d91bbbea457db139f1299956f99b20"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Bourns Hall",
         "room": "B121C"
       },
@@ -5285,6 +9164,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Olmsted Hall",
+        "room": "1344"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328617,
+              33.971237
+            ],
+            [
+              -117.328616,
+              33.9712
+            ],
+            [
+              -117.328579,
+              33.971199
+            ],
+            [
+              -117.328579,
+              33.971237
+            ],
+            [
+              -117.328617,
+              33.971237
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "b92bd8697557ec027d9c91eae5bdb386"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "room": "1213"
       },
@@ -5316,6 +9230,76 @@
         "type": "Polygon"
       },
       "id": "b96c14ef7de152e4f99fa2950d7888d2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1110"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326691,
+              33.972951
+            ],
+            [
+              -117.32661,
+              33.972951
+            ],
+            [
+              -117.32661,
+              33.972876
+            ],
+            [
+              -117.326691,
+              33.972877
+            ],
+            [
+              -117.326691,
+              33.972951
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "b9862bd36c33cea875a740d6a6fc9bf2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327673,
+              33.976199
+            ],
+            [
+              -117.327673,
+              33.976158
+            ],
+            [
+              -117.327649,
+              33.976158
+            ],
+            [
+              -117.327649,
+              33.976199
+            ],
+            [
+              -117.327673,
+              33.976199
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "b9e7aaa9c7e153c732c0ca9c65807e90"
     },
     {
       "type": "Feature",
@@ -5425,6 +9409,76 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Spieth Hall",
+        "room": "1251"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326064,
+              33.973019
+            ],
+            [
+              -117.325933,
+              33.973018
+            ],
+            [
+              -117.325932,
+              33.972953
+            ],
+            [
+              -117.326063,
+              33.972953
+            ],
+            [
+              -117.326064,
+              33.973019
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "bd654e0de861976ea957512ffff7a4e9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1212"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326545,
+              33.973069
+            ],
+            [
+              -117.326462,
+              33.973069
+            ],
+            [
+              -117.326463,
+              33.9731
+            ],
+            [
+              -117.326545,
+              33.973101
+            ],
+            [
+              -117.326545,
+              33.973069
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "bd668dbe1391f3e3174365563b264d5c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Winston Chung Hall",
         "room": "105"
       },
@@ -5441,27 +9495,27 @@
             ],
             [
               -117.32606,
-              33.975481
+              33.975457
             ],
             [
               -117.326074,
-              33.975481
+              33.975457
             ],
             [
               -117.326074,
-              33.975412
+              33.975365
             ],
             [
-              -117.326111,
-              33.975413
+              -117.32611,
+              33.975365
             ],
             [
-              -117.326111,
-              33.975482
+              -117.32611,
+              33.975457
             ],
             [
-              -117.326162,
-              33.975482
+              -117.326163,
+              33.975457
             ],
             [
               -117.32618,
@@ -5519,6 +9573,21 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Spieth Hall",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.326902,
+          33.972583
+        ],
+        "type": "Point"
+      },
+      "id": "c07908c644c7a1e1b376b1d7b3c1dc84"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Highlander Union Building",
         "room": "Fraternity/Sorority Involvement Center"
       },
@@ -5550,6 +9619,76 @@
         "type": "Polygon"
       },
       "id": "c0d4645f8563de39dd694ad904b48e79"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327698,
+              33.976199
+            ],
+            [
+              -117.327697,
+              33.976158
+            ],
+            [
+              -117.327674,
+              33.976158
+            ],
+            [
+              -117.327674,
+              33.976199
+            ],
+            [
+              -117.327698,
+              33.976199
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "c1fe3c1b131642bc071ed17ce703fd87"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1361"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326082,
+              33.972593
+            ],
+            [
+              -117.326119,
+              33.972593
+            ],
+            [
+              -117.326119,
+              33.972533
+            ],
+            [
+              -117.326081,
+              33.972533
+            ],
+            [
+              -117.326082,
+              33.972593
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "c2a12bcdfe4ecb8b90d87587a005effb"
     },
     {
       "type": "Feature",
@@ -5733,6 +9872,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "164"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328279,
+              33.976352
+            ],
+            [
+              -117.328278,
+              33.976312
+            ],
+            [
+              -117.328247,
+              33.976312
+            ],
+            [
+              -117.328248,
+              33.976352
+            ],
+            [
+              -117.328279,
+              33.976352
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "c6b57e864b2e882aa6e1c6e38668af5c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "type": "water"
       },
@@ -5818,6 +9992,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Spieth Hall",
+        "room": "1349"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.32636,
+              33.972593
+            ],
+            [
+              -117.326281,
+              33.972592
+            ],
+            [
+              -117.326279,
+              33.972533
+            ],
+            [
+              -117.326358,
+              33.972533
+            ],
+            [
+              -117.32636,
+              33.972593
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "c8658bf579b0df966b0ddffc84f9a550"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Bourns Hall",
         "type": "bathroom"
       },
@@ -5829,6 +10038,21 @@
         "type": "Point"
       },
       "id": "c92dab5bdb32cef497af50c02e7edd9f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "type": "bathroom"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.32838,
+          33.97121
+        ],
+        "type": "Point"
+      },
+      "id": "c944ab22d21aa2a300d597b49b4fdc63"
     },
     {
       "type": "Feature",
@@ -5864,6 +10088,41 @@
         "type": "Polygon"
       },
       "id": "cb3cb5a2c09111659defc1cac801c6a0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328872,
+              33.971195
+            ],
+            [
+              -117.328915,
+              33.971195
+            ],
+            [
+              -117.328915,
+              33.97114
+            ],
+            [
+              -117.328871,
+              33.97114
+            ],
+            [
+              -117.328872,
+              33.971195
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "cb586aeaeb551b10c5ea35f59ad478a3"
     },
     {
       "type": "Feature",
@@ -5973,6 +10232,111 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327904,
+              33.976108
+            ],
+            [
+              -117.327831,
+              33.976108
+            ],
+            [
+              -117.327832,
+              33.976177
+            ],
+            [
+              -117.327905,
+              33.976177
+            ],
+            [
+              -117.327904,
+              33.976108
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "ccee4416a44589f87ce5c403803e94e7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1303"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326882,
+              33.972589
+            ],
+            [
+              -117.326881,
+              33.972533
+            ],
+            [
+              -117.326818,
+              33.972533
+            ],
+            [
+              -117.326819,
+              33.972589
+            ],
+            [
+              -117.326882,
+              33.972589
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "cd36c2f4b5c071f9e50e0830de8e2c1d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "158"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328167,
+              33.976352
+            ],
+            [
+              -117.328166,
+              33.976274
+            ],
+            [
+              -117.328135,
+              33.976274
+            ],
+            [
+              -117.328136,
+              33.976351
+            ],
+            [
+              -117.328167,
+              33.976352
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "cd4ad8693e12e54e0aa2fb2e8542fd18"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "type": "stairs"
       },
@@ -6031,37 +10395,317 @@
           [
             [
               -117.325787,
-              33.975505
+              33.975495
             ],
             [
-              -117.325733,
-              33.975505
+              -117.325737,
+              33.975495
             ],
             [
-              -117.325732,
-              33.97549
+              -117.325737,
+              33.975475
             ],
             [
-              -117.325697,
-              33.97549
+              -117.325696,
+              33.975476
             ],
             [
               -117.325695,
-              33.97541
+              33.975365
             ],
             [
-              -117.325784,
-              33.97541
+              -117.325786,
+              33.975365
             ],
             [
               -117.325787,
-              33.975505
+              33.975495
             ]
           ]
         ],
         "type": "Polygon"
       },
       "id": "cf293cc6ba85c4d15351bdd929e9206b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1354"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326142,
+              33.972662
+            ],
+            [
+              -117.326142,
+              33.972629
+            ],
+            [
+              -117.326196,
+              33.972629
+            ],
+            [
+              -117.326196,
+              33.972662
+            ],
+            [
+              -117.326142,
+              33.972662
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "cf3273fc92573bf7bc9ce75f942f23d5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1236"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326242,
+              33.973131
+            ],
+            [
+              -117.32617,
+              33.973131
+            ],
+            [
+              -117.326169,
+              33.973068
+            ],
+            [
+              -117.326241,
+              33.973068
+            ],
+            [
+              -117.326242,
+              33.973131
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "cfdd04600ccb07b8a113a22851684665"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1311D"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326673,
+              33.972534
+            ],
+            [
+              -117.326673,
+              33.972556
+            ],
+            [
+              -117.326644,
+              33.972556
+            ],
+            [
+              -117.326643,
+              33.972534
+            ],
+            [
+              -117.326673,
+              33.972534
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "d10b926ca86f9e7bda30304bed16fadf"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1311"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326644,
+              33.97259
+            ],
+            [
+              -117.326615,
+              33.97259
+            ],
+            [
+              -117.326613,
+              33.972534
+            ],
+            [
+              -117.326643,
+              33.972534
+            ],
+            [
+              -117.326644,
+              33.97259
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "d1409fb0e4abdbcc9bfd0deeeb50c5e3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1359"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.32612,
+              33.972593
+            ],
+            [
+              -117.32628,
+              33.972592
+            ],
+            [
+              -117.326278,
+              33.972533
+            ],
+            [
+              -117.326119,
+              33.972534
+            ],
+            [
+              -117.32612,
+              33.972593
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "d14a305d9fe858892a3c43d930ce0728"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1226"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.32635,
+              33.973068
+            ],
+            [
+              -117.326242,
+              33.973068
+            ],
+            [
+              -117.326243,
+              33.973131
+            ],
+            [
+              -117.326351,
+              33.973132
+            ],
+            [
+              -117.32635,
+              33.973068
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "d1653feb151d203a259b84bbbd7f22fe"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "169"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328433,
+              33.9762
+            ],
+            [
+              -117.328283,
+              33.9762
+            ],
+            [
+              -117.328282,
+              33.976128
+            ],
+            [
+              -117.328432,
+              33.976129
+            ],
+            [
+              -117.328433,
+              33.9762
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "d1a200e03e321283c420c5fcba2517be"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1338"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328499,
+              33.971237
+            ],
+            [
+              -117.328498,
+              33.9712
+            ],
+            [
+              -117.32846,
+              33.9712
+            ],
+            [
+              -117.328461,
+              33.971237
+            ],
+            [
+              -117.328499,
+              33.971237
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "d1fbfa4ce599d5614a96178854351970"
     },
     {
       "type": "Feature",
@@ -6213,30 +10857,45 @@
         "coordinates": [
           [
             [
-              -117.329782,
-              33.973063
+              -117.329785,
+              33.97305
             ],
             [
-              -117.329782,
-              33.973013
+              -117.329784,
+              33.97299
             ],
             [
-              -117.329739,
-              33.973013
+              -117.329741,
+              33.97299
             ],
             [
-              -117.329739,
-              33.973063
+              -117.329741,
+              33.973049
             ],
             [
-              -117.329782,
-              33.973063
+              -117.329785,
+              33.97305
             ]
           ]
         ],
         "type": "Polygon"
       },
       "id": "d512303e9dbd86927d8efdc5f5139bc8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.327924,
+          33.97163
+        ],
+        "type": "Point"
+      },
+      "id": "d652103dcfe02058d6bff15e8ea7e855"
     },
     {
       "type": "Feature",
@@ -6292,6 +10951,56 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Winston Chung Hall",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.3258,
+          33.975083
+        ],
+        "type": "Point"
+      },
+      "id": "d699094b3ac8b5c77e374a8f0a8200a4"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1217"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326431,
+              33.97302
+            ],
+            [
+              -117.326305,
+              33.97302
+            ],
+            [
+              -117.326304,
+              33.972985
+            ],
+            [
+              -117.326431,
+              33.972986
+            ],
+            [
+              -117.326431,
+              33.97302
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "d6c19c595e04b8ca013c4eebee890c74"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "room": "1221"
       },
@@ -6323,6 +11032,41 @@
         "type": "Polygon"
       },
       "id": "d6d03d43447929cbd959a4200570d152"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1122"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327685,
+              33.971558
+            ],
+            [
+              -117.327618,
+              33.971558
+            ],
+            [
+              -117.327617,
+              33.971473
+            ],
+            [
+              -117.327684,
+              33.971473
+            ],
+            [
+              -117.327685,
+              33.971558
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "d7180dc80eb09f123ff0ae1bcff3c284"
     },
     {
       "type": "Feature",
@@ -6374,14 +11118,14 @@
             ],
             [
               -117.329695,
-              33.972603
+              33.972604
+            ],
+            [
+              -117.329666,
+              33.972604
             ],
             [
               -117.329667,
-              33.972603
-            ],
-            [
-              -117.329668,
               33.972649
             ],
             [
@@ -6393,6 +11137,21 @@
         "type": "Polygon"
       },
       "id": "d8247bb90c7b00103c647bf5a9c95edf"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "type": "water"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.328822,
+          33.971274
+        ],
+        "type": "Point"
+      },
+      "id": "d8448ca5e0ec60b97542eda0ffd03119"
     },
     {
       "type": "Feature",
@@ -6482,6 +11241,48 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "1362"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326082,
+              33.972629
+            ],
+            [
+              -117.326082,
+              33.972661
+            ],
+            [
+              -117.326016,
+              33.972661
+            ],
+            [
+              -117.326016,
+              33.972646
+            ],
+            [
+              -117.326055,
+              33.972646
+            ],
+            [
+              -117.326054,
+              33.972629
+            ],
+            [
+              -117.326082,
+              33.972629
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "daa9756b6551b8f660df9505162cb50f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Winston Chung Hall",
         "room": "Bytes Cafe"
       },
@@ -6489,24 +11290,24 @@
         "coordinates": [
           [
             [
-              -117.326162,
-              33.975481
+              -117.326163,
+              33.975457
             ],
             [
-              -117.326112,
-              33.975481
+              -117.326111,
+              33.975457
             ],
             [
-              -117.326112,
-              33.97544
+              -117.326111,
+              33.975396
             ],
             [
-              -117.326148,
-              33.97544
+              -117.326147,
+              33.975396
             ],
             [
-              -117.326162,
-              33.975481
+              -117.326163,
+              33.975457
             ]
           ]
         ],
@@ -6524,24 +11325,24 @@
         "coordinates": [
           [
             [
-              -117.325924,
-              33.975481
+              -117.325941,
+              33.975458
             ],
             [
               -117.326073,
-              33.975481
+              33.975457
             ],
             [
               -117.326073,
-              33.975412
+              33.975365
             ],
             [
-              -117.325923,
-              33.975411
+              -117.32594,
+              33.975365
             ],
             [
-              -117.325924,
-              33.975481
+              -117.325941,
+              33.975458
             ]
           ]
         ],
@@ -6708,6 +11509,181 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Spieth Hall",
+        "room": "1308"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326778,
+              33.972662
+            ],
+            [
+              -117.326778,
+              33.972627
+            ],
+            [
+              -117.326735,
+              33.972628
+            ],
+            [
+              -117.326736,
+              33.972662
+            ],
+            [
+              -117.326778,
+              33.972662
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "dc7292d3cdacf644842c6694ca1b97cb"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1208"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326546,
+              33.973069
+            ],
+            [
+              -117.326547,
+              33.973133
+            ],
+            [
+              -117.326647,
+              33.973133
+            ],
+            [
+              -117.326647,
+              33.973069
+            ],
+            [
+              -117.326546,
+              33.973069
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "dc9370e54fcbe98d2bb2b607a469604b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328837,
+              33.971316
+            ],
+            [
+              -117.328837,
+              33.971268
+            ],
+            [
+              -117.328809,
+              33.971268
+            ],
+            [
+              -117.32881,
+              33.971316
+            ],
+            [
+              -117.328837,
+              33.971316
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "dc995951ec8a8c13212e06a858d874bf"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1414"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328783,
+              33.971194
+            ],
+            [
+              -117.328735,
+              33.971194
+            ],
+            [
+              -117.328735,
+              33.97117
+            ],
+            [
+              -117.328783,
+              33.97117
+            ],
+            [
+              -117.328783,
+              33.971194
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "de1130b7192c1ed5ed23db9b715af291"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "168"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328437,
+              33.976353
+            ],
+            [
+              -117.328312,
+              33.976353
+            ],
+            [
+              -117.328311,
+              33.976274
+            ],
+            [
+              -117.328436,
+              33.976274
+            ],
+            [
+              -117.328437,
+              33.976353
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "de9d3b330f9a09d453ad140cfe6ec0c8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "room": "undefined"
       },
@@ -6739,6 +11715,76 @@
         "type": "Polygon"
       },
       "id": "dee77e6c80807e32f010f56dd3f0b014"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.32737,
+              33.976168
+            ],
+            [
+              -117.327369,
+              33.976112
+            ],
+            [
+              -117.327336,
+              33.976112
+            ],
+            [
+              -117.327336,
+              33.976168
+            ],
+            [
+              -117.32737,
+              33.976168
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "df54b9431700f93452d17d9ea09cfc62"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1347"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328658,
+              33.971316
+            ],
+            [
+              -117.328657,
+              33.97128
+            ],
+            [
+              -117.32862,
+              33.97128
+            ],
+            [
+              -117.32862,
+              33.971317
+            ],
+            [
+              -117.328658,
+              33.971316
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "e16cf9b54ae75fac435a8c7ec1575241"
     },
     {
       "type": "Feature",
@@ -6793,6 +11839,56 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Winston Chung Hall",
+        "type": "bathroom"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.325881,
+          33.975585
+        ],
+        "type": "Point"
+      },
+      "id": "e372f3f1317ca0d2b1f0fe20f3d79610"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1348"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328695,
+              33.971236
+            ],
+            [
+              -117.328695,
+              33.971199
+            ],
+            [
+              -117.328657,
+              33.971199
+            ],
+            [
+              -117.328658,
+              33.971237
+            ],
+            [
+              -117.328695,
+              33.971236
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "e3a9089c9d7b66e53e9edc1a905dcba4"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Sproul Hall",
         "room": "1359"
       },
@@ -6824,6 +11920,41 @@
         "type": "Polygon"
       },
       "id": "e413675be3252462a994cf9c0927ede7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1304"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326883,
+              33.972661
+            ],
+            [
+              -117.326883,
+              33.972627
+            ],
+            [
+              -117.326822,
+              33.972627
+            ],
+            [
+              -117.326823,
+              33.972661
+            ],
+            [
+              -117.326883,
+              33.972661
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "e4502a72cc035722df9ca4ef4d5c8776"
     },
     {
       "type": "Feature",
@@ -6878,8 +12009,8 @@
               33.975576
             ],
             [
-              -117.325946,
-              33.975577
+              -117.325945,
+              33.975576
             ],
             [
               -117.325947,
@@ -6933,6 +12064,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Olmsted Hall",
+        "room": "1137"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327492,
+              33.971658
+            ],
+            [
+              -117.327365,
+              33.971658
+            ],
+            [
+              -117.327364,
+              33.971597
+            ],
+            [
+              -117.327491,
+              33.971597
+            ],
+            [
+              -117.327492,
+              33.971658
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "e7a4e43b28a37e212f7d63dceef02d3d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Winston Chung Hall",
         "room": "122"
       },
@@ -6944,24 +12110,24 @@
               33.975553
             ],
             [
-              -117.325649,
-              33.975553
+              -117.325647,
+              33.975552
             ],
             [
-              -117.325647,
-              33.97541
+              -117.325644,
+              33.975364
             ],
             [
               -117.325694,
-              33.97541
+              33.975365
             ],
             [
               -117.325696,
-              33.975505
+              33.975495
             ],
             [
               -117.325787,
-              33.975506
+              33.975495
             ],
             [
               -117.325788,
@@ -7090,12 +12256,27 @@
       },
       "geometry": {
         "coordinates": [
-          -117.32968,
-          33.973023
+          -117.329683,
+          33.973017
         ],
         "type": "Point"
       },
       "id": "e9a406bc9cb64d33767b7ee41a14838e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Winston Chung Hall",
+        "type": "bathroom"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.325859,
+          33.975068
+        ],
+        "type": "Point"
+      },
+      "id": "ea02d4b923c36bb5a23f3e82eea2d02f"
     },
     {
       "type": "Feature",
@@ -7131,6 +12312,41 @@
         "type": "Polygon"
       },
       "id": "eab6fecb50b8851b19adc405d1a0021b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1339"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328479,
+              33.971281
+            ],
+            [
+              -117.328453,
+              33.971281
+            ],
+            [
+              -117.328453,
+              33.971318
+            ],
+            [
+              -117.32848,
+              33.971318
+            ],
+            [
+              -117.328479,
+              33.971281
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "ec094900f87221cc5da14a4633765eaa"
     },
     {
       "type": "Feature",
@@ -7205,6 +12421,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Spieth Hall",
+        "room": "1235"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326197,
+              33.973019
+            ],
+            [
+              -117.326156,
+              33.973019
+            ],
+            [
+              -117.326155,
+              33.972952
+            ],
+            [
+              -117.326197,
+              33.972951
+            ],
+            [
+              -117.326197,
+              33.973019
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "ed2ceaa77eb5809fb492dad3308ce3b8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Sproul Hall",
         "room": "1361"
       },
@@ -7245,12 +12496,47 @@
       },
       "geometry": {
         "coordinates": [
-          -117.329707,
-          33.97302
+          -117.329705,
+          33.972998
         ],
         "type": "Point"
       },
       "id": "ed855f60ecf7f61816f8eeab259b7045"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1346"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328656,
+              33.971237
+            ],
+            [
+              -117.328655,
+              33.971199
+            ],
+            [
+              -117.328618,
+              33.971199
+            ],
+            [
+              -117.328619,
+              33.971237
+            ],
+            [
+              -117.328656,
+              33.971237
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "edbc6b5ec4a268703abcba3600d8e01f"
     },
     {
       "type": "Feature",
@@ -7267,10 +12553,10 @@
             ],
             [
               -117.325818,
-              33.975653
+              33.975652
             ],
             [
-              -117.325818,
+              -117.325817,
               33.975672
             ],
             [
@@ -7286,12 +12572,12 @@
               33.975632
             ],
             [
-              -117.325746,
-              33.97561
+              -117.325745,
+              33.975609
             ],
             [
-              -117.32577,
-              33.97561
+              -117.325769,
+              33.975609
             ],
             [
               -117.32577,
@@ -7307,7 +12593,7 @@
             ],
             [
               -117.325836,
-              33.97561
+              33.975609
             ],
             [
               -117.325837,
@@ -7318,6 +12604,76 @@
         "type": "Polygon"
       },
       "id": "ee9d1d883a1d386e01fed6704f49cdf0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1418"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328783,
+              33.971169
+            ],
+            [
+              -117.328736,
+              33.971169
+            ],
+            [
+              -117.328735,
+              33.971144
+            ],
+            [
+              -117.328783,
+              33.971145
+            ],
+            [
+              -117.328783,
+              33.971169
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "eec300350f311de3f98a3cd95144b448"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1316"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328268,
+              33.97128
+            ],
+            [
+              -117.328267,
+              33.971199
+            ],
+            [
+              -117.328187,
+              33.971199
+            ],
+            [
+              -117.328188,
+              33.97128
+            ],
+            [
+              -117.328268,
+              33.97128
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "ef960912d23b78d7ef4f51df8b3f683e"
     },
     {
       "type": "Feature",
@@ -7353,6 +12709,76 @@
         "type": "Polygon"
       },
       "id": "f0b9af094ad054a49e238b0da7263267"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1123"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327711,
+              33.971658
+            ],
+            [
+              -117.32771,
+              33.971596
+            ],
+            [
+              -117.327636,
+              33.971596
+            ],
+            [
+              -117.327636,
+              33.971658
+            ],
+            [
+              -117.327711,
+              33.971658
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "f0cae8bfa9dff022ab498b708b29987c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "1208"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327854,
+              33.971468
+            ],
+            [
+              -117.327944,
+              33.971468
+            ],
+            [
+              -117.327943,
+              33.971306
+            ],
+            [
+              -117.327853,
+              33.971306
+            ],
+            [
+              -117.327854,
+              33.971468
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "f0d898b1750c720fe5ac1b86e8e4653e"
     },
     {
       "type": "Feature",
@@ -7442,6 +12868,76 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "179"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328683,
+              33.9762
+            ],
+            [
+              -117.328559,
+              33.9762
+            ],
+            [
+              -117.328558,
+              33.976128
+            ],
+            [
+              -117.328681,
+              33.976129
+            ],
+            [
+              -117.328683,
+              33.9762
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "f41af4fe320b58f5eaed3daf19c1abd6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1250"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.32603,
+              33.97313
+            ],
+            [
+              -117.326029,
+              33.973067
+            ],
+            [
+              -117.325899,
+              33.973067
+            ],
+            [
+              -117.3259,
+              33.973129
+            ],
+            [
+              -117.32603,
+              33.97313
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "f5d70fb2ca54939f61e561f2860a653d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Sproul Hall",
         "room": "undefined"
       },
@@ -7449,24 +12945,24 @@
         "coordinates": [
           [
             [
-              -117.329715,
-              33.972978
+              -117.329716,
+              33.97296
             ],
             [
-              -117.329691,
-              33.972979
+              -117.329692,
+              33.97296
             ],
             [
-              -117.329691,
-              33.972952
+              -117.329692,
+              33.97293
             ],
             [
-              -117.329715,
-              33.972952
+              -117.329716,
+              33.97293
             ],
             [
-              -117.329715,
-              33.972978
+              -117.329716,
+              33.97296
             ]
           ]
         ],
@@ -7512,6 +13008,57 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327574,
+              33.976468
+            ],
+            [
+              -117.32753,
+              33.976468
+            ],
+            [
+              -117.32753,
+              33.976426
+            ],
+            [
+              -117.327548,
+              33.976426
+            ],
+            [
+              -117.327548,
+              33.97637
+            ],
+            [
+              -117.327529,
+              33.976371
+            ],
+            [
+              -117.327528,
+              33.976305
+            ],
+            [
+              -117.327573,
+              33.976305
+            ],
+            [
+              -117.327574,
+              33.976468
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "f6daddd1dc3cf155aab22e23ee2fc592"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Winston Chung Hall",
         "type": "elevator"
       },
@@ -7527,6 +13074,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "160"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328214,
+              33.976293
+            ],
+            [
+              -117.328167,
+              33.976293
+            ],
+            [
+              -117.328166,
+              33.976274
+            ],
+            [
+              -117.328214,
+              33.976274
+            ],
+            [
+              -117.328214,
+              33.976293
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "f9b3c334f6e4bf0f3b3a36773705b6d8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Sproul Hall",
         "room": "1347"
       },
@@ -7534,24 +13116,24 @@
         "coordinates": [
           [
             [
-              -117.329823,
-              33.973062
+              -117.329825,
+              33.97305
             ],
             [
-              -117.329784,
-              33.973062
+              -117.329785,
+              33.97305
             ],
             [
-              -117.329784,
-              33.973013
+              -117.329785,
+              33.97299
             ],
             [
-              -117.329823,
-              33.973013
+              -117.329824,
+              33.97299
             ],
             [
-              -117.329823,
-              33.973062
+              -117.329825,
+              33.97305
             ]
           ]
         ],
@@ -7569,32 +13151,32 @@
         "coordinates": [
           [
             [
-              -117.329734,
-              33.973008
+              -117.329737,
+              33.972989
             ],
             [
-              -117.329671,
-              33.973008
+              -117.329673,
+              33.972989
             ],
             [
-              -117.329671,
-              33.97298
+              -117.329673,
+              33.972961
             ],
             [
-              -117.329715,
-              33.972979
+              -117.329717,
+              33.972961
             ],
             [
-              -117.329716,
-              33.972952
+              -117.329718,
+              33.97293
             ],
             [
-              -117.329733,
-              33.972952
+              -117.329737,
+              33.972929
             ],
             [
-              -117.329734,
-              33.973008
+              -117.329737,
+              33.972989
             ]
           ]
         ],
@@ -7640,6 +13222,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "154"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328135,
+              33.976351
+            ],
+            [
+              -117.328134,
+              33.976274
+            ],
+            [
+              -117.327976,
+              33.976274
+            ],
+            [
+              -117.327977,
+              33.976351
+            ],
+            [
+              -117.328135,
+              33.976351
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "fce6fe65388472a195ef551a3e4d7e2e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Winston Chung Hall",
         "room": "undefined"
       },
@@ -7651,7 +13268,7 @@
               33.975635
             ],
             [
-              -117.325856,
+              -117.325855,
               33.975635
             ],
             [
@@ -7682,23 +13299,23 @@
         "coordinates": [
           [
             [
-              -117.325924,
+              -117.32594,
               33.975553
             ],
             [
-              -117.325822,
-              33.975553
+              -117.325833,
+              33.975552
             ],
             [
-              -117.32582,
-              33.975482
+              -117.325833,
+              33.975458
             ],
             [
-              -117.325922,
-              33.975482
+              -117.32594,
+              33.975459
             ],
             [
-              -117.325924,
+              -117.32594,
               33.975553
             ]
           ]
@@ -7717,30 +13334,80 @@
         "coordinates": [
           [
             [
-              -117.325836,
-              33.975266
+              -117.325863,
+              33.975263
             ],
             [
-              -117.32581,
-              33.975266
+              -117.325832,
+              33.975262
             ],
             [
-              -117.32581,
-              33.975254
+              -117.325833,
+              33.975251
             ],
             [
-              -117.325836,
-              33.975254
+              -117.325863,
+              33.975251
             ],
             [
-              -117.325836,
-              33.975266
+              -117.325863,
+              33.975263
             ]
           ]
         ],
         "type": "Polygon"
       },
       "id": "fe24185aa54f49fd4922f3d974ca1b0d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.327804,
+          33.976088
+        ],
+        "type": "Point"
+      },
+      "id": "fe8cc8a5860f952a686e5473724c741b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Spieth Hall",
+        "room": "1218"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326434,
+              33.973133
+            ],
+            [
+              -117.326408,
+              33.973132
+            ],
+            [
+              -117.326406,
+              33.973068
+            ],
+            [
+              -117.326433,
+              33.973069
+            ],
+            [
+              -117.326434,
+              33.973133
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "fea54775676e31ec7ef3894e5b9062e6"
     },
     {
       "type": "Feature",

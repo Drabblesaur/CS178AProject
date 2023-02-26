@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Pressable } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Feather from '@expo/vector-icons/Feather'; 
 
@@ -9,6 +9,8 @@ import {
     TouchableWithoutFeedback,
     BottomSheetTextInput,
   } from '@gorhom/bottom-sheet';
+
+  import { buildingFloor } from "../screens/MapViewer.js";
 
 function HomeSheet(props){
     return(
