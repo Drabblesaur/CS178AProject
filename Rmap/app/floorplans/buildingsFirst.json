@@ -151,6 +151,76 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Life Sciences",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326647,
+              33.972429
+            ],
+            [
+              -117.326667,
+              33.972429
+            ],
+            [
+              -117.326668,
+              33.972391
+            ],
+            [
+              -117.326647,
+              33.972391
+            ],
+            [
+              -117.326647,
+              33.972429
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "03432ab6235569d1eee05d92e59361f2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Life Sciences",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326647,
+              33.97248
+            ],
+            [
+              -117.326647,
+              33.972441
+            ],
+            [
+              -117.326626,
+              33.972441
+            ],
+            [
+              -117.326626,
+              33.97248
+            ],
+            [
+              -117.326647,
+              33.97248
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "035ec1668d6014638f7576b4a918034e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Spieth Hall",
         "type": "stairs"
       },
@@ -162,6 +232,21 @@
         "type": "Point"
       },
       "id": "040e352be599ef12958154b8fedb4ba6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.325668,
+          33.974452
+        ],
+        "type": "Point"
+      },
+      "id": "0424c98a36d0c4890a02887ce5897db5"
     },
     {
       "type": "Feature",
@@ -212,6 +297,41 @@
         "type": "Point"
       },
       "id": "04e2d56ce84cd9b4995518efdb18e945"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "2133"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325378,
+              33.974828
+            ],
+            [
+              -117.325377,
+              33.974781
+            ],
+            [
+              -117.32531,
+              33.974781
+            ],
+            [
+              -117.325309,
+              33.974828
+            ],
+            [
+              -117.325378,
+              33.974828
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "05610490301f55c79d6f7c44cab111fd"
     },
     {
       "type": "Feature",
@@ -348,6 +468,41 @@
         "type": "Polygon"
       },
       "id": "0718dd96bff415312706f3bc2012f0d5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "room": "109"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330525,
+              33.97426
+            ],
+            [
+              -117.330454,
+              33.974259
+            ],
+            [
+              -117.330454,
+              33.974218
+            ],
+            [
+              -117.330525,
+              33.974218
+            ],
+            [
+              -117.330525,
+              33.97426
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "086308155c6478fee539289bb9f7ad23"
     },
     {
       "type": "Feature",
@@ -566,6 +721,21 @@
         "type": "Polygon"
       },
       "id": "0cc8c296f3818bae4d284b673acf02b3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.32491,
+          33.974437
+        ],
+        "type": "Point"
+      },
+      "id": "0da6c91b1654d86e6091bde452e94ede"
     },
     {
       "type": "Feature",
@@ -830,6 +1000,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Physics",
+        "room": "2119"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325376,
+              33.974593
+            ],
+            [
+              -117.325377,
+              33.974661
+            ],
+            [
+              -117.325309,
+              33.974661
+            ],
+            [
+              -117.32531,
+              33.974593
+            ],
+            [
+              -117.325376,
+              33.974593
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "15089122978a39edafe77a952afcc35a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Spieth Hall",
         "room": "1111"
       },
@@ -900,6 +1105,21 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Physics",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.325383,
+          33.975041
+        ],
+        "type": "Point"
+      },
+      "id": "166845ce2b0e8aa48b6baf62dd9bc15d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Winston Chung Hall",
         "room": "undefined"
       },
@@ -966,6 +1186,108 @@
         "type": "Polygon"
       },
       "id": "17fcf0c49b63eba2d2da85c3822f2792"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325057,
+              33.974365
+            ],
+            [
+              -117.325057,
+              33.974388
+            ],
+            [
+              -117.32508,
+              33.974388
+            ],
+            [
+              -117.325081,
+              33.974365
+            ],
+            [
+              -117.325057,
+              33.974365
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "18854ba4d9970900dc0d1827bc891fa2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330725,
+              33.974398
+            ],
+            [
+              -117.330693,
+              33.974397
+            ],
+            [
+              -117.330693,
+              33.974235
+            ],
+            [
+              -117.330601,
+              33.974234
+            ],
+            [
+              -117.330602,
+              33.974209
+            ],
+            [
+              -117.330606,
+              33.974184
+            ],
+            [
+              -117.330617,
+              33.974166
+            ],
+            [
+              -117.330643,
+              33.974153
+            ],
+            [
+              -117.330679,
+              33.974144
+            ],
+            [
+              -117.330715,
+              33.974143
+            ],
+            [
+              -117.330716,
+              33.974201
+            ],
+            [
+              -117.330724,
+              33.974201
+            ],
+            [
+              -117.330725,
+              33.974398
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "194be1a636603eb7679d8d6581bca8f7"
     },
     {
       "type": "Feature",
@@ -1069,6 +1391,73 @@
     },
     {
       "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326689,
+              33.972221
+            ],
+            [
+              -117.326689,
+              33.97227
+            ],
+            [
+              -117.326667,
+              33.97227
+            ],
+            [
+              -117.326667,
+              33.972221
+            ],
+            [
+              -117.326689,
+              33.972221
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "1e35ab2facf16ac738ffb939c0db03a3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Life Sciences",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326605,
+              33.97239
+            ],
+            [
+              -117.326605,
+              33.972428
+            ],
+            [
+              -117.326625,
+              33.972428
+            ],
+            [
+              -117.326625,
+              33.97239
+            ],
+            [
+              -117.326605,
+              33.97239
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "1f4e11abd7929e33bd4976f04bfcb0c5"
+    },
+    {
+      "type": "Feature",
       "properties": {
         "building": "Winston Chung Hall",
         "type": "stairs"
@@ -1120,6 +1509,76 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Student Success Center",
+        "room": "122"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330817,
+              33.974144
+            ],
+            [
+              -117.330767,
+              33.974143
+            ],
+            [
+              -117.330767,
+              33.974201
+            ],
+            [
+              -117.330817,
+              33.974201
+            ],
+            [
+              -117.330817,
+              33.974144
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "1f7820c669f9503647616a4a2eccab0a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Life Sciences",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326604,
+              33.972238
+            ],
+            [
+              -117.326635,
+              33.972238
+            ],
+            [
+              -117.326635,
+              33.97227
+            ],
+            [
+              -117.326604,
+              33.97227
+            ],
+            [
+              -117.326604,
+              33.972238
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "1f82c131a8202e9d7bc9af5bb722f0ea"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Olmsted Hall",
         "room": "undefined"
       },
@@ -1159,6 +1618,49 @@
         "type": "Polygon"
       },
       "id": "1fcc5d09e2d458a8948485c39676bdf9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Life Sciences",
+        "room": "1417"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326563,
+              33.972389
+            ],
+            [
+              -117.32649,
+              33.972389
+            ],
+            [
+              -117.326492,
+              33.972469
+            ],
+            [
+              -117.326512,
+              33.972469
+            ],
+            [
+              -117.326512,
+              33.972436
+            ],
+            [
+              -117.326563,
+              33.972435
+            ],
+            [
+              -117.326563,
+              33.972389
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "208c11f08ef16affb94170ce0d6f1bda"
     },
     {
       "type": "Feature",
@@ -1403,6 +1905,21 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Physics",
+        "type": "bathroom"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.325043,
+          33.974364
+        ],
+        "type": "Point"
+      },
+      "id": "2595212b92ab83d986ea6130e05b4b62"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Olmsted Hall",
         "room": "1132"
       },
@@ -1438,6 +1955,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Life Sciences",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326689,
+              33.97239
+            ],
+            [
+              -117.326648,
+              33.97239
+            ],
+            [
+              -117.326647,
+              33.972329
+            ],
+            [
+              -117.326689,
+              33.972329
+            ],
+            [
+              -117.326689,
+              33.97239
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "263f8732f2607b26c974d7559e054442"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Materials Science and Engineering",
         "type": "bathroom"
       },
@@ -1449,6 +2001,41 @@
         "type": "Point"
       },
       "id": "28200868e76a7e324b54468fdd026936"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "2054"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325024,
+              33.974434
+            ],
+            [
+              -117.325024,
+              33.974463
+            ],
+            [
+              -117.32498,
+              33.974463
+            ],
+            [
+              -117.32498,
+              33.974434
+            ],
+            [
+              -117.325024,
+              33.974434
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "2855020770bff45efa1e3f501b60e6cc"
     },
     {
       "type": "Feature",
@@ -1589,6 +2176,41 @@
         "type": "Polygon"
       },
       "id": "29fe2e3d1b82737341084f8134bf237e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "2007"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325639,
+              33.97439
+            ],
+            [
+              -117.325639,
+              33.974316
+            ],
+            [
+              -117.325545,
+              33.974316
+            ],
+            [
+              -117.325545,
+              33.97439
+            ],
+            [
+              -117.325639,
+              33.97439
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "2abdc91cd6497539e42981688842c6d4"
     },
     {
       "type": "Feature",
@@ -1783,6 +2405,21 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Student Success Center",
+        "type": "elevator"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.330488,
+          33.974142
+        ],
+        "type": "Point"
+      },
+      "id": "2d9270c27ec86e24e39ed736454c7790"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Materials Science and Engineering",
         "room": "104"
       },
@@ -1854,6 +2491,76 @@
         "type": "Polygon"
       },
       "id": "2e42e0eb866a8491c80bea55ef9bd894"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Life Sciences",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326636,
+              33.972238
+            ],
+            [
+              -117.326666,
+              33.972238
+            ],
+            [
+              -117.326666,
+              33.97227
+            ],
+            [
+              -117.326636,
+              33.97227
+            ],
+            [
+              -117.326636,
+              33.972238
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "2ffbb9ad751d4c0fcd687cd4cb62715a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "2153"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325379,
+              33.975032
+            ],
+            [
+              -117.325379,
+              33.974989
+            ],
+            [
+              -117.325311,
+              33.974988
+            ],
+            [
+              -117.325312,
+              33.975032
+            ],
+            [
+              -117.325379,
+              33.975032
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "2ffeca74d28d1a46639ef3ad0a1f78c5"
     },
     {
       "type": "Feature",
@@ -1960,6 +2667,21 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Life Sciences",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.326537,
+          33.972445
+        ],
+        "type": "Point"
+      },
+      "id": "302dd83eeac67b9ae2454431e2240ad2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Winston Chung Hall",
         "room": "134"
       },
@@ -1991,6 +2713,21 @@
         "type": "Polygon"
       },
       "id": "30f17475dfe69f3d8180f54fa35f41e8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.330834,
+          33.974022
+        ],
+        "type": "Point"
+      },
+      "id": "313672136a26e04f057dc8b7285a577e"
     },
     {
       "type": "Feature",
@@ -2135,6 +2872,57 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Physics",
+        "room": "2000"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.324996,
+              33.974149
+            ],
+            [
+              -117.324996,
+              33.974072
+            ],
+            [
+              -117.324966,
+              33.974071
+            ],
+            [
+              -117.324932,
+              33.974001
+            ],
+            [
+              -117.324734,
+              33.974009
+            ],
+            [
+              -117.324726,
+              33.97416
+            ],
+            [
+              -117.324935,
+              33.974198
+            ],
+            [
+              -117.32496,
+              33.974149
+            ],
+            [
+              -117.324996,
+              33.974149
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "36e4473eda2f8f358a7a5d80b554cf6a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Sproul Hall",
         "room": "1212"
       },
@@ -2166,6 +2954,41 @@
         "type": "Polygon"
       },
       "id": "37b420801f9e29e8465c081f3aa4341b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325474,
+              33.974546
+            ],
+            [
+              -117.325474,
+              33.974526
+            ],
+            [
+              -117.325444,
+              33.974526
+            ],
+            [
+              -117.325444,
+              33.974546
+            ],
+            [
+              -117.325474,
+              33.974546
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "385e73e9e608e7a5d38ec236b3b9449e"
     },
     {
       "type": "Feature",
@@ -2236,6 +3059,76 @@
         "type": "Polygon"
       },
       "id": "39a73b527dab2ed6296bac995fb5c021"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "2128"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.32554,
+              33.97475
+            ],
+            [
+              -117.32554,
+              33.974698
+            ],
+            [
+              -117.325425,
+              33.974697
+            ],
+            [
+              -117.325425,
+              33.974749
+            ],
+            [
+              -117.32554,
+              33.97475
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "3a1ef50f57a7a60d5222fea9cb3fafe2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "2004"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325639,
+              33.97451
+            ],
+            [
+              -117.325639,
+              33.974434
+            ],
+            [
+              -117.325589,
+              33.974435
+            ],
+            [
+              -117.325589,
+              33.97451
+            ],
+            [
+              -117.325639,
+              33.97451
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "3be983308dcbc1bde37c920cd0e8d136"
     },
     {
       "type": "Feature",
@@ -2440,6 +3333,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Life Sciences",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.32669,
+              33.972481
+            ],
+            [
+              -117.32669,
+              33.972442
+            ],
+            [
+              -117.326669,
+              33.972441
+            ],
+            [
+              -117.326669,
+              33.97248
+            ],
+            [
+              -117.32669,
+              33.972481
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "3f683ad7658a80d2aa2dc83cde99f0bb"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "room": "1217"
       },
@@ -2556,6 +3484,41 @@
         "type": "Point"
       },
       "id": "415aab41f545f5b6585e36c1e49eaa5c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "2118"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325424,
+              33.974592
+            ],
+            [
+              -117.32554,
+              33.974593
+            ],
+            [
+              -117.32554,
+              33.974644
+            ],
+            [
+              -117.325424,
+              33.974644
+            ],
+            [
+              -117.325424,
+              33.974592
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "41ab1fa0adce971058fdf23c7a466ab7"
     },
     {
       "type": "Feature",
@@ -2764,6 +3727,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Life Sciences",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326689,
+              33.972329
+            ],
+            [
+              -117.326648,
+              33.972329
+            ],
+            [
+              -117.326647,
+              33.972271
+            ],
+            [
+              -117.326689,
+              33.972271
+            ],
+            [
+              -117.326689,
+              33.972329
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "44274e5b3fb37affdf65d5c7072cb1f3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Winston Chung Hall",
         "room": "138"
       },
@@ -2834,6 +3832,76 @@
         "type": "Polygon"
       },
       "id": "451c3fca53ff741c2ac40fd2cda88d7d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "2028"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325363,
+              33.974434
+            ],
+            [
+              -117.325292,
+              33.974434
+            ],
+            [
+              -117.325292,
+              33.974507
+            ],
+            [
+              -117.325363,
+              33.974508
+            ],
+            [
+              -117.325363,
+              33.974434
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "467cf21393e8091592d09c41e3b89664"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "2015"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325512,
+              33.97439
+            ],
+            [
+              -117.325418,
+              33.974389
+            ],
+            [
+              -117.325417,
+              33.974315
+            ],
+            [
+              -117.325512,
+              33.974315
+            ],
+            [
+              -117.325512,
+              33.97439
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "46e6d83ff72e20ed3edb3d463774b846"
     },
     {
       "type": "Feature",
@@ -3063,6 +4131,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Physics",
+        "room": "2158"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325542,
+              33.975057
+            ],
+            [
+              -117.325542,
+              33.975005
+            ],
+            [
+              -117.325426,
+              33.975004
+            ],
+            [
+              -117.325426,
+              33.975056
+            ],
+            [
+              -117.325542,
+              33.975057
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "48e3d864c2035e72a14829520936a1a1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Materials Science and Engineering",
         "type": "elevator"
       },
@@ -3283,6 +4386,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Physics",
+        "room": "2049"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325031,
+              33.974388
+            ],
+            [
+              -117.32496,
+              33.974388
+            ],
+            [
+              -117.324959,
+              33.974316
+            ],
+            [
+              -117.32503,
+              33.974316
+            ],
+            [
+              -117.325031,
+              33.974388
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "4ccb339ff4e019d790e4ac34cabbc92a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Sproul Hall",
         "type": "bathroom"
       },
@@ -3449,6 +4587,41 @@
         "type": "Polygon"
       },
       "id": "4e62fbd27b02992e5f255454c527d9d9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "2034"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325291,
+              33.974507
+            ],
+            [
+              -117.325212,
+              33.974506
+            ],
+            [
+              -117.325212,
+              33.974434
+            ],
+            [
+              -117.325291,
+              33.974434
+            ],
+            [
+              -117.325291,
+              33.974507
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "4e78250b2129408ceb653d6d6f93e93a"
     },
     {
       "type": "Feature",
@@ -3624,6 +4797,56 @@
         "type": "Polygon"
       },
       "id": "509c6eb715cb1d12850ad9d7dd5cc389"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Life Sciences",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.326679,
+          33.972063
+        ],
+        "type": "Point"
+      },
+      "id": "5151214ac44ac5662aa8882841c911a9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Life Sciences",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326625,
+              33.972481
+            ],
+            [
+              -117.326625,
+              33.972441
+            ],
+            [
+              -117.326605,
+              33.972441
+            ],
+            [
+              -117.326605,
+              33.97248
+            ],
+            [
+              -117.326625,
+              33.972481
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "51bf7b7ae760b9cf76fee2df79ca5730"
     },
     {
       "type": "Feature",
@@ -3912,6 +5135,76 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Student Success Center",
+        "room": "112"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330677,
+              33.974086
+            ],
+            [
+              -117.330677,
+              33.973994
+            ],
+            [
+              -117.330608,
+              33.973994
+            ],
+            [
+              -117.330609,
+              33.974085
+            ],
+            [
+              -117.330677,
+              33.974086
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "5695327e4f6cf1c5fd5ae605c02a79f4"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "2033"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325144,
+              33.974388
+            ],
+            [
+              -117.325211,
+              33.974389
+            ],
+            [
+              -117.325211,
+              33.974368
+            ],
+            [
+              -117.325145,
+              33.974368
+            ],
+            [
+              -117.325144,
+              33.974388
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "56eb93e786f284ad136be0d45adb2a6f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Sproul Hall",
         "room": "undefined"
       },
@@ -3986,6 +5279,56 @@
         "type": "Polygon"
       },
       "id": "57a3cc8641c8b7f114d0bd491e46f450"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "2029"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325385,
+              33.974389
+            ],
+            [
+              -117.325384,
+              33.974315
+            ],
+            [
+              -117.325291,
+              33.974315
+            ],
+            [
+              -117.325291,
+              33.974389
+            ],
+            [
+              -117.325385,
+              33.974389
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "588ac93cdee1a21a498a9c3512d58266"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "type": "bathroom"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.325236,
+          33.974364
+        ],
+        "type": "Point"
+      },
+      "id": "58d68827f5bde65aebe07902bcf88b90"
     },
     {
       "type": "Feature",
@@ -4410,6 +5753,21 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Student Success Center",
+        "type": "bathroom"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.330478,
+          33.974281
+        ],
+        "type": "Point"
+      },
+      "id": "5fbab9d2fc46458795a9448a4d3a5f94"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Spieth Hall",
         "room": "undefined"
       },
@@ -4624,6 +5982,41 @@
         "type": "Polygon"
       },
       "id": "63c78c1f0bbd14eadf6efc935a6644a1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "2104"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325588,
+              33.974434
+            ],
+            [
+              -117.325588,
+              33.97451
+            ],
+            [
+              -117.325458,
+              33.97451
+            ],
+            [
+              -117.325458,
+              33.974435
+            ],
+            [
+              -117.325588,
+              33.974434
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "6455e601079e7d63bea895c276393e49"
     },
     {
       "type": "Feature",
@@ -4927,6 +6320,21 @@
         "type": "Polygon"
       },
       "id": "68bb4c4ae0c53b4c589118174ab750f7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.325668,
+          33.974342
+        ],
+        "type": "Point"
+      },
+      "id": "69bcc31bb8f845546f8b1a3b942df4d6"
     },
     {
       "type": "Feature",
@@ -5416,6 +6824,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Life Sciences",
+        "room": "1447"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326561,
+              33.972092
+            ],
+            [
+              -117.326482,
+              33.972093
+            ],
+            [
+              -117.326485,
+              33.972179
+            ],
+            [
+              -117.326561,
+              33.972179
+            ],
+            [
+              -117.326561,
+              33.972092
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "71b6023b09b9c65fed1b138425cb8979"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Bourns Hall",
         "room": "undefined"
       },
@@ -5859,6 +7302,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Student Success Center",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330817,
+              33.974398
+            ],
+            [
+              -117.330817,
+              33.974333
+            ],
+            [
+              -117.330727,
+              33.974333
+            ],
+            [
+              -117.330727,
+              33.974398
+            ],
+            [
+              -117.330817,
+              33.974398
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "7855fc505803bed98b4f00f4929774f0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "room": "undefined"
       },
@@ -5909,6 +7387,21 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Life Sciences",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.326586,
+          33.972066
+        ],
+        "type": "Point"
+      },
+      "id": "791dbe28c473b0409d8d888dd29c93a9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Olmsted Hall",
         "room": "1430"
       },
@@ -5940,6 +7433,41 @@
         "type": "Polygon"
       },
       "id": "797981a47ac11083f9ae0c7658015cc0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "2152"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325542,
+              33.975005
+            ],
+            [
+              -117.325426,
+              33.975004
+            ],
+            [
+              -117.325426,
+              33.974952
+            ],
+            [
+              -117.325542,
+              33.974953
+            ],
+            [
+              -117.325542,
+              33.975005
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "7982d8832ccf9c56e9c71f8cd9c0e6a9"
     },
     {
       "type": "Feature",
@@ -6005,6 +7533,41 @@
         "type": "Point"
       },
       "id": "7ac96d32a4a35a683d3a1e7e08ae4a5f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "2125"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325377,
+              33.974734
+            ],
+            [
+              -117.325309,
+              33.974733
+            ],
+            [
+              -117.325309,
+              33.974662
+            ],
+            [
+              -117.325377,
+              33.974662
+            ],
+            [
+              -117.325377,
+              33.974734
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "7ae7537a4fd0d78236fb9d497e0dd511"
     },
     {
       "type": "Feature",
@@ -6199,6 +7762,76 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Life Sciences",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326624,
+              33.972207
+            ],
+            [
+              -117.326689,
+              33.972207
+            ],
+            [
+              -117.326689,
+              33.97222
+            ],
+            [
+              -117.326625,
+              33.97222
+            ],
+            [
+              -117.326624,
+              33.972207
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "7da0a94f73486ed5283b969e8d87dcce"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "2143"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325378,
+              33.974938
+            ],
+            [
+              -117.325379,
+              33.974883
+            ],
+            [
+              -117.32531,
+              33.974883
+            ],
+            [
+              -117.32531,
+              33.974937
+            ],
+            [
+              -117.325378,
+              33.974938
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "7dce94dc4b2791d0fbc6b04a2b51f8a0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "room": "1313"
       },
@@ -6385,6 +8018,21 @@
         "type": "Polygon"
       },
       "id": "822da47b85949704269f7cfd2bbf7a9e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Life Sciences",
+        "type": "elevator"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.326612,
+          33.97221
+        ],
+        "type": "Point"
+      },
+      "id": "826d0f2f04d44a5ba1191bcd876f2e79"
     },
     {
       "type": "Feature",
@@ -6625,6 +8273,41 @@
         "type": "Polygon"
       },
       "id": "886ed0a4cf006e4f6a6579a8e05a3b9e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325024,
+              33.974464
+            ],
+            [
+              -117.325024,
+              33.974499
+            ],
+            [
+              -117.324878,
+              33.974494
+            ],
+            [
+              -117.32488,
+              33.974464
+            ],
+            [
+              -117.325024,
+              33.974464
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "88c569da76b5f3b091a21e3d6e93504e"
     },
     {
       "type": "Feature",
@@ -6924,6 +8607,38 @@
     },
     {
       "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326563,
+              33.972352
+            ],
+            [
+              -117.326525,
+              33.972352
+            ],
+            [
+              -117.326526,
+              33.972388
+            ],
+            [
+              -117.326563,
+              33.972388
+            ],
+            [
+              -117.326563,
+              33.972352
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "8d99cd49751374eb4a9fa1ade42a34a0"
+    },
+    {
+      "type": "Feature",
       "properties": {
         "building": "Watkins Hall",
         "room": "1334"
@@ -6956,6 +8671,41 @@
         "type": "Polygon"
       },
       "id": "8df392ff1148033af140a12e2038913c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325031,
+              33.974317
+            ],
+            [
+              -117.325032,
+              33.974363
+            ],
+            [
+              -117.325055,
+              33.974363
+            ],
+            [
+              -117.325055,
+              33.974317
+            ],
+            [
+              -117.325031,
+              33.974317
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "8e6ab9e001ddfd32f049ac097165a1f3"
     },
     {
       "type": "Feature",
@@ -7041,6 +8791,41 @@
         "type": "Polygon"
       },
       "id": "8ff7a48aeab42dea7b3945b9aa73d1e0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325378,
+              33.97478
+            ],
+            [
+              -117.325377,
+              33.974735
+            ],
+            [
+              -117.325309,
+              33.974735
+            ],
+            [
+              -117.32531,
+              33.974779
+            ],
+            [
+              -117.325378,
+              33.97478
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "90096d36a4286e17e1f1dfa4fc3e4a70"
     },
     {
       "type": "Feature",
@@ -7150,6 +8935,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Student Success Center",
+        "room": "114"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330746,
+              33.974086
+            ],
+            [
+              -117.330746,
+              33.973995
+            ],
+            [
+              -117.330677,
+              33.973994
+            ],
+            [
+              -117.330678,
+              33.974086
+            ],
+            [
+              -117.330746,
+              33.974086
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "916ae731ad48e3cc6208260de80ecf4c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Bourns Hall",
         "room": "B156"
       },
@@ -7231,6 +9051,41 @@
         "type": "Polygon"
       },
       "id": "941b3a8a5d747913e124972edc845904"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325417,
+              33.974389
+            ],
+            [
+              -117.325416,
+              33.974316
+            ],
+            [
+              -117.325385,
+              33.974316
+            ],
+            [
+              -117.325386,
+              33.974389
+            ],
+            [
+              -117.325417,
+              33.974389
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "944cca5748daec0c7c10ff264344b082"
     },
     {
       "type": "Feature",
@@ -7351,6 +9206,41 @@
         "type": "Polygon"
       },
       "id": "9699ab4f49c97e4e265d805ccc3b2a52"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Life Sciences",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326625,
+              33.972428
+            ],
+            [
+              -117.326646,
+              33.972429
+            ],
+            [
+              -117.326646,
+              33.97239
+            ],
+            [
+              -117.326626,
+              33.97239
+            ],
+            [
+              -117.326625,
+              33.972428
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "972e8b7d7154d49f2454f9395137b65b"
     },
     {
       "type": "Feature",
@@ -7645,6 +9535,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Physics",
+        "room": "2139"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325378,
+              33.974882
+            ],
+            [
+              -117.325378,
+              33.974829
+            ],
+            [
+              -117.32531,
+              33.974828
+            ],
+            [
+              -117.32531,
+              33.974882
+            ],
+            [
+              -117.325378,
+              33.974882
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "9f95a60ba4a671d50b104e33c7686846"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Bourns Hall",
         "room": "B160"
       },
@@ -7761,6 +9686,41 @@
         "type": "Polygon"
       },
       "id": "a0e09321c73069248efa9304cbd4703a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Life Sciences",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326668,
+              33.97248
+            ],
+            [
+              -117.326668,
+              33.972441
+            ],
+            [
+              -117.326647,
+              33.972441
+            ],
+            [
+              -117.326648,
+              33.97248
+            ],
+            [
+              -117.326668,
+              33.97248
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "a104b5cfab6fbc26393ef7edb726e9e2"
     },
     {
       "type": "Feature",
@@ -8181,6 +10141,21 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Student Success Center",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.330493,
+          33.974109
+        ],
+        "type": "Point"
+      },
+      "id": "a6b808563af80eab3dae2c33cbfbfe3f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Olmsted Hall",
         "room": "1324"
       },
@@ -8212,6 +10187,41 @@
         "type": "Polygon"
       },
       "id": "a7585a9fbbc22be6c47307fdab2d6e6e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325291,
+              33.974389
+            ],
+            [
+              -117.325259,
+              33.974389
+            ],
+            [
+              -117.325258,
+              33.974314
+            ],
+            [
+              -117.32529,
+              33.974315
+            ],
+            [
+              -117.325291,
+              33.974389
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "a7d707f80edc22cb819ac985fba39848"
     },
     {
       "type": "Feature",
@@ -8453,6 +10463,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Physics",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325474,
+              33.974591
+            ],
+            [
+              -117.325424,
+              33.974591
+            ],
+            [
+              -117.325424,
+              33.974547
+            ],
+            [
+              -117.325474,
+              33.974547
+            ],
+            [
+              -117.325474,
+              33.974591
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "aa6ec55460ee7cb5d14b84bd766c00ea"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Spieth Hall",
         "type": "stairs"
       },
@@ -8643,6 +10688,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Physics",
+        "room": "2140"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325542,
+              33.974882
+            ],
+            [
+              -117.325541,
+              33.97483
+            ],
+            [
+              -117.325426,
+              33.97483
+            ],
+            [
+              -117.325426,
+              33.974881
+            ],
+            [
+              -117.325542,
+              33.974882
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "ada8dd1f6bccdd0b113d17c3b590fb1c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Olmsted Hall",
         "room": "1116"
       },
@@ -8678,6 +10758,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Student Success Center",
+        "room": "118"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330766,
+              33.974201
+            ],
+            [
+              -117.330717,
+              33.9742
+            ],
+            [
+              -117.330716,
+              33.974143
+            ],
+            [
+              -117.330766,
+              33.974143
+            ],
+            [
+              -117.330766,
+              33.974201
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "ae71787603cf5b54408c278e8abd1139"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Sproul Hall",
         "room": "1228"
       },
@@ -8709,6 +10824,111 @@
         "type": "Polygon"
       },
       "id": "ae99b381f31cbaf08ab1ac7c22690368"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "2048"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325104,
+              33.974502
+            ],
+            [
+              -117.325104,
+              33.974434
+            ],
+            [
+              -117.325025,
+              33.974434
+            ],
+            [
+              -117.325025,
+              33.974499
+            ],
+            [
+              -117.325104,
+              33.974502
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "afe4b5d78eb9cd2e59efca18cf442b3b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Life Sciences",
+        "room": "1427A"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326524,
+              33.972259
+            ],
+            [
+              -117.326524,
+              33.972228
+            ],
+            [
+              -117.326484,
+              33.972228
+            ],
+            [
+              -117.326485,
+              33.972259
+            ],
+            [
+              -117.326524,
+              33.972259
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "b0fbf97b11bee8f3639c8507a8b2edf5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Life Sciences",
+        "room": "1427B"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326562,
+              33.972259
+            ],
+            [
+              -117.326562,
+              33.972228
+            ],
+            [
+              -117.326524,
+              33.972228
+            ],
+            [
+              -117.326525,
+              33.972259
+            ],
+            [
+              -117.326562,
+              33.972259
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "b119cd1354faa6d05961522bf29642b7"
     },
     {
       "type": "Feature",
@@ -8849,6 +11069,76 @@
         "type": "Polygon"
       },
       "id": "b4badf709d727541266891fbd447dbec"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "2132"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325541,
+              33.974802
+            ],
+            [
+              -117.32554,
+              33.97475
+            ],
+            [
+              -117.325425,
+              33.97475
+            ],
+            [
+              -117.325425,
+              33.974802
+            ],
+            [
+              -117.325541,
+              33.974802
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "b581457650d4b0fc9c51d37f7b05a800"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330817,
+              33.974265
+            ],
+            [
+              -117.330726,
+              33.974265
+            ],
+            [
+              -117.330726,
+              33.974332
+            ],
+            [
+              -117.330817,
+              33.974332
+            ],
+            [
+              -117.330817,
+              33.974265
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "b5b3f31502b9d171a03600b7bc563162"
     },
     {
       "type": "Feature",
@@ -9479,6 +11769,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Physics",
+        "room": "2042"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325211,
+              33.974506
+            ],
+            [
+              -117.325211,
+              33.974434
+            ],
+            [
+              -117.325105,
+              33.974434
+            ],
+            [
+              -117.325105,
+              33.974502
+            ],
+            [
+              -117.325211,
+              33.974506
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "be8f6790a3e5e2d43c8587a7cc08772b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Winston Chung Hall",
         "room": "105"
       },
@@ -9534,6 +11859,41 @@
         "type": "Polygon"
       },
       "id": "beccf717a6d69ee2d5f81b04c06a50c5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "room": "125"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330692,
+              33.974398
+            ],
+            [
+              -117.330692,
+              33.974344
+            ],
+            [
+              -117.330602,
+              33.974343
+            ],
+            [
+              -117.330602,
+              33.974397
+            ],
+            [
+              -117.330692,
+              33.974398
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "bee61d3ab1884cbf8080fd2e061f4e3a"
     },
     {
       "type": "Feature",
@@ -9837,6 +12197,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Student Success Center",
+        "room": "120"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330816,
+              33.974087
+            ],
+            [
+              -117.330816,
+              33.973995
+            ],
+            [
+              -117.330747,
+              33.973995
+            ],
+            [
+              -117.330748,
+              33.974086
+            ],
+            [
+              -117.330816,
+              33.974087
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "c59d6931087fe46b376d1c46a18e231d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "room": "1317"
       },
@@ -9868,6 +12263,41 @@
         "type": "Polygon"
       },
       "id": "c5a5913d5ee6e391af60a27064dcd4cc"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330817,
+              33.974264
+            ],
+            [
+              -117.330726,
+              33.974264
+            ],
+            [
+              -117.330726,
+              33.974201
+            ],
+            [
+              -117.330817,
+              33.974202
+            ],
+            [
+              -117.330817,
+              33.974264
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "c5d10baa124758af8266c1708932b11d"
     },
     {
       "type": "Feature",
@@ -9992,6 +12422,76 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Physics",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325474,
+              33.974526
+            ],
+            [
+              -117.325474,
+              33.97451
+            ],
+            [
+              -117.325455,
+              33.97451
+            ],
+            [
+              -117.325455,
+              33.974526
+            ],
+            [
+              -117.325474,
+              33.974526
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "c838a26d1a9fac63c78b7118c926e304"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Life Sciences",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326647,
+              33.97239
+            ],
+            [
+              -117.326605,
+              33.972389
+            ],
+            [
+              -117.326604,
+              33.972329
+            ],
+            [
+              -117.326646,
+              33.972329
+            ],
+            [
+              -117.326647,
+              33.97239
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "c838f73c2dace5e539ce18f6816df01d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Spieth Hall",
         "room": "1349"
       },
@@ -10053,6 +12553,76 @@
         "type": "Point"
       },
       "id": "c944ab22d21aa2a300d597b49b4fdc63"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "room": "123"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330692,
+              33.974343
+            ],
+            [
+              -117.330692,
+              33.97429
+            ],
+            [
+              -117.330602,
+              33.974289
+            ],
+            [
+              -117.330602,
+              33.974343
+            ],
+            [
+              -117.330692,
+              33.974343
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "ca9dc11dc150da16083fd012fcd6a58b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "room": "2144"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325541,
+              33.974934
+            ],
+            [
+              -117.325426,
+              33.974934
+            ],
+            [
+              -117.325426,
+              33.974882
+            ],
+            [
+              -117.325541,
+              33.974883
+            ],
+            [
+              -117.325541,
+              33.974934
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "cb306ed31a0a3fab8954f32680747b19"
     },
     {
       "type": "Feature",
@@ -10158,6 +12728,38 @@
         "type": "Polygon"
       },
       "id": "cbc58a947521f4f295576f2825e4aca0"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326525,
+              33.972388
+            ],
+            [
+              -117.326524,
+              33.972352
+            ],
+            [
+              -117.326488,
+              33.972352
+            ],
+            [
+              -117.32649,
+              33.972388
+            ],
+            [
+              -117.326525,
+              33.972388
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "cc850641cd422937242b81c46292f669"
     },
     {
       "type": "Feature",
@@ -10387,6 +12989,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Life Sciences",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326689,
+              33.972429
+            ],
+            [
+              -117.326668,
+              33.972429
+            ],
+            [
+              -117.326668,
+              33.972391
+            ],
+            [
+              -117.326689,
+              33.972391
+            ],
+            [
+              -117.326689,
+              33.972429
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "cdbe54ea36e90b79c1ff9c3eb2edf28b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Winston Chung Hall",
         "room": "124"
       },
@@ -10461,6 +13098,41 @@
         "type": "Polygon"
       },
       "id": "cf3273fc92573bf7bc9ce75f942f23d5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Life Sciences",
+        "room": "1445"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326561,
+              33.97218
+            ],
+            [
+              -117.326484,
+              33.97218
+            ],
+            [
+              -117.326485,
+              33.972197
+            ],
+            [
+              -117.326562,
+              33.972197
+            ],
+            [
+              -117.326561,
+              33.97218
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "cf5b83a080cd790b58a27a62bb6ccc05"
     },
     {
       "type": "Feature",
@@ -11614,6 +14286,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Physics",
+        "room": "2151"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325379,
+              33.97494
+            ],
+            [
+              -117.32531,
+              33.974939
+            ],
+            [
+              -117.325311,
+              33.974987
+            ],
+            [
+              -117.325379,
+              33.974987
+            ],
+            [
+              -117.325379,
+              33.97494
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "dd4cbc97b03751b471ef9918d6506855"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Olmsted Hall",
         "room": "1414"
       },
@@ -11754,6 +14461,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Physics",
+        "room": "2055"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.324958,
+              33.974317
+            ],
+            [
+              -117.324959,
+              33.974388
+            ],
+            [
+              -117.324888,
+              33.974388
+            ],
+            [
+              -117.324887,
+              33.974316
+            ],
+            [
+              -117.324958,
+              33.974317
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "e12501e843ae7141f81a4b4a7d8915f2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Olmsted Hall",
         "room": "1347"
       },
@@ -11820,6 +14562,41 @@
         "type": "Polygon"
       },
       "id": "e2b042a9b1154b92a354cd5e6650ca5b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "room": "121"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330693,
+              33.974289
+            ],
+            [
+              -117.330693,
+              33.974235
+            ],
+            [
+              -117.330602,
+              33.974234
+            ],
+            [
+              -117.330602,
+              33.974288
+            ],
+            [
+              -117.330693,
+              33.974289
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "e2cea6b787b1909982400f09014e4742"
     },
     {
       "type": "Feature",
@@ -12251,6 +15028,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Physics",
+        "room": "2111"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325376,
+              33.974509
+            ],
+            [
+              -117.325311,
+              33.974509
+            ],
+            [
+              -117.325311,
+              33.974591
+            ],
+            [
+              -117.325377,
+              33.974591
+            ],
+            [
+              -117.325376,
+              33.974509
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "e96486d942f141992d3e854696982558"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Sproul Hall",
         "type": "water"
       },
@@ -12421,6 +15233,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Physics",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325545,
+              33.974389
+            ],
+            [
+              -117.325544,
+              33.974316
+            ],
+            [
+              -117.325513,
+              33.974316
+            ],
+            [
+              -117.325513,
+              33.974389
+            ],
+            [
+              -117.325545,
+              33.974389
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "ed25688eacc351bfac9cbc8fd08baf79"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Spieth Hall",
         "room": "1235"
       },
@@ -12537,6 +15384,73 @@
         "type": "Polygon"
       },
       "id": "edbc6b5ec4a268703abcba3600d8e01f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330524,
+              33.974396
+            ],
+            [
+              -117.330524,
+              33.97429
+            ],
+            [
+              -117.330489,
+              33.97429
+            ],
+            [
+              -117.330488,
+              33.974278
+            ],
+            [
+              -117.330524,
+              33.974278
+            ],
+            [
+              -117.330525,
+              33.974261
+            ],
+            [
+              -117.330453,
+              33.97426
+            ],
+            [
+              -117.330453,
+              33.974217
+            ],
+            [
+              -117.330525,
+              33.974218
+            ],
+            [
+              -117.330525,
+              33.974141
+            ],
+            [
+              -117.330448,
+              33.97414
+            ],
+            [
+              -117.330448,
+              33.974396
+            ],
+            [
+              -117.330524,
+              33.974396
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "ee8e6816b73743aa7586b0c10a060ade"
     },
     {
       "type": "Feature",
@@ -12818,52 +15732,37 @@
     {
       "type": "Feature",
       "properties": {
-        "building": "Student Success Center"
+        "building": "Life Sciences",
+        "room": "1427"
       },
       "geometry": {
         "coordinates": [
           [
             [
-              -117.330819,
-              33.9744
+              -117.326562,
+              33.972259
             ],
             [
-              -117.33082,
-              33.973993
+              -117.326485,
+              33.97226
             ],
             [
-              -117.330444,
-              33.973988
+              -117.326488,
+              33.972352
             ],
             [
-              -117.330444,
-              33.974084
+              -117.326563,
+              33.972352
             ],
             [
-              -117.330284,
-              33.974082
-            ],
-            [
-              -117.330284,
-              33.97416
-            ],
-            [
-              -117.330285,
-              33.974238
-            ],
-            [
-              -117.330285,
-              33.974397
-            ],
-            [
-              -117.330819,
-              33.9744
+              -117.326562,
+              33.972259
             ]
           ]
         ],
         "type": "Polygon"
       },
-      "id": "f21c754f2098a55dc03c34c024aeaef1"
+      "id": "f2d920bc8101cb1af213dc086524a409"
     },
     {
       "type": "Feature",
@@ -12903,6 +15802,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Physics",
+        "room": "2124"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325541,
+              33.974697
+            ],
+            [
+              -117.32554,
+              33.974645
+            ],
+            [
+              -117.325425,
+              33.974644
+            ],
+            [
+              -117.325425,
+              33.974696
+            ],
+            [
+              -117.325541,
+              33.974697
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "f5153db235f0cd8ac714c12b8d557145"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Spieth Hall",
         "room": "1250"
       },
@@ -12934,6 +15868,21 @@
         "type": "Polygon"
       },
       "id": "f5d70fb2ca54939f61e561f2860a653d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "type": "water"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.330506,
+          33.974265
+        ],
+        "type": "Point"
+      },
+      "id": "f65ace9a508437b87ec90b009805fc98"
     },
     {
       "type": "Feature",
@@ -13074,6 +16023,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Life Sciences",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326646,
+              33.972329
+            ],
+            [
+              -117.326605,
+              33.972328
+            ],
+            [
+              -117.326604,
+              33.972271
+            ],
+            [
+              -117.326646,
+              33.972271
+            ],
+            [
+              -117.326646,
+              33.972329
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "f904c387369a2cfb067be20fa17d8954"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Materials Science and Engineering",
         "room": "160"
       },
@@ -13140,6 +16124,41 @@
         "type": "Polygon"
       },
       "id": "f9fe36a1bdf32b2cc41cbbe2a9449ff9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Life Sciences",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.32669,
+              33.972092
+            ],
+            [
+              -117.326603,
+              33.972092
+            ],
+            [
+              -117.326603,
+              33.972181
+            ],
+            [
+              -117.32669,
+              33.97218
+            ],
+            [
+              -117.32669,
+              33.972092
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "fb422eda40fd7de103e6ec35d8d6d527"
     },
     {
       "type": "Feature",
