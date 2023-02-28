@@ -30,13 +30,17 @@ function toggleOverlay(floor, {setBuilding}) {
     setBuilding({"features": []});
   } else if (floor == 1) {
     setBuilding(BuildingsFirstFloors);
-  }
+  } else if (floor == 2) {
+    setBuilding(BuildingsFirstFloors);
+  } else if (floor == 3) {
+    setBuilding(BuildingsFirstFloors);
+}
 };
 
 function MapViewer(props){
   const { modalOpen } = props.route.params;
-
   const [visibleBuilding, setBuilding] = useState({"features": []});
+  var map = useRef(null)
 
   React.useEffect(() => {
     if (props.route.params?.modalOpen) {
@@ -47,34 +51,29 @@ function MapViewer(props){
     return(
         <View style={styles.container}>
           <MapView
+            ref={map => {this.map = map}}
             style={styles.mapStyle}
-            //showsUserLocation = {true}
-            //showsMyLocationButton = {true}
+            customMapStyle={mapStyle}
+            showsUserLocation = {true}
+            showsMyLocationButton = {true}
             initialRegion={{ //Sets the initial view of the campus
               latitude: 33.973362,
               longitude: -117.328158,
-              latitudeDelta: 0.003,
-              longitudeDelta: 0.003,
+              latitudeDelta: 0.007,
+              longitudeDelta: 0.007,
             }}
           >
-           
+
           {// Call function to show all buildings first to always keep it "underneath" the classrooms
-            displayBuildings()
+            displayBuildings(props)
           } 
           {// Iterate and display current json dataset (visibleBuilding)
             displayFloors({visibleBuilding})
-          }
-          {// Iterate and display current json dataset (visibleBuilding)
-            displayIcons({visibleBuilding})
           }
 
           {/* //TEST: Display SPROUL HALL's FIRST floor
             displaySingleBuildingFloor("Sproul Hall", BuildingsFirstFloors)
         */}
-          {
-            //displaySingleBuildingFloor(props.params.display, props.params.buildingName, props.params.floorNumber,
-              //                        {visibleBuilding}, {setBuilding})
-          }
           
           {/*
             <Marker
@@ -103,15 +102,20 @@ function MapViewer(props){
                     <Text style={styles.pressableText}>First</Text>
                 </View>
               </Pressable>
-              {/*
+              
               <Pressable // TEST USER LOCATION
-                onPress={() => getOneTimeLocation()}
+                onPress={() => this.map.animateToRegion({
+                  latitude: 33.972775,
+                  longitude: -117.329716,
+                  latitudeDelta: 0.003,
+                  longitudeDelta: 0.003,
+                })}
                 style={ styles.buttonsStyle }>
                 <View>
                     <Text style={styles.pressableText}>User</Text>
                 </View>
               </Pressable>
-            */}
+            
           </View>
             <StatusBar/>
             <StatusBar/>
@@ -119,46 +123,8 @@ function MapViewer(props){
         );
     }
 
-// Styling app in general
-const styles = StyleSheet.create({
-  container: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    //alignItems: 'center',
-    justifyContent: 'flex-end',
-  },
-  mapStyle: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 90,
-  },
-  buttonsContainer: {
-    flexDirection: 'column',
-    paddingVertical: 150,
-    alignItems: 'flex-end',
-  },
-  buttonsStyle: {
-    backgroundColor: '#478BFF',
-    borderRadius: 10,
-  },
-  pressableText: {
-    //fontFamily : 'PoppinsMedium',
-    fontSize: 18,
-    color: '#FFFFFF',
-    paddingLeft: 10,
-    paddingRight: 10,
-    paddingTop: 2.5,
-    paddingBottom: 2.5,
-  }
-});
-
-// DISPLAY FUNCTIONS
-function displayBuildings() {
+// * * * DISPLAY FUNCTIONS * * *
+function displayBuildings(props) {
   return (Buildings.features.map((b) => {
     if (b.geometry.type == "Polygon") {
       var lineColor = "#00276b";
@@ -185,12 +151,14 @@ function displayBuildings() {
           
           strokeWidth={2}
           tappable
-          onPress={() => console.log(`${b.properties.building}`)}
+          onPress={() => {zoomInto(b);
+                          console.log("TEST 1");
+                          props.navigation.navigate('Class');}}
         />
         )
       }
-      }
-    ));
+    }
+  ));
 };
 
 function displayFloors({visibleBuilding}) {
@@ -212,12 +180,7 @@ function displayFloors({visibleBuilding}) {
         />
       )
     }
-  }));
-};
-
-function displayIcons({visibleBuilding}) {
-  return (visibleBuilding.features.map((b) => {
-    if (b.geometry.type == "Point") {
+    else if (b.geometry.type == "Point") {
       var img = require('../assets/bathroom.jpeg');
 
       if (b.properties.type == "bathroom") {
@@ -321,11 +284,40 @@ function displaySingleBuildingFloor(display, buildingName,floorNumber,
   return;
 };
 
+function zoomInto (b) {
+  this.map.animateToRegion({
+    latitude: getMiddleLat(b.geometry.coordinates[0]),
+    longitude: getMiddleLong(b.geometry.coordinates[0]),
+    latitudeDelta: 0.0018,
+    longitudeDelta: 0.0018,
+  })
+}
+
+function getMiddleLat(arr) {
+  var mid = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    mid += arr[i][1];
+  }
+
+  return mid / arr.length;
+}
+
+function getMiddleLong(arr) {
+  var mid = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    mid += arr[i][0];
+  }
+
+  return mid / arr.length;
+}
+
+// * * * STYLES * * *
 const mapStyle=
 [
   {
-    "featureType": "poi.business",
-    "elementType": "labels.text.fill",
+    "elementType": "labels",
     "stylers": [
       {
         "visibility": "off"
@@ -333,14 +325,84 @@ const mapStyle=
     ]
   },
   {
-    "featureType": "poi.business",
-    "elementType": "labels.text.stroke",
+    "featureType": "administrative",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.neighborhood",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
     "stylers": [
       {
         "visibility": "off"
       }
     ]
   }
-]
+];
+
+const styles = StyleSheet.create({
+  container: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    //alignItems: 'center',
+    justifyContent: 'flex-end',
+  },
+  mapStyle: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 90,
+  },
+  buttonsContainer: {
+    flexDirection: 'column',
+    paddingVertical: 150,
+    alignItems: 'flex-end',
+  },
+  buttonsStyle: {
+    backgroundColor: '#478BFF',
+    borderRadius: 10,
+  },
+  pressableText: {
+    //fontFamily : 'PoppinsMedium',
+    fontSize: 18,
+    color: '#FFFFFF',
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingTop: 2.5,
+    paddingBottom: 2.5,
+  }
+});
 
 export default MapViewer;
