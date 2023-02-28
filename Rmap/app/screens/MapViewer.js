@@ -21,6 +21,8 @@ import Icon from 'react-native-vector-icons/Feather';
 
 import Buildings from '../floorplans/buildings.json';
 import BuildingsFirstFloors from '../floorplans/buildingsFirst.json';
+import BuildingsSecondFloors from '../floorplans/buildingsSecond.json';
+import BuildingsThirdFloors from '../floorplans/buildingsThird.json';
 
 Icon.loadFont();
 
@@ -31,9 +33,9 @@ function toggleOverlay(floor, {setBuilding}) {
   } else if (floor == 1) {
     setBuilding(BuildingsFirstFloors);
   } else if (floor == 2) {
-    setBuilding(BuildingsFirstFloors);
+    setBuilding(BuildingsSecondFloors);
   } else if (floor == 3) {
-    setBuilding(BuildingsFirstFloors);
+    setBuilding(BuildingsThirdFloors);
 }
 };
 
@@ -68,7 +70,7 @@ function MapViewer(props){
             displayBuildings(props)
           } 
           {// Iterate and display current json dataset (visibleBuilding)
-            displayFloors({visibleBuilding})
+            displayFloors(props, {visibleBuilding})
           }
 
           {/* //TEST: Display SPROUL HALL's FIRST floor
@@ -99,10 +101,24 @@ function MapViewer(props){
                 onPress={() => toggleOverlay(1, {setBuilding})}
                 style={ styles.buttonsStyle }>
                 <View>
-                    <Text style={styles.pressableText}>First</Text>
+                    <Text style={styles.pressableText}>1st</Text>
                 </View>
               </Pressable>
-              
+              <Pressable // SECOND FLOORS
+                onPress={() => toggleOverlay(2, {setBuilding})}
+                style={ styles.buttonsStyle }>
+                <View>
+                    <Text style={styles.pressableText}>2nd</Text>
+                </View>
+              </Pressable>
+              <Pressable // THIRD FLOORS
+                onPress={() => toggleOverlay(3, {setBuilding})}
+                style={ styles.buttonsStyle }>
+                <View>
+                    <Text style={styles.pressableText}>3rd</Text>
+                </View>
+              </Pressable>
+              {/*
               <Pressable // TEST USER LOCATION
                 onPress={() => this.map.animateToRegion({
                   latitude: 33.972775,
@@ -115,6 +131,7 @@ function MapViewer(props){
                     <Text style={styles.pressableText}>User</Text>
                 </View>
               </Pressable>
+              */}
             
           </View>
             <StatusBar/>
@@ -152,8 +169,9 @@ function displayBuildings(props) {
           strokeWidth={2}
           tappable
           onPress={() => {zoomInto(b);
-                          console.log("TEST 1");
-                          props.navigation.navigate('Class');}}
+                          props.navigation.navigate('Details', {type: "building",
+                                                                building: b.properties.building
+                                                                });}}
         />
         )
       }
@@ -161,7 +179,7 @@ function displayBuildings(props) {
   ));
 };
 
-function displayFloors({visibleBuilding}) {
+function displayFloors(props, {visibleBuilding}) {
   return (visibleBuilding.features.map((b) => {
     if (b.geometry.type == "Polygon") {
       return (
@@ -176,7 +194,10 @@ function displayFloors({visibleBuilding}) {
           
           strokeWidth={2}
           tappable
-          onPress={() => console.log(`${b.properties.building}, Room ${b.properties.room}`)}
+          onPress={() => {props.navigation.navigate('Details', {type: "room",
+                                                                building: b.properties.building,
+                                                                room: b.properties.room
+                                                  });}}
         />
       )
     }

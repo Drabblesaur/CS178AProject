@@ -13,6 +13,7 @@ import LoginScreen from './app/screens/LoginScreen';
 import HomeSheet from './app/screens/HomeSheet';
 import ClassSheet from './app/screens/ClassSheet';
 import DirectorySheet from './app/screens/DirectorySheet';
+import DetailedViewSheet from './app/screens/DetailedViewSheet';
 
 
 function Modals(){
@@ -41,6 +42,11 @@ function Modals(){
       <BottomSheet.Screen
         component={DirectorySheet}
         name="Directory"
+        options={{index:1, enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#478BFF'}}}
+      />
+      <BottomSheet.Screen
+        component={DetailedViewSheet}
+        name="Details"
         options={{index:1, enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#478BFF'}}}
       />
     </BottomSheet.Navigator>

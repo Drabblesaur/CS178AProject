@@ -10,8 +10,6 @@ import {
     BottomSheetTextInput,
   } from '@gorhom/bottom-sheet';
 
-  import { buildingFloor } from "../screens/MapViewer.js";
-
 function HomeSheet(props){
     return(
         <View style={styles.container}>
