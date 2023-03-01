@@ -4,7 +4,7 @@ import React from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
-
+// add  2 extra button, one for sign up which takes to signup.js 
 
 const LoginScreen = (props) => {
     const [email, setEmail] = React.useState('');
@@ -45,7 +45,9 @@ const LoginScreen = (props) => {
     }
 
    
-  
+    /* <Button title="Forgot Password?" onPress={} /> 
+      Still need to implement the forgot password part 
+    */
     return (
       <View style={styles.container}>
         <TextInput
@@ -62,6 +64,7 @@ const LoginScreen = (props) => {
           onChangeText={setPassword}
         />
         <Button title="Login" onPress={LoginHandler} />
+        <Button title="Sign Up" onPress={registerHandler} /> 
       </View>
     );
   };

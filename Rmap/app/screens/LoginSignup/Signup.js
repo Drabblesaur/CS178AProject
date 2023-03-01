@@ -4,7 +4,8 @@ import React, { useState } from 'react';
 
 
 
-
+// Combine call in action page with login
+// Add forget password 
 
 
 const Signup = (props) => {
@@ -18,7 +19,9 @@ const Signup = (props) => {
     const registerHandler = () => {
     if (password == '' || confirmpassword == '' || email == '') {
         alert('Please enter email and password')
-    } else if (password != confirmpassword) {
+    }else if(email.slice(-7) != 'ucr.edu'){
+        alert('Please enter an UCR email') 
+    }else if (password != confirmpassword) {
         alert('Password does not match')
     }
     else {      
@@ -47,10 +50,6 @@ const Signup = (props) => {
 }
         
        
-
-
-   
-  
     return (
       <View style={styles.container}>
         <TextInput
@@ -73,7 +72,8 @@ const Signup = (props) => {
           value={confirmpassword}
           onChangeText={setconfirmpassword}
         />
-        <Button title="Register" onPress={registerHandler} />
+        <Button title="Create an Account" onPress={registerHandler} />
+        <Button title ="Sign in" onPress={LoginHandler} />
       </View>
     );
   };

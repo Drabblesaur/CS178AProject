@@ -6,6 +6,8 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 const bcrypt = require("bcrypt");
 
+// Adding profiles, 
+
 router.post('/signup', async (req, res) => {
   const {email, password} = req.body;
   if (!email || !password) {
