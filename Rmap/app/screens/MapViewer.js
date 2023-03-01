@@ -20,14 +20,28 @@ import MapView, {Marker, Overlay, Polygon, Polyline, Circle, Geojson} from 'reac
 import Icon from 'react-native-vector-icons/Feather';
 
 import Buildings from '../floorplans/buildings.json';
+import Socials from '../floorplans/social.json';
+import Parking from '../floorplans/parking.json';
 import BuildingsFirstFloors from '../floorplans/buildingsFirst.json';
 import BuildingsSecondFloors from '../floorplans/buildingsSecond.json';
 import BuildingsThirdFloors from '../floorplans/buildingsThird.json';
 
 Icon.loadFont();
+var prev_toggle = 0;
 
 // Toggle between floors
 function toggleOverlay(floor, {setBuilding}) {
+  if (prev_toggle == floor) {
+    prev_toggle = 0;
+    changeFloor(0, {setBuilding});
+  }
+  else {
+    prev_toggle = floor;
+    changeFloor(floor, {setBuilding});
+  }
+};
+
+function changeFloor(floor, {setBuilding}) {
   if (floor == 0) {
     setBuilding({"features": []});
   } else if (floor == 1) {
@@ -69,8 +83,14 @@ function MapViewer(props){
           {// Call function to show all buildings first to always keep it "underneath" the classrooms
             displayBuildings(props)
           } 
+          {// Call function to show all social buildings (no classrooms)
+            displaySocials(props)
+          } 
+          {// Call function to show all parking lots
+            displayParking(props)
+          } 
           {// Iterate and display current json dataset (visibleBuilding)
-            displayFloors(props, {visibleBuilding})
+            displayFloors(props, {visibleBuilding}, {setBuilding})
           }
 
           {/* //TEST: Display SPROUL HALL's FIRST floor
@@ -90,13 +110,6 @@ function MapViewer(props){
 
           {/* Button container for toggling floor plans for testing purposes*/}
           <View style={ styles.buttonsContainer }>
-              <Pressable // BUILDINGS
-                onPress={() => toggleOverlay(0, {setBuilding})}
-                style={ styles.buttonsStyle }>
-                <View>
-                    <Text style={styles.pressableText}>Buildings</Text>
-                </View>
-              </Pressable>
               <Pressable // FIRST FLOORS
                 onPress={() => toggleOverlay(1, {setBuilding})}
                 style={ styles.buttonsStyle }>
@@ -142,20 +155,12 @@ function MapViewer(props){
 
 // * * * DISPLAY FUNCTIONS * * *
 function displayBuildings(props) {
+  const routes = props.navigation.getState()?.routes;
+  const r = routes[routes.length - 1];
+  console.log(r);
+
   return (Buildings.features.map((b) => {
     if (b.geometry.type == "Polygon") {
-      var lineColor = "#00276b";
-      var solidColor = "#adcbff";
-
-      if (b.properties.type == "resource") {
-        lineColor = "#345D3D";
-        solidColor = "#9DCDA8";
-      }
-      else if (b.properties.type == "library") {
-        lineColor = "#7A3B3B";
-        solidColor = "#DC7A7A";
-      }
-
       return (
         <Polygon
           coordinates= {b.geometry.coordinates[0].map((x) => 
@@ -163,8 +168,36 @@ function displayBuildings(props) {
             )
           }
           key={`building-${b.id}`}
-          strokeColor={lineColor}
-          fillColor={solidColor}
+          strokeColor={"#466854"}
+          fillColor={"#7ED3A1"}
+          
+          strokeWidth={2}
+          tappable
+          onPress={() => {zoomInto(b);
+                          props.navigation.navigate('Details', {type: "building",
+                                                                building: b.properties.building,
+                                                                floors: b.properties.floors,
+                                                                k: r.key
+                                                                });}}
+        />
+        )
+      }
+    }
+  ));
+};
+
+function displaySocials(props) {
+  return (Socials.features.map((b) => {
+    if (b.geometry.type == "Polygon") {
+      return (
+        <Polygon
+          coordinates= {b.geometry.coordinates[0].map((x) => 
+              ({latitude: x[1], longitude: x[0]}),
+            )
+          }
+          key={`building-${b.id}`}
+          strokeColor={"#625C39"}
+          fillColor={"#E7CA23"}
           
           strokeWidth={2}
           tappable
@@ -179,7 +212,44 @@ function displayBuildings(props) {
   ));
 };
 
-function displayFloors(props, {visibleBuilding}) {
+function displayParking(props) {
+  return (Parking.features.map((b) => {
+    if (b.geometry.type == "Polygon") {
+      return (
+        <Polygon
+          coordinates= {b.geometry.coordinates[0].map((x) => 
+              ({latitude: x[1], longitude: x[0]}),
+            )
+          }
+          key={`building-${b.id}`}
+          strokeColor={"#3F3249"}
+          fillColor={"#rgba(189, 146, 221, 0.5)"}
+          
+          strokeWidth={2}
+          tappable
+          onPress={() => {zoomInto(b);
+                          props.navigation.navigate('Details', {type: "parking",
+                                                                building: b.properties.name
+                                                                });}}
+        />
+        )
+      }
+    }
+  ));
+};
+
+function displayFloors(props, {visibleBuilding}, {setBuilding}) {
+  var data = {"features": []};
+  if (props.route.params.floors == 1) {
+    data = BuildingsFirstFloors;
+  } else if (props.route.params.floors == 2) {
+    data = BuildingsSecondFloors;
+  }
+  else if (props.route.params.floors == 3) {
+    data = BuildingsThirdFloors;
+  }
+  //toggleOverlay(props.route.params.floors, {setBuilding});
+
   return (visibleBuilding.features.map((b) => {
     if (b.geometry.type == "Polygon") {
       return (

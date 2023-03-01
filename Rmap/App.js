@@ -27,7 +27,7 @@ function Modals(){
       <BottomSheet.Screen
         component={MapViewer}
         name="MapViewer"
-        initialParams={{ modalOpen: true }}
+        initialParams={{ modalOpen: true , floors: 0}}
       />
       <BottomSheet.Screen
         component={HomeSheet}

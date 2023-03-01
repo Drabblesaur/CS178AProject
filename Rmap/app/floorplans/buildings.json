@@ -3,43 +3,9 @@
     {
       "type": "Feature",
       "properties": {
-        "building": "Costo Hall",
-        "type": "resource"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.329322,
-              33.974466
-            ],
-            [
-              -117.329125,
-              33.974466
-            ],
-            [
-              -117.329121,
-              33.973969
-            ],
-            [
-              -117.329326,
-              33.973971
-            ],
-            [
-              -117.329322,
-              33.974466
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": "0b3801ed71c7b4a821660579f246a1c3"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "building": "Hinderaker Hall",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -106,7 +72,8 @@
       "type": "Feature",
       "properties": {
         "building": "Spieth Hall",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -293,7 +260,8 @@
       "type": "Feature",
       "properties": {
         "building": "CHASS Interdisciplinary North",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -355,51 +323,9 @@
     {
       "type": "Feature",
       "properties": {
-        "building": "Highlander Union Building",
-        "type": "resource"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.328464,
-              33.97489
-            ],
-            [
-              -117.328091,
-              33.974888
-            ],
-            [
-              -117.328091,
-              33.974873
-            ],
-            [
-              -117.32802,
-              33.974872
-            ],
-            [
-              -117.328018,
-              33.97473
-            ],
-            [
-              -117.328467,
-              33.974468
-            ],
-            [
-              -117.328464,
-              33.97489
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": "13d8858e4d01e8fdd075eb97d982e28a"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "building": "Batchelor Hall",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -458,7 +384,8 @@
       "type": "Feature",
       "properties": {
         "building": "Genomics",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -615,110 +542,9 @@
     {
       "type": "Feature",
       "properties": {
-        "building": "North Student Recreation Center North"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.328731,
-              33.979154
-            ],
-            [
-              -117.328425,
-              33.979153
-            ],
-            [
-              -117.328425,
-              33.979198
-            ],
-            [
-              -117.32814,
-              33.979198
-            ],
-            [
-              -117.32814,
-              33.979154
-            ],
-            [
-              -117.327518,
-              33.979154
-            ],
-            [
-              -117.327518,
-              33.978735
-            ],
-            [
-              -117.327584,
-              33.978735
-            ],
-            [
-              -117.327584,
-              33.978651
-            ],
-            [
-              -117.327652,
-              33.978651
-            ],
-            [
-              -117.327652,
-              33.978579
-            ],
-            [
-              -117.328242,
-              33.978579
-            ],
-            [
-              -117.328242,
-              33.978655
-            ],
-            [
-              -117.328731,
-              33.978655
-            ],
-            [
-              -117.32873,
-              33.978765
-            ],
-            [
-              -117.328769,
-              33.978815
-            ],
-            [
-              -117.32878,
-              33.978844
-            ],
-            [
-              -117.328781,
-              33.978877
-            ],
-            [
-              -117.328778,
-              33.978911
-            ],
-            [
-              -117.328769,
-              33.978945
-            ],
-            [
-              -117.328731,
-              33.979
-            ],
-            [
-              -117.328731,
-              33.979154
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": "23dc698391176342f0745f94bdf8aa03"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "building": "Physics",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -777,7 +603,8 @@
       "type": "Feature",
       "properties": {
         "building": "Athletics and Dance Building",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -875,134 +702,9 @@
     {
       "type": "Feature",
       "properties": {
-        "building": "South Student Recreation Center"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.328346,
-              33.978655
-            ],
-            [
-              -117.328531,
-              33.978655
-            ],
-            [
-              -117.328531,
-              33.97864
-            ],
-            [
-              -117.328589,
-              33.97864
-            ],
-            [
-              -117.328573,
-              33.978145
-            ],
-            [
-              -117.328547,
-              33.978085
-            ],
-            [
-              -117.328483,
-              33.978056
-            ],
-            [
-              -117.328416,
-              33.978044
-            ],
-            [
-              -117.328347,
-              33.978051
-            ],
-            [
-              -117.328269,
-              33.978028
-            ],
-            [
-              -117.328174,
-              33.977939
-            ],
-            [
-              -117.328106,
-              33.97791
-            ],
-            [
-              -117.328025,
-              33.977904
-            ],
-            [
-              -117.32795,
-              33.977919
-            ],
-            [
-              -117.327895,
-              33.977956
-            ],
-            [
-              -117.327852,
-              33.978032
-            ],
-            [
-              -117.327878,
-              33.978038
-            ],
-            [
-              -117.327872,
-              33.978094
-            ],
-            [
-              -117.327755,
-              33.978096
-            ],
-            [
-              -117.327751,
-              33.978416
-            ],
-            [
-              -117.327801,
-              33.978448
-            ],
-            [
-              -117.327835,
-              33.978454
-            ],
-            [
-              -117.327869,
-              33.978454
-            ],
-            [
-              -117.327908,
-              33.978437
-            ],
-            [
-              -117.328148,
-              33.978437
-            ],
-            [
-              -117.328148,
-              33.978453
-            ],
-            [
-              -117.328336,
-              33.978457
-            ],
-            [
-              -117.328346,
-              33.978655
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": "5d92da3a988b8ddbf29ec78657c42987"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "building": "Psychology",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -1117,7 +819,8 @@
       "type": "Feature",
       "properties": {
         "building": "University Lecture Hall",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -1160,7 +863,8 @@
       "type": "Feature",
       "properties": {
         "building": "Sproul Hall",
-        "type": "class"
+        "type": "class",
+        "floors": 2
       },
       "geometry": {
         "coordinates": [
@@ -1227,7 +931,8 @@
       "type": "Feature",
       "properties": {
         "building": "Campbell Hall",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -1278,7 +983,8 @@
       "type": "Feature",
       "properties": {
         "building": "Watkins Hall",
-        "type": "class"
+        "type": "class",
+        "floors": 2
       },
       "geometry": {
         "coordinates": [
@@ -1377,7 +1083,8 @@
       "type": "Feature",
       "properties": {
         "building": "Pierce Hall",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -1600,7 +1307,8 @@
       "type": "Feature",
       "properties": {
         "building": "Anderson Hall 2",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -1659,7 +1367,8 @@
       "type": "Feature",
       "properties": {
         "building": "Science Laboratories 1",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -1750,7 +1459,8 @@
       "type": "Feature",
       "properties": {
         "building": "Winston Chung Hall",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -1960,163 +1670,9 @@
     {
       "type": "Feature",
       "properties": {
-        "building": "Orbach Library",
-        "type": "library"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.324569,
-              33.974875
-            ],
-            [
-              -117.324569,
-              33.974908
-            ],
-            [
-              -117.324459,
-              33.974909
-            ],
-            [
-              -117.324459,
-              33.974872
-            ],
-            [
-              -117.324372,
-              33.974871
-            ],
-            [
-              -117.324372,
-              33.974717
-            ],
-            [
-              -117.324327,
-              33.974709
-            ],
-            [
-              -117.324271,
-              33.974685
-            ],
-            [
-              -117.324221,
-              33.974643
-            ],
-            [
-              -117.324175,
-              33.974593
-            ],
-            [
-              -117.324158,
-              33.974564
-            ],
-            [
-              -117.324153,
-              33.974538
-            ],
-            [
-              -117.323948,
-              33.974536
-            ],
-            [
-              -117.323949,
-              33.974475
-            ],
-            [
-              -117.32391,
-              33.974474
-            ],
-            [
-              -117.323911,
-              33.974357
-            ],
-            [
-              -117.323955,
-              33.974357
-            ],
-            [
-              -117.323955,
-              33.974283
-            ],
-            [
-              -117.324168,
-              33.974284
-            ],
-            [
-              -117.324168,
-              33.974293
-            ],
-            [
-              -117.324366,
-              33.974292
-            ],
-            [
-              -117.324366,
-              33.974227
-            ],
-            [
-              -117.32445,
-              33.974227
-            ],
-            [
-              -117.324449,
-              33.974192
-            ],
-            [
-              -117.324586,
-              33.974194
-            ],
-            [
-              -117.324586,
-              33.974228
-            ],
-            [
-              -117.32467,
-              33.974227
-            ],
-            [
-              -117.324671,
-              33.974294
-            ],
-            [
-              -117.324932,
-              33.974294
-            ],
-            [
-              -117.324933,
-              33.974607
-            ],
-            [
-              -117.324822,
-              33.974606
-            ],
-            [
-              -117.324822,
-              33.974745
-            ],
-            [
-              -117.324655,
-              33.974744
-            ],
-            [
-              -117.324657,
-              33.974875
-            ],
-            [
-              -117.324569,
-              33.974875
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": "8e776859dedcf7dd35211721e43e9a18"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "building": "Student Success Center",
-        "type": "class"
+        "type": "class",
+        "floors": 3
       },
       "geometry": {
         "coordinates": [
@@ -2166,99 +1722,9 @@
     {
       "type": "Feature",
       "properties": {
-        "building": "Rivera Library",
-        "type": "library"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.32788,
-              33.972956
-            ],
-            [
-              -117.327755,
-              33.972956
-            ],
-            [
-              -117.32776,
-              33.973214
-            ],
-            [
-              -117.327665,
-              33.973214
-            ],
-            [
-              -117.327666,
-              33.973248
-            ],
-            [
-              -117.327408,
-              33.973248
-            ],
-            [
-              -117.327409,
-              33.973148
-            ],
-            [
-              -117.327193,
-              33.973148
-            ],
-            [
-              -117.327193,
-              33.972973
-            ],
-            [
-              -117.327336,
-              33.972971
-            ],
-            [
-              -117.327337,
-              33.972831
-            ],
-            [
-              -117.327301,
-              33.972831
-            ],
-            [
-              -117.327303,
-              33.972738
-            ],
-            [
-              -117.327193,
-              33.97274
-            ],
-            [
-              -117.3272,
-              33.972053
-            ],
-            [
-              -117.327671,
-              33.972055
-            ],
-            [
-              -117.327667,
-              33.972806
-            ],
-            [
-              -117.327881,
-              33.972807
-            ],
-            [
-              -117.32788,
-              33.972956
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": "95523c97ea5f03517868ca200d99a581"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "building": "Chapman Hall",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -2316,55 +1782,9 @@
     {
       "type": "Feature",
       "properties": {
-        "building": "Career Center",
-        "type": "resource"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.328503,
-              33.975182
-            ],
-            [
-              -117.328239,
-              33.975401
-            ],
-            [
-              -117.328254,
-              33.975413
-            ],
-            [
-              -117.32821,
-              33.975449
-            ],
-            [
-              -117.328137,
-              33.975388
-            ],
-            [
-              -117.328136,
-              33.975007
-            ],
-            [
-              -117.328503,
-              33.975008
-            ],
-            [
-              -117.328503,
-              33.975182
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": "988b6ac4faff2f9685e792a49b67e7a9"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "building": "Humanities and Social Sciences",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -2630,190 +2050,9 @@
     {
       "type": "Feature",
       "properties": {
-        "building": "Highlander Union Building",
-        "type": "resource"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.328956,
-              33.974877
-            ],
-            [
-              -117.32875,
-              33.974877
-            ],
-            [
-              -117.328745,
-              33.974869
-            ],
-            [
-              -117.328689,
-              33.974884
-            ],
-            [
-              -117.328654,
-              33.97481
-            ],
-            [
-              -117.328678,
-              33.974802
-            ],
-            [
-              -117.328651,
-              33.974736
-            ],
-            [
-              -117.328593,
-              33.974736
-            ],
-            [
-              -117.328632,
-              33.974422
-            ],
-            [
-              -117.328602,
-              33.974434
-            ],
-            [
-              -117.328598,
-              33.974428
-            ],
-            [
-              -117.328588,
-              33.974432
-            ],
-            [
-              -117.328566,
-              33.974403
-            ],
-            [
-              -117.328606,
-              33.974387
-            ],
-            [
-              -117.328617,
-              33.974408
-            ],
-            [
-              -117.328635,
-              33.974402
-            ],
-            [
-              -117.328647,
-              33.974302
-            ],
-            [
-              -117.32856,
-              33.974101
-            ],
-            [
-              -117.328502,
-              33.97411
-            ],
-            [
-              -117.328481,
-              33.974065
-            ],
-            [
-              -117.32869,
-              33.973998
-            ],
-            [
-              -117.328706,
-              33.97382
-            ],
-            [
-              -117.328721,
-              33.973788
-            ],
-            [
-              -117.328744,
-              33.973762
-            ],
-            [
-              -117.328771,
-              33.973748
-            ],
-            [
-              -117.328821,
-              33.973737
-            ],
-            [
-              -117.328998,
-              33.973737
-            ],
-            [
-              -117.328996,
-              33.974462
-            ],
-            [
-              -117.328988,
-              33.974464
-            ],
-            [
-              -117.328983,
-              33.974792
-            ],
-            [
-              -117.328955,
-              33.974791
-            ],
-            [
-              -117.328956,
-              33.974877
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": "aa1b7ee86c636515d18e62ffdda384a9"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "building": "Highlander Union Building",
-        "type": "resource"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.328107,
-              33.974613
-            ],
-            [
-              -117.328164,
-              33.97453
-            ],
-            [
-              -117.328107,
-              33.974439
-            ],
-            [
-              -117.328017,
-              33.974437
-            ],
-            [
-              -117.328018,
-              33.974614
-            ],
-            [
-              -117.328107,
-              33.974613
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": "ad2f48ea428da9fefa1e37fe684a9bda"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "building": "Geology",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -2920,7 +2159,8 @@
       "type": "Feature",
       "properties": {
         "building": "Boyce Hall",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -3051,7 +2291,8 @@
       "type": "Feature",
       "properties": {
         "building": "Life Sciences",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -3094,7 +2335,8 @@
       "type": "Feature",
       "properties": {
         "building": "Arts Building",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -3341,7 +2583,8 @@
       "type": "Feature",
       "properties": {
         "building": "Life Sciences",
-        "type": "class"
+        "type": "class",
+        "floors": 2
       },
       "geometry": {
         "coordinates": [
@@ -3552,7 +2795,8 @@
       "type": "Feature",
       "properties": {
         "building": "Anderson Hall 1",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -3627,7 +2871,8 @@
       "type": "Feature",
       "properties": {
         "building": "CHASS Interdisciplinary South",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -3758,7 +3003,8 @@
       "type": "Feature",
       "properties": {
         "building": "Olmsted Hall",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -3917,7 +3163,8 @@
       "type": "Feature",
       "properties": {
         "building": "Skye Hall",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -4110,7 +3357,8 @@
       "type": "Feature",
       "properties": {
         "building": "Materials Science and Engineering",
-        "type": "class"
+        "type": "class",
+        "floors": 2
       },
       "geometry": {
         "coordinates": [
@@ -4277,7 +3525,8 @@
       "type": "Feature",
       "properties": {
         "building": "Entomology",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -4371,91 +3620,9 @@
     {
       "type": "Feature",
       "properties": {
-        "building": "University Bookstore",
-        "type": "resource"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.328136,
-              33.975438
-            ],
-            [
-              -117.327928,
-              33.975438
-            ],
-            [
-              -117.327924,
-              33.975285
-            ],
-            [
-              -117.327902,
-              33.975273
-            ],
-            [
-              -117.327886,
-              33.97526
-            ],
-            [
-              -117.327873,
-              33.97524
-            ],
-            [
-              -117.327867,
-              33.97522
-            ],
-            [
-              -117.327866,
-              33.975198
-            ],
-            [
-              -117.327872,
-              33.975177
-            ],
-            [
-              -117.327884,
-              33.975158
-            ],
-            [
-              -117.327901,
-              33.975143
-            ],
-            [
-              -117.32792,
-              33.975131
-            ],
-            [
-              -117.32792,
-              33.974945
-            ],
-            [
-              -117.328015,
-              33.974947
-            ],
-            [
-              -117.328015,
-              33.975006
-            ],
-            [
-              -117.328136,
-              33.975006
-            ],
-            [
-              -117.328136,
-              33.975438
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": "e56e42ef35a76fcb0c4d8028908604a2"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "building": "Biological Sciences",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -4574,7 +3741,8 @@
       "type": "Feature",
       "properties": {
         "building": "School of Medicine",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -4640,43 +3808,9 @@
     {
       "type": "Feature",
       "properties": {
-        "building": "Scotty's Convenience Store SOM",
-        "type": "resource"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -117.324513,
-              33.973787
-            ],
-            [
-              -117.324553,
-              33.97371
-            ],
-            [
-              -117.324462,
-              33.973677
-            ],
-            [
-              -117.324422,
-              33.973756
-            ],
-            [
-              -117.324513,
-              33.973787
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": "f00f5f8559864a45cc49a76b38b8381f"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "building": "Webber Hall",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [
@@ -4767,7 +3901,8 @@
       "type": "Feature",
       "properties": {
         "building": "Bourns Hall",
-        "type": "class"
+        "type": "class",
+        "floors": 1
       },
       "geometry": {
         "coordinates": [

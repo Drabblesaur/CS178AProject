@@ -11,6 +11,9 @@ function DetailedViewSheet(props){
         {
             displayRoom(props.route.params)
         }
+        {
+            displayFloorButtons(props)
+        }
         <Button title ='Go Back' onPress={() => {props.navigation.dispatch(CommonActions.goBack());}}/>
         <StatusBar/>
         </View>
@@ -22,6 +25,19 @@ function displayRoom(params) {
         return (<Text> Room {params.room} </Text>);
     }
     return;
+}
+
+function displayFloorButtons(props) {
+    var a = []
+    for (var i = 1; i <= props.route.params.floors; i++) {
+        a[i-1] = i;
+    }
+
+    const routes = props.navigation.getState()?.routes;
+    const prevRoute = routes[routes.length - 1];
+    console.log(prevRoute);
+
+    return a.map(i => {return (<Button title = {`${i}`} key={`button-${i}`} onPress={() => {props.navigation.setParams({floors: props.route.params.floors}, props.route.params.k);}}/>)});
 }
 
 const styles = StyleSheet.create({
