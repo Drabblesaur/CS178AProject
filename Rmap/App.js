@@ -15,6 +15,7 @@ import ClassSheet from './app/screens/ClassSheet';
 import DirectorySheet from './app/screens/DirectorySheet';
 import WelcomeScreen from './app/screens/LoginSignup/WelcomeScreen';
 import LoginScreen from './app/screens/LoginSignup/LoginScreen';
+import DetailedViewSheet from './app/screens/DetailedViewSheet';
 
 
 function Modals(){
@@ -28,7 +29,7 @@ function Modals(){
       <BottomSheet.Screen
         component={MapViewer}
         name="MapViewer"
-        initialParams={{ modalOpen: true }}
+        initialParams={{ modalOpen: true , floors: 0}}
       />
       <BottomSheet.Screen
         component={HomeSheet}
@@ -43,6 +44,11 @@ function Modals(){
       <BottomSheet.Screen
         component={DirectorySheet}
         name="Directory"
+        options={{index:1, enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#478BFF'}}}
+      />
+      <BottomSheet.Screen
+        component={DetailedViewSheet}
+        name="Details"
         options={{index:1, enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#478BFF'}}}
       />
     </BottomSheet.Navigator>

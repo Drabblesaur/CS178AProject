@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Pressable } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Feather from '@expo/vector-icons/Feather'; 
+
 import {
     TouchableOpacity,
     TouchableHighlight,
