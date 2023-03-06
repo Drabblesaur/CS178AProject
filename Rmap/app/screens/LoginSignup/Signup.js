@@ -21,6 +21,8 @@ const Signup = (props) => {
         alert('Please enter email and password')
     }else if(email.slice(-7) != 'ucr.edu'){
         alert('Please enter an UCR email') 
+    }else if(password.length < 8){
+        alert('Password must be at least 8 characters long!')
     }else if (password != confirmpassword) {
         alert('Password does not match')
     }
