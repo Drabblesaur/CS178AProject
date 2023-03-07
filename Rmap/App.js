@@ -21,6 +21,14 @@ import SettingsScreen from './app/screens/SettingsScreen';
 
 
 function Modals(){
+
+  const [index, setIndex] = React.useState(0);
+
+  const handleChange = useCallback((index) => {
+    console.log("index changed to: " + index);
+    setIndex(index);
+  }, []);
+
   return (
     <BottomSheet.Navigator
     screenOptions={{ 
@@ -28,7 +36,7 @@ function Modals(){
       backgroundStyle:{backgroundColor: '#F6F7F4'}, 
       handleIndicatorStyle:{backgroundColor: '#D9D9D9',width: 50, height: 5,},
       topInset: 45,
-      onChange: (index) => console.log("Sheet Index:"+index)
+      onChange: (index) => handleChange(index),
       }}>
       <BottomSheet.Screen
         component={MapViewer}
@@ -39,6 +47,8 @@ function Modals(){
         component={HomeSheet}
         name="Home"
         options={{index:0,enableDismissOnClose: true, enablePanDownToClose:false}}
+        //Passing in the index every time sheet is changed 
+        initialParams={{index}}
       />
       <BottomSheet.Screen
         component={ClassSheet}
