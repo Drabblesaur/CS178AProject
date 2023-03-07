@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Feather from '@expo/vector-icons/Feather'; 
 import {
@@ -9,17 +9,24 @@ import {
     BottomSheetTextInput,
   } from '@gorhom/bottom-sheet';
 
+
 function HomeSheet(props){
     return(
         <View style={styles.container}>
             {/* Search Container*/}
             <View style={styles.searchContainer}>
                 {/* Search Bar */}
-                <BottomSheetTextInput style={styles.searchBar} placeholder="Search" />
+                <BottomSheetTextInput 
+                style={styles.searchBar} 
+                placeholder="Search"
+                onPressIn={() => {console.log("pressed search bar");}}
+                onFocus={() => {console.log("focused search bar");}}
+                />
                 {/* Profile */}
                 <TouchableWithoutFeedback onPress={() => {props.navigation.navigate('Profile');}}>
                 <View style={styles.profile}/>
                 </TouchableWithoutFeedback>
+                {/* Cancel Button */}
             </View>
             {/* Menu Container */}
             <View style={styles.menuContainer}>
@@ -53,13 +60,15 @@ function HomeSheet(props){
                     {/* Favorite Button */}
                     <TouchableWithoutFeedback onPress={() => {props.navigation.navigate('Favorite');}}>
                         <View style={styles.favoriteButton}>
-                            <Feather name="star" size={24} color="white" />
+                            <Feather name="star" size={32} color="white" />
                         </View>
                     </TouchableWithoutFeedback>
                     {/* Settings Button */}
-                    <View style={styles.settingsButton}>
-
-                    </View>
+                    <TouchableWithoutFeedback onPress={() => {props.navigation.navigate('Settings');}}>
+                        <View style={styles.settingsButton}>
+                            <Feather name="settings" size={32} color="white" />
+                        </View>
+                    </TouchableWithoutFeedback>
                 </View>
             </View>
         </View>
@@ -125,7 +134,7 @@ const styles = StyleSheet.create({
     classTouchable:{
         flexDirection: 'column-reverse',
         alignItems: 'flex-start',
-        backgroundColor: '#A6D49F',
+        backgroundColor: '#84BC7C',
         height: 210,
         borderRadius: 10,
         padding: 10,
@@ -150,7 +159,7 @@ const styles = StyleSheet.create({
     directoryTouchable:{
         flexDirection: 'column-reverse',
         alignItems: 'flex-start',
-        backgroundColor: '#478BFF',
+        backgroundColor: '#2C4EDC',
         height: 210,
         borderRadius: 10,
         padding: 10,
@@ -160,7 +169,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignContent: 'center',
         flex : 1,
-        //backgroundColor: 'blue',
+        backgroundColor: 'blue',
     },
     favoriteButton: {
         flex: 1,
@@ -175,8 +184,10 @@ const styles = StyleSheet.create({
         flex: 1,
         height: "100%",
         backgroundColor: '#C1C1C1',
-        marginTop: 5,
+        marginBottom: 5,
         borderRadius: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
     }
   });
 

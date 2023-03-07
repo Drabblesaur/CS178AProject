@@ -4,6 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { CommonActions } from '@react-navigation/native';
 import Feather from '@expo/vector-icons/Feather'; 
 import { TouchableWithoutFeedback } from '@gorhom/bottom-sheet';
+import BuildingItem from '../components/BuildingItem';
 
 function FavoriteSheet(props){
     return(
@@ -15,10 +16,7 @@ function FavoriteSheet(props){
                     <Feather name="x-circle" size={32} color="black" />
                 </TouchableWithoutFeedback>
             </View>
-            <View style={styles.button_view}>
-                <Text style={{fontSize: 24, fontWeight: 'bold',}}>CS 171</Text>
-                <Feather name="chevron-right" size={24} color="black" />
-            </View>
+            <BuildingItem building={{name: 'Bourns Hall', address: '900 University Ave, Riverside, CA 92521'}}/>
         </View>
     );
 }
