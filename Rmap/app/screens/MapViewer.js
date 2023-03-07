@@ -19,6 +19,8 @@ import {BottomSheetBackdrop,BottomSheetBackdropProps,} from '@gorhom/bottom-shee
 import MapView, {Marker, Overlay, Polygon, Polyline, Circle, Geojson} from 'react-native-maps';
 import Icon from 'react-native-vector-icons/Feather';
 
+import * as Location from 'expo-location';
+
 import Buildings from '../floorplans/buildings.json';
 import Socials from '../floorplans/social.json';
 import Parking from '../floorplans/parking.json';
@@ -28,6 +30,20 @@ import BuildingsThirdFloors from '../floorplans/buildingsThird.json';
 
 Icon.loadFont();
 var prev_toggle = 0;
+
+async function componentDidMount({setLocation}) {
+  try {
+    let { status } = await Location.requestForegroundPermissionsAsync();
+    if (status !== 'granted') {
+      return;
+    }
+    let location = await Location.getCurrentPositionAsync({});
+    setLocation(location);
+    console.log(location);
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 // Toggle between floors
 function toggleOverlay(floor, {setBuilding}) {
@@ -56,6 +72,7 @@ function changeFloor(floor, {setBuilding}) {
 function MapViewer(props){
   const { modalOpen } = props.route.params;
   const [visibleBuilding, setBuilding] = useState({"features": []});
+  const [location, setLocation] = useState({coords: {longitude: 0, latitude:0}});
   var map = useRef(null)
 
   React.useEffect(() => {
@@ -63,6 +80,10 @@ function MapViewer(props){
       props.navigation.navigate('Home');
     }
     }, [props.route.params?.modalOpen]);
+
+    React.useEffect(() => {
+      componentDidMount({setLocation});
+      }, []);
   
     return(
         <View style={styles.container}>
@@ -100,8 +121,8 @@ function MapViewer(props){
           {/*
             <Marker
               coordinate={{
-                latitude: props.position.latitude,
-                longitude: props.position.longitude
+                latitude: location.coords.latitude,
+                longitude: location.coords.longitude
               }}
             />
             */}
