@@ -4,7 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { CommonActions } from '@react-navigation/native';
 import Feather from '@expo/vector-icons/Feather'; 
 import { TouchableWithoutFeedback } from '@gorhom/bottom-sheet';
-import ClassItem from '../components/ClassItem';
+import ItemButton from '../components/ItemButton';
 
 function ClassSheet(props){
     return(
@@ -16,9 +16,10 @@ function ClassSheet(props){
                     <Feather name="x-circle" size={32} color="white" />
                 </TouchableWithoutFeedback>
             </View>
-            <ClassItem className="PHIL 124" buildingName="Bornes Hall A"/>
-            <ClassItem className="CS 178B" buildingName="Material Science Building"/>
-            <ClassItem className="PHYS 2000" buildingName="Physics 2000"/>
+            {/* We need to place a List of Items from the DB here */}
+            <ItemButton title="PHIL 124" subtitle="Bornes Hall A"/>
+            <ItemButton title="CS 178B" subtitle="Material Science Building"/>
+            <ItemButton title="PHYS 2000" subtitle="Physics 2000"/>
         </View>
     );
 }

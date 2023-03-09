@@ -17,6 +17,7 @@ function HomeSheet(props){
     const handleFocus = () => {
         console.log("focused search bar");
         setMenuContent(<Text>Search Results</Text>);
+        console.log(index)
     }
 
 

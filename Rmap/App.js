@@ -17,6 +17,10 @@ import DirectorySheet from './app/screens/DirectorySheet';
 import FavoriteSheet from './app/screens/FavoriteSheet';
 import ProfileSheet from './app/screens/ProfileSheet';
 import SettingsScreen from './app/screens/SettingsScreen';
+import BuildingSheet from './app/screens/BuildingSheet';
+import SocialSheet from './app/screens/SocialSheet';
+import LotSheet from './app/screens/LotSheet';
+import BathroomSheet from './app/screens/BathroomSheet';
 
 
 
@@ -25,8 +29,8 @@ function Modals(){
   const [index, setIndex] = React.useState(0);
 
   const handleChange = useCallback((index) => {
-    console.log("index changed to: " + index);
     setIndex(index);
+    console.log("index is " + index);
   }, []);
 
   return (
@@ -46,9 +50,9 @@ function Modals(){
       <BottomSheet.Screen
         component={HomeSheet}
         name="Home"
-        options={{index:0,enableDismissOnClose: true, enablePanDownToClose:false}}
+        options={{index:1,enableDismissOnClose: true, enablePanDownToClose:false}}
         //Passing in the index every time sheet is changed 
-        initialParams={{index}}
+        initialParams={{ index: index }}
       />
       <BottomSheet.Screen
         component={ClassSheet}
@@ -65,10 +69,34 @@ function Modals(){
         name="Favorite"
         options={{snapPoints: ["13%","55%"],index:1, enableDismissOnClose: true, enablePanDownToClose:false}}
       />
-            <BottomSheet.Screen
+      <BottomSheet.Screen
         component={ProfileSheet}
         name="Profile"
         options={{snapPoints: ["55%","90%"],index:1, enableDismissOnClose: true, enablePanDownToClose:false}}
+      />
+      <BottomSheet.Screen
+        component={BuildingSheet}
+        name="Building"
+        options={{snapPoints: ["55%","90%"],index:0, enableDismissOnClose: true, enablePanDownToClose:false, backgroundStyle:{backgroundColor: '#84BC7C'}}}
+      
+      />
+      <BottomSheet.Screen
+        component={SocialSheet}
+        name="Social"
+        options={{snapPoints: ["55%","90%"],index:0, enableDismissOnClose: true, enablePanDownToClose:false, backgroundStyle:{backgroundColor: '#E0B04A'}}}
+      
+      />
+      <BottomSheet.Screen
+        component={LotSheet}
+        name="Lots"
+        options={{snapPoints: ["55%","90%"],index:0, enableDismissOnClose: true, enablePanDownToClose:false, backgroundStyle:{backgroundColor: '#A286F1'}}}
+      
+      />
+      <BottomSheet.Screen
+        component={BathroomSheet}
+        name="Bathrooms"
+        options={{snapPoints: ["55%","90%"],index:0, enableDismissOnClose: true, enablePanDownToClose:false, backgroundStyle:{backgroundColor: '#7AA4D6'}}}
+      
       />
     </BottomSheet.Navigator>
   );

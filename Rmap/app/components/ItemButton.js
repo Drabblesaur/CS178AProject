@@ -2,12 +2,12 @@ import * as React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import Feather from '@expo/vector-icons/Feather'; 
 
-function ClassItem (props) {
+function ItemButton (props) {
   return (
     <View style={styles.button_view}>
         <View style={styles.text_items}>
-            <Text style={{fontSize: 24, fontWeight: 'bold',}}>{props.className}</Text>
-            <Text style={{fontSize: 12,}}>{props.buildingName}</Text>
+            <Text style={{fontSize: 24, fontWeight: 'bold',}}>{props.title}</Text>
+            <Text style={{fontSize: 13}}>{props.subtitle}</Text>
         </View>
         <Feather name="chevron-right" size={32} color="black" />
     </View>
@@ -34,4 +34,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default ClassItem;
+export default ItemButton;

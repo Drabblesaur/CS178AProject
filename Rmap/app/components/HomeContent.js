@@ -36,13 +36,17 @@ function HomeContent(props){
                     {/* Favorite Button */}
                         <View style={styles.favoriteButton}>
                             <TouchableWithoutFeedback onPress={() => {props.navigation.navigate('Favorite');}}>
-                                <Feather name="star" size={32} color="white" />
+                                <View style={styles.favoriteButton}>
+                                    <Feather name="star" size={32} color="white" />
+                                </View>
                             </TouchableWithoutFeedback>
                         </View>
                     {/* Settings Button */}
                         <View style={styles.settingsButton}>
                             <TouchableWithoutFeedback onPress={() => {props.navigation.navigate('Settings');}}>
-                                <Feather name="settings" size={32} color="white" />
+                                <View style={styles.settingsButton}>
+                                    <Feather name="settings" size={32} color="white" />
+                                </View>
                             </TouchableWithoutFeedback>
                         </View>
                 </View>
