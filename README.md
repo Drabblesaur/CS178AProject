@@ -61,7 +61,7 @@ Create a mobile/web application that allows people to navigate the UCR campus wi
 ### Tools
 
 - Front End + Mobile: React Native
-- Back-end: Javascript
+- Back-end: Node.js, Express, MongoDB
 
 ### Possible Technologies
 
