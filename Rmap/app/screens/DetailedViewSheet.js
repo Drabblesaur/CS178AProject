@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View, DeviceEventEmitter } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { CommonActions } from '@react-navigation/native';
 import Feather from '@expo/vector-icons/Feather'; 
@@ -9,35 +9,50 @@ function DetailedViewSheet(props){
         <View style={styles.container}>
         <Text> {props.route.params.building} </Text>
         {
-            displayRoom(props.route.params)
+            displayRoomText(props.route.params)
         }
         {
             displayFloorButtons(props)
         }
-        <Button title ='Go Back' onPress={() => {props.navigation.dispatch(CommonActions.goBack());}}/>
+        <Button title ='Go Back' onPress={() => goBack(props)}/>
         <StatusBar/>
         </View>
     );
 }
 
-function displayRoom(params) {
+function displayRoomText(params) {
     if (params.type == "room") {
         return (<Text> Room {params.room} </Text>);
     }
     return;
 }
 
-function displayFloorButtons(props) {
+function displayFloorButtons(props) { // Lists out buttons for each floor that can be displayed
     var a = []
     for (var i = 1; i <= props.route.params.floors; i++) {
         a[i-1] = i;
     }
+    return a.map(i => {return (<Button title = {`${i}`} key={`button-${i}`} onPress={() => {setMapFloorDisplay(props.route.params.building, i); console.log("pressed " + i);}}/>)});
+}
 
-    const routes = props.navigation.getState()?.routes;
-    const prevRoute = routes[routes.length - 1];
-    console.log(prevRoute);
+function setMapFloorDisplay(buildingName, floor) { // Display building's floor on MapViewer
+    // Toggle MapViewer's floor
+    DeviceEventEmitter.emit("event.toggleOverlay", floor, buildingName);
+    // Remove listeners
+    DeviceEventEmitter.removeAllListeners("event.toggleOverlay");
+}
 
-    return a.map(i => {return (<Button title = {`${i}`} key={`button-${i}`} onPress={() => {props.navigation.setParams({floors: props.route.params.floors}, props.route.params.k);}}/>)});
+function goBack(props) {
+    resetMapViewer();
+    // Go back to previous navigation screen
+    props.navigation.dispatch(CommonActions.goBack());
+}
+
+function resetMapViewer() {
+    // Toggle MapViewer's floor to empty set
+    DeviceEventEmitter.emit("event.toggleOverlay", 0, "NULL");
+    // Remove listeners
+    DeviceEventEmitter.removeAllListeners("event.toggleOverlay");
 }
 
 const styles = StyleSheet.create({

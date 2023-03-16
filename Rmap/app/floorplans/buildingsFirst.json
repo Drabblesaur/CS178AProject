@@ -287,12 +287,13 @@
       "type": "Feature",
       "properties": {
         "building": "Winston Chung Hall",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "m"
       },
       "geometry": {
         "coordinates": [
-          -117.325848,
-          33.975293
+          -117.325851,
+          33.975286
         ],
         "type": "Point"
       },
@@ -372,7 +373,8 @@
       "type": "Feature",
       "properties": {
         "building": "Spieth Hall",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "m"
       },
       "geometry": {
         "coordinates": [
@@ -686,6 +688,27 @@
         "type": "Polygon"
       },
       "id": "0a20ef6c51fee03ffa709dcc3fa99240"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Watkins Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.329294,
+            33.972886
+          ],
+          [
+            -117.329294,
+            33.972861
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "0bf9b9f552972a6ce6435a91fc374835"
     },
     {
       "type": "Feature",
@@ -1292,6 +1315,22 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Sproul Hall",
+        "type": "bathroom",
+        "gender": "f"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.329837,
+          33.972467
+        ],
+        "type": "Point"
+      },
+      "id": "19d0c9f5b818a32bd47d67ee942c564b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Olmsted Hall",
         "room": "1429"
       },
@@ -1328,7 +1367,8 @@
       "type": "Feature",
       "properties": {
         "building": "Watkins Hall",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "f"
       },
       "geometry": {
         "coordinates": [
@@ -1377,8 +1417,41 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Winston Chung Hall",
+        "type": "bathroom",
+        "gender": "f"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.325852,
+          33.975318
+        ],
+        "type": "Point"
+      },
+      "id": "1c8bfd9d00a65bcbdd7c7f981a8fe330"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "CHASS Interdisciplinary North",
+        "type": "bathroom",
+        "gender": "f"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.330431,
+          33.975282
+        ],
+        "type": "Point"
+      },
+      "id": "1cda101125c97b3cab21c4437f86fd9f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Olmsted Hall",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "m"
       },
       "geometry": {
         "coordinates": [
@@ -1579,6 +1652,117 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Student Success Center",
+        "room": "hallway"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330816,
+              33.974144
+            ],
+            [
+              -117.330816,
+              33.974086
+            ],
+            [
+              -117.330609,
+              33.974085
+            ],
+            [
+              -117.330608,
+              33.974038
+            ],
+            [
+              -117.330444,
+              33.974037
+            ],
+            [
+              -117.330444,
+              33.974083
+            ],
+            [
+              -117.330281,
+              33.974082
+            ],
+            [
+              -117.330285,
+              33.974396
+            ],
+            [
+              -117.330447,
+              33.974396
+            ],
+            [
+              -117.330444,
+              33.974162
+            ],
+            [
+              -117.330525,
+              33.974161
+            ],
+            [
+              -117.330524,
+              33.974278
+            ],
+            [
+              -117.330488,
+              33.974278
+            ],
+            [
+              -117.330489,
+              33.97429
+            ],
+            [
+              -117.330524,
+              33.974289
+            ],
+            [
+              -117.330524,
+              33.974395
+            ],
+            [
+              -117.330601,
+              33.974396
+            ],
+            [
+              -117.3306,
+              33.974234
+            ],
+            [
+              -117.330601,
+              33.974206
+            ],
+            [
+              -117.330606,
+              33.97418
+            ],
+            [
+              -117.330617,
+              33.974164
+            ],
+            [
+              -117.330642,
+              33.974152
+            ],
+            [
+              -117.330678,
+              33.974143
+            ],
+            [
+              -117.330816,
+              33.974144
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "1fad89aee4f62cb8f0c5964284526dce"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Olmsted Hall",
         "room": "undefined"
       },
@@ -1731,6 +1915,73 @@
         "type": "Polygon"
       },
       "id": "21e64d6d070c721392f0d56e88628f04"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Bourns Hall",
+        "room": "hallway"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.3274,
+              33.975351
+            ],
+            [
+              -117.327399,
+              33.975169
+            ],
+            [
+              -117.326949,
+              33.975168
+            ],
+            [
+              -117.32695,
+              33.975079
+            ],
+            [
+              -117.326929,
+              33.975079
+            ],
+            [
+              -117.326928,
+              33.975099
+            ],
+            [
+              -117.326873,
+              33.975099
+            ],
+            [
+              -117.326873,
+              33.975165
+            ],
+            [
+              -117.32637,
+              33.975164
+            ],
+            [
+              -117.326375,
+              33.97533
+            ],
+            [
+              -117.326873,
+              33.975334
+            ],
+            [
+              -117.326875,
+              33.975349
+            ],
+            [
+              -117.3274,
+              33.975351
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "21f5ea3486192ceeb7e09ddb825e3c79"
     },
     {
       "type": "Feature",
@@ -1906,7 +2157,8 @@
       "type": "Feature",
       "properties": {
         "building": "Physics",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "m"
       },
       "geometry": {
         "coordinates": [
@@ -2265,6 +2517,181 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Physics",
+        "room": "hallway"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.325426,
+              33.975058
+            ],
+            [
+              -117.325312,
+              33.975057
+            ],
+            [
+              -117.325311,
+              33.975032
+            ],
+            [
+              -117.325379,
+              33.975032
+            ],
+            [
+              -117.325376,
+              33.974509
+            ],
+            [
+              -117.325363,
+              33.974509
+            ],
+            [
+              -117.325363,
+              33.974433
+            ],
+            [
+              -117.324979,
+              33.974433
+            ],
+            [
+              -117.32498,
+              33.974464
+            ],
+            [
+              -117.32488,
+              33.974462
+            ],
+            [
+              -117.324883,
+              33.97439
+            ],
+            [
+              -117.325032,
+              33.974387
+            ],
+            [
+              -117.325031,
+              33.974364
+            ],
+            [
+              -117.325056,
+              33.974363
+            ],
+            [
+              -117.325056,
+              33.974316
+            ],
+            [
+              -117.325257,
+              33.974315
+            ],
+            [
+              -117.325257,
+              33.974388
+            ],
+            [
+              -117.325639,
+              33.97439
+            ],
+            [
+              -117.32564,
+              33.974316
+            ],
+            [
+              -117.325662,
+              33.974316
+            ],
+            [
+              -117.325685,
+              33.974316
+            ],
+            [
+              -117.325688,
+              33.974508
+            ],
+            [
+              -117.32564,
+              33.97451
+            ],
+            [
+              -117.325638,
+              33.974434
+            ],
+            [
+              -117.325457,
+              33.974434
+            ],
+            [
+              -117.325457,
+              33.974508
+            ],
+            [
+              -117.325454,
+              33.974509
+            ],
+            [
+              -117.325454,
+              33.974525
+            ],
+            [
+              -117.325443,
+              33.974525
+            ],
+            [
+              -117.325443,
+              33.974546
+            ],
+            [
+              -117.325423,
+              33.974546
+            ],
+            [
+              -117.325425,
+              33.974802
+            ],
+            [
+              -117.325541,
+              33.974802
+            ],
+            [
+              -117.325541,
+              33.97483
+            ],
+            [
+              -117.325426,
+              33.97483
+            ],
+            [
+              -117.325425,
+              33.974934
+            ],
+            [
+              -117.32554,
+              33.974934
+            ],
+            [
+              -117.325541,
+              33.974953
+            ],
+            [
+              -117.325424,
+              33.974951
+            ],
+            [
+              -117.325426,
+              33.975058
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "2b869b1698515c931e04ff04b3b13e3d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Costo Hall",
         "room": "111"
       },
@@ -2410,8 +2837,8 @@
       },
       "geometry": {
         "coordinates": [
-          -117.330488,
-          33.974142
+          -117.330485,
+          33.974165
         ],
         "type": "Point"
       },
@@ -2732,6 +3159,27 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Physics",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.324881,
+            33.974437
+          ],
+          [
+            -117.324882,
+            33.974414
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "3234ff1e0837f18666f53a1920ccb573"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "CHASS Interdisciplinary South",
         "room": "1132"
       },
@@ -2868,6 +3316,27 @@
         "type": "Polygon"
       },
       "id": "34906559a032b9daf005e7bf14066eec"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Sproul Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.329792,
+            33.973159
+          ],
+          [
+            -117.329757,
+            33.973158
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "35927a184cf311f8127fec65639cf498"
     },
     {
       "type": "Feature",
@@ -3173,8 +3642,8 @@
       },
       "geometry": {
         "coordinates": [
-          -117.326449,
-          33.972983
+          -117.326442,
+          33.97298
         ],
         "type": "Point"
       },
@@ -3438,6 +3907,22 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "CHASS Interdisciplinary North",
+        "type": "bathroom",
+        "gender": "m"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.330477,
+          33.975251
+        ],
+        "type": "Point"
+      },
+      "id": "406f187b9a982b61f4a6a4468ba42ee5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Olmsted Hall",
         "room": "undefined"
       },
@@ -3474,7 +3959,8 @@
       "type": "Feature",
       "properties": {
         "building": "Spieth Hall",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "f"
       },
       "geometry": {
         "coordinates": [
@@ -4287,7 +4773,8 @@
       "type": "Feature",
       "properties": {
         "building": "Watkins Hall",
-        "type": ""
+        "type": "bathroom",
+        "gender": "m"
       },
       "geometry": {
         "coordinates": [
@@ -4422,12 +4909,13 @@
       "type": "Feature",
       "properties": {
         "building": "Sproul Hall",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "m"
       },
       "geometry": {
         "coordinates": [
-          -117.329818,
-          33.972465
+          -117.329804,
+          33.972466
         ],
         "type": "Point"
       },
@@ -4727,6 +5215,27 @@
         "type": "Polygon"
       },
       "id": "4f0c94eca76be0ed4a9027d171458cae"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.330581,
+            33.974397
+          ],
+          [
+            -117.330541,
+            33.974396
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "4f5d9722df9590b4b77176b5f2bf9df0"
     },
     {
       "type": "Feature",
@@ -5318,8 +5827,30 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Winston Chung Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.326327,
+            33.975153
+          ],
+          [
+            -117.326326,
+            33.975143
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "5893bb18985320487b614a8122dee4e0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Physics",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "f"
       },
       "geometry": {
         "coordinates": [
@@ -5504,6 +6035,237 @@
         "type": "Polygon"
       },
       "id": "5aad961f8b7a1943c443603e2deb1e36"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Winston Chung Hall",
+        "room": "hallway"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.326305,
+              33.975577
+            ],
+            [
+              -117.326303,
+              33.975358
+            ],
+            [
+              -117.326335,
+              33.975358
+            ],
+            [
+              -117.326335,
+              33.975346
+            ],
+            [
+              -117.326166,
+              33.975346
+            ],
+            [
+              -117.326166,
+              33.975167
+            ],
+            [
+              -117.3263,
+              33.975167
+            ],
+            [
+              -117.3263,
+              33.975156
+            ],
+            [
+              -117.326327,
+              33.975155
+            ],
+            [
+              -117.326326,
+              33.97514
+            ],
+            [
+              -117.326278,
+              33.97514
+            ],
+            [
+              -117.326277,
+              33.975135
+            ],
+            [
+              -117.326164,
+              33.975135
+            ],
+            [
+              -117.326164,
+              33.975106
+            ],
+            [
+              -117.326126,
+              33.975105
+            ],
+            [
+              -117.326124,
+              33.975134
+            ],
+            [
+              -117.325831,
+              33.975135
+            ],
+            [
+              -117.325776,
+              33.975135
+            ],
+            [
+              -117.325776,
+              33.975166
+            ],
+            [
+              -117.325783,
+              33.975166
+            ],
+            [
+              -117.325787,
+              33.975344
+            ],
+            [
+              -117.325722,
+              33.975343
+            ],
+            [
+              -117.325722,
+              33.975365
+            ],
+            [
+              -117.325786,
+              33.975364
+            ],
+            [
+              -117.325788,
+              33.975553
+            ],
+            [
+              -117.325692,
+              33.975552
+            ],
+            [
+              -117.325692,
+              33.97557
+            ],
+            [
+              -117.325669,
+              33.97557
+            ],
+            [
+              -117.32567,
+              33.975629
+            ],
+            [
+              -117.325745,
+              33.975631
+            ],
+            [
+              -117.325744,
+              33.975608
+            ],
+            [
+              -117.325769,
+              33.975608
+            ],
+            [
+              -117.325768,
+              33.975579
+            ],
+            [
+              -117.325797,
+              33.975579
+            ],
+            [
+              -117.325797,
+              33.975577
+            ],
+            [
+              -117.325835,
+              33.975578
+            ],
+            [
+              -117.325836,
+              33.975622
+            ],
+            [
+              -117.325854,
+              33.975622
+            ],
+            [
+              -117.325854,
+              33.975575
+            ],
+            [
+              -117.325995,
+              33.975575
+            ],
+            [
+              -117.325996,
+              33.975624
+            ],
+            [
+              -117.326015,
+              33.975624
+            ],
+            [
+              -117.326013,
+              33.975576
+            ],
+            [
+              -117.326138,
+              33.975576
+            ],
+            [
+              -117.326139,
+              33.975638
+            ],
+            [
+              -117.326165,
+              33.975637
+            ],
+            [
+              -117.326163,
+              33.975576
+            ],
+            [
+              -117.326191,
+              33.975576
+            ],
+            [
+              -117.326191,
+              33.975602
+            ],
+            [
+              -117.326226,
+              33.975603
+            ],
+            [
+              -117.326226,
+              33.975669
+            ],
+            [
+              -117.326287,
+              33.97567
+            ],
+            [
+              -117.326286,
+              33.975576
+            ],
+            [
+              -117.326305,
+              33.975577
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "5acc0d893af42cedb6682d513a05201d"
     },
     {
       "type": "Feature",
@@ -5754,12 +6516,13 @@
       "type": "Feature",
       "properties": {
         "building": "Student Success Center",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "m"
       },
       "geometry": {
         "coordinates": [
           -117.330478,
-          33.974281
+          33.974273
         ],
         "type": "Point"
       },
@@ -5799,6 +6562,24 @@
         "type": "Polygon"
       },
       "id": "607ae00bafaff326b204541e119d272e"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            -117.330401,
+            33.974397
+          ],
+          [
+            -117.330356,
+            33.974396
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "60be862c02446591775df436144f02a5"
     },
     {
       "type": "Feature",
@@ -5877,6 +6658,27 @@
         "type": "Polygon"
       },
       "id": "62a3d3fb82e75828726e019e836c23f9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Winston Chung Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.326305,
+            33.975568
+          ],
+          [
+            -117.326305,
+            33.975546
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "62b7e94e943cbc77c549f099a1c4003d"
     },
     {
       "type": "Feature",
@@ -5986,6 +6788,42 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Winston Chung Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.326161,
+            33.975019
+          ],
+          [
+            -117.326138,
+            33.975019
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "63f2214cd36358cfec43b97653330b7b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "CHASS Interdisciplinary North",
+        "type": "water"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.330401,
+          33.975242
+        ],
+        "type": "Point"
+      },
+      "id": "641dbcc3bd43a164fb9fc557c77f5693"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Physics",
         "room": "2104"
       },
@@ -6052,6 +6890,22 @@
         "type": "Polygon"
       },
       "id": "6542f922eb2148ea81ad41915fbdd83f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Sproul Hall",
+        "type": "bathroom",
+        "gender": "m"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.329705,
+          33.973024
+        ],
+        "type": "Point"
+      },
+      "id": "65e83ac12fbfba75ab173182ac709c1c"
     },
     {
       "type": "Feature",
@@ -6903,12 +7757,13 @@
       "type": "Feature",
       "properties": {
         "building": "Spieth Hall",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "m"
       },
       "geometry": {
         "coordinates": [
-          -117.326504,
-          33.972972
+          -117.32653,
+          33.972978
         ],
         "type": "Point"
       },
@@ -7053,6 +7908,27 @@
         "type": "Polygon"
       },
       "id": "74403d1fe18c618613c095960c496442"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Sproul Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.329759,
+            33.972605
+          ],
+          [
+            -117.32971,
+            33.972605
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "744925b0529516fd25e53196c079cf5a"
     },
     {
       "type": "Feature",
@@ -7373,7 +8249,8 @@
       "type": "Feature",
       "properties": {
         "building": "Olmsted Hall",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "f"
       },
       "geometry": {
         "coordinates": [
@@ -7713,7 +8590,8 @@
       "type": "Feature",
       "properties": {
         "building": "Costo Hall",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "u"
       },
       "geometry": {
         "coordinates": [
@@ -7723,6 +8601,22 @@
         "type": "Point"
       },
       "id": "7c9c1718e30427bd646ff61208948cef"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Sproul Hall",
+        "type": "water",
+        "gender": "m"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.329682,
+          33.973026
+        ],
+        "type": "Point"
+      },
+      "id": "7cd462139bc276e2981c82696c947a20"
     },
     {
       "type": "Feature",
@@ -7828,6 +8722,27 @@
         "type": "Polygon"
       },
       "id": "7dce94dc4b2791d0fbc6b04a2b51f8a0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.328019,
+            33.971307
+          ],
+          [
+            -117.328018,
+            33.971288
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "7df56a45adc58bc6170fae2887471296"
     },
     {
       "type": "Feature",
@@ -7983,6 +8898,81 @@
         "type": "Polygon"
       },
       "id": "81d07d3ce75e533892b579eee12af01c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "room": "hallway"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327892,
+              33.971595
+            ],
+            [
+              -117.327892,
+              33.971556
+            ],
+            [
+              -117.327389,
+              33.971561
+            ],
+            [
+              -117.327388,
+              33.971474
+            ],
+            [
+              -117.327359,
+              33.971475
+            ],
+            [
+              -117.327363,
+              33.971596
+            ],
+            [
+              -117.32771,
+              33.971595
+            ],
+            [
+              -117.327711,
+              33.971617
+            ],
+            [
+              -117.327743,
+              33.971617
+            ],
+            [
+              -117.327743,
+              33.971596
+            ],
+            [
+              -117.327804,
+              33.971595
+            ],
+            [
+              -117.327805,
+              33.97162
+            ],
+            [
+              -117.327847,
+              33.97162
+            ],
+            [
+              -117.327846,
+              33.971594
+            ],
+            [
+              -117.327892,
+              33.971595
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "820794b3fce98c5abaa740b7fa73e0b4"
     },
     {
       "type": "Feature",
@@ -8192,6 +9182,22 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Spieth Hall",
+        "type": "bathroom",
+        "gender": "f"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.326482,
+          33.972976
+        ],
+        "type": "Point"
+      },
+      "id": "87c5e172f9fa05594af398563188bf5d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "room": "1146"
       },
@@ -8308,6 +9314,27 @@
         "type": "Polygon"
       },
       "id": "88c569da76b5f3b091a21e3d6e93504e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Sproul Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.329857,
+            33.972809
+          ],
+          [
+            -117.329825,
+            33.972809
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "8935363a39937d67e310927c7831e313"
     },
     {
       "type": "Feature",
@@ -8604,6 +9631,27 @@
         "type": "Polygon"
       },
       "id": "8d2db10efdc067b97110c772d32fc9e6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Winston Chung Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.326048,
+            33.975019
+          ],
+          [
+            -117.326023,
+            33.975019
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "8d5e0aa8fd3cdfd141b7ae52eb7ca9fc"
     },
     {
       "type": "Feature",
@@ -8970,6 +10018,27 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Olmsted Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.328823,
+            33.971019
+          ],
+          [
+            -117.328795,
+            33.971018
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "92437deab924aa20db793ff435231df2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Bourns Hall",
         "room": "B156"
       },
@@ -9006,7 +10075,8 @@
       "type": "Feature",
       "properties": {
         "building": "Watkins Hall",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "m"
       },
       "geometry": {
         "coordinates": [
@@ -9174,6 +10244,166 @@
     },
     {
       "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328837,
+              33.971056
+            ],
+            [
+              -117.328819,
+              33.971056
+            ],
+            [
+              -117.328819,
+              33.971138
+            ],
+            [
+              -117.32887,
+              33.971139
+            ],
+            [
+              -117.32887,
+              33.971157
+            ],
+            [
+              -117.328819,
+              33.971157
+            ],
+            [
+              -117.328818,
+              33.971196
+            ],
+            [
+              -117.328836,
+              33.971197
+            ],
+            [
+              -117.328836,
+              33.971267
+            ],
+            [
+              -117.328766,
+              33.971267
+            ],
+            [
+              -117.328766,
+              33.971278
+            ],
+            [
+              -117.328736,
+              33.971277
+            ],
+            [
+              -117.328736,
+              33.971315
+            ],
+            [
+              -117.328721,
+              33.971316
+            ],
+            [
+              -117.328721,
+              33.971278
+            ],
+            [
+              -117.328381,
+              33.97128
+            ],
+            [
+              -117.328381,
+              33.971318
+            ],
+            [
+              -117.328331,
+              33.971319
+            ],
+            [
+              -117.328331,
+              33.97128
+            ],
+            [
+              -117.328301,
+              33.97128
+            ],
+            [
+              -117.328303,
+              33.971319
+            ],
+            [
+              -117.328018,
+              33.971317
+            ],
+            [
+              -117.328018,
+              33.97128
+            ],
+            [
+              -117.328267,
+              33.971281
+            ],
+            [
+              -117.328269,
+              33.971238
+            ],
+            [
+              -117.328335,
+              33.971238
+            ],
+            [
+              -117.328334,
+              33.971201
+            ],
+            [
+              -117.32842,
+              33.971201
+            ],
+            [
+              -117.328422,
+              33.971237
+            ],
+            [
+              -117.328695,
+              33.971237
+            ],
+            [
+              -117.328696,
+              33.9712
+            ],
+            [
+              -117.328735,
+              33.971199
+            ],
+            [
+              -117.328735,
+              33.971194
+            ],
+            [
+              -117.328783,
+              33.971193
+            ],
+            [
+              -117.328782,
+              33.971018
+            ],
+            [
+              -117.328837,
+              33.971018
+            ],
+            [
+              -117.328837,
+              33.971056
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "9655663bbb736bc18cb9d4eb0d2937b4"
+    },
+    {
+      "type": "Feature",
       "properties": {
         "building": "Winston Chung Hall",
         "room": "135"
@@ -9246,7 +10476,8 @@
       "type": "Feature",
       "properties": {
         "building": "Bourns Hall",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "m"
       },
       "geometry": {
         "coordinates": [
@@ -9256,6 +10487,22 @@
         "type": "Point"
       },
       "id": "974f43b1df7f7ae7b5dfe0885f1f6fb9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Winston Chung Hall",
+        "type": "bathroom",
+        "gender": "f"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.325866,
+          33.975054
+        ],
+        "type": "Point"
+      },
+      "id": "97995b70d9b696626f374b8c7f21cc4a"
     },
     {
       "type": "Feature",
@@ -9431,6 +10678,27 @@
         "type": "Polygon"
       },
       "id": "9a2b741c432a25f30992d36682c9ef24"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.330816,
+            33.97413
+          ],
+          [
+            -117.330816,
+            33.974102
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "9a4e549c877e0ddccd76f978efb7e212"
     },
     {
       "type": "Feature",
@@ -9796,7 +11064,8 @@
       "type": "Feature",
       "properties": {
         "building": "Watkins Hall",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "f"
       },
       "geometry": {
         "coordinates": [
@@ -9806,6 +11075,27 @@
         "type": "Point"
       },
       "id": "a1d05e04be8963595af9b9d9b81c7e1c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Olmsted Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.328376,
+            33.971319
+          ],
+          [
+            -117.328359,
+            33.971319
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "a23e2ffa8a5143433303d1c977a1c6d8"
     },
     {
       "type": "Feature",
@@ -9841,6 +11131,27 @@
         "type": "Polygon"
       },
       "id": "a27d0973db03747f6f1f5fb48ab730f7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Watkins Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.329023,
+            33.972955
+          ],
+          [
+            -117.32899,
+            33.972954
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "a3c854f8df3d5691195a49553a2d73f7"
     },
     {
       "type": "Feature",
@@ -9892,6 +11203,27 @@
         "type": "Polygon"
       },
       "id": "a44d153b34ce09c14f8e1316f5e338a9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Winston Chung Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.325776,
+            33.975162
+          ],
+          [
+            -117.325776,
+            33.975142
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "a45419931e364ef799e67fb7712d53e6"
     },
     {
       "type": "Feature",
@@ -9966,6 +11298,27 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Sproul Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.329865,
+            33.97293
+          ],
+          [
+            -117.329838,
+            33.97293
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "a473aa497bf748c622a618b174b218dc"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "room": "1340"
       },
@@ -10032,6 +11385,27 @@
         "type": "Polygon"
       },
       "id": "a59c67a4a4c58497227600907288b776"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Winston Chung Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.326335,
+            33.975356
+          ],
+          [
+            -117.326335,
+            33.975349
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "a5b82e242329046d1039305aadc3b22a"
     },
     {
       "type": "Feature",
@@ -10583,6 +11957,27 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Student Success Center",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.330418,
+            33.974083
+          ],
+          [
+            -117.330324,
+            33.974082
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "ad3dd588f178bb532ba0204e026b7a5f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Bourns Hall",
         "room": "B140"
       },
@@ -10894,6 +12289,27 @@
         "type": "Polygon"
       },
       "id": "b0fbf97b11bee8f3639c8507a8b2edf5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Physics",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.325673,
+            33.974316
+          ],
+          [
+            -117.325649,
+            33.974316
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "b1025cb1383d509b8e1ae403975f5b6b"
     },
     {
       "type": "Feature",
@@ -11489,6 +12905,27 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Student Success Center",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.330283,
+            33.974215
+          ],
+          [
+            -117.330281,
+            33.97418
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "b953c91d9e9f985c50e4973fe41c7f8e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "room": "1213"
       },
@@ -11595,6 +13032,117 @@
       "type": "Feature",
       "properties": {
         "building": "Sproul Hall",
+        "room": "hallway"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.329805,
+              33.973158
+            ],
+            [
+              -117.329645,
+              33.973158
+            ],
+            [
+              -117.329645,
+              33.973088
+            ],
+            [
+              -117.329603,
+              33.973087
+            ],
+            [
+              -117.329604,
+              33.972928
+            ],
+            [
+              -117.329691,
+              33.972928
+            ],
+            [
+              -117.329691,
+              33.97296
+            ],
+            [
+              -117.329673,
+              33.97296
+            ],
+            [
+              -117.329673,
+              33.972989
+            ],
+            [
+              -117.3297,
+              33.972989
+            ],
+            [
+              -117.329694,
+              33.972993
+            ],
+            [
+              -117.329694,
+              33.972997
+            ],
+            [
+              -117.329673,
+              33.972996
+            ],
+            [
+              -117.329673,
+              33.973049
+            ],
+            [
+              -117.329825,
+              33.97305
+            ],
+            [
+              -117.329824,
+              33.97293
+            ],
+            [
+              -117.329878,
+              33.97293
+            ],
+            [
+              -117.329877,
+              33.973056
+            ],
+            [
+              -117.329881,
+              33.973056
+            ],
+            [
+              -117.329881,
+              33.973088
+            ],
+            [
+              -117.329855,
+              33.973088
+            ],
+            [
+              -117.329855,
+              33.973086
+            ],
+            [
+              -117.329805,
+              33.973086
+            ],
+            [
+              -117.329805,
+              33.973158
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "b9ee0717c88afae93ca55d96b249b09a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Sproul Hall",
         "room": "1124"
       },
       "geometry": {
@@ -11695,6 +13243,48 @@
         "type": "Polygon"
       },
       "id": "bafa836e76229bd98a0b30aa0f42687f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Watkins Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.329296,
+            33.972338
+          ],
+          [
+            -117.329297,
+            33.972308
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "bb3bb9dc7d64f6f672ef432a1a39a295"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Winston Chung Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.325979,
+            33.975019
+          ],
+          [
+            -117.325955,
+            33.975019
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "bc41be8376572e9bd6a6d983d924dab0"
     },
     {
       "type": "Feature",
@@ -12360,11 +13950,11 @@
           [
             [
               -117.327351,
-              33.975337
+              33.975328
             ],
             [
               -117.327049,
-              33.975335
+              33.975328
             ],
             [
               -117.327047,
@@ -12376,7 +13966,7 @@
             ],
             [
               -117.327351,
-              33.975337
+              33.975328
             ]
           ]
         ],
@@ -12528,7 +14118,8 @@
       "type": "Feature",
       "properties": {
         "building": "Bourns Hall",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "f"
       },
       "geometry": {
         "coordinates": [
@@ -12543,7 +14134,8 @@
       "type": "Feature",
       "properties": {
         "building": "Olmsted Hall",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "u"
       },
       "geometry": {
         "coordinates": [
@@ -13024,6 +14616,22 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Student Success Center",
+        "type": "bathroom",
+        "gender": "f"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.330478,
+          33.97429
+        ],
+        "type": "Point"
+      },
+      "id": "ceeecb9e29c2f1fe38fdff855c2cc8ac"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Winston Chung Hall",
         "room": "124"
       },
@@ -13488,6 +15096,27 @@
       "type": "Feature",
       "properties": {
         "building": "Watkins Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.328577,
+            33.972884
+          ],
+          [
+            -117.328576,
+            33.972855
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "d4ab933f7aead0da1a005893adc70068"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Watkins Hall",
         "room": "1000"
       },
       "geometry": {
@@ -13864,6 +15493,27 @@
       "type": "Feature",
       "properties": {
         "building": "Winston Chung Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.325669,
+            33.975602
+          ],
+          [
+            -117.325669,
+            33.975582
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "d8da53ce9ed0b28f0d441ebb1e91c643"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Winston Chung Hall",
         "type": "stairs"
       },
       "geometry": {
@@ -14216,6 +15866,27 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Physics",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.325133,
+            33.974317
+          ],
+          [
+            -117.325088,
+            33.974317
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "dc7c28665603570ebc57567f965a02ad"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Spieth Hall",
         "room": "1208"
       },
@@ -14282,6 +15953,97 @@
         "type": "Polygon"
       },
       "id": "dc995951ec8a8c13212e06a858d874bf"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Sproul Hall",
+        "room": "hallway"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.329869,
+              33.972809
+            ],
+            [
+              -117.329869,
+              33.972768
+            ],
+            [
+              -117.329907,
+              33.972768
+            ],
+            [
+              -117.329907,
+              33.972746
+            ],
+            [
+              -117.329867,
+              33.972745
+            ],
+            [
+              -117.329867,
+              33.97265
+            ],
+            [
+              -117.329796,
+              33.97265
+            ],
+            [
+              -117.329794,
+              33.972605
+            ],
+            [
+              -117.329696,
+              33.972604
+            ],
+            [
+              -117.329697,
+              33.972652
+            ],
+            [
+              -117.329592,
+              33.97265
+            ],
+            [
+              -117.329592,
+              33.972674
+            ],
+            [
+              -117.329612,
+              33.972675
+            ],
+            [
+              -117.329611,
+              33.97281
+            ],
+            [
+              -117.329654,
+              33.97281
+            ],
+            [
+              -117.329649,
+              33.972679
+            ],
+            [
+              -117.329809,
+              33.972678
+            ],
+            [
+              -117.32981,
+              33.972809
+            ],
+            [
+              -117.329869,
+              33.972809
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "dce6dd2b19a4cef892c3b93b65784445"
     },
     {
       "type": "Feature",
@@ -14602,7 +16364,8 @@
       "type": "Feature",
       "properties": {
         "building": "HUB",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "u"
       },
       "geometry": {
         "coordinates": [
@@ -14617,12 +16380,13 @@
       "type": "Feature",
       "properties": {
         "building": "Winston Chung Hall",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "m"
       },
       "geometry": {
         "coordinates": [
-          -117.325881,
-          33.975585
+          -117.325894,
+          33.975591
         ],
         "type": "Point"
       },
@@ -14920,7 +16684,8 @@
       "type": "Feature",
       "properties": {
         "building": "Watkins Hall",
-        "type": "water"
+        "type": "water",
+        "gender": "m"
       },
       "geometry": {
         "coordinates": [
@@ -15028,6 +16793,27 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Bourns Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.327119,
+            33.975351
+          ],
+          [
+            -117.327067,
+            33.975351
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "e94d169819d0562a7731ccb8662f1ed3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Physics",
         "room": "2111"
       },
@@ -15064,12 +16850,13 @@
       "type": "Feature",
       "properties": {
         "building": "Sproul Hall",
-        "type": "water"
+        "type": "water",
+        "gender": "f"
       },
       "geometry": {
         "coordinates": [
-          -117.329683,
-          33.973017
+          -117.329681,
+          33.973
         ],
         "type": "Point"
       },
@@ -15079,12 +16866,13 @@
       "type": "Feature",
       "properties": {
         "building": "Winston Chung Hall",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "m"
       },
       "geometry": {
         "coordinates": [
-          -117.325859,
-          33.975068
+          -117.325868,
+          33.975099
         ],
         "type": "Point"
       },
@@ -15198,6 +16986,22 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Winston Chung Hall",
+        "type": "bathroom",
+        "gender": "f"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.325868,
+          33.975591
+        ],
+        "type": "Point"
+      },
+      "id": "ec76e577e43e97eb07062717b34cccbf"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "room": "1136"
       },
@@ -15229,6 +17033,27 @@
         "type": "Polygon"
       },
       "id": "ec8ddefb6d0d4a71bf0695456c5897f6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Watkins Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.328576,
+            33.972333
+          ],
+          [
+            -117.328576,
+            33.972306
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "ec99aca8f089d0f01cb819ffbccbb17b"
     },
     {
       "type": "Feature",
@@ -15339,7 +17164,8 @@
       "type": "Feature",
       "properties": {
         "building": "Sproul Hall",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "f"
       },
       "geometry": {
         "coordinates": [
@@ -15431,12 +17257,12 @@
               33.974218
             ],
             [
-              -117.330525,
-              33.974141
+              -117.330524,
+              33.974162
             ],
             [
-              -117.330448,
-              33.97414
+              -117.330445,
+              33.974162
             ],
             [
               -117.330448,
@@ -15490,8 +17316,8 @@
               33.975609
             ],
             [
-              -117.325769,
-              33.975609
+              -117.32577,
+              33.975608
             ],
             [
               -117.32577,
@@ -15588,6 +17414,27 @@
         "type": "Polygon"
       },
       "id": "ef960912d23b78d7ef4f51df8b3f683e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Sproul Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.32965,
+            33.972928
+          ],
+          [
+            -117.329622,
+            33.972928
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "efca938305e25c4826da86288a63e4af"
     },
     {
       "type": "Feature",
@@ -15693,6 +17540,153 @@
         "type": "Polygon"
       },
       "id": "f0d898b1750c720fe5ac1b86e8e4653e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Watkins Hall",
+        "room": "hallway"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.329294,
+              33.972893
+            ],
+            [
+              -117.329292,
+              33.972787
+            ],
+            [
+              -117.329247,
+              33.972787
+            ],
+            [
+              -117.329249,
+              33.972845
+            ],
+            [
+              -117.329043,
+              33.972847
+            ],
+            [
+              -117.329036,
+              33.972382
+            ],
+            [
+              -117.329071,
+              33.972382
+            ],
+            [
+              -117.329071,
+              33.97235
+            ],
+            [
+              -117.329296,
+              33.972352
+            ],
+            [
+              -117.329296,
+              33.972296
+            ],
+            [
+              -117.329079,
+              33.972295
+            ],
+            [
+              -117.329079,
+              33.972292
+            ],
+            [
+              -117.328933,
+              33.972291
+            ],
+            [
+              -117.32893,
+              33.972295
+            ],
+            [
+              -117.328575,
+              33.972293
+            ],
+            [
+              -117.328576,
+              33.972347
+            ],
+            [
+              -117.328994,
+              33.972347
+            ],
+            [
+              -117.329001,
+              33.972793
+            ],
+            [
+              -117.328934,
+              33.972793
+            ],
+            [
+              -117.328936,
+              33.972846
+            ],
+            [
+              -117.328628,
+              33.972847
+            ],
+            [
+              -117.328627,
+              33.972793
+            ],
+            [
+              -117.328574,
+              33.972793
+            ],
+            [
+              -117.328577,
+              33.972891
+            ],
+            [
+              -117.328654,
+              33.972892
+            ],
+            [
+              -117.328656,
+              33.972926
+            ],
+            [
+              -117.328668,
+              33.972927
+            ],
+            [
+              -117.328667,
+              33.972892
+            ],
+            [
+              -117.328963,
+              33.97289
+            ],
+            [
+              -117.328964,
+              33.972954
+            ],
+            [
+              -117.329046,
+              33.972955
+            ],
+            [
+              -117.329045,
+              33.972894
+            ],
+            [
+              -117.329294,
+              33.972893
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "f203f7c05475bad63db9a7f6092998db"
     },
     {
       "type": "Feature",
@@ -15833,6 +17827,27 @@
         "type": "Polygon"
       },
       "id": "f5153db235f0cd8ac714c12b8d557145"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Winston Chung Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.325913,
+            33.975019
+          ],
+          [
+            -117.325889,
+            33.975019
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "f59e5538cb8e6b0f844c78a5db99ab93"
     },
     {
       "type": "Feature",
@@ -16023,6 +18038,27 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Sproul Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.329698,
+            33.973158
+          ],
+          [
+            -117.329663,
+            33.973158
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "f89d976e50bb30f1a7e64100bdde9ef3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Life Sciences",
         "room": "undefined"
       },
@@ -16089,6 +18125,65 @@
         "type": "Polygon"
       },
       "id": "f9b3c334f6e4bf0f3b3a36773705b6d8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Materials Science and Engineering",
+        "room": "hallway"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328721,
+              33.976272
+            ],
+            [
+              -117.32831,
+              33.976273
+            ],
+            [
+              -117.32831,
+              33.976311
+            ],
+            [
+              -117.328247,
+              33.97631
+            ],
+            [
+              -117.328246,
+              33.976293
+            ],
+            [
+              -117.328214,
+              33.976293
+            ],
+            [
+              -117.328214,
+              33.976274
+            ],
+            [
+              -117.327905,
+              33.976272
+            ],
+            [
+              -117.327905,
+              33.976199
+            ],
+            [
+              -117.32872,
+              33.976201
+            ],
+            [
+              -117.328721,
+              33.976272
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "f9b3e165bc428c24a35315018be844e1"
     },
     {
       "type": "Feature",
@@ -16191,7 +18286,7 @@
             ],
             [
               -117.329737,
-              33.972929
+              33.97293
             ],
             [
               -117.329737,
@@ -16202,6 +18297,27 @@
         "type": "Polygon"
       },
       "id": "fc41dfd5c4f06e818ec42ff3827b268e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Sproul Hall",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.329641,
+            33.97281
+          ],
+          [
+            -117.329623,
+            33.97281
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "fc4a7c62e235e99d3b81b3331d80b0c7"
     },
     {
       "type": "Feature",

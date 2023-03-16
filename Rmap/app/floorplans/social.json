@@ -3,8 +3,127 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "University Theatre",
+        "floors": "",
+        "social_type": "entertainment",
+        "type": "social"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328602,
+              33.971779
+            ],
+            [
+              -117.328572,
+              33.9717
+            ],
+            [
+              -117.328535,
+              33.97171
+            ],
+            [
+              -117.328511,
+              33.971624
+            ],
+            [
+              -117.328512,
+              33.971522
+            ],
+            [
+              -117.328541,
+              33.971429
+            ],
+            [
+              -117.328735,
+              33.971474
+            ],
+            [
+              -117.328952,
+              33.971482
+            ],
+            [
+              -117.329048,
+              33.971482
+            ],
+            [
+              -117.329046,
+              33.971631
+            ],
+            [
+              -117.328939,
+              33.971631
+            ],
+            [
+              -117.32894,
+              33.971752
+            ],
+            [
+              -117.328723,
+              33.971749
+            ],
+            [
+              -117.328602,
+              33.971779
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "02aeda5562c62e909cd6d3d87e8fa193"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "UCR/City Soccer Field",
+        "floors": "",
+        "type": "sports"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.332943,
+              33.982879
+            ],
+            [
+              -117.332935,
+              33.98139
+            ],
+            [
+              -117.332914,
+              33.981374
+            ],
+            [
+              -117.331247,
+              33.981373
+            ],
+            [
+              -117.33125,
+              33.982835
+            ],
+            [
+              -117.331318,
+              33.982883
+            ],
+            [
+              -117.332943,
+              33.982879
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "0d0e5bf9d3bbf4e06ab7ab130a597203"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Orbach Library",
-        "floors": 0
+        "floors": 0,
+        "social_type": "library",
+        "type": "social"
       },
       "geometry": {
         "coordinates": [
@@ -158,8 +277,75 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Amy S. Harrison Softball Field",
+        "floors": "",
+        "social_type": "sports",
+        "type": "social"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330913,
+              33.977005
+            ],
+            [
+              -117.330213,
+              33.977003
+            ],
+            [
+              -117.330163,
+              33.976967
+            ],
+            [
+              -117.330174,
+              33.976385
+            ],
+            [
+              -117.330365,
+              33.976371
+            ],
+            [
+              -117.330501,
+              33.97639
+            ],
+            [
+              -117.33065,
+              33.976436
+            ],
+            [
+              -117.330766,
+              33.976507
+            ],
+            [
+              -117.330843,
+              33.9766
+            ],
+            [
+              -117.330893,
+              33.976709
+            ],
+            [
+              -117.330924,
+              33.97688
+            ],
+            [
+              -117.330913,
+              33.977005
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "28b0271aa735d851e637fe7b97b3d4ba"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Costo Hall",
-        "floors": 2
+        "floors": 2,
+        "social_type": "clubs",
+        "type": "social"
       },
       "geometry": {
         "coordinates": [
@@ -194,7 +380,9 @@
       "type": "Feature",
       "properties": {
         "building": "Career Center",
-        "floors": 0
+        "floors": 0,
+        "social_type": "service",
+        "type": "social"
       },
       "geometry": {
         "coordinates": [
@@ -241,7 +429,9 @@
       "type": "Feature",
       "properties": {
         "building": "Rivera Library",
-        "floors": 0
+        "floors": 0,
+        "social_type": "library",
+        "type": "social"
       },
       "geometry": {
         "coordinates": [
@@ -331,8 +521,47 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "SRC Volley Ball Court",
+        "floors": 0,
+        "social_type": "sports",
+        "type": "social"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328734,
+              33.977935
+            ],
+            [
+              -117.328732,
+              33.977656
+            ],
+            [
+              -117.328534,
+              33.977656
+            ],
+            [
+              -117.328537,
+              33.977934
+            ],
+            [
+              -117.328734,
+              33.977935
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "4c10e2d23bad9a6525e4acf07a05808d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "South Student Recreation Center",
-        "floors": 0
+        "floors": 0,
+        "social_type": "sports",
+        "type": "social"
       },
       "geometry": {
         "coordinates": [
@@ -458,8 +687,103 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "UC Police Department",
+        "floors": "",
+        "social_type": "police",
+        "type": "social"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330877,
+              33.979179
+            ],
+            [
+              -117.330878,
+              33.979126
+            ],
+            [
+              -117.330925,
+              33.979127
+            ],
+            [
+              -117.330925,
+              33.979016
+            ],
+            [
+              -117.330967,
+              33.979015
+            ],
+            [
+              -117.330967,
+              33.978953
+            ],
+            [
+              -117.330907,
+              33.978953
+            ],
+            [
+              -117.330908,
+              33.978914
+            ],
+            [
+              -117.330857,
+              33.978913
+            ],
+            [
+              -117.330857,
+              33.978886
+            ],
+            [
+              -117.330735,
+              33.978885
+            ],
+            [
+              -117.330735,
+              33.978912
+            ],
+            [
+              -117.330582,
+              33.978912
+            ],
+            [
+              -117.330581,
+              33.978982
+            ],
+            [
+              -117.330556,
+              33.978982
+            ],
+            [
+              -117.330557,
+              33.979095
+            ],
+            [
+              -117.330609,
+              33.979095
+            ],
+            [
+              -117.330608,
+              33.979177
+            ],
+            [
+              -117.330877,
+              33.979179
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "5cac33ae854717d7ddaa9af38fbbf85c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Highlander Union Building",
-        "floors": 0
+        "floors": 0,
+        "social_type": "store",
+        "type": "social"
       },
       "geometry": {
         "coordinates": [
@@ -497,8 +821,92 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "UCR Track Facility",
+        "floors": 0,
+        "social_type": "sports",
+        "type": "social"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.33015,
+              33.979169
+            ],
+            [
+              -117.329126,
+              33.979177
+            ],
+            [
+              -117.329126,
+              33.977365
+            ],
+            [
+              -117.330169,
+              33.977369
+            ],
+            [
+              -117.33015,
+              33.979169
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "61d08bff63669a0236246db241a0744b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "SRC Rope Course",
+        "floors": 0,
+        "social_type": "sports",
+        "type": "social"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327508,
+              33.979229
+            ],
+            [
+              -117.327091,
+              33.979232
+            ],
+            [
+              -117.327095,
+              33.978584
+            ],
+            [
+              -117.327566,
+              33.978587
+            ],
+            [
+              -117.327561,
+              33.97868
+            ],
+            [
+              -117.327501,
+              33.978743
+            ],
+            [
+              -117.327508,
+              33.979229
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "65313b4a602f88611dc7d8a1f1b63f64"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Health Sevice Building",
-        "floors": 0
+        "floors": 0,
+        "social_type": "service",
+        "type": "social"
       },
       "geometry": {
         "coordinates": [
@@ -564,8 +972,51 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "UCR Soccer Field",
+        "floors": "",
+        "social_type": "sports",
+        "type": "social"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.329932,
+              33.977066
+            ],
+            [
+              -117.329936,
+              33.976062
+            ],
+            [
+              -117.329136,
+              33.97605
+            ],
+            [
+              -117.329125,
+              33.976557
+            ],
+            [
+              -117.329137,
+              33.977064
+            ],
+            [
+              -117.329932,
+              33.977066
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "6e13b11aa1e9af946bdc8c117921475e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Highlander Union Building",
-        "floors": 0
+        "floors": 0,
+        "social_type": "HUB",
+        "type": "social"
       },
       "geometry": {
         "coordinates": [
@@ -608,7 +1059,9 @@
       "type": "Feature",
       "properties": {
         "building": "North Student Recreation Center North",
-        "floors": 0
+        "floors": 0,
+        "social_type": "sports",
+        "type": "social"
       },
       "geometry": {
         "coordinates": [
@@ -711,7 +1164,9 @@
       "type": "Feature",
       "properties": {
         "building": "University Bookstore",
-        "floors": 0
+        "floors": 0,
+        "social_type": "store",
+        "type": "social"
       },
       "geometry": {
         "coordinates": [
@@ -793,8 +1248,47 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "SRC Open Area",
+        "floors": 0,
+        "social_type": "sports",
+        "type": "social"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328732,
+              33.977619
+            ],
+            [
+              -117.327929,
+              33.977619
+            ],
+            [
+              -117.327926,
+              33.977266
+            ],
+            [
+              -117.328737,
+              33.977264
+            ],
+            [
+              -117.328732,
+              33.977619
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "91b8d671c33f73a92973ce0527b89fe3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "The Barn",
-        "floors": ""
+        "floors": "",
+        "social_type": "food",
+        "type": "social"
       },
       "geometry": {
         "coordinates": [
@@ -853,7 +1347,9 @@
       "type": "Feature",
       "properties": {
         "building": "Glasgow",
-        "floors": 0
+        "floors": 0,
+        "social_type": "food",
+        "type": "social"
       },
       "geometry": {
         "coordinates": [
@@ -911,8 +1407,58 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "UCR/City Baseball Field",
+        "floors": "",
+        "type": "sports"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.334694,
+              33.982885
+            ],
+            [
+              -117.334701,
+              33.981335
+            ],
+            [
+              -117.334533,
+              33.981331
+            ],
+            [
+              -117.334172,
+              33.981478
+            ],
+            [
+              -117.333654,
+              33.9815
+            ],
+            [
+              -117.332953,
+              33.981491
+            ],
+            [
+              -117.332958,
+              33.98288
+            ],
+            [
+              -117.334694,
+              33.982885
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "a6513191514c8b081db39e56e8f29c2b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Barn Stable",
-        "floors": 0
+        "floors": 0,
+        "social_type": "food",
+        "type": "social"
       },
       "geometry": {
         "coordinates": [
@@ -970,8 +1516,55 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "SRC Pool",
+        "floors": "",
+        "social_type": "sports",
+        "type": "social"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328509,
+              33.978003
+            ],
+            [
+              -117.328272,
+              33.978
+            ],
+            [
+              -117.328275,
+              33.977871
+            ],
+            [
+              -117.327918,
+              33.977871
+            ],
+            [
+              -117.327921,
+              33.977682
+            ],
+            [
+              -117.328512,
+              33.977684
+            ],
+            [
+              -117.328509,
+              33.978003
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "aeeea13c2d561311ec8b68456c86a92d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Highlander Union Building",
-        "floors": 3
+        "floors": 3,
+        "social_type": "HUB",
+        "type": "social"
       },
       "geometry": {
         "coordinates": [
@@ -1113,8 +1706,86 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Glen Mor Intramural Fields",
+        "floors": 0,
+        "type": "sports"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.319095,
+              33.979188
+            ],
+            [
+              -117.319099,
+              33.978292
+            ],
+            [
+              -117.318455,
+              33.978284
+            ],
+            [
+              -117.318457,
+              33.979186
+            ],
+            [
+              -117.319095,
+              33.979188
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "cbca5dbbc3d94f328402b592f3e9171c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Glen Mor Intramural Fields",
+        "floors": "",
+        "type": "sports"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.320377,
+              33.979197
+            ],
+            [
+              -117.319141,
+              33.979193
+            ],
+            [
+              -117.319141,
+              33.978296
+            ],
+            [
+              -117.320312,
+              33.978296
+            ],
+            [
+              -117.320362,
+              33.978332
+            ],
+            [
+              -117.320377,
+              33.979197
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "d0aeb978d1e154d1bda70f443af43b4f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Barn Theater",
-        "floors": 0
+        "floors": 0,
+        "social_type": "entertainment",
+        "type": "social"
       },
       "geometry": {
         "coordinates": [
@@ -1148,8 +1819,55 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "SRC Tennis Courts",
+        "floors": "",
+        "social_type": "sports",
+        "type": "social"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.327693,
+              33.978323
+            ],
+            [
+              -117.327693,
+              33.977921
+            ],
+            [
+              -117.32787,
+              33.97792
+            ],
+            [
+              -117.327876,
+              33.977265
+            ],
+            [
+              -117.327227,
+              33.977263
+            ],
+            [
+              -117.327224,
+              33.978323
+            ],
+            [
+              -117.327693,
+              33.978323
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "e60b2e17042d44881ea7a87120a108f7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Scotty's Convenience Store SOM",
-        "floors": 0
+        "floors": 0,
+        "social_type": "food",
+        "type": "social"
       },
       "geometry": {
         "coordinates": [
@@ -1183,8 +1901,83 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Botanic Gardens",
+        "floors": "",
+        "social_type": "garden",
+        "type": "social"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.320307,
+              33.9719
+            ],
+            [
+              -117.320755,
+              33.971108
+            ],
+            [
+              -117.320133,
+              33.969032
+            ],
+            [
+              -117.321233,
+              33.967749
+            ],
+            [
+              -117.320437,
+              33.966273
+            ],
+            [
+              -117.31805,
+              33.965937
+            ],
+            [
+              -117.318094,
+              33.969464
+            ],
+            [
+              -117.317081,
+              33.969488
+            ],
+            [
+              -117.31739,
+              33.969643
+            ],
+            [
+              -117.318098,
+              33.969967
+            ],
+            [
+              -117.318084,
+              33.971587
+            ],
+            [
+              -117.318663,
+              33.971671
+            ],
+            [
+              -117.31901,
+              33.971851
+            ],
+            [
+              -117.320307,
+              33.9719
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "eb9aa362821bc118dcce628e611d95aa"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Student Support Services Building",
-        "floors": 0
+        "floors": 0,
+        "social_type": "service",
+        "type": "social"
       },
       "geometry": {
         "coordinates": [

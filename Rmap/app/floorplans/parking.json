@@ -3,7 +3,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 28"
+        "name": "Lot 28",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -37,7 +38,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 19"
+        "name": "Lot 19",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -79,7 +81,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 30"
+        "name": "Lot 30",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -145,7 +148,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 13"
+        "name": "Lot 13",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -251,7 +255,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 24"
+        "name": "Lot 24",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -285,7 +290,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 15"
+        "name": "Lot 15",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -327,7 +333,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 50"
+        "name": "Lot 50",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -369,7 +376,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 41"
+        "name": "Lot 41",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -415,7 +423,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 5"
+        "name": "Lot 5",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -449,7 +458,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 29"
+        "name": "Lot 29",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -487,7 +497,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 10"
+        "name": "Lot 10",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -525,7 +536,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 31"
+        "name": "Lot 31",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -559,7 +571,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 6"
+        "name": "Lot 6",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -621,7 +634,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 32"
+        "name": "Lot 32",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -671,7 +685,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 23"
+        "name": "Lot 23",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -705,7 +720,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 42"
+        "name": "Lot 42",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -747,7 +763,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 9"
+        "name": "Lot 9",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -781,7 +798,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Big Springs 2"
+        "name": "Big Springs 2",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -815,7 +833,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 1"
+        "name": "Lot 1",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -853,7 +872,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 25"
+        "name": "Lot 25",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -895,7 +915,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 26"
+        "name": "Lot 26",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -965,7 +986,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Big Springs 1"
+        "name": "Big Springs 1",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
@@ -999,7 +1021,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lot 11"
+        "name": "Lot 11",
+        "type": "lot"
       },
       "geometry": {
         "coordinates": [
