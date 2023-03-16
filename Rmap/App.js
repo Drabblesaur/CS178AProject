@@ -16,6 +16,9 @@ import DirectorySheet from './app/screens/DirectorySheet';
 import WelcomeScreen from './app/screens/LoginSignup/WelcomeScreen';
 import LoginScreen from './app/screens/LoginSignup/LoginScreen';
 import DetailedViewSheet from './app/screens/DetailedViewSheet';
+import ProfileSheet from './app/screens/Profile/ProfileSheet';
+import EditProfile from './app/screens/Profile/EditProfile';
+import UploadProfilePicture from './app/screens/Profile/UploadProfilePicture';
 
 
 function Modals(){
@@ -49,6 +52,21 @@ function Modals(){
       <BottomSheet.Screen
         component={DetailedViewSheet}
         name="Details"
+        options={{index:1, enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#478BFF'}}}
+      />
+      <BottomSheet.Screen
+        component={ProfileSheet}
+        name="ProfileSheet"
+        options={{index:1, enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#478BFF'}}}
+      />
+      <BottomSheet.Screen
+        component={EditProfile}
+        name="EditProfile"
+        options={{index:1, enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#478BFF'}}}
+      />
+      <BottomSheet.Screen
+        component={UploadProfilePicture}
+        name="UploadProfilePicture"
         options={{index:1, enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#478BFF'}}}
       />
     </BottomSheet.Navigator>

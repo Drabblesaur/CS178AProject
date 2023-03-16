@@ -26,7 +26,7 @@ const Signup = (props) => {
         alert('Password does not match')
     }
     else {      
-      fetch('http://10.13.134.253:4000/signup', {
+      fetch('http://192.168.0.28:4000/signup', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'

@@ -17,7 +17,7 @@ const LoginScreen = (props) => {
         alert('Please enter email and password')
     }
     else {
-        fetch('http://10.13.134.253:4000/signin', {
+        fetch('http://10.13.34.131:4000/signin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -1,7 +1,9 @@
-import * as React from 'react';
+import React, { useEffect } from 'react'
 import { StyleSheet, Text, View, Pressable } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import Feather from '@expo/vector-icons/Feather'; 
+import Feather from '@expo/vector-icons/Feather';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 import {
     TouchableOpacity,
@@ -11,6 +13,16 @@ import {
   } from '@gorhom/bottom-sheet';
 
 function HomeSheet(props){
+    const [userdata, setUserdata] = React.useState(null)
+    useEffect(() => {
+        AsyncStorage.getItem('user')
+            .then(data => {
+                //console.log('async userdata ', data)
+                setUserdata(JSON.parse(data))
+            })
+            .catch(err => alert(err))
+    }, [])
+
     return(
         <View style={styles.container}>
             {/* Search Container*/}
@@ -18,7 +30,13 @@ function HomeSheet(props){
                 {/* Search Bar */}
                 <BottomSheetTextInput style={styles.searchBar} placeholder="Search" />
                 {/* Profile */}
-                <View style={styles.profile}/>
+                <View style={styles.profile}>
+                    <TouchableWithoutFeedback onPress={() => {props.navigation.navigate('ProfileSheet', {userdata});}}>
+                            <View style={styles.profile}>
+                                <Text></Text>
+                            </View>
+                        </TouchableWithoutFeedback>
+                    </View>
             </View>
             {/* Menu Container */}
             <View style={styles.menuContainer}>
