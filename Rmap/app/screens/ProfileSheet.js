@@ -4,22 +4,21 @@ import { StatusBar } from 'expo-status-bar';
 import { CommonActions } from '@react-navigation/native';
 import Feather from '@expo/vector-icons/Feather'; 
 import { TouchableWithoutFeedback } from '@gorhom/bottom-sheet';
-import DirectoryButton from '../components/DirectoryButton';
 
-function DirectorySheet(props){
+function ProfileSheet(props){
     return(
         <View style={styles.container}>
             {/* Title & Back Button*/}
             <View style={styles.menu_container}>
-                <Text style={{fontSize: 32, fontWeight: 'bold', color: 'white'}}>UCR Directory</Text>
+                <Text style={{fontSize: 32, fontWeight: 'bold', color: 'black'}}>Name</Text>
                 <TouchableWithoutFeedback onPress={() => {props.navigation.dispatch(CommonActions.goBack());}}>
-                    <Feather name="x-circle" size={32} color="white" />
+                    <Feather name="x-circle" size={32} color="black" />
                 </TouchableWithoutFeedback>
             </View>
-            <DirectoryButton title="Buildings" color="#84BC7C" location='Building' navigation={props.navigation}/>
-            <DirectoryButton title="Parking Lots" color="#A286F1" location='Lots' navigation={props.navigation}/>
-            <DirectoryButton title="Food & Social" color="#F0AF24" location='Social' navigation={props.navigation} />
-            <DirectoryButton title="Bathrooms" color="#7AA4D6" location='Bathrooms' navigation={props.navigation}/>
+            <View style={styles.button_view}>
+                <Text style={{fontSize: 24, fontWeight: 'bold',}}>CS 171</Text>
+                <Feather name="chevron-right" size={24} color="black" />
+            </View>
         </View>
     );
 }
@@ -40,6 +39,18 @@ const styles = StyleSheet.create({
         width: '100%',
         justifyContent: 'space-between',
     },
+    button_view: {
+        paddingLeft:10,
+        paddingRight:10,
+        borderRadius: 10,
+        marginTop: 10,
+        flexDirection: 'row',
+        height: '15%',
+        width: '100%',
+        backgroundColor: '#E6FCE3',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    },
   });
 
-export default DirectorySheet;
+export default ProfileSheet;

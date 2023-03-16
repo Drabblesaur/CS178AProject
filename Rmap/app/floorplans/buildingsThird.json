@@ -1,0 +1,568 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "type": "bathroom"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.330513,
+          33.974179
+        ],
+        "type": "Point"
+      },
+      "id": "0a8e761861c2d369be2b187430504a89"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "rooms": "316"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330641,
+              33.974085
+            ],
+            [
+              -117.330641,
+              33.973991
+            ],
+            [
+              -117.330783,
+              33.973993
+            ],
+            [
+              -117.330783,
+              33.974086
+            ],
+            [
+              -117.330641,
+              33.974085
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "0e16bb630a66782be1e909c3d20280d6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "rooms": "305"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330437,
+              33.974167
+            ],
+            [
+              -117.330437,
+              33.974181
+            ],
+            [
+              -117.330412,
+              33.974181
+            ],
+            [
+              -117.330412,
+              33.974167
+            ],
+            [
+              -117.330437,
+              33.974167
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "35b55f346a721932ed4da662b69531e3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "rooms": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.33064,
+              33.974084
+            ],
+            [
+              -117.330639,
+              33.973991
+            ],
+            [
+              -117.330591,
+              33.973991
+            ],
+            [
+              -117.330591,
+              33.974084
+            ],
+            [
+              -117.33064,
+              33.974084
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "3a2df27ffe58d7cc8e064ae885a575df"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "rooms": "321"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330737,
+              33.974169
+            ],
+            [
+              -117.330737,
+              33.974183
+            ],
+            [
+              -117.330713,
+              33.974183
+            ],
+            [
+              -117.330713,
+              33.974169
+            ],
+            [
+              -117.330737,
+              33.974169
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "5533d9215f64ce45680301874b1c8f7c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "rooms": "329"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330818,
+              33.974193
+            ],
+            [
+              -117.330796,
+              33.974193
+            ],
+            [
+              -117.330796,
+              33.97417
+            ],
+            [
+              -117.330762,
+              33.97417
+            ],
+            [
+              -117.330762,
+              33.974184
+            ],
+            [
+              -117.330712,
+              33.974183
+            ],
+            [
+              -117.330712,
+              33.974169
+            ],
+            [
+              -117.330692,
+              33.974169
+            ],
+            [
+              -117.330692,
+              33.974184
+            ],
+            [
+              -117.330617,
+              33.974183
+            ],
+            [
+              -117.330617,
+              33.974168
+            ],
+            [
+              -117.330589,
+              33.974168
+            ],
+            [
+              -117.330588,
+              33.974193
+            ],
+            [
+              -117.330555,
+              33.974194
+            ],
+            [
+              -117.330555,
+              33.974397
+            ],
+            [
+              -117.330817,
+              33.974398
+            ],
+            [
+              -117.330818,
+              33.974193
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "70a01d50eca462871aabc2e185c72d92"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "rooms": "317"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330667,
+              33.974169
+            ],
+            [
+              -117.330667,
+              33.974183
+            ],
+            [
+              -117.330643,
+              33.974183
+            ],
+            [
+              -117.330643,
+              33.974169
+            ],
+            [
+              -117.330667,
+              33.974169
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "76722cb7a9b74659a3fe391625e6d343"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "type": "elevator"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.330485,
+          33.974168
+        ],
+        "type": "Point"
+      },
+      "id": "775763835926531e6861d75705f36fde"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "rooms": "315"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330642,
+              33.974169
+            ],
+            [
+              -117.330642,
+              33.974183
+            ],
+            [
+              -117.330618,
+              33.974183
+            ],
+            [
+              -117.330618,
+              33.974169
+            ],
+            [
+              -117.330642,
+              33.974169
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "81e724bd3a6dd0803006588a8cd645db"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "rooms": "335"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330554,
+              33.974193
+            ],
+            [
+              -117.330553,
+              33.974398
+            ],
+            [
+              -117.330287,
+              33.974395
+            ],
+            [
+              -117.330285,
+              33.974165
+            ],
+            [
+              -117.330303,
+              33.974166
+            ],
+            [
+              -117.330303,
+              33.974193
+            ],
+            [
+              -117.330335,
+              33.974193
+            ],
+            [
+              -117.330335,
+              33.974166
+            ],
+            [
+              -117.330412,
+              33.974167
+            ],
+            [
+              -117.330412,
+              33.974181
+            ],
+            [
+              -117.330437,
+              33.974181
+            ],
+            [
+              -117.330437,
+              33.974167
+            ],
+            [
+              -117.330521,
+              33.974167
+            ],
+            [
+              -117.330521,
+              33.974193
+            ],
+            [
+              -117.330554,
+              33.974193
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "89347875f2e6198bbb26ebe187f07146"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.3308,
+          33.974025
+        ],
+        "type": "Point"
+      },
+      "id": "973a83bd7124915fba2e60d80eb4b893"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "rooms": "319"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330692,
+              33.974169
+            ],
+            [
+              -117.330692,
+              33.974183
+            ],
+            [
+              -117.330667,
+              33.974183
+            ],
+            [
+              -117.330667,
+              33.974169
+            ],
+            [
+              -117.330692,
+              33.974169
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "9a97abc2ab723a6f5d5f28b0531b257e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "rooms": "323"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330762,
+              33.97417
+            ],
+            [
+              -117.330762,
+              33.974184
+            ],
+            [
+              -117.330737,
+              33.974183
+            ],
+            [
+              -117.330737,
+              33.97417
+            ],
+            [
+              -117.330762,
+              33.97417
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "cc87808be067e5fdb615a7f5da047388"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "type": "bathroom"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.33034,
+          33.974177
+        ],
+        "type": "Point"
+      },
+      "id": "cde7812c12df8406b9586ee9351c631b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.330622,
+          33.974121
+        ],
+        "type": "Point"
+      },
+      "id": "e0fdcec26cdbdb7c7733c7f792b3494e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "type": "water"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.330364,
+          33.974167
+        ],
+        "type": "Point"
+      },
+      "id": "e60e8df2281eccc11eb5c52f238f7264"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "rooms": "308"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330445,
+              33.974083
+            ],
+            [
+              -117.330445,
+              33.973989
+            ],
+            [
+              -117.330589,
+              33.973991
+            ],
+            [
+              -117.330589,
+              33.974084
+            ],
+            [
+              -117.330445,
+              33.974083
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "fb5bd93cf79b25564259de0c35614505"
+    }
+  ],
+  "type": "FeatureCollection"
+}
