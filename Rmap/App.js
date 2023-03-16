@@ -88,7 +88,7 @@ function Modals(){
       <BottomSheet.Screen
         component={SocialSheet}
         name="Social"
-        options={{snapPoints: ["55%","90%"],index:0, enableDismissOnClose: true, enablePanDownToClose:false, backgroundStyle:{backgroundColor: '#E0B04A'}}}
+        options={{snapPoints: ["55%","90%"],index:0, enableDismissOnClose: true, enablePanDownToClose:false, backgroundStyle:{backgroundColor: '#F0AF24'}}}
       
       />
       <BottomSheet.Screen
@@ -137,7 +137,7 @@ export default function App() {
         <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} options={{headerShown: false,}} />
         <Stack.Screen name="Signup" component={Signup} options={{headerShown: false,}} />
         <Stack.Screen name="LoginScreen" component={LoginScreen} options={{headerShown: false,}} />
-        <Stack.Screen name="Modals" component={Modals} options={{headerShown: false,}}/>
+        <Stack.Screen name="Modals" component={Modals} options={{headerShown: false, gestureEnabled: false}}/>
         <Stack.Screen name="Settings" component={SettingsScreen} options={{headerShown: false,}}/>
       </Stack.Navigator>
     </NavigationContainer>

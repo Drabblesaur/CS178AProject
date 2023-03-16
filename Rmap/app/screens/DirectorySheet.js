@@ -18,7 +18,7 @@ function DirectorySheet(props){
             </View>
             <DirectoryButton title="Buildings" color="#84BC7C" location='Building' navigation={props.navigation}/>
             <DirectoryButton title="Parking Lots" color="#A286F1" location='Lots' navigation={props.navigation}/>
-            <DirectoryButton title="Food & Social" color="#E0B04A" location='Social' navigation={props.navigation} />
+            <DirectoryButton title="Food & Social" color="#F0AF24" location='Social' navigation={props.navigation} />
             <DirectoryButton title="Bathrooms" color="#7AA4D6" location='Bathrooms' navigation={props.navigation}/>
         </View>
     );

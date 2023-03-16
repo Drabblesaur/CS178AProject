@@ -1,8 +1,6 @@
-import { StyleSheet, Text, View,Keyboard} from 'react-native';
 import React, { useEffect } from 'react'
-import { StyleSheet, Text, View, Pressable } from 'react-native';
+import { StyleSheet, Text, View, Pressable,Keyboard } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import Feather from '@expo/vector-icons/Feather';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
     TouchableWithoutFeedback,

@@ -18,7 +18,6 @@ import { StatusBar } from 'expo-status-bar';
 import {BottomSheetBackdrop,BottomSheetBackdropProps,} from '@gorhom/bottom-sheet';
 import MapView, {Marker, Overlay, Polygon, Polyline, Circle, Geojson} from 'react-native-maps';
 import Icon from 'react-native-vector-icons/Feather';
-import { NativeViewGestureHandler } from 'react-native-gesture-handler';
 
 import * as Location from 'expo-location';
 
@@ -87,7 +86,6 @@ function MapViewer(props){
       }, []);
   
     return(
-      <NativeViewGestureHandler disallowInterruption={true}>
         <View style={styles.container}>
           <MapView
             ref={map => {this.map = map}}
@@ -191,8 +189,8 @@ function displayBuildings(props) {
             )
           }
           key={`building-${b.id}`}
-          strokeColor={"#466854"}
-          fillColor={"#7ED3A1"}
+          strokeColor={"#6FA76A"}
+          fillColor={"#84BC7C"}
           
           strokeWidth={2}
           tappable
@@ -219,8 +217,8 @@ function displaySocials(props) {
             )
           }
           key={`building-${b.id}`}
-          strokeColor={"#625C39"}
-          fillColor={"#E7CA23"}
+          strokeColor={"#DFA11D"}
+          fillColor={"#FFBC2A"}
           
           strokeWidth={2}
           tappable
@@ -245,7 +243,7 @@ function displayParking(props) {
             )
           }
           key={`building-${b.id}`}
-          strokeColor={"#3F3249"}
+          strokeColor={"#A286F1"}
           fillColor={"#rgba(189, 146, 221, 0.5)"}
           
           strokeWidth={2}
