@@ -1,23 +1,36 @@
 import * as React from 'react';
-import { StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View,Keyboard} from 'react-native';
 import {
     TouchableWithoutFeedback,
     BottomSheetTextInput,
+    KEYBOARD_DISMISS_THRESHOLD,
   } from '@gorhom/bottom-sheet';
+import Feather from '@expo/vector-icons/Feather'; 
 import HomeContent from '../components/HomeContent';
+import searchContent from '../components/SearchContent';
 
 
 function HomeSheet(props){
 
     const { index } = props.route.params;
+    const profile_element = <TouchableWithoutFeedback onPress={() => {props.navigation.navigate('Profile');}}><View style={styles.profile}/></TouchableWithoutFeedback>;
+    const cancel_btn = <TouchableWithoutFeedback onPress={() => {handleCancel();}}><View style={styles.cancel_btn}><Feather name="x-circle" size={40} color="black" /></View></TouchableWithoutFeedback>;
 
     //When the search bar is focused, HomeContent should be hidden and the search results should be shown
     const [MenuContent,setMenuContent] = React.useState(<HomeContent navigation={props.navigation}/>);
+    const [SideItem,setSideItem] = React.useState(profile_element);
      //MenuContent is the content of the menu, which is HomeContent by default
     const handleFocus = () => {
         console.log("focused search bar");
-        setMenuContent(<Text>Search Results</Text>);
+        setMenuContent(searchContent);
+        setSideItem(cancel_btn);
         console.log(index)
+    }
+    const handleCancel = () => {
+        console.log("cancel");
+        setMenuContent(<HomeContent navigation={props.navigation}/>);
+        setSideItem(profile_element);
+        Keyboard.dismiss();
     }
 
 
@@ -37,11 +50,8 @@ function HomeSheet(props){
                 placeholder="Search"
                 onFocus={() => {handleFocus();}}
                 />
-                {/* Profile */}
-                <TouchableWithoutFeedback onPress={() => {props.navigation.navigate('Profile');}}>
-                <View style={styles.profile}/>
-                </TouchableWithoutFeedback>
-                {/* Cancel Button */}
+                {/* Side Item */}
+                {SideItem}
             </View>
             {/* Menu Content */}
             {MenuContent}
@@ -56,6 +66,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         paddingLeft:20,
         paddingRight:20,
+        height: '100%',
         //backgroundColor: 'lightgrey',
         },
     searchContainer: {
@@ -83,6 +94,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#478BFF',
         marginRight: 10,
     },
+    cancel_btn:{
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 50,
+        width: 50,
+        marginRight: 10,
+    }
   });
 
 export default HomeSheet;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View,Keyboard} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { CommonActions } from '@react-navigation/native';
 import Feather from '@expo/vector-icons/Feather'; 
@@ -15,7 +15,7 @@ function LotSheet(props){
             {/* Title & Back Button*/}
             <View style={styles.menu_container}>
                 <Text style={{fontSize: 32, fontWeight: 'bold', color: 'white'}}>Parking Lots</Text>
-                <TouchableWithoutFeedback onPress={() => {props.navigation.dispatch(CommonActions.goBack());}}>
+                <TouchableWithoutFeedback onPress={() => {Keyboard.dismiss(); props.navigation.dispatch(CommonActions.goBack());}}>
                     <Feather name="x-circle" size={32} color="white" />
                 </TouchableWithoutFeedback>
             </View>

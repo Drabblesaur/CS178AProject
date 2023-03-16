@@ -4,7 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { CommonActions } from '@react-navigation/native';
 import Feather from '@expo/vector-icons/Feather'; 
 import { TouchableWithoutFeedback } from '@gorhom/bottom-sheet';
-import BuildingItem from '../components/BuildingItem';
+import ItemButton from '../components/ItemButton';
 
 function FavoriteSheet(props){
     return(
@@ -16,7 +16,7 @@ function FavoriteSheet(props){
                     <Feather name="x-circle" size={32} color="black" />
                 </TouchableWithoutFeedback>
             </View>
-            <BuildingItem building={{name: 'Bourns Hall', address: '900 University Ave, Riverside, CA 92521'}}/>
+            <ItemButton title="Sample Lot" subtitle="Miles from Current Location"/>
         </View>
     );
 }
