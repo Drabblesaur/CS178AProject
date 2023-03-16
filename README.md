@@ -4,31 +4,37 @@
 
 ## Setup
 
-First, run the development server:
-
+First, run the Server:
+```bash
+cd server
+# Load Packages & Dependencies
+yarn
+# Start Server
+node index.js
+# Control + c to exit
+```
+Then run the Front Application
 ```bash
 cd Rmap
-#Starting the dev Server
+# Load Packages & Dependencies
+yarn
+# Run Application
 yarn expo start
-#OR
+OR
 yarn start
-#For Specific Applications
-To run your project, navigate to the directory and run one of the following yarn commands.
-
-- cd Rmap
-- yarn android
-- yarn ios # you need to use macOS to build the iOS project - use the Expo app if you need to do iOS development without a Mac
-- yarn web
 
 › Scan the QR code above with Expo Go (Android) or the Camera app (iOS)
 
 › Press a │ open Android
 › Press w │ open web
 
+› Press c | reload QR Code
 › Press r │ reload app
 › Press m │ toggle menu
 
 › Press ? │ show all commands
+
+# Control + d to exit
 ```
 
 NOTE: To turn off server use Ctrl+C to exit server.
