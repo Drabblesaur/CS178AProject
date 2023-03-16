@@ -3,23 +3,31 @@ import { Button, StyleSheet, Text, View,Keyboard } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { CommonActions } from '@react-navigation/native';
 import Feather from '@expo/vector-icons/Feather'; 
-import { TouchableWithoutFeedback } from '@gorhom/bottom-sheet';
+import { TouchableWithoutFeedback,BottomSheetTextInput} from '@gorhom/bottom-sheet';
 import ItemButton from '../components/ItemButton';
 
-function ClassSheet(props){
+function SocialSheet(props){
+    const handleFocus = () => {
+        console.log("focused search bar");
+    }
     return(
         <View style={styles.container}>
             {/* Title & Back Button*/}
             <View style={styles.menu_container}>
-                <Text style={{fontSize: 32, fontWeight: 'bold', color: 'white'}}>Your Classes</Text>
+                <Text style={{fontSize: 32, fontWeight: 'bold', color: 'white'}}>Food & Social</Text>
                 <TouchableWithoutFeedback onPress={() => {Keyboard.dismiss(); props.navigation.dispatch(CommonActions.goBack());}}>
                     <Feather name="x-circle" size={32} color="white" />
                 </TouchableWithoutFeedback>
             </View>
+            <BottomSheetTextInput 
+                style={styles.searchBar} 
+                placeholder="Search"
+                onFocus={() => {handleFocus();}}
+            />
             {/* We need to place a List of Items from the DB here */}
-            <ItemButton title="PHIL 124" subtitle="Bornes Hall A"/>
-            <ItemButton title="CS 178B" subtitle="Material Science Building"/>
-            <ItemButton title="PHYS 2000" subtitle="Physics 2000"/>
+            <ItemButton title="Sample Lot" subtitle="Miles from Current Location"/>
+            <ItemButton title="Lot 50" subtitle="0.8 mi"/>
+            <ItemButton title="Lot 1" subtitle="1.2 mi"/>
         </View>
     );
 }
@@ -40,6 +48,16 @@ const styles = StyleSheet.create({
         width: '100%',
         justifyContent: 'space-between',
     },
-  });
+    searchBar: {
+        marginTop: 10,
+        flexDirection: 'row',
+        height: 33,
+        width: '100%',
+        backgroundColor: '#E7E7E7',
+        borderRadius: 10,
+        alignItems: 'center',
+        paddingLeft: 10,
+      },
+});
 
-export default ClassSheet;
+export default SocialSheet;

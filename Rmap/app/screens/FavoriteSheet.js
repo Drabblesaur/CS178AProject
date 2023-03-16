@@ -4,22 +4,19 @@ import { StatusBar } from 'expo-status-bar';
 import { CommonActions } from '@react-navigation/native';
 import Feather from '@expo/vector-icons/Feather'; 
 import { TouchableWithoutFeedback } from '@gorhom/bottom-sheet';
-import DirectoryButton from '../components/DirectoryButton';
+import ItemButton from '../components/ItemButton';
 
-function DirectorySheet(props){
+function FavoriteSheet(props){
     return(
         <View style={styles.container}>
             {/* Title & Back Button*/}
             <View style={styles.menu_container}>
-                <Text style={{fontSize: 32, fontWeight: 'bold', color: 'white'}}>UCR Directory</Text>
+                <Text style={{fontSize: 32, fontWeight: 'bold', color: 'black'}}>Favorites</Text>
                 <TouchableWithoutFeedback onPress={() => {props.navigation.dispatch(CommonActions.goBack());}}>
-                    <Feather name="x-circle" size={32} color="white" />
+                    <Feather name="x-circle" size={32} color="black" />
                 </TouchableWithoutFeedback>
             </View>
-            <DirectoryButton title="Buildings" color="#84BC7C" location='Building' navigation={props.navigation}/>
-            <DirectoryButton title="Parking Lots" color="#A286F1" location='Lots' navigation={props.navigation}/>
-            <DirectoryButton title="Food & Social" color="#E0B04A" location='Social' navigation={props.navigation} />
-            <DirectoryButton title="Bathrooms" color="#7AA4D6" location='Bathrooms' navigation={props.navigation}/>
+            <ItemButton title="Sample Lot" subtitle="Miles from Current Location"/>
         </View>
     );
 }
@@ -40,6 +37,18 @@ const styles = StyleSheet.create({
         width: '100%',
         justifyContent: 'space-between',
     },
+    button_view: {
+        paddingLeft:10,
+        paddingRight:10,
+        borderRadius: 10,
+        marginTop: 10,
+        flexDirection: 'row',
+        height: '15%',
+        width: '100%',
+        backgroundColor: '#E6FCE3',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    },
   });
 
-export default DirectorySheet;
+export default FavoriteSheet;
