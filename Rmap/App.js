@@ -10,17 +10,22 @@ const BottomSheet = createBottomSheetNavigator();
 const Stack = createNativeStackNavigator();
 
 import MapViewer from './app/screens/MapViewer';
-import LoginScreen from './app/screens/LoginScreen';
+import Signup from './app/screens/LoginSignup/Signup';
 import HomeSheet from './app/screens/HomeSheet';
 import ClassSheet from './app/screens/ClassSheet';
 import DirectorySheet from './app/screens/DirectorySheet';
 import FavoriteSheet from './app/screens/FavoriteSheet';
-import ProfileSheet from './app/screens/ProfileSheet';
 import SettingsScreen from './app/screens/SettingsScreen';
 import BuildingSheet from './app/screens/BuildingSheet';
 import SocialSheet from './app/screens/SocialSheet';
 import LotSheet from './app/screens/LotSheet';
 import BathroomSheet from './app/screens/BathroomSheet';
+import WelcomeScreen from './app/screens/LoginSignup/WelcomeScreen';
+import LoginScreen from './app/screens/LoginSignup/LoginScreen';
+import DetailedViewSheet from './app/screens/DetailedViewSheet';
+import ProfileSheet from './app/screens/Profile/ProfileSheet';
+import EditProfile from './app/screens/Profile/EditProfile';
+import UploadProfilePicture from './app/screens/Profile/UploadProfilePicture';
 
 
 
@@ -45,7 +50,7 @@ function Modals(){
       <BottomSheet.Screen
         component={MapViewer}
         name="MapViewer"
-        initialParams={{ modalOpen: true }}
+        initialParams={{ modalOpen: true , floors: 0}}
       />
       <BottomSheet.Screen
         component={HomeSheet}
@@ -98,6 +103,26 @@ function Modals(){
         options={{snapPoints: ["55%","90%"],index:0, enableDismissOnClose: true, enablePanDownToClose:false, backgroundStyle:{backgroundColor: '#7AA4D6'}}}
       
       />
+      <BottomSheet.Screen
+        component={DetailedViewSheet}
+        name="Details"
+        options={{index:1, enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#478BFF'}}}
+      />
+      <BottomSheet.Screen
+        component={ProfileSheet}
+        name="ProfileSheet"
+        options={{index:1, enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#478BFF'}}}
+      />
+      <BottomSheet.Screen
+        component={EditProfile}
+        name="EditProfile"
+        options={{index:1, enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#478BFF'}}}
+      />
+      <BottomSheet.Screen
+        component={UploadProfilePicture}
+        name="UploadProfilePicture"
+        options={{index:1, enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#478BFF'}}}
+      />
     </BottomSheet.Navigator>
   );
 }
@@ -105,15 +130,19 @@ function Modals(){
 
 export default function App() {
   return (
+    
     <GestureHandlerRootView style={{ flex: 1 }}>
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Login'>
-        <Stack.Screen name="Login" component={LoginScreen} options={{headerShown: false,}} />
+      <Stack.Navigator initialRouteName='Welcome'>
+        <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} options={{headerShown: false,}} />
+        <Stack.Screen name="Signup" component={Signup} options={{headerShown: false,}} />
+        <Stack.Screen name="LoginScreen" component={LoginScreen} options={{headerShown: false,}} />
         <Stack.Screen name="Modals" component={Modals} options={{headerShown: false,}}/>
         <Stack.Screen name="Settings" component={SettingsScreen} options={{headerShown: false,}}/>
       </Stack.Navigator>
     </NavigationContainer>
     </GestureHandlerRootView>
+   
   );
 }
 

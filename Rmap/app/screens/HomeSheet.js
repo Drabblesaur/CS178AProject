@@ -1,5 +1,9 @@
-import * as React from 'react';
 import { StyleSheet, Text, View,Keyboard} from 'react-native';
+import React, { useEffect } from 'react'
+import { StyleSheet, Text, View, Pressable } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import Feather from '@expo/vector-icons/Feather';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
     TouchableWithoutFeedback,
     BottomSheetTextInput,
@@ -13,7 +17,7 @@ import searchContent from '../components/SearchContent';
 function HomeSheet(props){
 
     const { index } = props.route.params;
-    const profile_element = <TouchableWithoutFeedback onPress={() => {props.navigation.navigate('Profile');}}><View style={styles.profile}/></TouchableWithoutFeedback>;
+    const profile_element = <TouchableWithoutFeedback onPress={() => {props.navigation.navigate('ProfileSheet', {userdata});}}><View style={styles.profile}/></TouchableWithoutFeedback>;
     const cancel_btn = <TouchableWithoutFeedback onPress={() => {handleCancel();}}><View style={styles.cancel_btn}><Feather name="x-circle" size={40} color="black" /></View></TouchableWithoutFeedback>;
 
     //When the search bar is focused, HomeContent should be hidden and the search results should be shown
@@ -39,6 +43,15 @@ function HomeSheet(props){
         //setMenuContent(<HomeContent navigation={props.navigation}/>);
     //}
 
+    const [userdata, setUserdata] = React.useState(null)
+    useEffect(() => {
+        AsyncStorage.getItem('user')
+            .then(data => {
+                //console.log('async userdata ', data)
+                setUserdata(JSON.parse(data))
+            })
+            .catch(err => alert(err))
+    }, [])
 
     return(
         <View style={styles.container}>

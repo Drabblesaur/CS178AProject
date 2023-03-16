@@ -1,164 +1,487 @@
-import React, {Component, useState} from 'react';
-import { Button, StyleSheet, Text, View, Image, SafeAreaView, Pressable } from 'react-native';
+import React, {Component, useEffect, useRef, useState} from 'react';
+import { 
+  Image, 
+  SafeAreaView, 
+  Pressable, 
+  Alert,
+  Button,
+  Linking,
+  PermissionsAndroid,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Switch,
+  Text,
+  ToastAndroid,
+  View,} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import {BottomSheetBackdrop,BottomSheetBackdropProps,} from '@gorhom/bottom-sheet';
-import MapView, {Marker, Overlay} from 'react-native-maps';
+import MapView, {Marker, Overlay, Polygon, Polyline, Circle, Geojson} from 'react-native-maps';
 import Icon from 'react-native-vector-icons/Feather';
 import { NativeViewGestureHandler } from 'react-native-gesture-handler';
 
-const UCRCOORD1 = [33.973311, -117.328205];
-const UCRCOORD2 = [33.973378, -117.328108];
+import * as Location from 'expo-location';
 
-const SKYE_COORD1 = [33.974983757803216, -117.32906175571368];
-const SKYE_COORD2 = [33.9758205938672, -117.32864056005334];
-const SPROUL_COORD1 = [33.972357375536745, -117.33006897950474];
-const SPROUL_COORD2 = [33.973186960425124, -117.3294313360745];
-const WATKINS_COORD1 = [33.97223032141277, -117.32931341769752];
-const WATKINS_COORD2 = [33.973244835362586, -117.32855643846719];
-const CHASS_SOUTH_COORD1 = [33.974479656373006, -117.33084046063642];
-const CHASS_SOUTH_COORD2 = [33.97512051004066, -117.33025715007692];
-
+import Buildings from '../floorplans/buildings.json';
+import Socials from '../floorplans/social.json';
+import Parking from '../floorplans/parking.json';
+import BuildingsFirstFloors from '../floorplans/buildingsFirst.json';
+import BuildingsSecondFloors from '../floorplans/buildingsSecond.json';
+import BuildingsThirdFloors from '../floorplans/buildingsThird.json';
 
 Icon.loadFont();
+var prev_toggle = 0;
+
+async function componentDidMount({setLocation}) {
+  try {
+    let { status } = await Location.requestForegroundPermissionsAsync();
+    if (status !== 'granted') {
+      return;
+    }
+    let location = await Location.getCurrentPositionAsync({});
+    setLocation(location);
+    console.log(location);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+// Toggle between floors
+function toggleOverlay(floor, {setBuilding}) {
+  if (prev_toggle == floor) {
+    prev_toggle = 0;
+    changeFloor(0, {setBuilding});
+  }
+  else {
+    prev_toggle = floor;
+    changeFloor(floor, {setBuilding});
+  }
+};
+
+function changeFloor(floor, {setBuilding}) {
+  if (floor == 0) {
+    setBuilding({"features": []});
+  } else if (floor == 1) {
+    setBuilding(BuildingsFirstFloors);
+  } else if (floor == 2) {
+    setBuilding(BuildingsSecondFloors);
+  } else if (floor == 3) {
+    setBuilding(BuildingsThirdFloors);
+}
+};
+
 function MapViewer(props){
   const { modalOpen } = props.route.params;
+  const [visibleBuilding, setBuilding] = useState({"features": []});
+  const [location, setLocation] = useState({coords: {longitude: 0, latitude:0}});
+  var map = useRef(null)
 
   React.useEffect(() => {
     if (props.route.params?.modalOpen) {
       props.navigation.navigate('Home');
     }
-  }, [props.route.params?.modalOpen]);
+    }, [props.route.params?.modalOpen]);
 
-    // Visibility states per floor plan, will toggle the opacity to 1 or 0
-    const [visibleFirst, setVisibleFirst] = useState(0);
-    const [visibleSecond, setVisibleSecond] = useState(0);
-    // Arrays for floor plan visibility states
-    const visible = [visibleFirst, visibleSecond];
-    const setVisible = [setVisibleFirst, setVisibleSecond];
-
-    // Toggles floor plan on and off based on "floor" (index for floor plan visibility arrays)
-    const toggleOverlay = (floor) => {
-      if (visible[floor] == 0) {
-        setVisible[floor](1);
-      } else {
-        setVisible[floor](0);
-      }
-
-      for (var i = 0; i < visible.length; i++) {
-        if (i != floor) {
-          setVisible[i](0);
-        }
-      }
-    };
+    React.useEffect(() => {
+      componentDidMount({setLocation});
+      }, []);
   
     return(
       <NativeViewGestureHandler disallowInterruption={true}>
         <View style={styles.container}>
           <MapView
-          style={styles.mapStyle}
-          initialRegion={{ //Sets the initial view of the campus
-            latitude: 33.973362,
-            longitude: -117.328158,
-            latitudeDelta: 0.0025,
-            longitudeDelta: 0.0025,
-          }}
-          /*customMapStyle={mapStyle}*/>
-            
-          {/* Building floor overlays
-              NOTE: Need to refactor, there are a lot of buildings on campus */}
-          {/*
-          <Overlay //Test, UCR logo
-            image={require('../assets/UCR.png')}
-            bounds={[UCRCOORD1, UCRCOORD2]}
-            opacity={visibleFirst}
-            hide={true}
-          />
-          */}
-          <Overlay // SKYE HALL
-            image={require('../assets/skye.png')}
-            bounds={[SKYE_COORD1, SKYE_COORD2]}
-            opacity={visibleFirst}
-          />
-          <Marker 
-            coordinate={{
-              latitude: 33.97537507374277,
-              longitude: -117.32886487890542,
-            }}
-            title={'Skye Hall'}
-          />
-          <Overlay // SPROUL HALL, FIRST FLOOR
-            image={require('../assets/sproul1.png')}
-            bounds={[SPROUL_COORD1, SPROUL_COORD2]}
-            opacity={visibleFirst}
-          />
-          <Overlay // SPROUL HALL, SECOND FLOOR
-            image={require('../assets/sproul2.png')}
-            bounds={[SPROUL_COORD1, SPROUL_COORD2]}
-            opacity={visibleSecond}
-          />
-          <Overlay // WATKINS HALL, FIRST FLOOR
-            image={require('../assets/watkins1.png')}
-            bounds={[WATKINS_COORD1, WATKINS_COORD2]}
-            opacity={visibleFirst}
-          />
-          <Overlay // WATKINS HALL, SECOND FLOOR
-            image={require('../assets/watkins2.png')}
-            bounds={[WATKINS_COORD1, WATKINS_COORD2]}
-            opacity={visibleSecond}
-          />
-          <Overlay // CHASS SOUHT, FIRST FLOOR
-            image={require('../assets/chasssouth1.png')}
-            bounds={[CHASS_SOUTH_COORD1, CHASS_SOUTH_COORD2]}
-            opacity={visibleFirst}
-          />
-          <Overlay // CHASS SOUHT, SECOND FLOOR
-            image={require('../assets/chasssouth2.png')}
-            bounds={[CHASS_SOUTH_COORD1, CHASS_SOUTH_COORD2]}
-            opacity={visibleSecond}
-          />
-
-          {/* A test marker*/ /*
-          <Marker 
-            draggable
-            coordinate={{
+            ref={map => {this.map = map}}
+            style={styles.mapStyle}
+            customMapStyle={mapStyle}
+            showsUserLocation = {true}
+            showsMyLocationButton = {true}
+            initialRegion={{ //Sets the initial view of the campus
               latitude: 33.973362,
               longitude: -117.328158,
+              latitudeDelta: 0.007,
+              longitudeDelta: 0.007,
             }}
-            onDragEnd={
-              (e) => alert(JSON.stringify(e.nativeEvent.coordinate))
-            }
-            title={'Test Marker'}
-            description={'This is a description of the marker'}
-          /> */
-          }
-        </MapView>
+          >
 
-        {/* Button container for toggling floor plans*/}
-        <View style={ styles.buttonsContainer }>
-            <Pressable // FIRST FLOORS
-              onPress={() => toggleOverlay(0)}
-              style={ styles.buttonsStyle }>
-              <View>
-                  <Text style={styles.pressableText}>1st</Text>
-              </View>
-            </Pressable>
-            <Pressable // SECOND FLOORS
-              onPress={() => toggleOverlay(1)}
-              style={ styles.buttonsStyle }>
-              <View>
-                  <Text style={styles.pressableText}>2nd</Text>
-              </View>
-            </Pressable>
-        </View>
-          {/*<Button title ='go to Class' onPress={() => {props.navigation.navigate('Class');}}/>*/}
-          <StatusBar/>
-          <StatusBar/>
-        </View>
-        </NativeViewGestureHandler>
-    );
+          {// Call function to show all buildings first to always keep it "underneath" the classrooms
+            displayBuildings(props)
+          } 
+          {// Call function to show all social buildings (no classrooms)
+            displaySocials(props)
+          } 
+          {// Call function to show all parking lots
+            displayParking(props)
+          } 
+          {// Iterate and display current json dataset (visibleBuilding)
+            displayFloors(props, {visibleBuilding}, {setBuilding})
+          }
+
+          {/* //TEST: Display SPROUL HALL's FIRST floor
+            displaySingleBuildingFloor("Sproul Hall", BuildingsFirstFloors)
+        */}
+          
+          {/*
+            <Marker
+              coordinate={{
+                latitude: location.coords.latitude,
+                longitude: location.coords.longitude
+              }}
+            />
+            */}
+
+          </MapView>
+
+          {/* Button container for toggling floor plans for testing purposes*/}
+          <View style={ styles.buttonsContainer }>
+              <Pressable // FIRST FLOORS
+                onPress={() => toggleOverlay(1, {setBuilding})}
+                style={ styles.buttonsStyle }>
+                <View>
+                    <Text style={styles.pressableText}>1st</Text>
+                </View>
+              </Pressable>
+              <Pressable // SECOND FLOORS
+                onPress={() => toggleOverlay(2, {setBuilding})}
+                style={ styles.buttonsStyle }>
+                <View>
+                    <Text style={styles.pressableText}>2nd</Text>
+                </View>
+              </Pressable>
+              <Pressable // THIRD FLOORS
+                onPress={() => toggleOverlay(3, {setBuilding})}
+                style={ styles.buttonsStyle }>
+                <View>
+                    <Text style={styles.pressableText}>3rd</Text>
+                </View>
+              </Pressable>
+              {/*
+              <Pressable // TEST USER LOCATION
+                onPress={() => this.map.animateToRegion({
+                  latitude: 33.972775,
+                  longitude: -117.329716,
+                  latitudeDelta: 0.003,
+                  longitudeDelta: 0.003,
+                })}
+                style={ styles.buttonsStyle }>
+                <View>
+                    <Text style={styles.pressableText}>User</Text>
+                </View>
+              </Pressable>
+              */}
+            
+          </View>
+            <StatusBar/>
+            <StatusBar/>
+          </View>
+        );
+    }
+
+// * * * DISPLAY FUNCTIONS * * *
+function displayBuildings(props) {
+  const routes = props.navigation.getState()?.routes;
+  const r = routes[routes.length - 1];
+  console.log(r);
+
+  return (Buildings.features.map((b) => {
+    if (b.geometry.type == "Polygon") {
+      return (
+        <Polygon
+          coordinates= {b.geometry.coordinates[0].map((x) => 
+              ({latitude: x[1], longitude: x[0]}),
+            )
+          }
+          key={`building-${b.id}`}
+          strokeColor={"#466854"}
+          fillColor={"#7ED3A1"}
+          
+          strokeWidth={2}
+          tappable
+          onPress={() => {zoomInto(b);
+                          props.navigation.navigate('Details', {type: "building",
+                                                                building: b.properties.building,
+                                                                floors: b.properties.floors,
+                                                                k: r.key
+                                                                });}}
+        />
+        )
+      }
+    }
+  ));
+};
+
+function displaySocials(props) {
+  return (Socials.features.map((b) => {
+    if (b.geometry.type == "Polygon") {
+      return (
+        <Polygon
+          coordinates= {b.geometry.coordinates[0].map((x) => 
+              ({latitude: x[1], longitude: x[0]}),
+            )
+          }
+          key={`building-${b.id}`}
+          strokeColor={"#625C39"}
+          fillColor={"#E7CA23"}
+          
+          strokeWidth={2}
+          tappable
+          onPress={() => {zoomInto(b);
+                          props.navigation.navigate('Details', {type: "building",
+                                                                building: b.properties.building
+                                                                });}}
+        />
+        )
+      }
+    }
+  ));
+};
+
+function displayParking(props) {
+  return (Parking.features.map((b) => {
+    if (b.geometry.type == "Polygon") {
+      return (
+        <Polygon
+          coordinates= {b.geometry.coordinates[0].map((x) => 
+              ({latitude: x[1], longitude: x[0]}),
+            )
+          }
+          key={`building-${b.id}`}
+          strokeColor={"#3F3249"}
+          fillColor={"#rgba(189, 146, 221, 0.5)"}
+          
+          strokeWidth={2}
+          tappable
+          onPress={() => {zoomInto(b);
+                          props.navigation.navigate('Details', {type: "parking",
+                                                                building: b.properties.name
+                                                                });}}
+        />
+        )
+      }
+    }
+  ));
+};
+
+function displayFloors(props, {visibleBuilding}, {setBuilding}) {
+  var data = {"features": []};
+  if (props.route.params.floors == 1) {
+    data = BuildingsFirstFloors;
+  } else if (props.route.params.floors == 2) {
+    data = BuildingsSecondFloors;
+  }
+  else if (props.route.params.floors == 3) {
+    data = BuildingsThirdFloors;
+  }
+  //toggleOverlay(props.route.params.floors, {setBuilding});
+
+  return (visibleBuilding.features.map((b) => {
+    if (b.geometry.type == "Polygon") {
+      return (
+        <Polygon
+          coordinates= {b.geometry.coordinates[0].map((x) => 
+              ({latitude: x[1], longitude: x[0]}),
+            )
+          }
+          key={`building-room${b.id}`}
+          strokeColor="#00276b"
+          fillColor="#fff6b3"
+          
+          strokeWidth={2}
+          tappable
+          onPress={() => {props.navigation.navigate('Details', {type: "room",
+                                                                building: b.properties.building,
+                                                                room: b.properties.room
+                                                  });}}
+        />
+      )
+    }
+    else if (b.geometry.type == "Point") {
+      var img = require('../assets/bathroom.jpeg');
+
+      if (b.properties.type == "bathroom") {
+        img = require('../assets/bathroom.jpeg');
+      }
+      else if (b.properties.type == "elevator") {
+        img = require('../assets/elevator.png');
+      }
+      else if (b.properties.type == "stairs") {
+        img = require('../assets/stairs.jpg');
+      }
+      else if (b.properties.type == "water") {
+        img = require('../assets/water.png');
+      }
+
+      return (
+        <Marker
+          tracksViewChanges={false}
+          style={{width: 20, height: 20}}
+          coordinate={
+            {latitude: b.geometry.coordinates[1], 
+              longitude: b.geometry.coordinates[0]
+            }
+            }
+          key={`${b.properties.type}${b.id}`}
+        >
+          <Image
+            source={img}
+            style={{width: 20, height: 20}}
+            resizeMethod="resize"
+            resizeMode="center"
+          />
+        </Marker>
+      )
+    }
+  }));
+};
+
+function displaySingleBuildingFloor(display, buildingName,floorNumber,
+                                    {visibleBuilding}, {setBuilding}) {
+  if (display) {
+    toggleOverlay(floorNumber,{setBuilding});
+
+    return (visibleBuilding.features.map((b) => {
+      if ((b.geometry.type == "Polygon") && (b.properties.building == buildingName)) {
+        return (
+          <Polygon
+            coordinates= {b.geometry.coordinates[0].map((x) => 
+                ({latitude: x[1], longitude: x[0]}),
+              )
+            }
+            key={`building-room${b.id}`}
+            strokeColor="#00276b"
+            fillColor="#fff6b3"
+            
+            strokeWidth={2}
+            tappable
+            onPress={() => console.log(`${b.properties.building}, Room ${b.properties.room}`)}
+          />
+        )
+      }
+      else if ((b.geometry.type == "Point") &&(b.properties.building == buildingName)) {
+        var img = require('../assets/bathroom.jpeg');
+
+        if (b.properties.type == "bathroom") {
+          img = require('../assets/bathroom.jpeg');
+        }
+        else if (b.properties.type == "elevator") {
+          img = require('../assets/elevator.png');
+        }
+        else if (b.properties.type == "stairs") {
+          img = require('../assets/stairs.jpg');
+        }
+        else if (b.properties.type == "water") {
+          img = require('../assets/water.png');
+        }
+
+        return (
+          <Marker
+            tracksViewChanges={false}
+            style={{width: 20, height: 20}}
+            coordinate={
+              {latitude: b.geometry.coordinates[1], 
+                longitude: b.geometry.coordinates[0]
+              }
+              }
+            key={`${b.properties.type}${b.id}`}
+          >
+            <Image
+              source={img}
+              style={{width: 20, height: 20}}
+              resizeMethod="resize"
+              resizeMode="center"
+            />
+          </Marker>
+        )
+      }
+    }));
+  }
+
+  return;
+};
+
+function zoomInto (b) {
+  this.map.animateToRegion({
+    latitude: getMiddleLat(b.geometry.coordinates[0]),
+    longitude: getMiddleLong(b.geometry.coordinates[0]),
+    latitudeDelta: 0.0018,
+    longitudeDelta: 0.0018,
+  })
 }
 
-// Styling app in general
+function getMiddleLat(arr) {
+  var mid = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    mid += arr[i][1];
+  }
+
+  return mid / arr.length;
+}
+
+function getMiddleLong(arr) {
+  var mid = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    mid += arr[i][0];
+  }
+
+  return mid / arr.length;
+}
+
+// * * * STYLES * * *
+const mapStyle=
+[
+  {
+    "elementType": "labels",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.neighborhood",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  }
+];
+
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
@@ -174,7 +497,7 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     right: 0,
-    bottom: 0,
+    bottom: 90,
   },
   buttonsContainer: {
     flexDirection: 'column',
