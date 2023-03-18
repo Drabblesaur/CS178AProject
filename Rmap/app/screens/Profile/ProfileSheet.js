@@ -12,7 +12,7 @@ const ProfileSheet = (props) => {
     const loaddata = async () => {
         AsyncStorage.getItem('user')
             .then(async (value) => {
-                fetch('http://192.168.6.175:4000/userdata', {
+                fetch('http://192.168.0.105:4000/userdata', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -54,10 +54,10 @@ const ProfileSheet = (props) => {
                     <ScrollView>
                          <View style={styles.c1}>
                             {
-                                userdata.profilepic.length > 0 ?
+                                userdata.profilepic != null && userdata.profilepic.length > 0?
                                     <Image style={styles.profilepic} source={{ uri: userdata.profilepic }} />
                                     :
-                                    <Text style={styles.txt}>No pic</Text>
+                                    <Text style={styles.txt}>{'No Pic'}</Text>
                             }
                             
 
