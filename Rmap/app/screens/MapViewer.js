@@ -36,7 +36,7 @@ async function componentDidMount({setLocation}) {
   }
 }
 
-// Toggle between floors
+// * * * FUNCTIONS TO TOGGLE FLOORS * * *
 function toggleOverlay(floor, buildingName, {setBuilding}) {
   if (prev_toggle == floor) {
     prev_toggle = 0;
@@ -61,6 +61,7 @@ function changeFloor(floor, buildingName, {setBuilding}) {
   }
 };
 
+// * * * RENDER BUILDING NAMES FUNCTIONS * * *
 async function getCameraInfo() {
   if (this.map) {
     try {
@@ -74,14 +75,23 @@ async function getCameraInfo() {
   }
 }
 
+function showBuildingNames(zoom) {
+  if ((zoom > 18) && (prev_toggle == 0)) {
+    display_building_name = true;
+  }
+  else {
+    display_building_name = false;
+  }
+}
+
 function MapViewer(props){
   const { modalOpen } = props.route.params;
   const [visibleBuilding, setBuilding] = useState([]);
   const [location, setLocation] = useState({coords: {longitude: 0, latitude:0}});
-  var map = useRef(null);
+  const [zoom, setZoom] = useState(16.0);
 
   DeviceEventEmitter.addListener("event.toggleOverlay", (floor, buildingName) => toggleOverlay(floor, buildingName, {setBuilding}));
-  console.log(visibleBuilding);
+  //console.log(visibleBuilding);
 
   React.useEffect(() => {
     if (props.route.params?.modalOpen) {
@@ -93,7 +103,7 @@ function MapViewer(props){
     componentDidMount({setLocation});
   }, []);
 
-  console.log(getCameraInfo());
+  showBuildingNames(zoom);
 
   return(
     <View style={styles.container}>
@@ -108,6 +118,11 @@ function MapViewer(props){
           longitude: -117.328158,
           latitudeDelta: 0.007,
           longitudeDelta: 0.007,
+        }}
+        onRegionChangeComplete={async (region) => {
+          const coords = await this.map.getCamera();
+          setZoom(coords.zoom);
+          console.log('coords', coords);
         }}
       >
         { // Call function to show all buildings first to always keep it "underneath" the classrooms
@@ -150,12 +165,8 @@ function displayFloors(props, data, {setBuilding}) {
   return (data?.map((b) => {
     if (b?.geometry.type == "Polygon" && b?.properties.room != "hallway") {
       var coords = b.geometry.coordinates[0].map((x) => ({latitude: x[1], longitude: x[0]}));
-      var lat = getMiddleLat(b.geometry.coordinates[0]);
+      var lat = getMiddleLat(b.geometry.coordinates[0]) - 0.00001;
       var long = getMiddleLong(b.geometry.coordinates[0]);
-      var class_number = "";
-      if (b.properties.room != "undefined") {
-        class_number = b.properties.room;
-      }
 
       var marker = <Marker
                     coordinate={
@@ -166,16 +177,16 @@ function displayFloors(props, data, {setBuilding}) {
                       }
                     key={`marker${b.properties.type}${b.id}`}
                   >
-                    <Text>
-                      {class_number}
+                    <Text style={{border: "solid", borderRadius:10, fontSize: 12, backgroundColor:"#rgba(133, 128, 94, 0.5)", color:"white"}}>
+                      {(b.properties.room != "undefined") ? b.properties.room : ""}
                     </Text>
                   </Marker>;
 
       var polygon = <Polygon
-                      coordinates= {coords}
+                      coordinates={coords}
                       key={`building-room${b.id}`}
-                      strokeColor="#00276b"
-                      fillColor="#fff6b3"
+                      strokeColor="#85805e"
+                      fillColor={ (b.properties.room == "undefined") ? "#85805e" :"#fff6b3"}
                       strokeWidth={2}
                       tappable
                       onPress={() => {toggleOverlay(0, "", {setBuilding});
@@ -222,14 +233,32 @@ function displayFloors(props, data, {setBuilding}) {
                   >
                     <Image
                       source={img}
-                      style={{width: 20, height: 20}}
+                      style={{width: 20, height: 20, border: "solid", borderRadius:10}}
                       resizeMethod="resize"
                       resizeMode="center"
                     />
                   </Marker>;
-
       return marker;
-      }
+    } /*else if (b.geometry.type == "LineString") {
+      //var coords = b.geometry.coordinates[0].map((x) => ({latitude: x[1], longitude: x[0]}));
+      var line = <Polyline
+                  coordinates={[
+                      {
+                        latitude: b.geometry.coordinates[0][0][1],
+                        longitude: b.geometry.coordinates[0][0][0],
+                      },
+                      {
+                        latitude: b.geometry.coordinates[0][1][1],
+                        longitude: b.geometry.coordinates[0][1][0],
+                      }
+                    ]
+                  }
+                  key={`entrance-${b.id}`}
+                  strokeColor={"#1b5180"}
+                  strokeWidth={3}
+                />;
+      return line;
+    }*/
     }
   ));
 };
@@ -256,15 +285,12 @@ function displayFloorsHallways(props, data) {
   ));
 }
 
+// * * * DISPLAY MAIN BUILDINGS * * *
 function displayBuildings(props, {setBuilding}) {
   return (Buildings.features.map((b) => {
     if (b.geometry.type == "Polygon") {
       var lat = getMiddleLat(b.geometry.coordinates[0]);
       var long = getMiddleLong(b.geometry.coordinates[0]);
-      var building_name = b.properties.building;
-      if (!display_building_name) {
-        building_name = "";
-      }
 
       var marker = <Marker
                     coordinate={
@@ -286,7 +312,7 @@ function displayBuildings(props, {setBuilding}) {
                                   }}
                   >
                     <Text style={{fontSize: 12}}>
-                      {building_name}
+                      {display_building_name ? b.properties.building : ""}
                     </Text>
                   </Marker>;
 
@@ -331,7 +357,7 @@ function displaySocials(props, {setBuilding}) {
                     key={`marker${b.properties.type}${b.id}`}
                   >
                     <Text style={{fontSize: 12}}>
-                      {b.properties.building}
+                      {display_building_name ? b.properties.building : ""}
                     </Text>
                   </Marker>;
 
@@ -349,7 +375,8 @@ function displaySocials(props, {setBuilding}) {
                                       zoomInto(b);
                                       props.navigation.navigate('Details', {
                                                                             type: "building",
-                                                                            building: b.properties.building
+                                                                            building: b.properties.building,
+                                                                            floors: b.properties.floors,
                                                                             }
                                                                 );}}
                     />;
@@ -374,7 +401,7 @@ function displayParking(props, {setBuilding}) {
                     key={`marker${b.properties.name}${b.id}`}
                   >
                     <Text style={{fontSize: 12}}>
-                      {b.properties.name}
+                      {display_building_name ? b.properties.name : ""}
                     </Text>
                   </Marker>;
 
@@ -405,21 +432,35 @@ function displayParking(props, {setBuilding}) {
 
 // * * * MAP ZOOM FUNCTIONS * * *
 function zoomInto (b) { // Zoom into building "b"
-  this.map.animateToRegion({
-    latitude: getMiddleLat(b.geometry.coordinates[0]),
-    longitude: getMiddleLong(b.geometry.coordinates[0]),
-    latitudeDelta: 0.0008,
-    longitudeDelta: 0.0008,
-  })
+  if(this.map) {
+    try {
+      this.map.animateToRegion({
+        latitude: getMiddleLat(b.geometry.coordinates[0]),
+        longitude: getMiddleLong(b.geometry.coordinates[0]),
+        latitudeDelta: 0.0008,
+        longitudeDelta: 0.0008,
+      })
+    } catch (err) {
+      console.error(err)
+      return;
+    }
+  }
 }
 
 function zoomReset () { // Resets screen to original zoom
-  this.map.animateToRegion({
-    latitude: 33.973362,
-    longitude: -117.328158,
-    latitudeDelta: 0.008,
-    longitudeDelta: 0.008,
-  })
+  if(this.map) {
+    try {
+      this.map.animateToRegion({
+        latitude: 33.973362,
+        longitude: -117.328158,
+        latitudeDelta: 0.008,
+        longitudeDelta: 0.008,
+      })
+    } catch (err) {
+      console.error(err)
+      return;
+    }
+  }
 }
 
 function getMiddleLat(arr) { // Helper function for function zoomInto(b) (gets center of building b's latitude)

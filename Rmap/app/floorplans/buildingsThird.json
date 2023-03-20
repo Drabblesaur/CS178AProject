@@ -19,7 +19,7 @@
       "type": "Feature",
       "properties": {
         "building": "Student Success Center",
-        "rooms": "316"
+        "room": "316"
       },
       "geometry": {
         "coordinates": [
@@ -53,8 +53,240 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Highlander Union Building",
+        "room": "379"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328766,
+              33.97409
+            ],
+            [
+              -117.328708,
+              33.974091
+            ],
+            [
+              -117.328716,
+              33.974021
+            ],
+            [
+              -117.328772,
+              33.974021
+            ],
+            [
+              -117.328766,
+              33.97409
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "0e1e62f3ffcaa901d471deb254a092ba"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Highlander Union Building",
+        "room": "hallway"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328849,
+              33.974015
+            ],
+            [
+              -117.328955,
+              33.974015
+            ],
+            [
+              -117.328955,
+              33.973838
+            ],
+            [
+              -117.328908,
+              33.973838
+            ],
+            [
+              -117.328908,
+              33.973891
+            ],
+            [
+              -117.328898,
+              33.973907
+            ],
+            [
+              -117.328881,
+              33.973919
+            ],
+            [
+              -117.328859,
+              33.97393
+            ],
+            [
+              -117.328832,
+              33.973937
+            ],
+            [
+              -117.328781,
+              33.973936
+            ],
+            [
+              -117.328746,
+              33.974294
+            ],
+            [
+              -117.328685,
+              33.974294
+            ],
+            [
+              -117.328697,
+              33.974509
+            ],
+            [
+              -117.328812,
+              33.974509
+            ],
+            [
+              -117.32881,
+              33.974373
+            ],
+            [
+              -117.328849,
+              33.974015
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "166551c1f0b5ec4664a036f05eedad30"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Student Success Center",
-        "rooms": "305"
+        "room": "hallway"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.330817,
+              33.974193
+            ],
+            [
+              -117.330816,
+              33.973994
+            ],
+            [
+              -117.330785,
+              33.973994
+            ],
+            [
+              -117.330785,
+              33.974088
+            ],
+            [
+              -117.330285,
+              33.974082
+            ],
+            [
+              -117.330285,
+              33.974164
+            ],
+            [
+              -117.330303,
+              33.974165
+            ],
+            [
+              -117.330303,
+              33.974192
+            ],
+            [
+              -117.330334,
+              33.974192
+            ],
+            [
+              -117.330334,
+              33.974165
+            ],
+            [
+              -117.330521,
+              33.974166
+            ],
+            [
+              -117.330521,
+              33.974193
+            ],
+            [
+              -117.330587,
+              33.974192
+            ],
+            [
+              -117.330588,
+              33.974167
+            ],
+            [
+              -117.330796,
+              33.974169
+            ],
+            [
+              -117.330796,
+              33.974193
+            ],
+            [
+              -117.330817,
+              33.974193
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "205afa1239812782bc8c9ece2605d9b3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Highlander Union Building",
+        "room": "367"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328757,
+              33.974173
+            ],
+            [
+              -117.3287,
+              33.974173
+            ],
+            [
+              -117.328708,
+              33.974091
+            ],
+            [
+              -117.328765,
+              33.97409
+            ],
+            [
+              -117.328757,
+              33.974173
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "2ea7a50bb21601e300cddab433909129"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Student Success Center",
+        "room": "305"
       },
       "geometry": {
         "coordinates": [
@@ -89,7 +321,7 @@
       "type": "Feature",
       "properties": {
         "building": "Student Success Center",
-        "rooms": "undefined"
+        "room": "undefined"
       },
       "geometry": {
         "coordinates": [
@@ -123,8 +355,23 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Highlander Union Building",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.328587,
+          33.974405
+        ],
+        "type": "Point"
+      },
+      "id": "41824c742739487db4207a05c2712d1f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Student Success Center",
-        "rooms": "321"
+        "room": "321"
       },
       "geometry": {
         "coordinates": [
@@ -158,8 +405,23 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Highlander Union Building",
+        "type": "elevator"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.328804,
+          33.974416
+        ],
+        "type": "Point"
+      },
+      "id": "6bfd52e22d42ba7b77420741643bd04b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Student Success Center",
-        "rooms": "329"
+        "room": "329"
       },
       "geometry": {
         "coordinates": [
@@ -242,7 +504,7 @@
       "type": "Feature",
       "properties": {
         "building": "Student Success Center",
-        "rooms": "317"
+        "room": "317"
       },
       "geometry": {
         "coordinates": [
@@ -292,7 +554,7 @@
       "type": "Feature",
       "properties": {
         "building": "Student Success Center",
-        "rooms": "315"
+        "room": "315"
       },
       "geometry": {
         "coordinates": [
@@ -326,8 +588,23 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Highlander Union Building",
+        "type": "stairs"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.328807,
+          33.973924
+        ],
+        "type": "Point"
+      },
+      "id": "8555f195865cc0df8da90a1417210c0b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Student Success Center",
-        "rooms": "335"
+        "room": "335"
       },
       "geometry": {
         "coordinates": [
@@ -401,6 +678,21 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Highlander Union Building",
+        "type": "elevator"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.328932,
+          33.97386
+        ],
+        "type": "Point"
+      },
+      "id": "96c8868888f95685dbda97c73f642890"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Student Success Center",
         "type": "stairs"
       },
@@ -417,7 +709,7 @@
       "type": "Feature",
       "properties": {
         "building": "Student Success Center",
-        "rooms": "319"
+        "room": "319"
       },
       "geometry": {
         "coordinates": [
@@ -451,8 +743,297 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Highlander Union Building",
+        "room": "377"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328831,
+              33.97416
+            ],
+            [
+              -117.328923,
+              33.97416
+            ],
+            [
+              -117.328922,
+              33.974127
+            ],
+            [
+              -117.328834,
+              33.974127
+            ],
+            [
+              -117.328831,
+              33.97416
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "9adaea8e754c2f7516946eb8959b4d4b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Highlander Union Building",
+        "room": "353"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328823,
+              33.974251
+            ],
+            [
+              -117.328957,
+              33.974251
+            ],
+            [
+              -117.328956,
+              33.974161
+            ],
+            [
+              -117.328924,
+              33.974161
+            ],
+            [
+              -117.328924,
+              33.9742
+            ],
+            [
+              -117.328828,
+              33.9742
+            ],
+            [
+              -117.328823,
+              33.974251
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "9adcd08166f2718e660b2bf5c8c15f3c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Highlander Union Building",
+        "room": "365"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328828,
+              33.9742
+            ],
+            [
+              -117.328924,
+              33.974199
+            ],
+            [
+              -117.328923,
+              33.974161
+            ],
+            [
+              -117.328831,
+              33.974161
+            ],
+            [
+              -117.328828,
+              33.9742
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "a23b02cc459b8a96e74aeb33ce05a04a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Highlander Union Building",
+        "room": "346"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328957,
+              33.974371
+            ],
+            [
+              -117.328896,
+              33.974371
+            ],
+            [
+              -117.328895,
+              33.974306
+            ],
+            [
+              -117.328817,
+              33.974306
+            ],
+            [
+              -117.328822,
+              33.974252
+            ],
+            [
+              -117.328957,
+              33.974252
+            ],
+            [
+              -117.328957,
+              33.974371
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "ae17f019e3758bd1335998ac2cc253f3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Highlander Union Building",
+        "room": "383"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328773,
+              33.974021
+            ],
+            [
+              -117.328781,
+              33.973937
+            ],
+            [
+              -117.328761,
+              33.973937
+            ],
+            [
+              -117.328744,
+              33.973931
+            ],
+            [
+              -117.328736,
+              33.973916
+            ],
+            [
+              -117.328736,
+              33.973902
+            ],
+            [
+              -117.328714,
+              33.973902
+            ],
+            [
+              -117.328705,
+              33.97402
+            ],
+            [
+              -117.328773,
+              33.974021
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "ae834e94b94bf516ae6db30bfc622324"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Highlander Union Building",
+        "room": "302"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328952,
+              33.974874
+            ],
+            [
+              -117.328957,
+              33.974371
+            ],
+            [
+              -117.32881,
+              33.974373
+            ],
+            [
+              -117.328812,
+              33.974509
+            ],
+            [
+              -117.328697,
+              33.974509
+            ],
+            [
+              -117.328707,
+              33.974814
+            ],
+            [
+              -117.32875,
+              33.974874
+            ],
+            [
+              -117.328952,
+              33.974874
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "b24a5bce26c7d6624d126e8c8ff15ecb"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Highlander Union Building",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328895,
+              33.974371
+            ],
+            [
+              -117.328894,
+              33.974307
+            ],
+            [
+              -117.328818,
+              33.974306
+            ],
+            [
+              -117.328811,
+              33.974372
+            ],
+            [
+              -117.328895,
+              33.974371
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "c808bad2475ae004026c6d6610dd6cfd"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Student Success Center",
-        "rooms": "323"
+        "room": "323"
       },
       "geometry": {
         "coordinates": [
@@ -501,6 +1082,49 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Highlander Union Building",
+        "room": "381"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328924,
+              33.974161
+            ],
+            [
+              -117.328957,
+              33.97416
+            ],
+            [
+              -117.328954,
+              33.974016
+            ],
+            [
+              -117.328847,
+              33.974015
+            ],
+            [
+              -117.328835,
+              33.974126
+            ],
+            [
+              -117.328923,
+              33.974126
+            ],
+            [
+              -117.328924,
+              33.974161
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "cdf1ecc8159080ed772ae9e412c4e55e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Student Success Center",
         "type": "stairs"
       },
@@ -512,6 +1136,41 @@
         "type": "Point"
       },
       "id": "e0fdcec26cdbdb7c7733c7f792b3494e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Highlander Union Building",
+        "room": "355"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328745,
+              33.974294
+            ],
+            [
+              -117.328686,
+              33.974294
+            ],
+            [
+              -117.3287,
+              33.974174
+            ],
+            [
+              -117.328757,
+              33.974173
+            ],
+            [
+              -117.328745,
+              33.974294
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "e48fbadc7cf7fd11cc41aaf9be2e38e7"
     },
     {
       "type": "Feature",
@@ -531,8 +1190,23 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Highlander Union Building",
+        "type": "water"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.328795,
+          33.974515
+        ],
+        "type": "Point"
+      },
+      "id": "f613484a2e3cd5815256594a5d6fc5af"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Student Success Center",
-        "rooms": "308"
+        "room": "308"
       },
       "geometry": {
         "coordinates": [
