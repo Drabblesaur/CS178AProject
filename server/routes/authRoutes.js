@@ -52,9 +52,9 @@ router.post('/signin', (req, res) => {
                               if (doMatch) {
                                   const token = jwt.sign({ _id: savedUser._id }, process.env.JWT_SECRET);
 
-                                  const { _id, email, profilepic } = savedUser;
+                                  const { _id, email, profilepic, classes, favorites } = savedUser;
 
-                                  res.json({ message: "Successfully Signed In", token, user: { _id, email, profilepic } });
+                                  res.json({ message: "Successfully Signed In", token, user: { _id, email, profilepic,classes, favorites  } });
                               }
                               else {
                                   return res.status(422).json({ error: "Invalid Credentials" });
@@ -109,6 +109,39 @@ router.post('/setprofilepic', (req, res) => {
           savedUser.save()
               .then(user => {
                   res.json({ message: "Profile picture updated successfully" })
+              })
+              .catch(err => {
+                  console.log(err);
+              })
+      })
+      .catch(err => {
+          console.log(err);
+      })
+})
+
+router.post('/addClasses', (req, res) => {
+  const { email, building, room, name } = req.body;
+
+
+  // console.log("email: ", email);
+  User.findOne({ email: email })
+      .then((savedUser) => {
+          if (!savedUser) {
+              return res.status(422).json({ error: "Invalid Credentials" })
+          }
+          const newClass = { building, room, name };
+          savedUser.classes.push(newClass);
+          savedUser.save()
+              .then(user => {
+                  res.json({ message: "class added succesfully" })
+                  const { _id } = payload;
+                  User.findById(_id).then(userdata => {
+                  res.status(200).send({
+                  message: "User Found",
+                  user: userdata
+          });
+      })
+                  
               })
               .catch(err => {
                   console.log(err);

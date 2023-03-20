@@ -23,6 +23,8 @@ const ProfileSheet = (props) => {
                     .then(res => res.json()).then(data => {
                         if (data.message == 'User Found') {
                             setUserdata(data.user)
+                            
+                            
                         }
                         else {
                             alert('Login Again')
@@ -44,7 +46,7 @@ const ProfileSheet = (props) => {
     }, [])
     
     
-    console.log('userdata ', userdata)
+    console.log('userdata from profile sheet ', userdata)
     
     return (
         <View style={styles.container}>
@@ -65,7 +67,7 @@ const ProfileSheet = (props) => {
                         <View style={styles.container}>
                             <Text style={styles.txt}>{userdata.email}</Text>
                             <Button title ='User Name' onPress={() => {props.navigation.navigate('EditProfile');}}/>
-                            <Button title ='Edit Classes' onPress={() => {props.navigation.dispatch(CommonActions.goBack());}}/>
+                            <Button title ='Edit Classes' onPress={() => {props.navigation.navigate('EditClasses');}}/>
                             <Button title ='Logout' onPress={() => {props.navigation.navigate('WelcomeScreen');}}/>
                             <Button title ='Go Back' onPress={() => {props.navigation.dispatch(CommonActions.goBack());}}/>
                         </View>

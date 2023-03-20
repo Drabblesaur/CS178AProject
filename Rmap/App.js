@@ -26,6 +26,9 @@ import DetailedViewSheet from './app/screens/DetailedViewSheet';
 import ProfileSheet from './app/screens/Profile/ProfileSheet';
 import EditProfile from './app/screens/Profile/EditProfile';
 import UploadProfilePicture from './app/screens/Profile/UploadProfilePicture';
+import EditClasses from './app/screens/Profile/EditClasses';
+import AddClasses from './app/screens/Profile/AddClasses';
+import ClassCreation from './app/screens/Profile/ClassCreation';
 
 
 
@@ -130,7 +133,10 @@ export default function App() {
         <Stack.Screen name="Modals" component={Modals} options={{headerShown: false, gestureEnabled: false}}/>
         <Stack.Screen name="Settings" component={SettingsScreen} options={{headerShown: false,}}/>
         <Stack.Screen name="EditProfile" component={EditProfile} options={{headerShown: false,}}/>
+        <Stack.Screen name="EditClasses" component={EditClasses} options={{headerShown: false,}}/>
+        <Stack.Screen name="AddClasses" component={AddClasses} options={{headerShown: false,}}/>
         <Stack.Screen name="UploadProfilePicture" component={UploadProfilePicture} options={{headerShown: false,}}/>
+        <Stack.Screen name="ClassCreation" component={ClassCreation} options={{headerShown: false,}}/>
       </Stack.Navigator>
     </NavigationContainer>
     </GestureHandlerRootView>

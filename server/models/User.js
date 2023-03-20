@@ -21,10 +21,11 @@ const userSchema = new mongoose.Schema({
     type: Array,
     default :[]
   },
-  classes: {
-    type: Array,
-    default :[]
-  }
+  classes: [{
+    building: String,
+    room: String,
+    name: String
+  }]
 });
 
 userSchema.pre('save', async function (next) {

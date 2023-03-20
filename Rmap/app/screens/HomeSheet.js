@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { StyleSheet, Text, View, Pressable,Keyboard,Image } from 'react-native';
+import { StyleSheet, Text, View, Pressable,Keyboard,Image,BackHandler, ActivityIndicator } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
@@ -15,17 +15,21 @@ import searchContent from '../components/SearchContent';
 function HomeSheet(props){
 
     const [userdata, setUserdata] = React.useState(null)
+    const [isLoading, setIsLoading] = React.useState(true); // add loading state
     useEffect(() => {
         AsyncStorage.getItem('user')
             .then(data => {
-                //console.log('async userdata ', data)
-                setUserdata(JSON.parse(data))
+                setUserdata(JSON.parse(data));
+                setIsLoading(false); // set loading state to false when data is loaded
             })
-            .catch(err => alert(err))
+            .catch(err => {
+                setIsLoading(false); // set loading state to false in case of error too
+                alert(err);
+            })
     }, [])
     console.log(userdata);
     const { index } = props.route.params;
-    const profile_element = userdata ? 
+    const profile_element = userdata ?
     (
         console.log('Rendering Image element with profile picture'),
         console.log(userdata.user.profilepic),
@@ -48,8 +52,14 @@ function HomeSheet(props){
           }}
         >
           <View style={styles.profile} />
+          
         </TouchableWithoutFeedback>
       );
+      useEffect(() => {
+        if (userdata) {
+          setSideItem(profile_element);
+        }
+      }, [userdata]);
     const cancel_btn = <TouchableWithoutFeedback onPress={() => {handleCancel();}}><View style={styles.cancel_btn}><Feather name="x-circle" size={40} color="black" /></View></TouchableWithoutFeedback>;
 
     //When the search bar is focused, HomeContent should be hidden and the search results should be shown
@@ -69,14 +79,33 @@ function HomeSheet(props){
         Keyboard.dismiss();
     }
 
+    useEffect(() => {
+        const backAction = () => {
+            props.navigation.navigate('Modals');
+            return true;
+        };
+
+        const backHandler = BackHandler.addEventListener(
+            'hardwareBackPress',
+            backAction
+        );
+
+        return () => backHandler.remove();
+    }, []);
+
 
     //if(index == 1){
         //console.log("index is " + index);
         //setMenuContent(<HomeContent navigation={props.navigation}/>);
     //}
 
-    
-
+    if (isLoading) {
+        return (
+          <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <ActivityIndicator />
+          </View>
+        );
+      }
     return(
         <View style={styles.container}>
             {/* Search Container*/}
@@ -91,6 +120,7 @@ function HomeSheet(props){
                 {SideItem}
             </View>
             {/* Menu Content */}
+            
             {MenuContent}
         </View>
     );
@@ -128,6 +158,7 @@ const styles = StyleSheet.create({
         height: 50,
         width: 50,
         borderRadius: 50,
+        backgroundColor: '#478BFF',
         marginRight: 10,
     },
     cancel_btn:{
