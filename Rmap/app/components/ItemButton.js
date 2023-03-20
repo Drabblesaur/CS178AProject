@@ -1,16 +1,18 @@
 import * as React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View ,TouchableOpacity} from 'react-native';
 import Feather from '@expo/vector-icons/Feather'; 
 
 function ItemButton (props) {
   return (
-    <View style={styles.button_view}>
-        <View style={styles.text_items}>
-            <Text style={{fontSize: 24, fontWeight: 'bold',}}>{props.title}</Text>
-            <Text style={{fontSize: 13}}>{props.subtitle}</Text>
+    <TouchableOpacity onPress={props.onPress}>
+        <View style={styles.button_view}>
+            <View style={styles.text_items}>
+                <Text style={{fontSize: 24, fontWeight: 'bold',}}>{props.title}</Text>
+                <Text style={{fontSize: 13}}>{props.subtitle}</Text>
+            </View>
+            <Feather name="chevron-right" size={32} color="black" />
         </View>
-        <Feather name="chevron-right" size={32} color="black" />
-    </View>
+    </TouchableOpacity>
   )
 }
 

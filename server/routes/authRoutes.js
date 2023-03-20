@@ -5,6 +5,8 @@ const User = mongoose.model("User");
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 const bcrypt = require("bcrypt");
+const Feature = require('../models/Feature');
+const { MongoClient } = require('mongodb');
 
 router.post('/signup', async (req, res) => {
   const {email, password} = req.body;
@@ -26,13 +28,7 @@ router.post('/signup', async (req, res) => {
         console.log(err);
         return res.status(422).json({error: "User not Registered" });
       }
-    
-
-    
   }
-  
-
-  
 })
 
 
@@ -56,9 +52,9 @@ router.post('/signin', (req, res) => {
                               if (doMatch) {
                                   const token = jwt.sign({ _id: savedUser._id }, process.env.JWT_SECRET);
 
-                                  const { _id, email } = savedUser;
+                                  const { _id, email, profilepic } = savedUser;
 
-                                  res.json({ message: "Successfully Signed In", token, user: { _id, email } });
+                                  res.json({ message: "Successfully Signed In", token, user: { _id, email, profilepic } });
                               }
                               else {
                                   return res.status(422).json({ error: "Invalid Credentials" });
@@ -122,6 +118,313 @@ router.post('/setprofilepic', (req, res) => {
           console.log(err);
       })
 })
+
+//router.get('/firstfloordata/:buildingname', (req, res) => {
+router.get('/buildingData', (req, res) => {
+    //const buildingName = req.params.buildingname;
+    //const {building , room} = req.body;
+    MongoClient.connect(process.env.MONGO_URL, { useNewUrlParser: true }, (err, client) => {
+        if (err) throw err;
+      
+        // Get a reference to the database
+        const db = client.db('test')
+        const collection = db.collection('buildings');
+
+        // Define the query object
+        const query = {};
+
+        // Check if a limit parameter was provided
+        if (req.query.limit) {
+            const limitNumber = parseInt(req.query.limit, 10);
+        if (isNaN(limitNumber)) {
+            return res.status(400).json({ message: 'Invalid limit parameter' });
+        }
+        // Add the limit to the query object
+        query.limit = limitNumber;
+        }
+       
+
+        //collection.find({ "properties.building": buildingName }).toArray((err, result) => {
+        if (req.query.limit) {
+            collection.find().limit(query.limit).toArray((err, result) => {
+                if (err) {
+                  console.error(err);
+                  return res.status(500).send(err);
+                }
+          
+                // Return the building data as a JSON response
+                res.json(result);
+                
+              });
+        }
+        else {
+            collection.find().toArray((err, result) => {
+                if (err) {
+                  console.error(err);
+                  return res.status(500).send(err);
+                }
+          
+                // Return the building data as a JSON response
+                res.json(result);
+                
+              });
+        }
+        
+        });
+                  
+ });
+
+ router.get('/buildingData/:buildingName', (req, res) => {
+    let buildingName = req.params.buildingName;
+    buildingName = `.*${buildingName}.*`;
+  
+    MongoClient.connect(process.env.MONGO_URL, { useNewUrlParser: true }, (err, client) => {
+      if (err) throw err;
+  
+      // Get a reference to the database
+      const db = client.db('test');
+      const collection = db.collection('buildings');
+      collection.find({ "properties.building": { $regex: new RegExp(buildingName, 'i') } }).toArray((err, result) => {
+        if (err) {
+          console.error(err);
+          return res.status(500).send(err);
+        }
+  
+        // Return the building data as a JSON response
+        res.json(result);
+      });
+    });
+  });
+
+ router.get('/buildingFirstdata', (req, res) => {
+    //const buildingName = req.params.buildingname;
+    //const {building , room} = req.body;
+    MongoClient.connect(process.env.MONGO_URL, { useNewUrlParser: true }, (err, client) => {
+        if (err) throw err;
+      
+        // Get a reference to the database
+        const db = client.db('test')
+        const collection = db.collection('buildingFirstFloors');
+        //collection.find({ "properties.building": buildingName }).toArray((err, result) => {
+        collection.find().toArray((err, result) => {
+            if (err) {
+              console.error(err);
+              return res.status(500).send(err);
+            }
+      
+            // Return the building data as a JSON response
+            res.json(result);
+            
+          });
+        });
+                  
+ });
+
+ router.get('/buildingSecondData', (req, res) => {
+    //const buildingName = req.params.buildingname;
+    //const {building , room} = req.body;
+    MongoClient.connect(process.env.MONGO_URL, { useNewUrlParser: true }, (err, client) => {
+        if (err) throw err;
+      
+        // Get a reference to the database
+        const db = client.db('test')
+        const collection = db.collection('buildingSecondFloors');
+        //collection.find({ "properties.building": buildingName }).toArray((err, result) => {
+        collection.find().toArray((err, result) => {
+            if (err) {
+              console.error(err);
+              return res.status(500).send(err);
+            }
+      
+            // Return the building data as a JSON response
+            res.json(result);
+            
+          });
+        });
+                  
+ });
+
+
+ router.get('/buildingThirdData', (req, res) => {
+    //const buildingName = req.params.buildingname;
+    //const {building , room} = req.body;
+    MongoClient.connect(process.env.MONGO_URL, { useNewUrlParser: true }, (err, client) => {
+        if (err) throw err;
+      
+        // Get a reference to the database
+        const db = client.db('test')
+        const collection = db.collection('buildingThirdFloor');
+        //collection.find({ "properties.building": buildingName }).toArray((err, result) => {
+        collection.find().toArray((err, result) => {
+            if (err) {
+              console.error(err);
+              return res.status(500).send(err);
+            }
+      
+            // Return the building data as a JSON response
+            res.json(result);
+            
+          });
+        });
+                  
+ });
+
+ router.get('/parkingData/:parkingName', (req, res) => {
+    let parkingName = req.params.parkingName;
+    parkingName = `.*${parkingName}.*`;
+  
+    MongoClient.connect(process.env.MONGO_URL, { useNewUrlParser: true }, (err, client) => {
+      if (err) throw err;
+  
+      // Get a reference to the database
+      const db = client.db('test');
+      const collection = db.collection('parking');
+      collection.find({ "properties.name": { $regex: new RegExp(parkingName, 'i') } }).toArray((err, result) => {
+        if (err) {
+          console.error(err);
+          return res.status(500).send(err);
+        }
+  
+        // Return the parking building data as a JSON response
+        res.json(result);
+      });
+    });
+  });
+
+ router.get('/parkingData', (req, res) => {
+    //const buildingName = req.params.buildingname;
+    //const {building , room} = req.body;
+    MongoClient.connect(process.env.MONGO_URL, { useNewUrlParser: true }, (err, client) => {
+        if (err) throw err;
+      
+        // Get a reference to the database
+        const db = client.db('test')
+        const collection = db.collection('parking');
+        //collection.find({ "properties.building": buildingName }).toArray((err, result) => {
+        const query = {};
+        // Check if a limit parameter was provided
+        if (req.query.limit) {
+            const limitNumber = parseInt(req.query.limit, 10);
+        if (isNaN(limitNumber)) {
+            return res.status(400).json({ message: 'Invalid limit parameter' });
+        }
+        // Add the limit to the query object
+        query.limit = limitNumber;
+        }
+        
+
+        //collection.find({ "properties.building": buildingName }).toArray((err, result) => {
+        if (req.query.limit) {
+            collection.find().limit(query.limit).toArray((err, result) => {
+                if (err) {
+                  console.error(err);
+                  return res.status(500).send(err);
+                }
+          
+                // Return the building data as a JSON response
+                res.json(result);
+                
+              });
+        }
+        else {
+            collection.find().toArray((err, result) => {
+                if (err) {
+                  console.error(err);
+                  return res.status(500).send(err);
+                }
+          
+                // Return the building data as a JSON response
+                res.json(result);
+                
+              });
+        }
+        
+        });
+                  
+ });
+
+ router.get('/socialData/:socialName', (req, res) => {
+    let socialName = req.params.socialName;
+    socialName = `.*${socialName}.*`;
+  
+    MongoClient.connect(process.env.MONGO_URL, { useNewUrlParser: true }, (err, client) => {
+      if (err) throw err;
+  
+      // Get a reference to the database
+      const db = client.db('test');
+      const collection = db.collection('social');
+      collection.find({ "properties.building": { $regex: new RegExp(socialName, 'i') } }).toArray((err, result) => {
+        if (err) {
+          console.error(err);
+          return res.status(500).send(err);
+        }
+  
+        // Return the social building data as a JSON response
+        res.json(result);
+      });
+    });
+  });
+
+ router.get('/socialData', (req, res) => {
+    //const buildingName = req.params.buildingname;
+    //const {building , room} = req.body;
+    MongoClient.connect(process.env.MONGO_URL, { useNewUrlParser: true }, (err, client) => {
+        if (err) throw err;
+      
+        // Get a reference to the database
+        const db = client.db('test')
+        const collection = db.collection('social');
+        const query = {};
+
+        // Check if a limit parameter was provided
+        if (req.query.limit) {
+            const limitNumber = parseInt(req.query.limit, 10);
+        if (isNaN(limitNumber)) {
+            return res.status(400).json({ message: 'Invalid limit parameter' });
+        }
+        // Add the limit to the query object
+        query.limit = limitNumber;
+        }
+       
+
+        //collection.find({ "properties.building": buildingName }).toArray((err, result) => {
+        if (req.query.limit) {
+            collection.find().limit(query.limit).toArray((err, result) => {
+                if (err) {
+                  console.error(err);
+                  return res.status(500).send(err);
+                }
+          
+                // Return the building data as a JSON response
+                res.json(result);
+                
+              });
+        }
+        else {
+            collection.find().toArray((err, result) => {
+                if (err) {
+                  console.error(err);
+                  return res.status(500).send(err);
+                }
+          
+                // Return the building data as a JSON response
+                res.json(result);
+                
+              });
+        }
+        
+        });
+                  
+ });
+
+  
+    // console.log("email: ", email);
+    
+
+  
+
+
+
 
 
 module.exports = router;

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { StyleSheet, Text, View, Pressable,Keyboard } from 'react-native';
+import { StyleSheet, Text, View, Pressable,Keyboard,Image } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
@@ -14,8 +14,42 @@ import searchContent from '../components/SearchContent';
 
 function HomeSheet(props){
 
+    const [userdata, setUserdata] = React.useState(null)
+    useEffect(() => {
+        AsyncStorage.getItem('user')
+            .then(data => {
+                //console.log('async userdata ', data)
+                setUserdata(JSON.parse(data))
+            })
+            .catch(err => alert(err))
+    }, [])
+    console.log(userdata);
     const { index } = props.route.params;
-    const profile_element = <TouchableWithoutFeedback onPress={() => {props.navigation.navigate('ProfileSheet', {userdata});}}><View style={styles.profile}/></TouchableWithoutFeedback>;
+    const profile_element = userdata ? 
+    (
+        console.log('Rendering Image element with profile picture'),
+        console.log(userdata.user.profilepic),
+        <TouchableWithoutFeedback
+          onPress={() => {
+            props.navigation.navigate('ProfileSheet', {userdata});
+          }}
+        >
+          
+          <Image
+            style={styles.profile}
+            source={{ uri: userdata.user.profilepic }}
+          />
+        </TouchableWithoutFeedback>
+      ) : (
+        console.log('Rendering View element with default profile icon'),
+        <TouchableWithoutFeedback
+          onPress={() => {
+            props.navigation.navigate('ProfileSheet', {userdata});
+          }}
+        >
+          <View style={styles.profile} />
+        </TouchableWithoutFeedback>
+      );
     const cancel_btn = <TouchableWithoutFeedback onPress={() => {handleCancel();}}><View style={styles.cancel_btn}><Feather name="x-circle" size={40} color="black" /></View></TouchableWithoutFeedback>;
 
     //When the search bar is focused, HomeContent should be hidden and the search results should be shown
@@ -30,8 +64,8 @@ function HomeSheet(props){
     }
     const handleCancel = () => {
         console.log("cancel");
-        setMenuContent(<HomeContent navigation={props.navigation}/>);
         setSideItem(profile_element);
+        setMenuContent(<HomeContent navigation={props.navigation}/>);
         Keyboard.dismiss();
     }
 
@@ -41,15 +75,7 @@ function HomeSheet(props){
         //setMenuContent(<HomeContent navigation={props.navigation}/>);
     //}
 
-    const [userdata, setUserdata] = React.useState(null)
-    useEffect(() => {
-        AsyncStorage.getItem('user')
-            .then(data => {
-                //console.log('async userdata ', data)
-                setUserdata(JSON.parse(data))
-            })
-            .catch(err => alert(err))
-    }, [])
+    
 
     return(
         <View style={styles.container}>
@@ -102,7 +128,6 @@ const styles = StyleSheet.create({
         height: 50,
         width: 50,
         borderRadius: 50,
-        backgroundColor: '#478BFF',
         marginRight: 10,
     },
     cancel_btn:{

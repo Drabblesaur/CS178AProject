@@ -113,16 +113,6 @@ function Modals(){
         name="ProfileSheet"
         options={{index:1, enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#478BFF'}}}
       />
-      <BottomSheet.Screen
-        component={EditProfile}
-        name="EditProfile"
-        options={{index:1, enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#478BFF'}}}
-      />
-      <BottomSheet.Screen
-        component={UploadProfilePicture}
-        name="UploadProfilePicture"
-        options={{index:1, enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#478BFF'}}}
-      />
     </BottomSheet.Navigator>
   );
 }
@@ -139,6 +129,8 @@ export default function App() {
         <Stack.Screen name="LoginScreen" component={LoginScreen} options={{headerShown: false,}} />
         <Stack.Screen name="Modals" component={Modals} options={{headerShown: false, gestureEnabled: false}}/>
         <Stack.Screen name="Settings" component={SettingsScreen} options={{headerShown: false,}}/>
+        <Stack.Screen name="EditProfile" component={EditProfile} options={{headerShown: false,}}/>
+        <Stack.Screen name="UploadProfilePicture" component={UploadProfilePicture} options={{headerShown: false,}}/>
       </Stack.Navigator>
     </NavigationContainer>
     </GestureHandlerRootView>

@@ -45,7 +45,7 @@ const UploadProfilePicture = (props) => {
         AsyncStorage.getItem('user')
             .then(data => {
                 pickImage().then(url => {
-                    fetch('http://192.168.4.25:4000/setprofilepic', {
+                    fetch('http://192.168.0.105:4000/setprofilepic', {
                         method: 'post',
                         headers: {
                             'Content-Type': 'application/json'
