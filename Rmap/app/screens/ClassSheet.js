@@ -1,12 +1,50 @@
-import * as React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Button, StyleSheet, Text, View,Keyboard } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { CommonActions } from '@react-navigation/native';
 import Feather from '@expo/vector-icons/Feather'; 
 import { TouchableWithoutFeedback } from '@gorhom/bottom-sheet';
 import ItemButton from '../components/ItemButton';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 function ClassSheet(props){
+
+    const [userdata, setUserdata] = React.useState(null)
+    const loaddata = () => {
+        AsyncStorage.getItem('user')
+            .then(async (value) => {
+                fetch('http://192.168.0.105:4000/userdata', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + JSON.parse(value).token
+                    },
+                    body: JSON.stringify({ email: JSON.parse(value).user.email })
+                })
+                    .then(res => res.json()).then(data => {
+                        if (data.message == 'User Found') {
+                            setUserdata(data.user)
+                            
+                            
+                        }
+                        else {
+                            alert('Login Again')
+                            props.navigation.navigate('LoginScreen')
+                        }
+                    })
+                    .catch(err => {
+                        props.navigation.navigate('LoginScreen')
+                        console.log('value1: ', value)
+                    })
+            })
+            .catch(err => {
+                props.navigation.navigate('LoginScreen')
+                console.log('value2: ', value)
+            })
+    }
+    useEffect(() => {
+        loaddata()
+    }, [])
     return(
         <View style={styles.container}>
             {/* Title & Back Button*/}

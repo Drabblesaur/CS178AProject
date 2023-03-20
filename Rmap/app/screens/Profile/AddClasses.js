@@ -65,7 +65,6 @@ function AddClasses(props){
                     <ItemButton 
                         key={building._id} 
                         title={building.properties.building} 
-                        subtitle="0.5 mi" // You can replace this with the actual distance if you have that data
                         onPress={() => {handleItemPress(building)}}
                     />
                 );

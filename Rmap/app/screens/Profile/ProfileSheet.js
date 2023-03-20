@@ -56,7 +56,7 @@ const ProfileSheet = (props) => {
                     <ScrollView>
                          <View style={styles.c1}>
                             {
-                                userdata.profilepic.length > 0 ?
+                                userdata.profilepic.length > 0 && userdata.profilepic != "" ?
                                     <Image style={styles.profilepic} source={{ uri: userdata.profilepic }} />
                                     :
                                     <Text style={styles.txt}>No pic</Text>

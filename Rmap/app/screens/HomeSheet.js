@@ -14,25 +14,50 @@ import searchContent from '../components/SearchContent';
 
 function HomeSheet(props){
 
-    const [userdata, setUserdata] = React.useState(null)
+    
     const [isLoading, setIsLoading] = React.useState(true); // add loading state
-    useEffect(() => {
+    const [userdata, setUserdata] = React.useState(null)
+    const loaddata = async () => {
         AsyncStorage.getItem('user')
-            .then(data => {
-                setUserdata(JSON.parse(data));
-                setIsLoading(false); // set loading state to false when data is loaded
+            .then(async (value) => {
+                fetch('http://192.168.0.105:4000/userdata', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + JSON.parse(value).token
+                    },
+                    body: JSON.stringify({ email: JSON.parse(value).user.email })
+                })
+                    .then(res => res.json()).then(data => {
+                        if (data.message == 'User Found') {
+                            setUserdata(data.user)
+                            
+                            
+                        }
+                        else {
+                            alert('Login Again')
+                            props.navigation.navigate('LoginScreen')
+                        }
+                    })
+                    .catch(err => {
+                        props.navigation.navigate('LoginScreen')
+                        console.log('value1: ', value)
+                    })
             })
             .catch(err => {
-                setIsLoading(false); // set loading state to false in case of error too
-                alert(err);
+                props.navigation.navigate('LoginScreen')
+                console.log('value2: ', value)
             })
+    }
+    useEffect(() => {
+        loaddata()
     }, [])
     console.log(userdata);
     const { index } = props.route.params;
-    const profile_element = userdata ?
+    const profile_element = userdata && userdata.profilepic != "" && userdata.profilepic.length > 0 ? 
     (
         console.log('Rendering Image element with profile picture'),
-        console.log(userdata.user.profilepic),
+        console.log(userdata.profilepic),
         <TouchableWithoutFeedback
           onPress={() => {
             props.navigation.navigate('ProfileSheet', {userdata});
@@ -41,7 +66,7 @@ function HomeSheet(props){
           
           <Image
             style={styles.profile}
-            source={{ uri: userdata.user.profilepic }}
+            source={{ uri: userdata.profilepic }}
           />
         </TouchableWithoutFeedback>
       ) : (
@@ -99,13 +124,6 @@ function HomeSheet(props){
         //setMenuContent(<HomeContent navigation={props.navigation}/>);
     //}
 
-    if (isLoading) {
-        return (
-          <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <ActivityIndicator />
-          </View>
-        );
-      }
     return(
         <View style={styles.container}>
             {/* Search Container*/}

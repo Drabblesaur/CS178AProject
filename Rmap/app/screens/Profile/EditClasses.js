@@ -101,27 +101,12 @@ function EditClasses(props){
           onFocus={() => { handleFocus(); }}
         />
         {/* Display search results */}
-        <ScrollView
-          contentContainerStyle={styles.contentContainer}
-          onScroll={({ nativeEvent }) => {
-            if (isFetching) return;
-            if (nativeEvent.contentOffset.y + nativeEvent.layoutMeasurement.height >= nativeEvent.contentSize.height) {
-              handleLoadMore();
-            }
-          }}
-          scrollEventThrottle={400}
-          onEndReached={() => {
-            if (!isFetching) {
-              handleLoadMore();
-            }
-          }}
-          onEndReachedThreshold={0.5}
-        >
+        <ScrollView contentContainerStyle={styles.contentContainer}>
           {userdata && userdata.classes.map((classObj) => (
             <ItemButton
               key={classObj._id}
               title={classObj.building}
-              subtitle="0.5 mi"
+              subtitle={classObj.name}
               onPress={() => { handleItemPress() }}
             />
           ))}
@@ -131,6 +116,9 @@ function EditClasses(props){
               size="large"
               color="blue"
             />
+          )}
+          {!isFetching && (
+            <Button style = {styles.loadMore} title="Load More" onPress={() => handleLoadMore()} />
           )}
         </ScrollView>
         <TouchableOpacity style={styles.circle} onPress={() => props.navigation.navigate('AddClasses')}></TouchableOpacity>
@@ -177,6 +165,12 @@ const styles = StyleSheet.create({
       backgroundColor: 'blue',
       alignItems: 'center',
       justifyContent: 'center',
+    },
+    loadMore: {
+      backgroundColor: '#1e90ff',
+      paddingVertical: 10,
+      paddingHorizontal: 20,
+      borderRadius: 25,
     },
 
 });
