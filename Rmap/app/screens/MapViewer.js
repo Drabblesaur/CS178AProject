@@ -200,6 +200,8 @@ function displayFloors(props, data, {setBuilding}) {
       return ( [polygon, marker]);
     } else if (b?.geometry.type == "Point") {
       var img = "";
+      var w = 20;
+      var h = 20;
       if (b.properties.type == "bathroom") {
         img = require('../assets/neutral.png');
 
@@ -219,6 +221,34 @@ function displayFloors(props, data, {setBuilding}) {
       else if (b.properties.type == "water") {
         img = require('../assets/water.png');
       }
+      else if (b.properties.type == "Subway") {
+        w = 30; h = 30;
+        img = require('../assets/subway.png');
+      }
+      else if (b.properties.type == "The Habit") {
+        w = 30; h = 30;
+        img = require('../assets/habit.png');
+      }
+      else if (b.properties.type == "Coffee Bean") {
+        w = 30; h = 30;
+        img = require('../assets/coffee_bean.png');
+      }
+      else if (b.properties.type == "Panda Express") {
+        w = 30; h = 30;
+        img = require('../assets/panda.png');
+      }
+      else if (b.properties.type == "Chronic Tacos") {
+        w = 30; h = 30;
+        img = require('../assets/chronic.png');
+      }
+      else if (b.properties.type == "Hibachi San Grill") {
+        w = 30; h = 30;
+        img = require('../assets/hibachi.png');
+      }
+      else if (b.properties.type == "Halal Shack") {
+        w = 30; h = 30;
+        img = require('../assets/halal.png');
+      }
 
       var lat = b.geometry.coordinates[1];
       var long = b.geometry.coordinates[0];
@@ -233,32 +263,22 @@ function displayFloors(props, data, {setBuilding}) {
                   >
                     <Image
                       source={img}
-                      style={{width: 20, height: 20, border: "solid", borderRadius:10}}
+                      style={{width: w, height: h, border: "solid", borderRadius:10}}
                       resizeMethod="resize"
                       resizeMode="center"
                     />
                   </Marker>;
       return marker;
-    } /*else if (b.geometry.type == "LineString") {
-      //var coords = b.geometry.coordinates[0].map((x) => ({latitude: x[1], longitude: x[0]}));
+    } else if (b.geometry.type == "LineString") {
+      var coords = b.geometry.coordinates.map((x) => ({latitude: x[1], longitude: x[0]}));
       var line = <Polyline
-                  coordinates={[
-                      {
-                        latitude: b.geometry.coordinates[0][0][1],
-                        longitude: b.geometry.coordinates[0][0][0],
-                      },
-                      {
-                        latitude: b.geometry.coordinates[0][1][1],
-                        longitude: b.geometry.coordinates[0][1][0],
-                      }
-                    ]
-                  }
+                  coordinates={coords}
                   key={`entrance-${b.id}`}
                   strokeColor={"#1b5180"}
-                  strokeWidth={3}
+                  strokeWidth={5}
                 />;
       return line;
-    }*/
+    }
     }
   ));
 };
@@ -311,7 +331,7 @@ function displayBuildings(props, {setBuilding}) {
                                     display_class_number = true;
                                   }}
                   >
-                    <Text style={{fontSize: 12}}>
+                    <Text style={{border: "solid", borderRadius:10, fontSize: 12, backgroundColor:"#rgba(133, 128, 94, 0.5)", color:"white"}}>
                       {display_building_name ? b.properties.building : ""}
                     </Text>
                   </Marker>;
@@ -356,7 +376,7 @@ function displaySocials(props, {setBuilding}) {
                       }
                     key={`marker${b.properties.type}${b.id}`}
                   >
-                    <Text style={{fontSize: 12}}>
+                    <Text style={{border: "solid", borderRadius:10, fontSize: 12, backgroundColor:"#rgba(133, 128, 94, 0.5)", color:"white"}}>
                       {display_building_name ? b.properties.building : ""}
                     </Text>
                   </Marker>;
@@ -400,7 +420,7 @@ function displayParking(props, {setBuilding}) {
                       }
                     key={`marker${b.properties.name}${b.id}`}
                   >
-                    <Text style={{fontSize: 12}}>
+                    <Text style={{border: "solid", borderRadius:10, fontSize: 12, backgroundColor:"#rgba(133, 128, 94, 0.5)", color:"white"}}>
                       {display_building_name ? b.properties.name : ""}
                     </Text>
                   </Marker>;

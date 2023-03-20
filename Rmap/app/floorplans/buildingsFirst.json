@@ -3,6 +3,68 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Highlander Union Building",
+        "room": "hallway"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328638,
+              33.974061
+            ],
+            [
+              -117.328793,
+              33.974011
+            ],
+            [
+              -117.328973,
+              33.974008
+            ],
+            [
+              -117.328974,
+              33.974145
+            ],
+            [
+              -117.328874,
+              33.974147
+            ],
+            [
+              -117.328871,
+              33.974306
+            ],
+            [
+              -117.328816,
+              33.974306
+            ],
+            [
+              -117.328817,
+              33.974375
+            ],
+            [
+              -117.32868,
+              33.974373
+            ],
+            [
+              -117.328689,
+              33.974304
+            ],
+            [
+              -117.328707,
+              33.974209
+            ],
+            [
+              -117.328638,
+              33.974061
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Sproul Hall",
         "room": "1222"
       },
@@ -2332,7 +2394,8 @@
       "type": "Feature",
       "properties": {
         "building": "Materials Science and Engineering",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "f"
       },
       "geometry": {
         "coordinates": [
@@ -10843,7 +10906,8 @@
       "type": "Feature",
       "properties": {
         "building": "Materials Science and Engineering",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "m"
       },
       "geometry": {
         "coordinates": [

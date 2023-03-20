@@ -4,7 +4,8 @@
       "type": "Feature",
       "properties": {
         "building": "Student Success Center",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "f"
       },
       "geometry": {
         "coordinates": [
@@ -316,6 +317,22 @@
         "type": "Polygon"
       },
       "id": "35b55f346a721932ed4da662b69531e3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Highlander Union Building",
+        "type": "bathroom",
+        "gender": "m"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.328833,
+          33.974321
+        ],
+        "type": "Point"
+      },
+      "id": "3720b5083f33cabf03757661327a1caa"
     },
     {
       "type": "Feature",
@@ -951,6 +968,22 @@
       "type": "Feature",
       "properties": {
         "building": "Highlander Union Building",
+        "type": "bathroom",
+        "gender": "f"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.328831,
+          33.974359
+        ],
+        "type": "Point"
+      },
+      "id": "af95f826b0803340646519e02c7c90c6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Highlander Union Building",
         "room": "302"
       },
       "geometry": {
@@ -1068,7 +1101,8 @@
       "type": "Feature",
       "properties": {
         "building": "Student Success Center",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "m"
       },
       "geometry": {
         "coordinates": [
