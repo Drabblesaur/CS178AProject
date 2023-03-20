@@ -20,6 +20,7 @@ import BuildingsThirdFloors from '../floorplans/buildingsThird.json';
 
 Icon.loadFont();
 var prev_toggle = 0;
+var display_building_name = true;
 
 async function componentDidMount({setLocation}) {
   try {
@@ -39,7 +40,7 @@ async function componentDidMount({setLocation}) {
 function toggleOverlay(floor, buildingName, {setBuilding}) {
   if (prev_toggle == floor) {
     prev_toggle = 0;
-    changeFloor(0, buildingName, {setBuilding});
+    changeFloor(0, "", {setBuilding});
   }
   else {
     prev_toggle = floor;
@@ -48,16 +49,30 @@ function toggleOverlay(floor, buildingName, {setBuilding}) {
 };
 
 function changeFloor(floor, buildingName, {setBuilding}) {
-  if (prev_toggle == 0) {
+  if (floor == 0) {
+    display_building_name = true;
     setBuilding([]);
-  } else if (prev_toggle == 1) {
+  } else if (floor == 1) {
     setBuilding(BuildingsFirstFloors.features.filter(a => a.properties.building == buildingName));
-  } else if (prev_toggle == 2) {
+  } else if (floor == 2) {
     setBuilding(BuildingsSecondFloors.features.filter(a => a.properties.building == buildingName));
-  } else if (prev_toggle == 3) {
+  } else if (floor == 3) {
     setBuilding(BuildingsThirdFloors.features.filter(a => a.properties.building == buildingName));
   }
 };
+
+async function getCameraInfo() {
+  if (this.map) {
+    try {
+      const camera = await this.map.getCamera()
+      console.log(camera)
+      return camera;
+    } catch (err) {
+      console.error(err)
+      return;
+    }
+  }
+}
 
 function MapViewer(props){
   const { modalOpen } = props.route.params;
@@ -66,9 +81,9 @@ function MapViewer(props){
   var map = useRef(null);
 
   DeviceEventEmitter.addListener("event.toggleOverlay", (floor, buildingName) => toggleOverlay(floor, buildingName, {setBuilding}));
-  
+  console.log(visibleBuilding);
+
   React.useEffect(() => {
-    console.log(visibleBuilding);
     if (props.route.params?.modalOpen) {
       props.navigation.navigate('Home');
     }
@@ -77,6 +92,8 @@ function MapViewer(props){
   React.useEffect(() => {
     componentDidMount({setLocation});
   }, []);
+
+  console.log(getCameraInfo());
 
   return(
     <View style={styles.container}>
@@ -130,70 +147,88 @@ function MapViewer(props){
 
 // Displays classrooms (Polygon) and facility markers (Point) of current building floor
 function displayFloors(props, data, {setBuilding}) {
-  return (data.map((b) => {
-    if (b.geometry.type == "Polygon" && b.properties.room != "hallway") {
-      return (
-        <Polygon
-            coordinates= {b.geometry.coordinates[0].map((x) => 
-                ({latitude: x[1], longitude: x[0]}),
-              )
-            }
-            key={`building-room${b.id}`}
-            strokeColor="#00276b"
-            fillColor="#fff6b3"
-            
-            strokeWidth={2}
-            tappable
-            onPress={() => {toggleOverlay(0, "", {setBuilding});
-                            props.navigation.navigate('Details', {
-                                                                  type: "room",
-                                                                  building: b.properties.building,
-                                                                  room: b.properties.room
-                                                                  }
-                                                      );}}
-          />
-        )
-      } else if (b.geometry.type == "Point") {
-        var img = require('../assets/bathroom.jpeg');
+  return (data?.map((b) => {
+    if (b?.geometry.type == "Polygon" && b?.properties.room != "hallway") {
+      var coords = b.geometry.coordinates[0].map((x) => ({latitude: x[1], longitude: x[0]}));
+      var lat = getMiddleLat(b.geometry.coordinates[0]);
+      var long = getMiddleLong(b.geometry.coordinates[0]);
+      var class_number = "";
+      if (b.properties.room != "undefined") {
+        class_number = b.properties.room;
+      }
 
-        if (b.properties.type == "bathroom") {
-          img = require('../assets/neutral.png');
+      var marker = <Marker
+                    coordinate={
+                        {
+                          latitude: lat, 
+                          longitude: long
+                        }
+                      }
+                    key={`marker${b.properties.type}${b.id}`}
+                  >
+                    <Text>
+                      {class_number}
+                    </Text>
+                  </Marker>;
 
-          if (b.properties.gender == "m") {
-            img = require('../assets/mens.png');
-          }
-          else if (b.properties.gender == "f") {
-            img = require('../assets/women.png');
-          }
+      var polygon = <Polygon
+                      coordinates= {coords}
+                      key={`building-room${b.id}`}
+                      strokeColor="#00276b"
+                      fillColor="#fff6b3"
+                      strokeWidth={2}
+                      tappable
+                      onPress={() => {toggleOverlay(0, "", {setBuilding});
+                                      props.navigation.navigate('Details', {
+                                                                            type: "room",
+                                                                            building: b.properties.building,
+                                                                            room: b.properties.room
+                                                                            }
+                                                                );}}
+                    />;
+      return ( [polygon, marker]);
+    } else if (b?.geometry.type == "Point") {
+      var img = "";
+      if (b.properties.type == "bathroom") {
+        img = require('../assets/neutral.png');
+
+        if (b.properties.gender == "m") {
+          img = require('../assets/mens.png');
         }
-        else if (b.properties.type == "elevator") {
-          img = require('../assets/elevator.png');
+        else if (b.properties.gender == "f") {
+          img = require('../assets/women.png');
         }
-        else if (b.properties.type == "stairs") {
-          img = require('../assets/stairs.jpg');
-        }
-        else if (b.properties.type == "water") {
-          img = require('../assets/water.png');
-        }
-        return (
-          <Marker
-            tracksViewChanges={false}
-            style={{width: 20, height: 20}}
-            coordinate={
-              {latitude: b.geometry.coordinates[1], 
-                longitude: b.geometry.coordinates[0]
-              }
-              }
-            key={`${b.properties.type}${b.id}`}
-          >
-            <Image
-              source={img}
-              style={{width: 20, height: 20}}
-              resizeMethod="resize"
-              resizeMode="center"
-            />
-          </Marker>
-        )
+      }
+      else if (b.properties.type == "elevator") {
+        img = require('../assets/elevator.png');
+      }
+      else if (b.properties.type == "stairs") {
+        img = require('../assets/stairs.jpg');
+      }
+      else if (b.properties.type == "water") {
+        img = require('../assets/water.png');
+      }
+
+      var lat = b.geometry.coordinates[1];
+      var long = b.geometry.coordinates[0];
+      var marker = <Marker
+                    coordinate={
+                        {
+                          latitude: lat, 
+                          longitude: long
+                        }
+                      }
+                    key={`${b.properties.type}${b.id}`}
+                  >
+                    <Image
+                      source={img}
+                      style={{width: 20, height: 20}}
+                      resizeMethod="resize"
+                      resizeMode="center"
+                    />
+                  </Marker>;
+
+      return marker;
       }
     }
   ));
@@ -214,8 +249,6 @@ function displayFloorsHallways(props, data) {
           strokeColor={"#rgba(161, 207, 246, 0)"}
           fillColor={"#rgba(161, 207, 246, 1)"}
           strokeWidth={2}
-          tappable
-          onPress={() => {}}
         />
         )
       }
@@ -226,28 +259,58 @@ function displayFloorsHallways(props, data) {
 function displayBuildings(props, {setBuilding}) {
   return (Buildings.features.map((b) => {
     if (b.geometry.type == "Polygon") {
-      return (
-        <Polygon
-          coordinates= {b.geometry.coordinates[0].map((x) => 
-              ({latitude: x[1], longitude: x[0]}),
-            )
-          }
-          key={`building-${b.id}`}
-          strokeColor={"#6FA76A"}
-          fillColor={"#84BC7C"}
-          
-          strokeWidth={2}
-          tappable
-          onPress={() => {toggleOverlay(0, "", {setBuilding});
-                          zoomInto(b);
-                          props.navigation.navigate('Details', {
-                                                                type: "building",
-                                                                building: b.properties.building,
-                                                                floors: b.properties.floors,
-                                                                }
-                                                    );}}
-        />
-        )
+      var lat = getMiddleLat(b.geometry.coordinates[0]);
+      var long = getMiddleLong(b.geometry.coordinates[0]);
+      var building_name = b.properties.building;
+      if (!display_building_name) {
+        building_name = "";
+      }
+
+      var marker = <Marker
+                    coordinate={
+                        {latitude: lat, 
+                          longitude: long
+                        }
+                      }
+                    key={`marker${b.properties.type}${b.id}`}
+                    onPress={() => {toggleOverlay(0, "", {setBuilding});
+                                    zoomInto(b);
+                                    props.navigation.navigate('Details', {
+                                                                          type: "building",
+                                                                          building: b.properties.building,
+                                                                          floors: b.properties.floors,
+                                                                          }
+                                                              );
+                                    display_building_name = false;
+                                    display_class_number = true;
+                                  }}
+                  >
+                    <Text style={{fontSize: 12}}>
+                      {building_name}
+                    </Text>
+                  </Marker>;
+
+      var polygon = <Polygon
+                    coordinates= {b.geometry.coordinates[0].map((x) => 
+                        ({latitude: x[1], longitude: x[0]}),
+                      )
+                    }
+                    key={`building-${b.id}`}
+                    strokeColor={"#6FA76A"}
+                    fillColor={"#84BC7C"}
+                    strokeWidth={2}
+                    tappable
+                    onPress={() => {
+                                    toggleOverlay(0, "", {setBuilding});
+                                    zoomInto(b);
+                                    props.navigation.navigate('Details', {
+                                                                          type: "building",
+                                                                          building: b.properties.building,
+                                                                          floors: b.properties.floors,
+                                                                          }
+                                                              );}}
+                  />;
+      return ([polygon, marker]);
       }
     }
   ));
@@ -256,27 +319,41 @@ function displayBuildings(props, {setBuilding}) {
 function displaySocials(props, {setBuilding}) {
   return (Socials.features.map((b) => {
     if (b.geometry.type == "Polygon") {
-      return (
-        <Polygon
-          coordinates= {b.geometry.coordinates[0].map((x) => 
-              ({latitude: x[1], longitude: x[0]}),
-            )
-          }
-          key={`building-${b.id}`}
-          strokeColor={"#DFA11D"}
-          fillColor={"#FFBC2A"}
-          
-          strokeWidth={2}
-          tappable
-          onPress={() => {toggleOverlay(0, "", {setBuilding});
-                          zoomInto(b);
-                          props.navigation.navigate('Details', {
-                                                                type: "building",
-                                                                building: b.properties.building
-                                                                }
-                                                    );}}
-        />
-        )
+      var lat = getMiddleLat(b.geometry.coordinates[0]);
+      var long = getMiddleLong(b.geometry.coordinates[0]);
+      var marker = <Marker
+                    coordinate={
+                        {
+                          latitude: lat, 
+                          longitude: long
+                        }
+                      }
+                    key={`marker${b.properties.type}${b.id}`}
+                  >
+                    <Text style={{fontSize: 12}}>
+                      {b.properties.building}
+                    </Text>
+                  </Marker>;
+
+      var polygon =  <Polygon
+                      coordinates= {b.geometry.coordinates[0].map((x) => 
+                          ({latitude: x[1], longitude: x[0]}),
+                        )
+                      }
+                      key={`building-${b.id}`}
+                      strokeColor={"#DFA11D"}
+                      fillColor={"#FFBC2A"}
+                      strokeWidth={2}
+                      tappable
+                      onPress={() => {toggleOverlay(0, "", {setBuilding});
+                                      zoomInto(b);
+                                      props.navigation.navigate('Details', {
+                                                                            type: "building",
+                                                                            building: b.properties.building
+                                                                            }
+                                                                );}}
+                    />;
+      return ([polygon, marker]);
       }
     }
   ));
@@ -285,27 +362,42 @@ function displaySocials(props, {setBuilding}) {
 function displayParking(props, {setBuilding}) {
   return (Parking.features.map((b) => {
     if (b.geometry.type == "Polygon") {
-      return (
-        <Polygon
-          coordinates= {b.geometry.coordinates[0].map((x) => 
-              ({latitude: x[1], longitude: x[0]}),
-            )
-          }
-          key={`building-${b.id}`}
-          strokeColor={"#A286F1"}
-          fillColor={"#rgba(189, 146, 221, 0.5)"}
-          
-          strokeWidth={2}
-          tappable
-          onPress={() => {toggleOverlay(0, "", {setBuilding});
-                          zoomInto(b);
-                          props.navigation.navigate('Details', {
-                                                                type: "parking",
-                                                                building: b.properties.name
-                                                                }
-                                                    );}}
-        />
-        )
+      var lat = getMiddleLat(b.geometry.coordinates[0]);
+      var long = getMiddleLong(b.geometry.coordinates[0]);
+      var marker = <Marker
+                    coordinate={
+                        {
+                          latitude: lat, 
+                          longitude: long
+                        }
+                      }
+                    key={`marker${b.properties.name}${b.id}`}
+                  >
+                    <Text style={{fontSize: 12}}>
+                      {b.properties.name}
+                    </Text>
+                  </Marker>;
+
+      var polygon = <Polygon
+                    coordinates= {b.geometry.coordinates[0].map((x) => 
+                        ({latitude: x[1], longitude: x[0]}),
+                      )
+                    }
+                    key={`building-${b.id}`}
+                    strokeColor={"#A286F1"}
+                    fillColor={"#rgba(189, 146, 221, 0.5)"}
+                    strokeWidth={2}
+                    tappable
+                    onPress={() => {toggleOverlay(0, "", {setBuilding});
+                                    zoomInto(b);
+                                    props.navigation.navigate('Details', {
+                                                                          type: "parking",
+                                                                          building: b.properties.name
+                                                                          }
+                                                              );}}
+                  />;
+
+      return ([polygon, marker]);
       }
     }
   ));
@@ -316,8 +408,8 @@ function zoomInto (b) { // Zoom into building "b"
   this.map.animateToRegion({
     latitude: getMiddleLat(b.geometry.coordinates[0]),
     longitude: getMiddleLong(b.geometry.coordinates[0]),
-    latitudeDelta: 0.0018,
-    longitudeDelta: 0.0018,
+    latitudeDelta: 0.0008,
+    longitudeDelta: 0.0008,
   })
 }
 

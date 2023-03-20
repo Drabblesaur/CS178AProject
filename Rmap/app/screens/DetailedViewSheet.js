@@ -5,6 +5,11 @@ import { CommonActions } from '@react-navigation/native';
 import Feather from '@expo/vector-icons/Feather'; 
 
 function DetailedViewSheet(props){
+    var floors = []
+    for (var i = 1; i <= props.route.params.floors; i++) {
+        floors[i-1] = i;
+    }
+
     return(
         <View style={styles.container}>
         <Text> {props.route.params.building} </Text>
@@ -12,7 +17,7 @@ function DetailedViewSheet(props){
             displayRoomText(props.route.params)
         }
         {
-            displayFloorButtons(props)
+            displayFloorButtons(floors, props)
         }
         <Button title ='Go Back' onPress={() => goBack(props)}/>
         <StatusBar/>
@@ -27,12 +32,9 @@ function displayRoomText(params) {
     return;
 }
 
-function displayFloorButtons(props) { // Lists out buttons for each floor that can be displayed
-    var a = []
-    for (var i = 1; i <= props.route.params.floors; i++) {
-        a[i-1] = i;
-    }
-    return a.map(i => {return (<Button title = {`${i}`} key={`button-${i}`} onPress={() => {setMapFloorDisplay(props.route.params.building, i); console.log("pressed " + i);}}/>)});
+function displayFloorButtons(floors, props) { // Lists out buttons for each floor that can be displayed
+    var buttonList = floors.map(i => {return (<Button title = {`${i}`} key={`button-${i}`} onPress={() => {setMapFloorDisplay(props.route.params.building, i); console.log("pressed " + i);}}/>)});
+    return buttonList;
 }
 
 function setMapFloorDisplay(buildingName, floor) { // Display building's floor on MapViewer
@@ -50,7 +52,7 @@ function goBack(props) {
 
 function resetMapViewer() {
     // Toggle MapViewer's floor to empty set
-    DeviceEventEmitter.emit("event.toggleOverlay", 0, "NULL");
+    DeviceEventEmitter.emit("event.toggleOverlay", 0, "");
     // Remove listeners
     DeviceEventEmitter.removeAllListeners("event.toggleOverlay");
 }
