@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     settingsButton: {
         flex: 1,
         height: "100%",
-        backgroundColor: '#C1C1C1',
+        backgroundColor: '#7B7B7B',
         marginBottom: 5,
         borderRadius: 10,
         justifyContent: 'center',

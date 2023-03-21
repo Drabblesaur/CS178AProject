@@ -136,7 +136,9 @@ function DetailedViewSheet(props){
 
 function displayRoomText(params) {
     console.log(params);
+    console.log(params);
     if (params.type == "room") {
+        return (<Text style={{fontSize: 24, fontWeight: 'bold', color: 'white'}}>Room {params.room}</Text>);
         return (<Text style={{fontSize: 24, fontWeight: 'bold', color: 'white'}}>Room {params.room}</Text>);
     }
     return;
@@ -147,6 +149,16 @@ function displayFloorButtons(props) { // Lists out buttons for each floor that c
     for (var i = 1; i <= props.route.params.floors; i++) {
         a[i-1] = i;
     }
+    return a.map(i => {return (
+        <TouchableWithoutFeedback 
+        title = {`${i}`}
+        key={`button-${i}`}
+        onPress={() => {setMapFloorDisplay(props.route.params.building, i); console.log("pressed " + i);}}>
+            <View style={styles.floorbuttons}>
+            <Text style={{fontSize: 32, fontWeight: 'bold', color: 'white'}}>{i}</Text>
+            </View>
+        </TouchableWithoutFeedback>
+        )});
     return a.map(i => {return (
         <TouchableWithoutFeedback 
         title = {`${i}`}
