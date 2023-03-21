@@ -69,7 +69,7 @@ const ProfileSheet = (props) => {
                             <Button title ='User Name' onPress={() => {props.navigation.navigate('EditProfile');}}/>
                             <Button title ='Edit Classes' onPress={() => {props.navigation.navigate('EditClasses');}}/>
                             <Button title ='Logout' onPress={() => {props.navigation.navigate('WelcomeScreen');}}/>
-                            <Button title ='Go Back' onPress={() => {props.navigation.dispatch(CommonActions.goBack());}}/>
+                            <Button title ='Go Back' onPress={() => {props.navigation.navigate('Home',{userdata});}}/>
                         </View>
                     </ScrollView>
                     :

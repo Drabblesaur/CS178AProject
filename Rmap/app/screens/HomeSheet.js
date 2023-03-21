@@ -51,16 +51,15 @@ function HomeSheet(props){
     }
     useEffect(() => {
         loaddata()
-    }, [])
-    console.log(userdata);
+    },[]);
     const { index } = props.route.params;
-    const profile_element = userdata && userdata.profilepic != "" && userdata.profilepic.length > 0 ? 
+    let profile_element = userdata && userdata.profilepic != "" && userdata.profilepic.length > 0 ? 
     (
         console.log('Rendering Image element with profile picture'),
         console.log(userdata.profilepic),
         <TouchableWithoutFeedback
           onPress={() => {
-            props.navigation.navigate('ProfileSheet', {userdata});
+            props.navigation.navigate('ProfileSheet');
           }}
         >
           
@@ -71,9 +70,10 @@ function HomeSheet(props){
         </TouchableWithoutFeedback>
       ) : (
         console.log('Rendering View element with default profile icon'),
+        
         <TouchableWithoutFeedback
           onPress={() => {
-            props.navigation.navigate('ProfileSheet', {userdata});
+            props.navigation.navigate('ProfileSheet');
           }}
         >
           <View style={styles.profile} />

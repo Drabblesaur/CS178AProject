@@ -23,7 +23,6 @@ const UploadProfilePicture = (props) => {
         if (!result.cancelled) {
             const source = { uri: result.uri };
             setImage(source);
-            console.log('HELLO');
             const response = await fetch(result.uri);
             const blob = await response.blob();
             const filename = result.uri.substring(result.uri);
