@@ -12,7 +12,7 @@ const ProfileSheet = (props) => {
     const loaddata = async () => {
         AsyncStorage.getItem('user')
             .then(async (value) => {
-                fetch('http://192.168.4.25:4000/userdata', {
+                fetch('http://192.168.0.105:4000/userdata', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -23,6 +23,8 @@ const ProfileSheet = (props) => {
                     .then(res => res.json()).then(data => {
                         if (data.message == 'User Found') {
                             setUserdata(data.user)
+                            
+                            
                         }
                         else {
                             alert('Login Again')
@@ -43,9 +45,7 @@ const ProfileSheet = (props) => {
         loaddata()
     }, [])
     
-    
-    console.log('userdata ', userdata)
-    
+      
     return (
         <View style={styles.container}>
             <StatusBar />
@@ -54,7 +54,7 @@ const ProfileSheet = (props) => {
                     <ScrollView>
                          <View style={styles.c1}>
                             {
-                                userdata.profilepic.length > 0 ?
+                                userdata.profilepic.length > 0 && userdata.profilepic != "" ?
                                     <Image style={styles.profilepic} source={{ uri: userdata.profilepic }} />
                                     :
                                     <Text style={styles.txt}>No pic</Text>
@@ -65,9 +65,9 @@ const ProfileSheet = (props) => {
                         <View style={styles.container}>
                             <Text style={styles.txt}>{userdata.email}</Text>
                             <Button title ='User Name' onPress={() => {props.navigation.navigate('EditProfile');}}/>
-                            <Button title ='Edit Classes' onPress={() => {props.navigation.dispatch(CommonActions.goBack());}}/>
+                            <Button title ='Edit Classes' onPress={() => {props.navigation.navigate('EditClasses');}}/>
                             <Button title ='Logout' onPress={() => {props.navigation.navigate('WelcomeScreen');}}/>
-                            <Button title ='Go Back' onPress={() => {props.navigation.dispatch(CommonActions.goBack());}}/>
+                            <Button title ='Go Back' onPress={() => {props.navigation.navigate('Home',{userdata});}}/>
                         </View>
                     </ScrollView>
                     :

@@ -23,7 +23,6 @@ const UploadProfilePicture = (props) => {
         if (!result.cancelled) {
             const source = { uri: result.uri };
             setImage(source);
-            console.log('HELLO');
             const response = await fetch(result.uri);
             const blob = await response.blob();
             const filename = result.uri.substring(result.uri);
@@ -45,7 +44,7 @@ const UploadProfilePicture = (props) => {
         AsyncStorage.getItem('user')
             .then(data => {
                 pickImage().then(url => {
-                    fetch('http://192.168.4.25:4000/setprofilepic', {
+                    fetch('http://192.168.0.105:4000/setprofilepic', {
                         method: 'post',
                         headers: {
                             'Content-Type': 'application/json'

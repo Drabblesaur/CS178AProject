@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { StyleSheet, Text, View, Pressable,Keyboard } from 'react-native';
+import { StyleSheet, Text, View, Pressable,Keyboard,Image,BackHandler, ActivityIndicator } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
@@ -13,9 +13,76 @@ import searchContent from '../components/SearchContent';
 
 
 function HomeSheet(props){
-
+    const [isLoading, setIsLoading] = React.useState(true); // add loading state
+    const [userdata, setUserdata] = React.useState(null)
+    const loaddata = async () => {
+        AsyncStorage.getItem('user')
+            .then(async (value) => {
+                fetch('http://192.168.0.105:4000/userdata', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + JSON.parse(value).token
+                    },
+                    body: JSON.stringify({ email: JSON.parse(value).user.email })
+                })
+                    .then(res => res.json()).then(data => {
+                        if (data.message == 'User Found') {
+                            setUserdata(data.user)
+                            
+                            
+                        }
+                        else {
+                            alert('Login Again')
+                            props.navigation.navigate('LoginScreen')
+                        }
+                    })
+                    .catch(err => {
+                        props.navigation.navigate('LoginScreen')
+                        console.log('value1: ', value)
+                    })
+            })
+            .catch(err => {
+                props.navigation.navigate('LoginScreen')
+                console.log('value2: ', value)
+            })
+    }
+    useEffect(() => {
+        loaddata()
+    },[]);
     const { index } = props.route.params;
-    const profile_element = <TouchableWithoutFeedback onPress={() => {props.navigation.navigate('ProfileSheet', {userdata});}}><View style={styles.profile}/></TouchableWithoutFeedback>;
+    let profile_element = userdata && userdata.profilepic != "" && userdata.profilepic.length > 0 ? 
+    (
+        console.log('Rendering Image element with profile picture'),
+        console.log(userdata.profilepic),
+        <TouchableWithoutFeedback
+          onPress={() => {
+            props.navigation.navigate('ProfileSheet');
+          }}
+        >
+          
+          <Image
+            style={styles.profile}
+            source={{ uri: userdata.profilepic }}
+          />
+        </TouchableWithoutFeedback>
+      ) : (
+        console.log('Rendering View element with default profile icon'),
+        
+        <TouchableWithoutFeedback
+          onPress={() => {
+            props.navigation.navigate('ProfileSheet');
+          }}
+        >
+          <View style={styles.profile} />
+          
+        </TouchableWithoutFeedback>
+      );
+      useEffect(() => {
+        if (userdata) {
+          setSideItem(profile_element);
+        }
+      }, [userdata]);
     const cancel_btn = <TouchableWithoutFeedback onPress={() => {handleCancel();}}><View style={styles.cancel_btn}><Feather name="x-circle" size={40} color="black" /></View></TouchableWithoutFeedback>;
 
     //When the search bar is focused, HomeContent should be hidden and the search results should be shown
@@ -30,26 +97,30 @@ function HomeSheet(props){
     }
     const handleCancel = () => {
         console.log("cancel");
-        setMenuContent(<HomeContent navigation={props.navigation}/>);
         setSideItem(profile_element);
+        setMenuContent(<HomeContent navigation={props.navigation}/>);
         Keyboard.dismiss();
     }
+
+    useEffect(() => {
+        const backAction = () => {
+            props.navigation.navigate('Modals');
+            return true;
+        };
+
+        const backHandler = BackHandler.addEventListener(
+            'hardwareBackPress',
+            backAction
+        );
+
+        return () => backHandler.remove();
+    }, []);
 
 
     //if(index == 1){
         //console.log("index is " + index);
         //setMenuContent(<HomeContent navigation={props.navigation}/>);
     //}
-
-    const [userdata, setUserdata] = React.useState(null)
-    useEffect(() => {
-        AsyncStorage.getItem('user')
-            .then(data => {
-                //console.log('async userdata ', data)
-                setUserdata(JSON.parse(data))
-            })
-            .catch(err => alert(err))
-    }, [])
 
     return(
         <View style={styles.container}>
@@ -65,6 +136,7 @@ function HomeSheet(props){
                 {SideItem}
             </View>
             {/* Menu Content */}
+            
             {MenuContent}
         </View>
     );

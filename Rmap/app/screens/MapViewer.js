@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { 
   Image, 
   Pressable, 
@@ -11,9 +11,9 @@ import MapView, {Marker, Polygon, Polyline } from 'react-native-maps';
 import Icon from 'react-native-vector-icons/Feather';
 import * as Location from 'expo-location';
 
-import Buildings from '../floorplans/buildings.json';
-import Socials from '../floorplans/social.json';
-import Parking from '../floorplans/parking.json';
+//import Buildings from '../floorplans/buildings.json';
+//import Socials from '../floorplans/social.json';
+//import Parking from '../floorplans/parking.json';
 import BuildingsFirstFloors from '../floorplans/buildingsFirst.json';
 import BuildingsSecondFloors from '../floorplans/buildingsSecond.json';
 import BuildingsThirdFloors from '../floorplans/buildingsThird.json';
@@ -46,6 +46,20 @@ function toggleOverlay(floor, buildingName, {setBuilding}) {
     changeFloor(floor, buildingName, {setBuilding});
   }
 };
+
+//function changeFloor(floor, buildingName) {
+//  let filteredData = [];
+//
+//  if (toggle === 1) {
+//    filteredData = buildingData.BuildingsFirstFloors.filter(a => a.properties.building === buildingName);
+//  } else if (toggle === 2) {
+//    filteredData = buildingData.BuildingsSecondFloors.filter(a => a.properties.building === buildingName);
+//  } else if (toggle === 3) {
+//    filteredData = buildingData.BuildingsThirdFloors.filter(a => a.properties.building === buildingName);
+//  }
+//
+//  setBuilding(filteredData);
+//}
 
 function changeFloor(floor, buildingName, {setBuilding}) {
   if (prev_toggle == 0) {
@@ -199,6 +213,7 @@ function displayFloors(props, data, {setBuilding}) {
   ));
 };
 
+
 // Displays hallways of current building floor
 // (should be called before displayBuilding function to ensure it does not overlap classrooms)
 function displayFloorsHallways(props, data) {
@@ -224,7 +239,15 @@ function displayFloorsHallways(props, data) {
 }
 
 function displayBuildings(props, {setBuilding}) {
-  return (Buildings.features.map((b) => {
+  const [Buildings, setBuildings] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://192.168.0.105:4000/buildingData`)
+      .then(response => response.json())
+      .then(data => setBuildings(data))
+      .catch(error => console.error(error));
+  }, []);
+  return (Buildings.map((b) => {
     if (b.geometry.type == "Polygon") {
       return (
         <Polygon
@@ -244,6 +267,7 @@ function displayBuildings(props, {setBuilding}) {
                                                                 type: "building",
                                                                 building: b.properties.building,
                                                                 floors: b.properties.floors,
+                                                                sheetColor:"#84BC7C",
                                                                 }
                                                     );}}
         />
@@ -254,7 +278,15 @@ function displayBuildings(props, {setBuilding}) {
 };
 
 function displaySocials(props, {setBuilding}) {
-  return (Socials.features.map((b) => {
+  const [Socials, setBuildings] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://192.168.0.105:4000/socialData`)
+      .then(response => response.json())
+      .then(data => setBuildings(data))
+      .catch(error => console.error(error));
+  }, []);
+  return (Socials.map((b) => {
     if (b.geometry.type == "Polygon") {
       return (
         <Polygon
@@ -272,7 +304,8 @@ function displaySocials(props, {setBuilding}) {
                           zoomInto(b);
                           props.navigation.navigate('Details', {
                                                                 type: "building",
-                                                                building: b.properties.building
+                                                                building: b.properties.building,
+                                                                sheetColor:"#F0AF24",
                                                                 }
                                                     );}}
         />
@@ -283,7 +316,15 @@ function displaySocials(props, {setBuilding}) {
 };
 
 function displayParking(props, {setBuilding}) {
-  return (Parking.features.map((b) => {
+  const [Parking, setBuildings] = useState([]);
+
+  useEffect(() => { 
+    fetch(`http://192.168.0.105:4000/parkingData`)
+      .then(response => response.json())
+      .then(data => setBuildings(data))
+      .catch(error => console.error(error));
+  }, []);
+  return (Parking.map((b) => {
     if (b.geometry.type == "Polygon") {
       return (
         <Polygon
@@ -301,7 +342,8 @@ function displayParking(props, {setBuilding}) {
                           zoomInto(b);
                           props.navigation.navigate('Details', {
                                                                 type: "parking",
-                                                                building: b.properties.name
+                                                                building: b.properties.name,
+                                                                sheetColor:"#A286F1",
                                                                 }
                                                     );}}
         />
@@ -312,7 +354,7 @@ function displayParking(props, {setBuilding}) {
 };
 
 // * * * MAP ZOOM FUNCTIONS * * *
-function zoomInto (b) { // Zoom into building "b"
+export function zoomInto (b) { // Zoom into building "b"
   this.map.animateToRegion({
     latitude: getMiddleLat(b.geometry.coordinates[0]),
     longitude: getMiddleLong(b.geometry.coordinates[0]),
