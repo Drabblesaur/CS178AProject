@@ -45,9 +45,7 @@ const ProfileSheet = (props) => {
         loaddata()
     }, [])
     
-    
-    console.log('userdata from profile sheet ', userdata)
-    
+      
     return (
         <View style={styles.container}>
             <StatusBar />

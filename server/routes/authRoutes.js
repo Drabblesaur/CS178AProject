@@ -152,6 +152,43 @@ router.post('/addClasses', (req, res) => {
       })
 })
 
+
+router.post('/addFavorite', (req, res) => {
+  const { email, building} = req.body;
+
+
+  // console.log("email: ", email);
+  User.findOne({ email: email })
+      .then((savedUser) => {
+          if (!savedUser) {
+              return res.status(422).json({ error: "Invalid Credentials" })
+          }
+          const newFavorite = { building};
+          savedUser.favorites.push(newFavorite);
+          savedUser.save()
+              .then(user => {
+                  res.json({ message: "favorite added succesfully!" })
+                  const { _id } = payload;
+                  User.findById(_id).then(userdata => {
+                  res.status(200).send({
+                  message: "User Found",
+                  user: userdata
+          });
+      })
+                  
+              })
+              .catch(err => {
+                  console.log(err);
+              })
+      })
+      .catch(err => {
+          console.log(err);
+      })
+})
+
+
+
+
 //router.get('/firstfloordata/:buildingname', (req, res) => {
 router.get('/buildingData', (req, res) => {
     //const buildingName = req.params.buildingname;

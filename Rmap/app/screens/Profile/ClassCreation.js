@@ -39,43 +39,52 @@ function ClassCreation(props){
               else if (data.message == 'class added succesfully') {
                   console.log('userdata from class creation:', userdata);
                   var userdata1 = {...userdata, ...data};
-                  await AsyncStorage.setItem('user', JSON.stringify(userdata))
-                  props.navigation.navigate('EditClasses')
+                  
+                  props.navigation.navigate('EditClasses', {userdata})
               }
           })
           .catch(err => {
               alert(err)
           })
-  
-     
   }
-
-  useEffect(() => {
+  const loaddata = () => {
     AsyncStorage.getItem('user')
-      .then(data => {
-        const userdata = JSON.parse(data);
-        setUserdata(userdata);
-        if (userdata) {
-          const classes = userdata['user']['classes'];
-          classes.forEach((classObj) => {
-            console.log(classObj.building);
-          });
-          console.log('class creation userdata:', userdata.user.email);
-        }
-      })
-      .catch(err => {
-        alert(err);
-      })
-  }, []);
+        .then(async (value) => {
+            fetch('http://192.168.0.105:4000/userdata', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + JSON.parse(value).token
+                },
+                body: JSON.stringify({ email: JSON.parse(value).user.email })
+            })
+                .then(res => res.json()).then(data => {
+                    if (data.message == 'User Found') {
+                        setUserdata(data.user)
 
-  useEffect(() => {
-    if (userdata) {
-      setEmail(userdata.user.email);
-    }
-  }, [userdata]);
-  
+                        
+                    }
+                    else {
+                        alert('Login Again')
+                        props.navigation.navigate('LoginScreen')
+                    }
+                })
+                .catch(err => {
+                    props.navigation.navigate('LoginScreen')
+                    console.log('value1: ', value)
+                })
+        })
+        .catch(err => {
+            props.navigation.navigate('LoginScreen')
+            console.log('value2: ', value)
+        })
+}
+useEffect(() => {
+    loaddata()
+}, [])
+
+ 
   return (
-    console.log(email),
     <View style={styles.container}>
       {/* Title & Back Button*/}
       <View style={styles.menu_container}>
@@ -99,7 +108,7 @@ function ClassCreation(props){
           value={room}
           onChangeText={setRoom}
         />
-        <Button title="Add Class" onPress={() => ClassHandler(email, props.route.params.building.properties.building)} />
+        <Button title="Add Class" onPress={() => ClassHandler(userdata.email, props.route.params.building.properties.building)} />
 
       
     </View>

@@ -17,10 +17,9 @@ const userSchema = new mongoose.Schema({
     default: '',
     // required: true
   },
-  favorites: {
-    type: Array,
-    default :[]
-  },
+  favorites: [{
+    building: String,
+  }],
   classes: [{
     building: String,
     room: String,

@@ -34,6 +34,7 @@ const LoginScreen = (props) => {
                 }
                 else if (data.message == 'Successfully Signed In') {
                     props.navigation.navigate('Modals')
+                    await AsyncStorage.setItem('user', JSON.stringify(data))
                 }
             })
             .catch(err => {
