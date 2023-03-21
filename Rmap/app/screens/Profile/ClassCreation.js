@@ -6,6 +6,7 @@ import Feather from '@expo/vector-icons/Feather';
 import { TouchableWithoutFeedback, BottomSheetTextInput, BottomSheetScrollView} from '@gorhom/bottom-sheet';
 import ItemButton from '../../components/ItemButton';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 function ClassCreation(props){
@@ -85,33 +86,41 @@ useEffect(() => {
 
  
   return (
+    <SafeAreaView style={{flex:1,backgroundColor: '#84BC7C',}}>
     <View style={styles.container}>
       {/* Title & Back Button*/}
       <View style={styles.menu_container}>
-        <Text style={{ fontSize: 32, fontWeight: 'bold', color: 'green' }}>Class Creation</Text>
+        <Text style={{ fontSize: 32, fontWeight: 'bold', color: 'white' }}>Class Creation</Text>
         <TouchableWithoutFeedback onPress={() => { Keyboard.dismiss(); props.navigation.dispatch(CommonActions.goBack()); }}>
           <Feather name="x-circle" size={32} color="white" />
         </TouchableWithoutFeedback>
       </View>
-      <Text style={{ fontSize: 32, fontWeight: 'bold', color: 'black' }}>{props.route.params.building.properties.building}</Text>
-      <Text style={{ fontSize: 20, color: 'black' }}>class name *</Text>
-      <TextInput
-          style={styles.input}
-          placeholder="Phil 145..."
-          value={name}
-          onChangeText={setName}
-        />
-        <Text style={{ fontSize: 20, color: 'black' }}>room number</Text>
+      <Text style={{ fontSize: 32, fontWeight: 'bold', color: 'white',marginVertical:20}}>{props.route.params.building.properties.building}</Text>
+      <View style={styles.input_container}>
+        <Text style={{ fontSize: 20, color: 'white',fontWeight:'bold' }}>class name *</Text>
+        <TextInput
+            style={styles.input}
+            placeholder="Phil 145..."
+            value={name}
+            onChangeText={setName}
+          />
+      </View>
+      <View style={styles.input_container}>
+        <Text style={{ fontSize: 20, color: 'white',fontWeight:'bold' }}>room number</Text>
         <TextInput
           style={styles.input}
           placeholder="134, 245, etc..."
           value={room}
           onChangeText={setRoom}
         />
-        <Button title="Add Class" onPress={() => ClassHandler(userdata.email, props.route.params.building.properties.building)} />
-
-      
+      </View>
+      <TouchableWithoutFeedback onPress={() => ClassHandler(email, props.route.params.building.properties.building)} >
+        <View style={styles.button_container}>
+          <Text style={{ fontSize: 20, color: 'white',fontWeight:'bold' }}>Add Class</Text>
+        </View>
+      </TouchableWithoutFeedback>
     </View>
+    </SafeAreaView>
   );
   
 }
@@ -132,6 +141,20 @@ menu_container:{
     width: '100%',
     justifyContent: 'space-between',
 },
+input_container:{
+  //backgroundColor:'red',
+  width:'90%',
+  alignItems:'start',
+  marginBottom:20
+},
+input:{
+  fontSize: 18,
+  width: '100%',
+  justifyContent:'center',
+  borderRadius:10,
+  padding: 10,
+  backgroundColor: '#E7E7E7'
+},
 searchBar: {
     marginTop: 10,
     flexDirection: 'row',
@@ -145,17 +168,14 @@ searchBar: {
   contentContainer: {
     backgroundColor: "white",
   },
-  circle: {
-    position: 'absolute',
-    bottom: 20,
-    right: 20,
-    width: 60,
-    height: 60,
-    borderRadius: 30,
-    backgroundColor: 'blue',
+  button_container:{
+    backgroundColor: '#478BFF',
+    width: '80%',
+    height: 50,
     alignItems: 'center',
     justifyContent: 'center',
-  },
+    borderRadius: 10,
+  }
 
 });
 

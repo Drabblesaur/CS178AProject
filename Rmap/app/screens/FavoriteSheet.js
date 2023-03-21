@@ -139,9 +139,23 @@ const styles = StyleSheet.create({
         width: '100%',
         justifyContent: 'space-between',
     },
-    contentContainer: {
-        backgroundColor: "white",
-      },
+    button_view: {
+        paddingLeft:10,
+        paddingRight:10,
+        borderRadius: 10,
+        marginTop: 10,
+        flexDirection: 'row',
+        height: '15%',
+        width: '100%',
+        backgroundColor: '#E6FCE3',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    },
+    contentContainer:{
+        flexDirection: 'column',
+        //backgroundColor: "white",
+    }
+
   });
 
 

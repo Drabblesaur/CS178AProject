@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import { Button, StyleSheet, Text, View,Keyboard,ScrollView,TextInput, TouchableOpacity, ActivityIndicator} from 'react-native';
+import { Button, StyleSheet, Text, View,Keyboard,ScrollView,TextInput, TouchableOpacity, ActivityIndicator,FlatList} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { CommonActions } from '@react-navigation/native';
 import Feather from '@expo/vector-icons/Feather'; 
 import { TouchableWithoutFeedback, BottomSheetTextInput, BottomSheetScrollView} from '@gorhom/bottom-sheet';
 import ItemButton from '../../components/ItemButton';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 function EditClasses(props){
     const [userdata, setUserdata] = React.useState(null)
@@ -93,7 +94,8 @@ function EditClasses(props){
     
 
     return (
-      <View style={styles.container}>
+      <SafeAreaView style={{flex:1,backgroundColor: '#84BC7C',}}>
+        <View style={styles.container}>
         {/* Title & Back Button*/}
         <View style={styles.menu_container}>
           <Text style={{ fontSize: 32, fontWeight: 'bold', color: 'white' }}>Classes</Text>
@@ -107,28 +109,30 @@ function EditClasses(props){
           onFocus={() => { handleFocus(); }}
         />
         {/* Display search results */}
-        <ScrollView contentContainerStyle={styles.contentContainer}>
-          {userdata && userdata.classes.map((classObj) => (
-            <ItemButton
-              key={classObj._id}
-              title={classObj.building}
-              subtitle={classObj.name}
-              onPress={() => { handleItemPress() }}
-            />
-          ))}
-          {isFetching && (
-            <ActivityIndicator
-              style={{ marginVertical: 20 }}
-              size="large"
-              color="blue"
-            />
+        <FlatList
+          contentContainerStyle={styles.contentContainer}
+          horizontal={false}
+          data={userdata?.classes}
+          keyExtractor={(item) => item._id}
+          renderItem={({ item }) => (
+          <ItemButton
+            title={item.building}
+            backgroundColor='#E6FCE3'
+            subtitle={item.name}
+            onPress={() => handleItemPress()}
+          />
           )}
-          {!isFetching && (
-            <Button style = {styles.loadMore} title="Load More" onPress={() => handleLoadMore()} />
-          )}
-        </ScrollView>
-        <TouchableOpacity style={styles.circle} onPress={() => props.navigation.navigate('AddClasses')}></TouchableOpacity>
+          ListFooterComponent={() => (
+        isFetching ?
+          <ActivityIndicator style={{ marginVertical: 20 }} size="large" color="blue" /> :
+          <Button style={styles.loadMore} title="Load More" onPress={() => handleLoadMore()} />
+            )}
+        />
+        <TouchableOpacity style={styles.circle} onPress={() => props.navigation.navigate('AddClasses')}>
+          <Feather name="plus" size={24} color="white" />
+        </TouchableOpacity>
       </View>
+      </SafeAreaView>
     );
 }
 
@@ -140,7 +144,7 @@ const styles = StyleSheet.create({
       justifyContent: 'flex-start',
       paddingLeft:20,
       paddingRight:20,
-      //backgroundColor: 'lightgrey',
+      backgroundColor: '#84BC7C',
       },
   menu_container:{ 
       flexDirection: 'row',
@@ -159,7 +163,9 @@ const styles = StyleSheet.create({
       paddingLeft: 10,
     },
     contentContainer: {
-      backgroundColor: "white",
+      minWidth: 340,
+      flexDirection: 'column',
+      //backgroundColor: "white",
     },
     circle: {
       position: 'absolute',
@@ -168,7 +174,7 @@ const styles = StyleSheet.create({
       width: 60,
       height: 60,
       borderRadius: 30,
-      backgroundColor: 'blue',
+      backgroundColor: '#478BFF',
       alignItems: 'center',
       justifyContent: 'center',
     },

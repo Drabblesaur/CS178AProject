@@ -89,6 +89,7 @@ function ClassSheet(props){
                     key={classObj._id}
                     title={classObj.building}
                     subtitle={classObj.name}
+                    backgroundColor="#E6FCE3"
                     text={`Room ${classObj.room}`}
                     onPress={() => { handleSearch(classObj.building) }}
                      />
@@ -116,7 +117,9 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     contentContainer: {
-        backgroundColor: "white",
+        minWidth: 340,
+        flexDirection: 'column',
+        //backgroundColor: "white",
       },
   });
 

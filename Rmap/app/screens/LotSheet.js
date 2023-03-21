@@ -65,7 +65,8 @@ function LotSheet(props){
                 return (
                     <ItemButton 
                         key={building._id} 
-                        title={building.properties.name} 
+                        title={building.properties.name}
+                        backgroundColor="#EBE3FF" 
                         subtitle="0.5 mi" // You can replace this with the actual distance if you have that data
                         onPress={() => {handleItemPress(building)}}
                     />
@@ -103,7 +104,9 @@ const styles = StyleSheet.create({
         paddingLeft: 10,
       },
       contentContainer: {
-        backgroundColor: "white",
+        minWidth: 340,
+        flexDirection: 'column',
+        //backgroundColor: "white",
       },
 });
 

@@ -335,6 +335,7 @@ function displayBuildings(props, {setBuilding}, bounds) {
                                                                             type: "building",
                                                                             building: b.properties.building,
                                                                             floors: b.properties.floors,
+                                                                            sheetColor:"#84BC7C",
                                                                             }
                                                                 );
                                       display_building_name = false;
@@ -383,6 +384,7 @@ function displaySocials(props, {setBuilding}, bounds) {
                                                                             type: "building",
                                                                             building: b.properties.building,
                                                                             floors: b.properties.floors,
+                                                                            sheetColor:"#F0AF24",
                                                                             }
                                                                 );}}
                     />;
@@ -410,7 +412,6 @@ function displaySocials(props, {setBuilding}, bounds) {
 
 function displayParking(props, {setBuilding}, bounds) {
   const [Parking, setBuildings] = useState([]);
-
   useEffect(() => {
     fetch(`http://192.168.4.25:4000/parkingData`)
       .then(response => response.json())
@@ -436,7 +437,8 @@ function displayParking(props, {setBuilding}, bounds) {
                                     zoomInto(b);
                                     props.navigation.navigate('Details', {
                                                                           type: "parking",
-                                                                          building: b.properties.name
+                                                                          building: b.properties.name,
+                                                                          sheetColor:"#A286F1",
                                                                           }
                                                               );}}
                   />;

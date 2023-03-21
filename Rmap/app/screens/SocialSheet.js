@@ -58,11 +58,12 @@ function SocialSheet(props){
                 onSubmitEditing={() => {handleSearch(searchTerm);}}
             />
             {/* We need to place a List of Items from the DB here */}
-            <BottomSheetScrollView contentContainerStyle={styles.       contentContainer}>
+            <BottomSheetScrollView contentContainerStyle={styles.contentContainer}>
                 {buildingData.map((building) => {
                     return (
                         <ItemButton 
                             key={building._id} 
+                            backgroundColor="#FCDC98"
                             title={building.properties.building} 
                             subtitle="0.5 mi" // You can replace this with the actual distance if you have that data
                             onPress={() => {handleItemPress(building)}}
@@ -101,7 +102,8 @@ const styles = StyleSheet.create({
         paddingLeft: 10,
       },
       contentContainer: {
-        backgroundColor: "white",
+        flexDirection: 'column',
+        //backgroundColor: "white",
       },
 });
 

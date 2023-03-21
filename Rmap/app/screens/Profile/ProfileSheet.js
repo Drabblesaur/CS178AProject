@@ -5,7 +5,9 @@ import { StatusBar } from 'expo-status-bar';
 import { CommonActions } from '@react-navigation/native';
 import Feather from '@expo/vector-icons/Feather'; 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { TouchableWithoutFeedback, BottomSheetTextInput, BottomSheetScrollView} from '@gorhom/bottom-sheet';
 import { Foundation } from '@expo/vector-icons';
+import ItemButton from '../../components/ItemButton';
 
 const ProfileSheet = (props) => {
     const [userdata, setUserdata] = React.useState(null)
@@ -48,38 +50,51 @@ const ProfileSheet = (props) => {
       
     return (
         <View style={styles.container}>
-            <StatusBar />
+            <View style={styles.menu_container}>
+                <Text style={{fontSize: 32, fontWeight: 'bold', color: 'white'}}>Profile</Text>
+                <TouchableWithoutFeedback onPress={() => {props.navigation.dispatch(CommonActions.goBack());}}>
+                <Feather name="x-circle" size={32} color="white" />
+                </TouchableWithoutFeedback>
+            </View>
             {
                 userdata ?
-                    <ScrollView>
-                         <View style={styles.c1}>
-                            {
-                                userdata.profilepic.length > 0 && userdata.profilepic != "" ?
-                                    <Image style={styles.profilepic} source={{ uri: userdata.profilepic }} />
-                                    :
-                                    <Text style={styles.txt}>No pic</Text>
-                            }
-                            
-
-                        </View>
-                        <View style={styles.container}>
-                            <Text style={styles.txt}>{userdata.email}</Text>
-                            <Button title ='User Name' onPress={() => {props.navigation.navigate('EditProfile');}}/>
-                            <Button title ='Edit Classes' onPress={() => {props.navigation.navigate('EditClasses');}}/>
-                            <Button title ='Logout' onPress={() => {props.navigation.navigate('WelcomeScreen');}}/>
-                            <Button title ='Go Back' onPress={() => {props.navigation.navigate('Home',{userdata});}}/>
-                        </View>
-                    </ScrollView>
-                    :
-                    <ActivityIndicator size="large" color="white" />
+                <View style={{width: '100%', height: '100%',flexDirection:'column',marginTop:10}}>
+                <View style={styles.c1}>
+                {
+                    userdata.profilepic.length > 0 && userdata.profilepic != "" ?
+                        <Image style={styles.profilepic} source={{ uri: userdata.profilepic }} />
+                        :
+                        <Text style={styles.txt}>No pic</Text>
+                }
+                <Text style={styles.txt}>{userdata.email}</Text>
+                </View>
+                <ItemButton title="Edit Profile" subtitle="Change your profile picture" backgroundColor="#B8D6FB" onPress={() => {props.navigation.navigate('EditProfile')}}/>
+                <ItemButton title="Edit Classes" subtitle="Add Classes" backgroundColor="#E6FCE3" onPress={() => {props.navigation.navigate('EditClasses')}}/>
+                <ItemButton title="Logout" subtitle="Logout of your account" backgroundColor="#FFB0B0" onPress={() => {props.navigation.navigate('WelcomeScreen');}}/>
+                </View>
+                :
+                <ActivityIndicator size="large" color="white" />
             }
-
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    container: { flex: 1, alignItems: 'center', justifyContent: 'center'},
+    container: { 
+        flex: 1,
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        paddingLeft:20,
+        paddingRight:20,
+        //backgroundColor: 'lightgrey',
+        },
+    menu_container: {
+        width: '100%',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        //backgroundColor: '#111111',
+    },
     profilepic: {
         width: 150,
         height: 150,
@@ -88,17 +103,17 @@ const styles = StyleSheet.create({
     },
     txt: {
         color: 'white',
-        fontSize: 11,
+        marginLeft: 10,
+        fontSize: 20,
         fontWeight: 'bold',
-        margin: 10,
-        backgroundColor: '#111111',
-        paddingVertical: 20,
-        paddingHorizontal: 20,
+        //backgroundColor: '#111111',
         borderRadius: 20
     },
     c1: {
+        flexDirection: 'row',
         width: '100%',
         alignItems: 'center',
+        //backgroundColor: 'red',
     },
   });
 

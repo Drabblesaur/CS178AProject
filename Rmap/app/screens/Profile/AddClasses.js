@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import { Button, StyleSheet, Text, View,Keyboard,ScrollView,TextInput} from 'react-native';
+import { Button, StyleSheet, Text, View,Keyboard,ScrollView,TextInput,FlatList} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { CommonActions } from '@react-navigation/native';
 import Feather from '@expo/vector-icons/Feather'; 
 import { TouchableWithoutFeedback, BottomSheetTextInput, BottomSheetScrollView} from '@gorhom/bottom-sheet';
 import ItemButton from '../../components/ItemButton';
 import { zoomInto } from '../MapViewer'
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 function AddClasses(props){
 
@@ -43,6 +44,7 @@ function AddClasses(props){
     }, []);
 
       return(
+        <SafeAreaView style={{flex:1,backgroundColor: '#84BC7C',}}>
         <View style={styles.container}>
           {/* Title & Back Button*/}
           <View style={styles.menu_container}>
@@ -59,18 +61,21 @@ function AddClasses(props){
             onSubmitEditing={() => {handleSearch(searchTerm);}}
           />
           {/* Display search results */}
-          <ScrollView contentContainerStyle={styles.contentContainer}>
-            {buildingData.map((building) => {
-                return (
-                    <ItemButton 
-                        key={building._id} 
-                        title={building.properties.building} 
-                        onPress={() => {handleItemPress(building)}}
-                    />
-                );
-            })}
-        </ScrollView>
+          <FlatList
+          style={styles.listContainer}
+  contentContainerStyle={styles.contentContainer}
+  data={buildingData}
+  keyExtractor={(building) => building._id}
+  renderItem={({ item }) => (
+    <ItemButton
+      title={item.properties.building}
+      backgroundColor='#E6FCE3'
+      onPress={() => handleItemPress(item)}
+    />
+  )}
+/>
         </View>
+        </SafeAreaView>
       );
     
 }
@@ -103,7 +108,8 @@ const styles = StyleSheet.create({
       paddingLeft: 10,
     },
     contentContainer: {
-      backgroundColor: "white",
+      minWidth: 340,
+      flexDirection: 'column',
     },
 });
 

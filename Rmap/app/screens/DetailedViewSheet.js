@@ -116,9 +116,8 @@ function DetailedViewSheet(props){
                 </TouchableWithoutFeedback>
                 <TouchableWithoutFeedback onPress={() => FavoriteHandler(userdata.email, props.route.params.building)}>
                     <View style={styles.option_fav}>
-                    <Feather name="star" size={24} color="white" />
-                    <Text style={{fontSize: 14, fontWeight: 'bold', color: 'white'}}>Favorite</Text>
-                    
+                    <Feather name="star" size={24} color="black" />
+                    <Text style={{fontSize: 14, fontWeight: 'bold', color: 'black'}}>Favorite</Text>
                     </View>
                 </TouchableWithoutFeedback>
             </View>
@@ -246,9 +245,11 @@ const styles = StyleSheet.create({
         width: 100,
     },
     option_fav:{
+        borderWidth: 3,
+        borderColor: '#F0AF24',
         borderRadius: 10,
         padding: 10,
-        backgroundColor: '#F0AF24',
+        backgroundColor: 'white',
         alignItems: 'center',
         flexDirection: 'column',
         width: 100,
