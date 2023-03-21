@@ -60,6 +60,7 @@ function ClassSheet(props){
           if (data) {
             handleItemPress(data[0]);
           }
+          console.log(data);
           
         } catch (error) {
           console.log(error);

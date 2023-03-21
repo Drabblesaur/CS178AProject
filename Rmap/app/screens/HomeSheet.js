@@ -13,8 +13,6 @@ import searchContent from '../components/SearchContent';
 
 
 function HomeSheet(props){
-
-    
     const [isLoading, setIsLoading] = React.useState(true); // add loading state
     const [userdata, setUserdata] = React.useState(null)
     const loaddata = async () => {

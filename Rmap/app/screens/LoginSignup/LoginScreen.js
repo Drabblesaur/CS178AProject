@@ -1,5 +1,5 @@
 
-import {View, Button,StyleSheet,Text,TextInput } from "react-native";
+import {View, Button,StyleSheet,Text,TextInput, Image, TouchableOpacity,SafeAreaView  } from "react-native";
 import React from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -47,22 +47,39 @@ const LoginScreen = (props) => {
    
   
     return (
-      <View style={styles.container}>
-        <TextInput
-          style={styles.input}
-          placeholder="Email"
-          value={email}
-          onChangeText={setEmail}
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="Password"
-          secureTextEntry={true}
-          value={password}
-          onChangeText={setPassword}
-        />
-        <Button title="Login" onPress={LoginHandler} />
+      <SafeAreaView style={styles.safe_container}>
+        <View style={styles.container}>
+        <Image style = {styles.logo} source={require('../../assets/Rmap.png')}></Image>
+          <Text style ={styles.welcomeText}>Welcome Back!</Text>
+          <Image style = {styles.logo2} source={require('../../assets/logo2.png')}></Image>
+          <View style ={styles.input_container}>
+          <Text style = {styles.text}>Email:</Text>
+              <TextInput
+                style={styles.input}
+                placeholder="example@ucr.edu"
+                placeholderTextColor="#BCBCBC"
+                value={email}
+                onChangeText={setEmail}
+              />
+            </View>
+          <View style ={styles.input_container}>
+          <Text style = {styles.text}>Password:</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="8+ Characters"
+              placeholderTextColor="#BCBCBC"
+              secureTextEntry={true}
+              value={password}
+              onChangeText={setPassword}
+            />
+          </View>
+          <TouchableOpacity style ={styles.signup_container} onPress={() => {props.navigation.navigate('Signup')}}>
+              <View style={styles.button_text}>
+                <Text style = {styles.signup_Text}>Login</Text>
+              </View>
+            </TouchableOpacity>
       </View>
+      </SafeAreaView>
     );
   };
 
@@ -73,5 +90,83 @@ const LoginScreen = (props) => {
 export default LoginScreen;
 
 const styles = StyleSheet.create({
-    container: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+  safe_container:{
+    flex:1,
+    backgroundColor: '#2C4EDC',
+  },
+
+  container:{ 
+    flexDirection: 'column',
+    alignItems: 'center', 
+    justifyContent: 'center',
+    backgroundColor: '#2C4EDC',
+  },
+
+  signup_container:{
+    marginTop:30,
+    backgroundColor:'#478BFF',
+    width:'70%',
+    minHeight:60,
+    justifyContent:'center',
+    borderRadius:10
+  },
+  button_text:{
+    //backgroundColor :"black",
+    width: "100%",
+    alignItems: 'center'
+  },
+  
+  signup_Text:{
+    fontSize: 20, 
+    fontWeight: "bold",
+    //alignSelf: "center ",
+    color: "#FFF",
+  },
+
+  input:{
+    fontSize: 18,
+    width: '100%',
+    justifyContent:'center',
+    borderRadius:10,
+    padding: 10,
+    backgroundColor: '#E7E7E7'
+  },
+  
+
+  text:{
+    marginTop:20,
+    fontSize: 20, 
+    color: "#FFF",
+    textAlign: 'right',
+    marginBottom:10,
+    fontWeight: "bold",
+  },
+
+  logo:{
+    height:46,
+    width:135,
+    marginTop: 35,
+    marginBottom: 30,
+  },
+
+  welcomeText:{
+    color: '#FAF4EE',
+    fontSize: 36,
+    marginBottom: 30,
+    fontWeight: "bold",
+  },
+
+  input_container:{
+    //backgroundColor:'red',
+    width:'80%',
+    alignItems:'start',
+    marginBottom:20
+  },
+
+  logo2:{
+    resizeMode: 'contain',
+    width: 150,
+    height: 150,
+
+  }
 });
