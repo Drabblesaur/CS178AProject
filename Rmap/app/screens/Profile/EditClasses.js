@@ -7,15 +7,12 @@ import { TouchableWithoutFeedback, BottomSheetTextInput, BottomSheetScrollView} 
 import ItemButton from '../../components/ItemButton';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-
 function EditClasses(props){
-
-    const [searchTerm, setSearchTerm] = useState('');
     const [userdata, setUserdata] = React.useState(null)
     const loaddata = () => {
         AsyncStorage.getItem('user')
             .then(async (value) => {
-                fetch('http://192.168.0.105:4000/userdata', {
+                fetch('http://192.168.4.25:4000/userdata', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -57,32 +54,41 @@ function EditClasses(props){
     }
 
   const [isFetching, setIsFetching] = useState(false);
-  const handleLoadMore = async () => {
+  const handleLoadMore = () => {
     setIsFetching(true);
-    try {
-      const value = await AsyncStorage.getItem('user');
-      const response = await fetch('http://192.168.0.105:4000/userdata', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer ' + JSON.parse(value).token
-        },
-        body: JSON.stringify({ email: JSON.parse(value).user.email })
-      });
-      const data = await response.json();
-      if (data.message === 'User Found') {
-        setUserdata(data.user);
-      } else {
-        alert('Login Again');
-        props.navigation.navigate('LoginScreen');
-      }
-      setIsFetching(false);
-    } catch (err) {
-      setIsFetching(false);
-      alert(err);
-      props.navigation.navigate('LoginScreen');
-    }
-  }
+    console.log('BREAKING');
+    AsyncStorage.getItem('user')
+    .then(async (value) => {
+        fetch('http://192.168.4.25:4000/userdata', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + JSON.parse(value).token
+            },
+            body: JSON.stringify({ email: JSON.parse(value).user.email })
+        })
+            .then(res => res.json()).then(data => {
+                if (data.message == 'User Found') {
+                    setUserdata(data.user)
+                    
+                    
+                }
+                else {
+                    alert('Login Again')
+                    props.navigation.navigate('LoginScreen')
+                }
+                setIsFetching(false);
+            })
+            .catch(err => {
+                props.navigation.navigate('LoginScreen')
+                console.log('value1: ', value)
+            })
+    })
+    .catch(err => {
+        props.navigation.navigate('LoginScreen')
+        console.log('value2: ', value)
+    })
+}
 
     
 

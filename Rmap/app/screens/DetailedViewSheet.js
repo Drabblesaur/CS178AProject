@@ -7,6 +7,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import { TouchableWithoutFeedback } from '@gorhom/bottom-sheet'; 
 
 function DetailedViewSheet(props){
+
     return(
         <View style={styles.container}>
             <View style = {styles.header_container}>
@@ -14,7 +15,7 @@ function DetailedViewSheet(props){
                 <View style = {styles.title_container}>
                     <Text style={{fontSize: 32, fontWeight: 'bold', color: 'white'}}>{props.route.params.building}</Text>
                 </View>
-                <TouchableWithoutFeedback onPress={() => {props.navigation.dispatch(CommonActions.goBack());}}>
+                <TouchableWithoutFeedback onPress={() => {goBack(props);}}>
                     <Feather name="x-circle" size={32} color="white" />
                 </TouchableWithoutFeedback>
             </View>

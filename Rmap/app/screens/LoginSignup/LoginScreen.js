@@ -17,7 +17,7 @@ const LoginScreen = (props) => {
         alert('Please enter email and password')
     }
     else {
-        fetch('http://192.168.0.105:4000/signin', {
+        fetch('http://192.168.4.25:4000/signin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -34,6 +34,7 @@ const LoginScreen = (props) => {
                 }
                 else if (data.message == 'Successfully Signed In') {
                     props.navigation.navigate('Modals')
+                    await AsyncStorage.setItem('user', JSON.stringify(data))
                 }
             })
             .catch(err => {

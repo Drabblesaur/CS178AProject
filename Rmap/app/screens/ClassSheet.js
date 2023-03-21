@@ -15,7 +15,7 @@ function ClassSheet(props){
     const loaddata = () => {
         AsyncStorage.getItem('user')
             .then(async (value) => {
-                fetch('http://192.168.0.105:4000/userdata', {
+                fetch('http://192.168.4.25:4000/userdata', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ function ClassSheet(props){
 
     const handleSearch = async (term) => {
         try {
-          const response = await fetch(`http://192.168.0.105:4000/buildingData/${term}`);
+          const response = await fetch(`http://192.168.4.25:4000/buildingData/${term}`);
           const data = await response.json();
           setBuildingData(data);
           if (data) {
