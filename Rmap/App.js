@@ -106,7 +106,7 @@ function Modals(){
       <BottomSheet.Screen
         component={DetailedViewSheet}
         name="Details"
-        options={{index:1, enableDismissOnClose: true, enablePanDownToClose:false , backgroundStyle:{backgroundColor: '#478BFF'}}}
+        options={{index:1, enableDismissOnClose: true, enablePanDownToClose:false,backgroundStyle:{backgroundColor: '#CACACA'} }}
       />
       <BottomSheet.Screen
         component={ProfileSheet}
