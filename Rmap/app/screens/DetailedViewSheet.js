@@ -33,7 +33,7 @@ function displayRoomText(params) {
 }
 
 function displayFloorButtons(floors, props) { // Lists out buttons for each floor that can be displayed
-    var buttonList = floors.map(i => {return (<Button title = {`${i}`} key={`button-${i}`} onPress={() => {setMapFloorDisplay(props.route.params.building, i); console.log("pressed " + i);}}/>)});
+    var buttonList = floors.map(i => {return (<Button title = {`${i}`} key={`button-${i}`} onPress={() => {setMapFloorDisplay(props.route.params.building, i); /*console.log("pressed " + i);*/}}/>)});
     return buttonList;
 }
 

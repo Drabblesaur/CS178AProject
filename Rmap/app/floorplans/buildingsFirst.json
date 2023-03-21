@@ -7376,7 +7376,7 @@
       "type": "Feature",
       "properties": {
         "building": "Highlander Union Building",
-        "room": "111: Associated Students Program Board"
+        "room": "111"
       },
       "geometry": {
         "coordinates": [
@@ -12623,7 +12623,7 @@
     {
       "type": "Feature",
       "properties": {
-        "building": "HUB",
+        "building": "Highlander Union Building",
         "type": "bathroom",
         "gender": "m"
       },
@@ -13934,7 +13934,7 @@
       "type": "Feature",
       "properties": {
         "building": "Highlander Union Building",
-        "room": "101: Highlander Newspaper"
+        "room": "101"
       },
       "geometry": {
         "coordinates": [
@@ -16618,7 +16618,7 @@
     {
       "type": "Feature",
       "properties": {
-        "building": "HUB",
+        "building": "Highlander Union Building",
         "type": "bathroom",
         "gender": "f"
       },
