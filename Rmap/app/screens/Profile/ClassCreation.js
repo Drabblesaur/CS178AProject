@@ -18,7 +18,7 @@ function ClassCreation(props){
 
   const ClassHandler = (email, building) => {
       console.log(email);
-      fetch('http://192.168.6.63:4000/addClasses', {
+      fetch('http://192.168.4.25:4000/addClasses', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'
@@ -40,41 +40,51 @@ function ClassCreation(props){
               else if (data.message == 'class added succesfully') {
                   console.log('userdata from class creation:', userdata);
                   var userdata1 = {...userdata, ...data};
-                  await AsyncStorage.setItem('user', JSON.stringify(userdata))
-                  props.navigation.navigate('EditClasses')
+                  
+                  props.navigation.navigate('EditClasses', {userdata})
               }
           })
           .catch(err => {
               alert(err)
           })
-  
-     
   }
-
-  useEffect(() => {
+  const loaddata = () => {
     AsyncStorage.getItem('user')
-      .then(data => {
-        const userdata = JSON.parse(data);
-        setUserdata(userdata);
-        if (userdata) {
-          const classes = userdata['user']['classes'];
-          classes.forEach((classObj) => {
-            console.log(classObj.building);
-          });
-          console.log('class creation userdata:', userdata.user.email);
-        }
-      })
-      .catch(err => {
-        alert(err);
-      })
-  }, []);
+        .then(async (value) => {
+            fetch('http://192.168.0.105:4000/userdata', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + JSON.parse(value).token
+                },
+                body: JSON.stringify({ email: JSON.parse(value).user.email })
+            })
+                .then(res => res.json()).then(data => {
+                    if (data.message == 'User Found') {
+                        setUserdata(data.user)
 
-  useEffect(() => {
-    if (userdata) {
-      setEmail(userdata.user.email);
-    }
-  }, [userdata]);
-  
+                        
+                    }
+                    else {
+                        alert('Login Again')
+                        props.navigation.navigate('LoginScreen')
+                    }
+                })
+                .catch(err => {
+                    props.navigation.navigate('LoginScreen')
+                    console.log('value1: ', value)
+                })
+        })
+        .catch(err => {
+            props.navigation.navigate('LoginScreen')
+            console.log('value2: ', value)
+        })
+}
+useEffect(() => {
+    loaddata()
+}, [])
+
+ 
   return (
     <SafeAreaView style={{flex:1,backgroundColor: '#84BC7C',}}>
     <View style={styles.container}>

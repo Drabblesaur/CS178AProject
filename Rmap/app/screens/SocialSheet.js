@@ -22,7 +22,7 @@ function SocialSheet(props){
 
     const handleSearch = async (term) => {
         try {
-          const response = await fetch(`http://192.168.6.63:4000/socialData/${term}`);
+          const response = await fetch(`http://192.168.4.25:4000/socialData/${term}`);
           const data = await response.json();
           setBuildingData(data);
         } catch (error) {
@@ -32,7 +32,7 @@ function SocialSheet(props){
     useEffect(() => {
         const fetchInitialData = async () => {
           try {
-            const response = await fetch(`http://192.168.6.63:4000/socialData?limit=5`);
+            const response = await fetch(`http://192.168.4.25:4000/socialData?limit=5`);
             const data = await response.json();
             setBuildingData(data);
           } catch (error) {

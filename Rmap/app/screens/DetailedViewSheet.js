@@ -1,12 +1,77 @@
-import * as React from 'react';
 import { Button, StyleSheet, Text, View, DeviceEventEmitter } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { CommonActions } from '@react-navigation/native';
 import Feather from '@expo/vector-icons/Feather';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { TouchableWithoutFeedback } from '@gorhom/bottom-sheet'; 
+import React, {useState, useEffect} from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 function DetailedViewSheet(props){
+    const [userdata, setUserdata] = React.useState(null);
+    const FavoriteHandler = (email, building) => {
+        console.log(email);
+        fetch('http://192.168.0.105:4000/addFavorite', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            
+            body: JSON.stringify({
+                email, //coming from userdata.email
+                building, //coming from props.route.params.building.properties.building
+
+            })
+        })
+            .then(res => res.json())
+            .then(async data => {
+                if (data.error) {
+                    alert(data.error)
+                }
+                else if (data.message == "favorite added succesfully!") {
+                    console.log('userdata from detailed sheet:', userdata);
+                    alert(data.message);
+                }
+            })
+            .catch(err => {
+                alert(err)
+            })
+    }
+    const loaddata = () => {
+      AsyncStorage.getItem('user')
+          .then(async (value) => {
+              fetch('http://192.168.0.105:4000/userdata', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                      'Authorization': 'Bearer ' + JSON.parse(value).token
+                  },
+                  body: JSON.stringify({ email: JSON.parse(value).user.email })
+              })
+                  .then(res => res.json()).then(data => {
+                      if (data.message == 'User Found') {
+                          setUserdata(data.user)
+  
+                          
+                      }
+                      else {
+                          alert('Login Again')
+                          
+                      }
+                  })
+                  .catch(err => {
+                      
+                      console.log('value1: ', value)
+                  })
+          })
+          .catch(err => {
+              
+              console.log('value2: ', value)
+          })
+  }
+  useEffect(() => {
+      loaddata()
+  }, [])
     return(
         <View style={
             {
@@ -27,7 +92,7 @@ function DetailedViewSheet(props){
                 <View style = {styles.title_container}>
                     <Text style={{fontSize: 32, fontWeight: 'bold', color: 'white'}}>{props.route.params.building}</Text>
                 </View>
-                <TouchableWithoutFeedback onPress={() => {props.navigation.dispatch(CommonActions.goBack());}}>
+                <TouchableWithoutFeedback onPress={() => {goBack(props);}}>
                     <Feather name="x-circle" size={32} color="white" />
                 </TouchableWithoutFeedback>
             </View>
@@ -49,7 +114,7 @@ function DetailedViewSheet(props){
                     <Text style={{fontSize: 14, fontWeight: 'bold', color: 'black'}}>Biking</Text>
                     </View>
                 </TouchableWithoutFeedback>
-                <TouchableWithoutFeedback>
+                <TouchableWithoutFeedback onPress={() => FavoriteHandler(userdata.email, props.route.params.building)}>
                     <View style={styles.option_fav}>
                     <Feather name="star" size={24} color="black" />
                     <Text style={{fontSize: 14, fontWeight: 'bold', color: 'black'}}>Favorite</Text>
@@ -70,7 +135,9 @@ function DetailedViewSheet(props){
 
 function displayRoomText(params) {
     console.log(params);
+    console.log(params);
     if (params.type == "room") {
+        return (<Text style={{fontSize: 24, fontWeight: 'bold', color: 'white'}}>Room {params.room}</Text>);
         return (<Text style={{fontSize: 24, fontWeight: 'bold', color: 'white'}}>Room {params.room}</Text>);
     }
     return;
@@ -81,6 +148,16 @@ function displayFloorButtons(props) { // Lists out buttons for each floor that c
     for (var i = 1; i <= props.route.params.floors; i++) {
         a[i-1] = i;
     }
+    return a.map(i => {return (
+        <TouchableWithoutFeedback 
+        title = {`${i}`}
+        key={`button-${i}`}
+        onPress={() => {setMapFloorDisplay(props.route.params.building, i); console.log("pressed " + i);}}>
+            <View style={styles.floorbuttons}>
+            <Text style={{fontSize: 32, fontWeight: 'bold', color: 'white'}}>{i}</Text>
+            </View>
+        </TouchableWithoutFeedback>
+        )});
     return a.map(i => {return (
         <TouchableWithoutFeedback 
         title = {`${i}`}

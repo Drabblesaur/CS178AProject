@@ -14,7 +14,7 @@ const ProfileSheet = (props) => {
     const loaddata = async () => {
         AsyncStorage.getItem('user')
             .then(async (value) => {
-                fetch('http://192.168.6.63:4000/userdata', {
+                fetch('http://192.168.4.25:4000/userdata', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -47,9 +47,7 @@ const ProfileSheet = (props) => {
         loaddata()
     }, [])
     
-    
-    console.log('userdata from profile sheet ', userdata)
-    
+      
     return (
         <View style={styles.container}>
             <View style={styles.menu_container}>

@@ -3,6 +3,68 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Highlander Union Building",
+        "room": "hallway"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328638,
+              33.974061
+            ],
+            [
+              -117.328793,
+              33.974011
+            ],
+            [
+              -117.328973,
+              33.974008
+            ],
+            [
+              -117.328974,
+              33.974145
+            ],
+            [
+              -117.328874,
+              33.974147
+            ],
+            [
+              -117.328871,
+              33.974306
+            ],
+            [
+              -117.328816,
+              33.974306
+            ],
+            [
+              -117.328817,
+              33.974375
+            ],
+            [
+              -117.32868,
+              33.974373
+            ],
+            [
+              -117.328689,
+              33.974304
+            ],
+            [
+              -117.328707,
+              33.974209
+            ],
+            [
+              -117.328638,
+              33.974061
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Sproul Hall",
         "room": "1222"
       },
@@ -692,6 +754,21 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Highlander Union Building",
+        "type": "Halal Shack"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.328716,
+          33.974081
+        ],
+        "type": "Point"
+      },
+      "id": "0bc5c6a72a615515751f84ff3bfca61d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Watkins Hall",
         "type": "entrance"
       },
@@ -949,6 +1026,65 @@
         "type": "Point"
       },
       "id": "11c0eef1527966f795005d313cbb3482"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Costo Hall",
+        "room": "hallway"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.329319,
+              33.974311
+            ],
+            [
+              -117.32932,
+              33.974226
+            ],
+            [
+              -117.329167,
+              33.974224
+            ],
+            [
+              -117.329167,
+              33.97428
+            ],
+            [
+              -117.32919,
+              33.974281
+            ],
+            [
+              -117.329191,
+              33.974387
+            ],
+            [
+              -117.329129,
+              33.974387
+            ],
+            [
+              -117.32913,
+              33.97446
+            ],
+            [
+              -117.329222,
+              33.97446
+            ],
+            [
+              -117.32922,
+              33.974312
+            ],
+            [
+              -117.329319,
+              33.974311
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "12fdf4eac21d685143123a866525f819"
     },
     {
       "type": "Feature",
@@ -1445,6 +1581,21 @@
         "type": "Point"
       },
       "id": "1cda101125c97b3cab21c4437f86fd9f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Highlander Union Building",
+        "type": "Panda Express"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.328833,
+          33.974245
+        ],
+        "type": "Point"
+      },
+      "id": "1d9d609456f43fe683e98f3597425c1a"
     },
     {
       "type": "Feature",
@@ -2243,7 +2394,8 @@
       "type": "Feature",
       "properties": {
         "building": "Materials Science and Engineering",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "f"
       },
       "geometry": {
         "coordinates": [
@@ -4080,7 +4232,7 @@
             ],
             [
               -117.32919,
-              33.974282
+              33.974281
             ],
             [
               -117.32919,
@@ -5679,6 +5831,21 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Costo Hall",
+        "type": "elevator"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.329181,
+          33.974239
+        ],
+        "type": "Point"
+      },
+      "id": "56a1c1df898489a09af123282634126d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Physics",
         "room": "2033"
       },
@@ -7194,7 +7361,22 @@
       "type": "Feature",
       "properties": {
         "building": "Highlander Union Building",
-        "room": "111: Associated Students Program Board"
+        "type": "Chronic Tacos"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.328835,
+          33.974162
+        ],
+        "type": "Point"
+      },
+      "id": "69bdb982e92f6b03e645f06b9f2d1c7e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Highlander Union Building",
+        "room": "111"
       },
       "geometry": {
         "coordinates": [
@@ -8038,6 +8220,27 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Highlander Union Building",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.32887,
+            33.97401
+          ],
+          [
+            -117.328818,
+            33.974011
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "76060fe517515287d3462418e948219e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Winston Chung Hall",
         "room": "129"
       },
@@ -8606,8 +8809,7 @@
       "type": "Feature",
       "properties": {
         "building": "Sproul Hall",
-        "type": "water",
-        "gender": "m"
+        "type": "water"
       },
       "geometry": {
         "coordinates": [
@@ -9233,7 +9435,7 @@
     {
       "type": "Feature",
       "properties": {
-        "building": "HUB",
+        "building": "Highlander Union Building",
         "type": "stairs"
       },
       "geometry": {
@@ -10704,7 +10906,8 @@
       "type": "Feature",
       "properties": {
         "building": "Materials Science and Engineering",
-        "type": "bathroom"
+        "type": "bathroom",
+        "gender": "m"
       },
       "geometry": {
         "coordinates": [
@@ -10834,6 +11037,21 @@
         "type": "Polygon"
       },
       "id": "9f95a60ba4a671d50b104e33c7686846"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Highlander Union Building",
+        "type": "Hibachi San Grill"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.328921,
+          33.974079
+        ],
+        "type": "Point"
+      },
+      "id": "9fae612a09db48807fb454d54d877630"
     },
     {
       "type": "Feature",
@@ -11740,7 +11958,7 @@
     {
       "type": "Feature",
       "properties": {
-        "building": "HUB",
+        "building": "Highlander Union Building",
         "type": "stairs"
       },
       "geometry": {
@@ -12258,6 +12476,27 @@
     {
       "type": "Feature",
       "properties": {
+        "building": "Highlander Union Building",
+        "type": "entrance"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.328684,
+            33.974345
+          ],
+          [
+            -117.328686,
+            33.974326
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "b0d85fff58f8d0629a6a12ae134af717"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "building": "Life Sciences",
         "room": "1427A"
       },
@@ -12380,6 +12619,22 @@
         "type": "Polygon"
       },
       "id": "b1c9dc91c780117e97a2c1b48b98d867"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Highlander Union Building",
+        "type": "bathroom",
+        "gender": "m"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.328829,
+          33.974317
+        ],
+        "type": "Point"
+      },
+      "id": "b2aa401323939a5df1e19256a1218ff2"
     },
     {
       "type": "Feature",
@@ -13679,7 +13934,7 @@
       "type": "Feature",
       "properties": {
         "building": "Highlander Union Building",
-        "room": "101: Highlander Newspaper"
+        "room": "101"
       },
       "geometry": {
         "coordinates": [
@@ -16363,14 +16618,14 @@
     {
       "type": "Feature",
       "properties": {
-        "building": "HUB",
+        "building": "Highlander Union Building",
         "type": "bathroom",
-        "gender": "u"
+        "gender": "f"
       },
       "geometry": {
         "coordinates": [
-          -117.328842,
-          33.974343
+          -117.328831,
+          33.97436
         ],
         "type": "Point"
       },
@@ -16531,6 +16786,21 @@
         "type": "Polygon"
       },
       "id": "e52abb7c6d61d703655ec3d043b4e16d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Highlander Union Building",
+        "type": "water"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.328856,
+          33.97434
+        ],
+        "type": "Point"
+      },
+      "id": "e5a8fc03f7be7ef6ba55f0adce666ced"
     },
     {
       "type": "Feature",
@@ -16850,8 +17120,7 @@
       "type": "Feature",
       "properties": {
         "building": "Sproul Hall",
-        "type": "water",
-        "gender": "f"
+        "type": "water"
       },
       "geometry": {
         "coordinates": [
@@ -16947,6 +17216,66 @@
         "type": "Polygon"
       },
       "id": "ec094900f87221cc5da14a4633765eaa"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.328638,
+              33.974061
+            ],
+            [
+              -117.328793,
+              33.974011
+            ],
+            [
+              -117.328973,
+              33.974008
+            ],
+            [
+              -117.328974,
+              33.974145
+            ],
+            [
+              -117.328874,
+              33.974147
+            ],
+            [
+              -117.328871,
+              33.974306
+            ],
+            [
+              -117.328816,
+              33.974306
+            ],
+            [
+              -117.328817,
+              33.974375
+            ],
+            [
+              -117.32868,
+              33.974373
+            ],
+            [
+              -117.328689,
+              33.974304
+            ],
+            [
+              -117.328707,
+              33.974209
+            ],
+            [
+              -117.328638,
+              33.974061
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "ec32fa68a54ca9a9bff30c6e2d41d1c5"
     },
     {
       "type": "Feature",
@@ -17379,6 +17708,41 @@
         "type": "Polygon"
       },
       "id": "eec300350f311de3f98a3cd95144b448"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "building": "Highlander Union Building",
+        "room": "undefined"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -117.32887,
+              33.974374
+            ],
+            [
+              -117.32887,
+              33.974306
+            ],
+            [
+              -117.328817,
+              33.974306
+            ],
+            [
+              -117.328818,
+              33.974374
+            ],
+            [
+              -117.32887,
+              33.974374
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "eee621875af872ce1421cb07421a28bb"
     },
     {
       "type": "Feature",

@@ -23,7 +23,8 @@ function BuildingSheet(props){
 
     const handleSearch = async (term) => {
         try {
-          const response = await fetch(`http://192.168.6.63:4000/buildingData/${term}`);
+          const response = await fetch(`http://192.168.4.25:4000/buildingData/${term}`);
+
           const data = await response.json();
           setBuildingData(data);
         } catch (error) {
@@ -33,7 +34,8 @@ function BuildingSheet(props){
     useEffect(() => {
         const fetchInitialData = async () => {
           try {
-            const response = await fetch(`http://192.168.6.63:4000/buildingData?limit=5`);
+
+            const response = await fetch(`http://192.168.4.25:4000/buildingData?limit=5`);
             const data = await response.json();
             setBuildingData(data);
           } catch (error) {
