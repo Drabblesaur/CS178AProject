@@ -17,7 +17,7 @@ function ClassCreation(props){
 
   const ClassHandler = (email, building) => {
       console.log(email);
-      fetch('http://192.168.0.105:4000/addClasses', {
+      fetch('http://192.168.4.25:4000/addClasses', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'
