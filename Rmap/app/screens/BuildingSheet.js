@@ -105,6 +105,7 @@ const styles = StyleSheet.create({
         paddingLeft: 10,
       },
       contentContainer: {
+        width: '100%',
         flexDirection: 'column',
         //backgroundColor: "white",
       },

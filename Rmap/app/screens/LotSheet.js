@@ -22,7 +22,7 @@ function LotSheet(props){
 
     const handleSearch = async (term) => {
         try {
-          const response = await fetch(`http://192.168.0.105:4000/parkingData/${term}`);
+          const response = await fetch(`http://192.168.6.63:4000/parkingData/${term}`);
           const data = await response.json();
           setBuildingData(data);
         } catch (error) {
@@ -32,7 +32,7 @@ function LotSheet(props){
     useEffect(() => {
         const fetchInitialData = async () => {
           try {
-            const response = await fetch(`http://192.168.0.105:4000/parkingData?limit=5`);
+            const response = await fetch(`http://192.168.6.63:4000/parkingData?limit=5`);
             const data = await response.json();
             setBuildingData(data);
           } catch (error) {
@@ -65,7 +65,8 @@ function LotSheet(props){
                 return (
                     <ItemButton 
                         key={building._id} 
-                        title={building.properties.name} 
+                        title={building.properties.name}
+                        backgroundColor="#EBE3FF" 
                         subtitle="0.5 mi" // You can replace this with the actual distance if you have that data
                         onPress={() => {handleItemPress(building)}}
                     />
@@ -103,7 +104,9 @@ const styles = StyleSheet.create({
         paddingLeft: 10,
       },
       contentContainer: {
-        backgroundColor: "white",
+        minWidth: 340,
+        flexDirection: 'column',
+        //backgroundColor: "white",
       },
 });
 

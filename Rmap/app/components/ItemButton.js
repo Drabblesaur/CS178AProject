@@ -13,7 +13,6 @@ function ItemButton (props) {
                 marginTop: 10,
                 flexDirection: 'row',
                 height: 80,
-                width: '100%',
                 backgroundColor: props.backgroundColor,
                 alignItems: 'center',
                 justifyContent: 'space-between',
