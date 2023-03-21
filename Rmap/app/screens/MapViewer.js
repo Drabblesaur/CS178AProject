@@ -157,7 +157,7 @@ function displayFloors(props, data, {setBuilding}, bounds) {
                       }
                     key={`marker${b.properties.type}${b.id}`}
                   >
-                    <Text style={{border: "solid", borderRadius:10, fontSize: 12, backgroundColor:"#rgba(133, 128, 94, 0.5)", color:"white"}}>
+                    <Text style={styles.label}>
                       {(b.properties.room != "undefined") ? b.properties.room : ""}
                     </Text>
                   </Marker>;
@@ -341,7 +341,7 @@ function displayBuildings(props, {setBuilding}, bounds) {
                                       display_class_number = true;
                                     }}
                     >
-                      <Text style={{border: "solid", borderRadius:10, fontSize: 12, backgroundColor:"#rgba(133, 128, 94, 0.5)", color:"white"}}>
+                      <Text style={styles.label}>
                         {display_building_name ? b.properties.building : ""}
                       </Text>
                     </Marker>;
@@ -396,7 +396,7 @@ function displaySocials(props, {setBuilding}, bounds) {
                       }
                     key={`marker${b.properties.type}${b.id}`}
                   >
-                    <Text style={{border: "solid", borderRadius:10, fontSize: 12, backgroundColor:"#rgba(133, 128, 94, 0.5)", color:"white"}}>
+                    <Text style={styles.label}>
                       {display_building_name ? b.properties.building : ""}
                     </Text>
                   </Marker>;
@@ -450,7 +450,7 @@ function displayParking(props, {setBuilding}, bounds) {
                       }
                     key={`marker${b.properties.name}${b.id}`}
                   >
-                    <Text style={{border: "solid", borderRadius:10, fontSize: 12, backgroundColor:"#rgba(133, 128, 94, 0.5)", color:"white"}}>
+                    <Text style={styles.label}>
                       {display_building_name ? b.properties.name : ""}
                     </Text>
                   </Marker>;
@@ -498,8 +498,8 @@ export function zoomInto (b) { // Zoom into building "b"
       this.map.animateToRegion({
         latitude: getMiddleLat(b.geometry.coordinates[0]) - 0.000215,
         longitude: getMiddleLong(b.geometry.coordinates[0]),
-        latitudeDelta: 0.0008,
-        longitudeDelta: 0.0008,
+        latitudeDelta: 0.001,
+        longitudeDelta: 0.001,
       })
     } catch (err) {
       console.error(err)
@@ -628,6 +628,14 @@ const styles = StyleSheet.create({
     paddingRight: 10,
     paddingTop: 2.5,
     paddingBottom: 2.5,
+  },
+  label: {
+    border: "solid",
+    padding: 2,
+    borderRadius:10,
+    fontSize: 12,
+    backgroundColor:"#rgba(133, 128, 94, 0.5)",
+    color:"white"
   }
 });
 

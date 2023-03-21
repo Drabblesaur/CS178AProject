@@ -419,7 +419,7 @@
       "type": "Feature",
       "properties": {
         "building": "Sproul Hall",
-        "room": "undefined"
+        "room": "hallway"
       },
       "geometry": {
         "coordinates": [
@@ -561,7 +561,7 @@
       "type": "Feature",
       "properties": {
         "building": "Student Success Center",
-        "type": "bathroom"
+        "type": "bathrooms"
       },
       "geometry": {
         "coordinates": [
@@ -3220,7 +3220,7 @@
       "type": "Feature",
       "properties": {
         "building": "Student Success Center",
-        "type": "bathroom",
+        "type": "bathrooms",
         "gender": "m"
       },
       "geometry": {
@@ -4485,7 +4485,7 @@
       "type": "Feature",
       "properties": {
         "building": "Sproul Hall",
-        "room": "undefined"
+        "room": "hallway"
       },
       "geometry": {
         "coordinates": [
@@ -4640,7 +4640,7 @@
       "type": "Feature",
       "properties": {
         "building": "Student Success Center",
-        "type": "bathroom"
+        "type": "bathrooms"
       },
       "geometry": {
         "coordinates": [
@@ -4850,7 +4850,7 @@
       "type": "Feature",
       "properties": {
         "building": "Student Success Center",
-        "type": "bathroom",
+        "type": "bathrooms",
         "gender": "f"
       },
       "geometry": {
@@ -6187,7 +6187,7 @@
       "type": "Feature",
       "properties": {
         "building": "Sproul Hall",
-        "room": 2364
+        "room": "2364"
       },
       "geometry": {
         "coordinates": [
