@@ -290,7 +290,7 @@ function displayBuildings(props, {setBuilding}, bounds) {
   const [Buildings, setBuildings] = useState([]);
 
   useEffect(() => {
-    fetch(`http://192.168.4.25:4000/buildingData`)
+    fetch(`http://192.168.6.63:4000/buildingData`)
       .then(response => response.json())
       .then(data => setBuildings(data))
       .catch(error => console.error(error));
@@ -317,7 +317,7 @@ function displayBuildings(props, {setBuilding}, bounds) {
                                                                           type: "building",
                                                                           building: b.properties.building,
                                                                           floors: b.properties.floors,
-                                                                          color: "red"
+                                                                          sheetColor:"#84BC7C",
                                                                           }
                                                               );}}
                   />;
@@ -358,7 +358,7 @@ function displaySocials(props, {setBuilding}, bounds) {
   const [Socials, setBuildings] = useState([]);
 
   useEffect(() => {
-    fetch(`http://192.168.4.25:4000/socialData`)
+    fetch(`http://192.168.6.63:4000/socialData`)
       .then(response => response.json())
       .then(data => setBuildings(data))
       .catch(error => console.error(error));
@@ -413,7 +413,7 @@ function displaySocials(props, {setBuilding}, bounds) {
 function displayParking(props, {setBuilding}, bounds) {
   const [Parking, setBuildings] = useState([]);
   useEffect(() => {
-    fetch(`http://192.168.4.25:4000/parkingData`)
+    fetch(`http://192.168.6.63:4000/parkingData`)
       .then(response => response.json())
       .then(data => setBuildings(data))
       .catch(error => console.error(error));

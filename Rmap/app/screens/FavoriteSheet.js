@@ -15,7 +15,7 @@ function FavoriteSheet(props){
     const loaddata = () => {
         AsyncStorage.getItem('user')
             .then(async (value) => {
-                fetch('http://192.168.0.105:4000/userdata', {
+                fetch('http://192.168.6.63:4000/userdata', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ function FavoriteSheet(props){
         console.log(term);
       
         try {
-          const buildingResponse = await fetch(`http://192.168.0.105:4000/buildingData/${term}`);
+          const buildingResponse = await fetch(`http://192.168.6.63:4000/buildingData/${term}`);
           const buildingData = await buildingResponse.json();
           if (buildingData) {
             handleItemPress(buildingData[0]);
@@ -68,7 +68,7 @@ function FavoriteSheet(props){
         }
       
         try {
-          const socialResponse = await fetch(`http://192.168.0.105:4000/socialData/${term}`);
+          const socialResponse = await fetch(`http://192.168.6.63:4000/socialData/${term}`);
           const socialData = await socialResponse.json();
           if (socialData) {
             handleItemPress(socialData[0]);
@@ -80,7 +80,7 @@ function FavoriteSheet(props){
         }
       
         try {
-          const parkingResponse = await fetch(`http://192.168.0.105:4000/parkingData/${term}`);
+          const parkingResponse = await fetch(`http://192.168.6.63:4000/parkingData/${term}`);
           const parkingData = await parkingResponse.json();
           if (parkingData) {
             handleItemPress(parkingData[0]);
@@ -103,9 +103,9 @@ function FavoriteSheet(props){
         <View style={styles.container}>
             {/* Title & Back Button*/}
             <View style={styles.menu_container}>
-                <Text style={{fontSize: 32, fontWeight: 'bold', color: 'white'}}>Favorites</Text>
+                <Text style={{fontSize: 32, fontWeight: 'bold', color: 'black'}}>Favorites</Text>
                 <TouchableWithoutFeedback onPress={() => {Keyboard.dismiss(); props.navigation.dispatch(CommonActions.goBack());}}>
-                    <Feather name="x-circle" size={32} color="white" />
+                    <Feather name="x-circle" size={32} color="black" />
                 </TouchableWithoutFeedback>
             </View>
             <BottomSheetScrollView  contentContainerStyle={styles.contentContainer}>
@@ -114,6 +114,7 @@ function FavoriteSheet(props){
                     key={classObj._id}
                     title={classObj.building}
                     subtitle='0.5 miles away'
+                    backgroundColor='#E0B04A'
                     onPress={() => { handleSearch(classObj.building) }}
                      />
             ))}

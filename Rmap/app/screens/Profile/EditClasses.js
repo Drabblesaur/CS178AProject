@@ -13,7 +13,7 @@ function EditClasses(props){
     const loaddata = () => {
         AsyncStorage.getItem('user')
             .then(async (value) => {
-                fetch('http://192.168.4.25:4000/userdata', {
+                fetch('http://192.168.6.63:4000/userdata', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ function EditClasses(props){
     console.log('BREAKING');
     AsyncStorage.getItem('user')
     .then(async (value) => {
-        fetch('http://192.168.4.25:4000/userdata', {
+        fetch('http://192.168.6.63:4000/userdata', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

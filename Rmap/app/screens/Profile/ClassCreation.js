@@ -18,7 +18,7 @@ function ClassCreation(props){
 
   const ClassHandler = (email, building) => {
       console.log(email);
-      fetch('http://192.168.4.25:4000/addClasses', {
+      fetch('http://192.168.6.63:4000/addClasses', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'
@@ -51,7 +51,7 @@ function ClassCreation(props){
   const loaddata = () => {
     AsyncStorage.getItem('user')
         .then(async (value) => {
-            fetch('http://192.168.0.105:4000/userdata', {
+            fetch('http://192.168.6.63:4000/userdata', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -114,7 +114,7 @@ useEffect(() => {
           onChangeText={setRoom}
         />
       </View>
-      <TouchableWithoutFeedback onPress={() => ClassHandler(email, props.route.params.building.properties.building)} >
+      <TouchableWithoutFeedback onPress={() => ClassHandler(userdata.email, props.route.params.building.properties.building)} >
         <View style={styles.button_container}>
           <Text style={{ fontSize: 20, color: 'white',fontWeight:'bold' }}>Add Class</Text>
         </View>
@@ -144,7 +144,7 @@ menu_container:{
 input_container:{
   //backgroundColor:'red',
   width:'90%',
-  alignItems:'start',
+  alignItems:'flex-start',
   marginBottom:20
 },
 input:{

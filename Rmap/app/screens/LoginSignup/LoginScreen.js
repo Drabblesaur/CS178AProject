@@ -17,7 +17,7 @@ const LoginScreen = (props) => {
         alert('Please enter email and password')
     }
     else {
-        fetch('http://192.168.4.25:4000/signin', {
+        fetch('http://192.168.6.63:4000/signin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -73,7 +73,7 @@ const LoginScreen = (props) => {
               onChangeText={setPassword}
             />
           </View>
-          <TouchableOpacity style ={styles.signup_container} onPress={() => {props.navigation.navigate('Signup')}}>
+          <TouchableOpacity style ={styles.signup_container} onPress={LoginHandler}>
               <View style={styles.button_text}>
                 <Text style = {styles.signup_Text}>Login</Text>
               </View>
@@ -93,6 +93,7 @@ const styles = StyleSheet.create({
   safe_container:{
     flex:1,
     backgroundColor: '#2C4EDC',
+    alignContent: 'center',
   },
 
   container:{ 
@@ -119,7 +120,7 @@ const styles = StyleSheet.create({
   signup_Text:{
     fontSize: 20, 
     fontWeight: "bold",
-    //alignSelf: "center ",
+    alignSelf: "center",
     color: "#FFF",
   },
 
@@ -159,7 +160,7 @@ const styles = StyleSheet.create({
   input_container:{
     //backgroundColor:'red',
     width:'80%',
-    alignItems:'start',
+    alignItems:'flex-start',
     marginBottom:20
   },
 

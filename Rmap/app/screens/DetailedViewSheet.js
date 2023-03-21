@@ -8,10 +8,11 @@ import React, {useState, useEffect} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 function DetailedViewSheet(props){
+    console.log(props.route.params)
     const [userdata, setUserdata] = React.useState(null);
     const FavoriteHandler = (email, building) => {
         console.log(email);
-        fetch('http://192.168.0.105:4000/addFavorite', {
+        fetch('http://192.168.6.63:4000/addFavorite', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -40,7 +41,7 @@ function DetailedViewSheet(props){
     const loaddata = () => {
       AsyncStorage.getItem('user')
           .then(async (value) => {
-              fetch('http://192.168.0.105:4000/userdata', {
+              fetch('http://192.168.6.63:4000/userdata', {
                   method: 'POST',
                   headers: {
                       'Content-Type': 'application/json',
@@ -134,8 +135,6 @@ function DetailedViewSheet(props){
 }
 
 function displayRoomText(params) {
-    console.log(params);
-    console.log(params);
     if (params.type == "room") {
         return (<Text style={{fontSize: 24, fontWeight: 'bold', color: 'white'}}>Room {params.room}</Text>);
         return (<Text style={{fontSize: 24, fontWeight: 'bold', color: 'white'}}>Room {params.room}</Text>);

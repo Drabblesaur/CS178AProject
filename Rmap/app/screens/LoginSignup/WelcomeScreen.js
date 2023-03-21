@@ -21,9 +21,6 @@ function WelcomeScreen(props) {
       </SafeAreaView>
   );
 }
-//<Image stlye = {styles.logo} source={require('../../assets/Rmap.png')}></Image>
-//<Image source={require('../../assets/main_1.png')}></Image>
-//<Image source={require('../../assets/asset-1.svg')}></Image>
 
 export default WelcomeScreen;
 
@@ -49,7 +46,7 @@ const styles = StyleSheet.create({
       marginTop:20,
       fontSize: 36, 
       fontWeight: "bold",
-      alignItems: 'center', 
+      alignItems: 'flex-start', 
       color: "#FFF",
       textAlign: 'center',
       marginBottom:30
@@ -66,20 +63,20 @@ const styles = StyleSheet.create({
     button_text:{
       //backgroundColor :"black",
       width: "100%",
-      alignItems: 'center'
+      alignItems: 'flex-start'
     },
     
     buttonText:{
       fontSize: 20, 
       fontWeight: "bold",
-      //alignSelf: "center ",
+      alignSelf: "center",
       color: "#478BFF",
     },
     
     signup_Text:{
       fontSize: 20, 
       fontWeight: "bold",
-      //alignSelf: "center ",
+      alignSelf: "center",
       color: "#FFF",
     },
 

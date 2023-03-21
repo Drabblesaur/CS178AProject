@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
   input_container:{
     //backgroundColor:'red',
     width:'80%',
-    alignItems:'start',
+    alignItems:'flex-start',
     marginBottom:20
   },
   input:{
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
   text:{
     marginTop:20,
     fontSize: 20, 
-   // alignItems: 'center', 
+    alignItems: 'center', 
     color: "#FFF",
     textAlign: 'right',
     marginBottom:10,
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
   buttonText:{
     fontSize: 20, 
     fontWeight: "bold",
-    //alignSelf: "center ",
+    alignSelf: "center",
     color: "#FFF",
   },
 
