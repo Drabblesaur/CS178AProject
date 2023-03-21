@@ -22,7 +22,7 @@ function SocialSheet(props){
 
     const handleSearch = async (term) => {
         try {
-          const response = await fetch(`http://192.168.0.105:4000/socialData/${term}`);
+          const response = await fetch(`http://192.168.6.63:4000/socialData/${term}`);
           const data = await response.json();
           setBuildingData(data);
         } catch (error) {
@@ -32,7 +32,7 @@ function SocialSheet(props){
     useEffect(() => {
         const fetchInitialData = async () => {
           try {
-            const response = await fetch(`http://192.168.0.105:4000/socialData?limit=5`);
+            const response = await fetch(`http://192.168.6.63:4000/socialData?limit=5`);
             const data = await response.json();
             setBuildingData(data);
           } catch (error) {
@@ -58,11 +58,12 @@ function SocialSheet(props){
                 onSubmitEditing={() => {handleSearch(searchTerm);}}
             />
             {/* We need to place a List of Items from the DB here */}
-            <BottomSheetScrollView contentContainerStyle={styles.       contentContainer}>
+            <BottomSheetScrollView contentContainerStyle={styles.contentContainer}>
                 {buildingData.map((building) => {
                     return (
                         <ItemButton 
                             key={building._id} 
+                            backgroundColor="#FCDC98"
                             title={building.properties.building} 
                             subtitle="0.5 mi" // You can replace this with the actual distance if you have that data
                             onPress={() => {handleItemPress(building)}}
@@ -101,7 +102,8 @@ const styles = StyleSheet.create({
         paddingLeft: 10,
       },
       contentContainer: {
-        backgroundColor: "white",
+        flexDirection: 'column',
+        //backgroundColor: "white",
       },
 });
 
