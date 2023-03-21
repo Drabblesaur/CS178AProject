@@ -5,7 +5,20 @@ import Feather from '@expo/vector-icons/Feather';
 function ItemButton (props) {
   return (
     <TouchableOpacity onPress={props.onPress}>
-        <View style={styles.button_view}>
+        <View style={
+            {
+                paddingLeft:20,
+                paddingRight:20,
+                borderRadius: 10,
+                marginTop: 10,
+                flexDirection: 'row',
+                height: 80,
+                width: '100%',
+                backgroundColor: props.backgroundColor,
+                alignItems: 'center',
+                justifyContent: 'space-between',
+            }
+        }>
             <View style={styles.text_items}>
                 <Text style={{fontSize: 24, fontWeight: 'bold',}}>{props.title}</Text>
                 <Text style={{fontSize: 13}}>{props.subtitle}</Text>
@@ -17,18 +30,6 @@ function ItemButton (props) {
 }
 
 const styles = StyleSheet.create({
-    button_view: {
-        paddingLeft:20,
-        paddingRight:20,
-        borderRadius: 10,
-        marginTop: 10,
-        flexDirection: 'row',
-        height: 80,
-        width: '100%',
-        backgroundColor: '#E6FCE3',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-    },
     text_items: {
         flexDirection: 'column',
         alignItems: 'flex-start',

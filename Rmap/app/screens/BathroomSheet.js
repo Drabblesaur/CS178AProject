@@ -3,7 +3,7 @@ import { Button, StyleSheet, Text, View,Keyboard} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { CommonActions } from '@react-navigation/native';
 import Feather from '@expo/vector-icons/Feather'; 
-import { TouchableWithoutFeedback,BottomSheetTextInput } from '@gorhom/bottom-sheet';
+import { TouchableWithoutFeedback,BottomSheetTextInput,BottomSheetScrollView } from '@gorhom/bottom-sheet';
 import ItemButton from '../components/ItemButton';
 
 function BathroomSheet(props){
@@ -24,10 +24,12 @@ function BathroomSheet(props){
                 placeholder="Search"
                 onFocus={() => {handleFocus();}}
             />
-            {/* We need to place a List of Items from the DB here */}
-            <ItemButton title="Sample Lot" subtitle="Miles from Current Location"/>
-            <ItemButton title="Lot 50" subtitle="0.8 mi"/>
-            <ItemButton title="Lot 1" subtitle="1.2 mi"/>
+            <BottomSheetScrollView contentContainerStyle={styles.contentContainer}>
+                {/* We need to place a List of Items from the DB here */}
+                <ItemButton title="Sample Lot" subtitle="Miles from Current Location" backgroundColor="#B8D6FB"/>
+                <ItemButton title="Lot 50" subtitle="0.8 mi" backgroundColor="#B8D6FB"/>
+                <ItemButton title="Lot 1" subtitle="1.2 mi" backgroundColor="#B8D6FB"/>
+            </BottomSheetScrollView>
         </View>
     );
 }
@@ -57,6 +59,10 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         alignItems: 'center',
         paddingLeft: 10,
+      },
+      contentContainer: {
+        flexDirection: 'column',
+        //backgroundColor: "white",
       },
 });
 

@@ -242,7 +242,7 @@ function displayBuildings(props, {setBuilding}) {
   const [Buildings, setBuildings] = useState([]);
 
   useEffect(() => {
-    fetch(`http://192.168.0.105:4000/buildingData`)
+    fetch(`http://192.168.6.63:4000/buildingData`)
       .then(response => response.json())
       .then(data => setBuildings(data))
       .catch(error => console.error(error));
@@ -267,6 +267,7 @@ function displayBuildings(props, {setBuilding}) {
                                                                 type: "building",
                                                                 building: b.properties.building,
                                                                 floors: b.properties.floors,
+                                                                sheetColor:"#84BC7C",
                                                                 }
                                                     );}}
         />
@@ -280,7 +281,7 @@ function displaySocials(props, {setBuilding}) {
   const [Socials, setBuildings] = useState([]);
 
   useEffect(() => {
-    fetch(`http://192.168.0.105:4000/socialData`)
+    fetch(`http://192.168.6.63:4000/socialData`)
       .then(response => response.json())
       .then(data => setBuildings(data))
       .catch(error => console.error(error));
@@ -303,7 +304,8 @@ function displaySocials(props, {setBuilding}) {
                           zoomInto(b);
                           props.navigation.navigate('Details', {
                                                                 type: "building",
-                                                                building: b.properties.building
+                                                                building: b.properties.building,
+                                                                sheetColor:"#F0AF24",
                                                                 }
                                                     );}}
         />
@@ -316,8 +318,8 @@ function displaySocials(props, {setBuilding}) {
 function displayParking(props, {setBuilding}) {
   const [Parking, setBuildings] = useState([]);
 
-  useEffect(() => {
-    fetch(`http://192.168.0.105:4000/parkingData`)
+  useEffect(() => { 
+    fetch(`http://192.168.6.63:4000/parkingData`)
       .then(response => response.json())
       .then(data => setBuildings(data))
       .catch(error => console.error(error));
@@ -340,7 +342,8 @@ function displayParking(props, {setBuilding}) {
                           zoomInto(b);
                           props.navigation.navigate('Details', {
                                                                 type: "parking",
-                                                                building: b.properties.name
+                                                                building: b.properties.name,
+                                                                sheetColor:"#A286F1",
                                                                 }
                                                     );}}
         />

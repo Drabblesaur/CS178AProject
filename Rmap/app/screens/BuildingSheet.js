@@ -23,7 +23,7 @@ function BuildingSheet(props){
 
     const handleSearch = async (term) => {
         try {
-          const response = await fetch(`http://192.168.0.105:4000/buildingData/${term}`);
+          const response = await fetch(`http://192.168.6.63:4000/buildingData/${term}`);
           const data = await response.json();
           setBuildingData(data);
         } catch (error) {
@@ -33,7 +33,7 @@ function BuildingSheet(props){
     useEffect(() => {
         const fetchInitialData = async () => {
           try {
-            const response = await fetch(`http://192.168.0.105:4000/buildingData?limit=5`);
+            const response = await fetch(`http://192.168.6.63:4000/buildingData?limit=5`);
             const data = await response.json();
             setBuildingData(data);
           } catch (error) {
@@ -65,7 +65,8 @@ function BuildingSheet(props){
                 return (
                     <ItemButton 
                         key={building._id} 
-                        title={building.properties.building} 
+                        title={building.properties.building}
+                        backgroundColor="#E6FCE3" 
                         subtitle="0.5 mi" // You can replace this with the actual distance if you have that data
                         onPress={() => {handleItemPress(building)}}
                     />
@@ -104,7 +105,8 @@ const styles = StyleSheet.create({
         paddingLeft: 10,
       },
       contentContainer: {
-        backgroundColor: "white",
+        flexDirection: 'column',
+        //backgroundColor: "white",
       },
 });
 

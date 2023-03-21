@@ -8,7 +8,20 @@ import { TouchableWithoutFeedback } from '@gorhom/bottom-sheet';
 
 function DetailedViewSheet(props){
     return(
-        <View style={styles.container}>
+        <View style={
+            {
+                flex: 1,
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'flex-start',
+                borderRadius: 20,
+                paddingTop: 10,
+                paddingLeft:20,
+                paddingRight:20,
+                backgroundColor: props.route.params.sheetColor, 
+            }
+            }
+        >
             <View style = {styles.header_container}>
                 {/* Title Container*/}
                 <View style = {styles.title_container}>
@@ -101,14 +114,6 @@ function resetMapViewer() {
 }
 
 const styles = StyleSheet.create({
-    container: { flex: 1,
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-        paddingLeft:20,
-        paddingRight:20,
-        //backgroundColor: 'lightgrey',
-        },
     header_container:{
         flexDirection: 'row',
         // backgroundColor: 'white',
